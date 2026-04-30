@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "purpose": "Venue library for Bolo Boys event management. Claude checks this before creating new event entries and updates it when new venues are added.",
+    "last_updated": "2026-04-29"
+  },
+  "venues": [
+    {
+      "id": "side-saddle",
+      "name": "Side Saddle",
+      "type": "bar",
+      "neighborhood": "Grant Park / Beltline",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "680 Hamilton Ave SE, Atlanta, GA 30312",
+      "phone": "(770) 790-7886",
+      "website": "https://www.sidesaddle.wine/",
+      "google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
+      "notes": "Regular gig. Monthly showcase. Patio available. Often co-billed with Dirty Shame & Acoustic Station."
+    },
+    {
+      "id": "cultivation-brewing",
+      "name": "Cultivation Brewing",
+      "type": "brewery",
+      "neighborhood": "Norcross",
+      "city": "Norcross",
+      "state": "GA",
+      "address": "650 Langford Dr, Norcross, GA 30071",
+      "phone": "(770) 696-5407",
+      "website": "https://www.cultivationbrew.com/",
+      "google_maps_url": "https://maps.google.com/?q=650+Langford+Dr,+Norcross,+GA+30071",
+      "notes": "Multiple bookings. Annual showcase with Dirty Shame."
+    },
+    {
+      "id": "echo-art-gallery",
+      "name": "Echo Art Gallery",
+      "type": "gallery",
+      "neighborhood": null,
+      "city": "Atlanta",
+      "state": "GA",
+      "address": null,
+      "phone": null,
+      "website": null,
+      "google_maps_url": null,
+      "notes": "Address/maps link needed — verify before next show listing. Show: 10/18/2025."
+    },
+    {
+      "id": "b-complex",
+      "name": "B Complex",
+      "type": "venue",
+      "neighborhood": null,
+      "city": "Atlanta",
+      "state": "GA",
+      "address": null,
+      "phone": null,
+      "website": "https://thebcomplex.com/about",
+      "google_maps_url": null,
+      "notes": "Hosted Community Christmas Market. Address/maps link needed."
+    },
+    {
+      "id": "because-coffee",
+      "name": "Because Coffee",
+      "type": "cafe",
+      "neighborhood": "Dawson Village",
+      "city": "Dawsonville",
+      "state": "GA",
+      "address": "240 Dawson Village Way N #100, Dawsonville, GA 30534",
+      "phone": "(706) 216-6278",
+      "website": "https://because.coffee/",
+      "google_maps_url": "https://maps.google.com/?q=240+Dawson+Village+Way+N,+Dawsonville,+GA+30534",
+      "notes": "Played 12/13/2025 Christmas show (9 AM–12 PM). Santa in attendance."
+    },
+    {
+      "id": "wild-heaven-avondale",
+      "name": "Wild Heaven Brewing",
+      "type": "brewery",
+      "neighborhood": "Avondale Estates",
+      "city": "Avondale Estates",
+      "state": "GA",
+      "address": "135B Maple St, Avondale Estates, GA 30002",
+      "phone": "(404) 228-2961",
+      "website": "https://wildheavenbeer.com/",
+      "google_maps_url": "https://maps.google.com/?q=135B+Maple+St,+Avondale+Estates,+GA+30002",
+      "notes": "Ongoing concert series. Typical slots: Fri eve 6:30 PM / Sat afternoon."
+    },
+    {
+      "id": "wild-heaven-toco-hills",
+      "name": "Wild Heaven Brewing",
+      "type": "brewery",
+      "neighborhood": "Toco Hills",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "2935B N Druid Hills Rd NE, Atlanta, GA 30329",
+      "phone": null,
+      "website": "https://wildheavenbeer.com/",
+      "google_maps_url": "https://maps.google.com/?q=2935B+N+Druid+Hills+Rd+NE,+Atlanta,+GA+30329",
+      "notes": "Ongoing concert series. Typical slot: Sun afternoon 3–6 PM."
+    },
+    {
+      "id": "gateway-park-grant-park",
+      "name": "Gateway Park at Grant Park",
+      "type": "park",
+      "neighborhood": "Grant Park",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "759 Boulevard SE, Atlanta, GA 30312",
+      "phone": null,
+      "website": null,
+      "google_maps_url": "https://maps.app.goo.gl/zqrCTAH2D9zjBjiH6",
+      "notes": "Outdoor park. Booked via Grant Park Conservancy. Typical slot: Sun morning 11 AM."
+    },
+    {
+      "id": "grant-central-pizza-east",
+      "name": "Grant Central Pizza East",
+      "type": "restaurant",
+      "neighborhood": "East Atlanta Village",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "1279 Glenwood Ave SE, Atlanta, GA 30316",
+      "phone": "(404) 627-0007",
+      "website": "https://www.grantcentraleast.com/",
+      "google_maps_url": "https://maps.google.com/?q=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316",
+      "notes": "Pizza restaurant in East Atlanta Village. First show 5/25/2026."
+    }
+  ]
+}
