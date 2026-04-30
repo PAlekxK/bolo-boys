@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "purpose": "Bolo Boys distribution list for calendar invites and show communications.",
+    "last_updated": "2026-04-30",
+    "notes": "Ante Up is a supergroup composed of members from Bolo Boys, Dirty Shame, and Acoustic Station. Not a separate contact — use the full distribution list for Ante Up shows."
+  },
+  "contacts": [
+    {
+      "name": "Nigel Wright",
+      "email": "nigelwrightmusic@gmail.com",
+      "role": "bolo-boys"
+    },
+    {
+      "name": "John Wilber",
+      "email": "j_wilber@comcast.net",
+      "role": "bolo-boys",
+      "notes": "Primary email"
+    },
+    {
+      "name": "John Wilber",
+      "email": "jwilber7626@gmail.com",
+      "role": "bolo-boys",
+      "notes": "Alternate email"
+    },
+    {
+      "name": "Paul Kirschenbauer",
+      "email": "paul.kirschenbauer@gmail.com",
+      "role": "bolo-boys"
+    },
+    {
+      "name": "Bolo Boys Band",
+      "email": "boloboysband@gmail.com",
+      "role": "bolo-boys"
+    },
+    {
+      "name": "Bolo Boys Calendar",
+      "email": "d4dbab624363304c7918a8b0a989bee659e411da71d59512964327e1b1ee2f72@group.calendar.google.com",
+      "role": "calendar",
+      "always_include": true,
+      "notes": "Always include on every invite unless explicitly noted otherwise"
+    },
+    {
+      "name": "Bryan Wilber",
+      "email": "bryanwilber@gmail.com",
+      "role": "acoustic-station-dirty-shame"
+    },
+    {
+      "name": "Naomi",
+      "email": "naomilavend@gmail.com",
+      "role": "acoustic-station-dirty-shame"
+    },
+    {
+      "name": "MM Wilber",
+      "email": "mmwilber@gmail.com",
+      "role": "acoustic-station-dirty-shame"
+    },
+    {
+      "name": "Paul Shaw",
+      "email": "paulshaw3@yahoo.com",
+      "role": "acoustic-station-dirty-shame"
+    },
+    {
+      "name": "Mel Shaw",
+      "email": "melshaw3@yahoo.com",
+      "role": "acoustic-station-dirty-shame"
+    },
+    {
+      "name": "James Wiggins",
+      "email": "evereman1@gmail.com",
+      "role": "acoustic-station-dirty-shame"
+    }
+  ]
+}
