@@ -88,11 +88,12 @@
       "venue_neighborhood": "East Atlanta Village",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316",
-      "supporting_acts": [],
+      "supporting_acts": ["Adam Klein"],
       "theme": "Pizza Night in East Atlanta",
       "invitation_text": "Monday night, East Atlanta Village, pizza, and Bolo Boys at 8 PM. If you've ever needed a reason to start your week right — here it is. Come hang.",
       "teaser": null,
-      "additional_details": null,
+      "additional_details": "Part of the Grant Ole Opry series. Adam Klein opens at 7 PM, Bolo Boys at 8 PM. Free and family friendly.",
+      "poster_url": "assets/Pictures/IMG_5345.jpeg",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Grant+Central+Pizza+East&dates=20260525T200000/20260525T220000&location=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316&details=Bolo+Boys+live+at+Grant+Central+Pizza+East+in+East+Atlanta+Village",
       "ics_url": null
     }
