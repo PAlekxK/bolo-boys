@@ -373,6 +373,15 @@
       margin-top: 2px;
     }
 
+    .event-theme-teaser {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
     .event-supporting {
       font-size: 0.73rem;
       color: var(--gray);
@@ -764,6 +773,7 @@
           <div class="event-divider-line"></div>
           <div class="event-info">
             <a class="event-venue-name" href="${ev.venue_google_maps_url || '#'}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${ev.venue_name}</a>
+            ${ev.theme ? `<div class="event-theme-teaser">${ev.theme}</div>` : ''}
             <div class="event-time-city">${ev.time}${loc ? ' &nbsp;·&nbsp; ' + loc : ''}</div>
             ${ev.supporting_acts && ev.supporting_acts.length ? `<div class="event-supporting">w/ ${ev.supporting_acts.join(', ')}</div>` : ''}
           </div>
