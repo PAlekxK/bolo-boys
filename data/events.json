@@ -96,6 +96,24 @@
       "poster_url": "assets/Pictures/IMG_5345.jpeg",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Grant+Central+Pizza+East&dates=20260525T200000/20260525T220000&location=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316&details=Bolo+Boys+live+at+Grant+Central+Pizza+East+in+East+Atlanta+Village",
       "ics_url": null
+    },
+    {
+      "id": "side-saddle-2026-05-31",
+      "date": "2026-05-31",
+      "day_of_week": "Sunday",
+      "time": "11:30 AM",
+      "venue_id": "side-saddle",
+      "venue_name": "Side Saddle Wine Saloon",
+      "venue_neighborhood": "Grant Park / Beltline",
+      "venue_city": "Atlanta, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
+      "supporting_acts": ["Dirty Shame"],
+      "theme": "One Year on the Beltline",
+      "invitation_text": "Side Saddle is turning one, and we couldn't be more honored to be part of the celebration. This Beltline gem has become one of our favorite places to play — and honestly just to be — since we first stepped onto their patio. Great wine, great people, and a space that feels like it was made for live music. Come join us Sunday morning and help us raise a glass to a full year of Side Saddle getting it exactly right.",
+      "teaser": null,
+      "additional_details": "Part of Side Saddle's 1-year anniversary weekend. Free and open to the public.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260531T113000/20260531T133000&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+Wine+Saloon+%E2%80%94+1-Year+Anniversary+Weekend",
+      "ics_url": null
     }
   ]
 }
