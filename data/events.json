@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Upcoming shows for the Bolo Boys website. Only upcoming shows are listed here — past shows are covered by social media.",
-    "last_updated": "2026-04-29",
+    "last_updated": "2026-05-07",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json."
   },
@@ -24,24 +24,6 @@
     "ics_url": null
   },
   "events": [
-    {
-      "id": "wild-heaven-avondale-2026-05-08",
-      "date": "2026-05-08",
-      "day_of_week": "Friday",
-      "time": "6:30 PM",
-      "venue_id": "wild-heaven-avondale",
-      "venue_name": "Wild Heaven Brewing",
-      "venue_neighborhood": null,
-      "venue_city": "Avondale Estates, GA",
-      "venue_google_maps_url": "https://maps.google.com/?q=135B+Maple+St,+Avondale+Estates,+GA+30002",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
-      "theme": "The Wild Heaven Kickoff",
-      "invitation_text": "We're kicking off a brand new concert series with the folks at Wild Heaven Brewing — and we couldn't be more excited. Grab a pint, grab a friend, and come join us at the Avondale location on a Friday night. Good beer, good vibes, live music. That's all you need.",
-      "teaser": null,
-      "additional_details": null,
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Wild+Heaven+Brewing&dates=20260508T183000/20260508T203000&location=135B+Maple+St,+Avondale+Estates,+GA+30002&details=Bolo+Boys+live+at+Wild+Heaven+Brewing+%E2%80%94+Avondale+Estates",
-      "ics_url": null
-    },
     {
       "id": "gateway-park-grant-park-2026-05-17",
       "date": "2026-05-17",
