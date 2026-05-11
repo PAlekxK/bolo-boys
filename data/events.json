@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Upcoming shows for the Bolo Boys website. Only upcoming shows are listed here — past shows are covered by social media.",
-    "last_updated": "2026-05-07",
+    "last_updated": "2026-05-11",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json."
   },
@@ -35,10 +35,11 @@
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=781+Boulevard+SE,+Atlanta,+GA+30312",
       "supporting_acts": [],
-      "theme": "Market Morning",
-      "invitation_text": "The Grant Park Conservancy is transforming the Boulevard Green into a community hub — vendors, music, programming, and free admission for all ages. We're proud to be playing the May edition of their new Market in the Park series, part of the same vision that's made the GPC Summer Shade Festival such a beloved Atlanta tradition. Come out Sunday, browse the market from 10 AM, and catch us live at 11.",
+      "theme": "Grant Park's Birthday",
+      "invitation_text": "The Grant Park Conservancy is throwing our favorite park a birthday party — and we're pleased to be providing the tunes. There's something for everyone — yoga at 1, an artist market, food and drinks, fresh flowers and produce, free kids activities, and live music from 11–1 on the Boulevard Green!",
       "teaser": null,
-      "additional_details": "Market in the Park runs 10 AM–3 PM. Free and open to all ages. Bolo Boys play at 11 AM.",
+      "additional_details": "Grant Park's birthday celebration. Market in the Park runs 10 AM–3 PM. Free and open to all ages. Bolo Boys play at 11 AM.",
+      "poster_url": "assets/posters/gateway-park-grant-park-2026-05-17.jpeg",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Grant+Park+Market+in+the+Park&dates=20260517T110000/20260517T140000&location=781+Boulevard+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+the+Grant+Park+Conservancy+Market+in+the+Park",
       "ics_url": null
     },
@@ -71,11 +72,11 @@
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316",
       "supporting_acts": ["Adam Klein"],
-      "theme": "Pizza Night in East Atlanta",
-      "invitation_text": "Monday night, East Atlanta Village, pizza, and Bolo Boys at 8 PM. If you've ever needed a reason to start your week right — here it is. Come hang.",
+      "theme": "Memorial Day at the Opry",
+      "invitation_text": "Memorial Day Monday in East Atlanta Village — long weekend, and the best kind of excuse to stay out for one more. Adam Klein at 7, Bolo Boys at 8. Come hang.",
       "teaser": null,
       "additional_details": "Part of the Grant Ole Opry series. Adam Klein opens at 7 PM, Bolo Boys at 8 PM. Free and family friendly.",
-      "poster_url": "assets/pictures/IMG_5345.jpeg",
+      "poster_url": "assets/posters/grant-central-pizza-2026-05-25.jpeg",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Grant+Central+Pizza+East&dates=20260525T200000/20260525T220000&location=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316&details=Bolo+Boys+live+at+Grant+Central+Pizza+East+in+East+Atlanta+Village",
       "ics_url": null
     },

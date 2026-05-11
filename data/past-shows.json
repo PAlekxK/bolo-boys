@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Historical show log for Bolo Boys. Completed shows move here when they pass. Upcoming shows live in events.json.",
-    "last_updated": "2026-04-29",
+    "last_updated": "2026-05-11",
     "schema_version": "1.0"
   },
   "past_shows": [
@@ -162,6 +162,20 @@
       "notes": "Second annual showcase at Cultivation Brewing."
     },
     {
+      "id": "capitol-view-holiday-market-2025-11-14",
+      "date": "2025-11-14",
+      "day_of_week": "Friday",
+      "time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "venue_id": "b-complex",
+      "venue_name": "B-Complex",
+      "venue_neighborhood": "Capitol View",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [],
+      "notes": "Capitol View Holiday Artisan Market (with Southwest neighbors). Live band, refreshments, tarot reading — adults only night.",
+      "poster_url": "assets/posters/capitol-view-holiday-market-2025-11-14.jpeg"
+    },
+    {
       "id": "echo-art-gallery-2025-10-18",
       "date": "2025-10-18",
       "day_of_week": "Saturday",
@@ -172,7 +186,8 @@
       "venue_neighborhood": null,
       "venue_city": "Atlanta, GA",
       "supporting_acts": [],
-      "notes": "Show date confirmed from Google Drive folder."
+      "notes": "Show date confirmed from Google Drive folder.",
+      "poster_url": "assets/posters/echo-art-gallery-2025-10-18.jpeg"
     }
   ]
 }
