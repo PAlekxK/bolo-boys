@@ -81,7 +81,8 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "supporting_acts": ["Dirty Shame", "Acoustic Station"],
-      "notes": "St. Paddy's Day celebration show. Green drinks, Irish trivia."
+      "notes": "St. Paddy's Day celebration show. Green drinks, Irish trivia.",
+      "poster_url": "assets/posters/side-saddle-2026-03-28.jpeg"
     },
     {
       "id": "wild-heaven-avondale-2026-03-20",
@@ -120,7 +121,8 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "supporting_acts": ["Dirty Shame"],
-      "notes": "Monthly showcase of Atlanta talent."
+      "notes": "Monthly showcase of Atlanta talent.",
+      "poster_url": "assets/posters/side-saddle-2026-01-30.jpeg"
     },
     {
       "id": "side-saddle-2025-12-19",
@@ -146,7 +148,8 @@
       "venue_neighborhood": "Dawson Village",
       "venue_city": "Dawsonville, GA",
       "supporting_acts": [],
-      "notes": "Christmas celebration event. Santa in attendance."
+      "notes": "Christmas celebration event. Santa in attendance.",
+      "poster_url": "assets/posters/because-coffee-2025-12-13.jpeg"
     },
     {
       "id": "cultivation-brewing-2025-12-12",
@@ -159,7 +162,8 @@
       "venue_neighborhood": "Norcross",
       "venue_city": "Norcross, GA",
       "supporting_acts": ["Dirty Shame"],
-      "notes": "Second annual showcase at Cultivation Brewing."
+      "notes": "Second annual showcase at Cultivation Brewing.",
+      "poster_url": "assets/posters/cultivation-brewing-2025-12-12.jpeg"
     },
     {
       "id": "capitol-view-holiday-market-2025-11-14",
