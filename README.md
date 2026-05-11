@@ -20,8 +20,9 @@ A static site (`index.html`) plus structured JSON data files. No build step. No 
 ├── assets/
 │   ├── hero.jpg            # Hero background
 │   ├── band-photo.jpg      # About-section band photo
-│   ├── live-1..4.jpg       # Carousel photos
-│   └── pictures/           # Show posters and other show-specific art
+│   ├── live-1..7.jpg       # Carousel photos
+│   ├── posters/            # Show flyers / posters (one per event, named <event-id>.jpeg)
+│   └── pictures/           # Other show-specific photography
 └── .gitignore              # Keeps CRM and macOS junk out of the repo
 ```
 
@@ -55,7 +56,8 @@ To check deploy status: GitHub repo → **Settings → Pages**.
 ## Asset conventions
 
 - **`assets/`** — site-wide images that ship with every page load (hero, band photo, carousel).
-- **`assets/pictures/`** — show-specific art (posters, flyers). Referenced from individual events in `events.json` via the optional `poster_url` field.
+- **`assets/posters/`** — show flyers and posters. One file per event, named after the event's `id` (e.g. `gateway-park-grant-park-2026-05-17.jpeg`). Referenced from `events.json` via the optional `poster_url` field. Build the archive over time so we always have a repository to draw from.
+- **`assets/pictures/`** — other show-specific photography (not posters).
 - **In-progress design files** (rough drafts, working PSDs, design experiments) should live outside the repo or in a folder added to `.gitignore`. Don't commit them — keep the repo lean.
 
 ## What's *not* in this repo

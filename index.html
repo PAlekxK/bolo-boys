@@ -514,6 +514,105 @@
       font-size: 0.9rem;
     }
 
+    /* ── Past Shows (collapsed disclosure) ───────────────────── */
+    .past-shows-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 28px 24px 40px;
+      border-top: 1px solid var(--divider);
+    }
+
+    .past-shows-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 700;
+      user-select: none;
+      padding: 6px 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .past-shows-summary::-webkit-details-marker { display: none; }
+    .past-shows-summary::marker { content: ''; }
+
+    .past-shows-chevron {
+      transition: transform 0.22s ease;
+    }
+
+    .past-shows-wrap[open] .past-shows-chevron {
+      transform: rotate(180deg);
+    }
+
+    .past-shows-content {
+      margin-top: 14px;
+    }
+
+    .past-month-group { margin-bottom: 10px; }
+
+    .past-month-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding: 14px 0 6px;
+      border-bottom: 1px solid var(--divider);
+      margin-bottom: 4px;
+    }
+
+    .past-show-row {
+      display: grid;
+      grid-template-columns: 44px 56px 1fr;
+      align-items: center;
+      padding: 8px 0;
+      font-size: 0.82rem;
+      gap: 10px;
+      line-height: 1.45;
+    }
+
+    .past-show-poster {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      object-fit: cover;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    .past-show-poster-placeholder {
+      width: 40px;
+      height: 40px;
+    }
+
+    .past-show-date {
+      color: var(--gray);
+      font-variant-numeric: tabular-nums;
+      font-size: 0.78rem;
+    }
+
+    .past-show-venue {
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+
+    .past-show-location {
+      color: var(--gray);
+    }
+
+    .past-show-supporting {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--gray);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
     /* ── Social / Connect links ─────────────────────────────── */
     .social-list {
       display: flex;
@@ -726,6 +825,9 @@
         <img src="assets/live-4.jpg" alt="Bolo Boys live" loading="lazy">
         <img src="assets/live-1.jpg" alt="Bolo Boys live" loading="lazy">
         <img src="assets/live-3.jpg" alt="Bolo Boys live" loading="lazy">
+        <img src="assets/live-5.jpg" alt="Bolo Boys live at Echo Art Gallery" loading="lazy">
+        <img src="assets/live-6.jpg" alt="Bolo Boys" loading="lazy">
+        <img src="assets/live-7.jpg" alt="Bolo Boys" loading="lazy">
       </div>
     </div>
     <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous photo">&#8249;</button>
@@ -733,6 +835,20 @@
     <div class="carousel-dots" id="carousel-dots"></div>
   </div>
 </div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PAST SHOWS (collapsed)
+     ════════════════════════════════════════════════════════════ -->
+<details class="past-shows-wrap" id="past-shows">
+  <summary class="past-shows-summary">
+    <span>Past Shows</span>
+    <svg class="past-shows-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </summary>
+  <div class="past-shows-content" id="past-shows-content">
+    <div class="shows-empty">Loading…</div>
+  </div>
+</details>
 
 
 <!-- ════════════════════════════════════════════════════════════
@@ -799,7 +915,7 @@
   async function loadShows() {
     const container = document.getElementById('shows-content');
     try {
-      const response = await fetch('data/events.json');
+      const response = await fetch('data/events.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error('Failed to load events');
       const data   = await response.json();
       const events = (data.events || []).filter(ev => ev.date >= new Date().toISOString().slice(0,10));
@@ -822,6 +938,56 @@
   }
 
   loadShows();
+
+  // ── Past shows (collapsed disclosure, lazy-rendered on open) ──
+  async function loadPastShows() {
+    const container = document.getElementById('past-shows-content');
+    try {
+      const response = await fetch('data/past-shows.json', { cache: 'no-cache' });
+      if (!response.ok) throw new Error('Failed to load past shows');
+      const data  = await response.json();
+      const shows = (data.past_shows || []).slice().sort((a, b) => b.date.localeCompare(a.date));
+      if (!shows.length) {
+        container.innerHTML = '<div class="shows-empty">No past shows logged yet.</div>';
+        return;
+      }
+      const grouped = {};
+      shows.forEach(s => {
+        const d   = new Date(s.date + 'T12:00:00');
+        const key = d.toLocaleString('en-US', { month: 'long', year: 'numeric' }).toUpperCase();
+        (grouped[key] = grouped[key] || []).push(s);
+      });
+      container.innerHTML = Object.entries(grouped).map(([month, items]) => `
+        <div class="past-month-group">
+          <div class="past-month-label">${month}</div>
+          ${items.map(s => {
+            const d       = new Date(s.date + 'T12:00:00');
+            const dateStr = d.toLocaleString('en-US', { month: 'short', day: 'numeric' });
+            const loc     = s.venue_neighborhood || s.venue_city || '';
+            const sup     = s.supporting_acts && s.supporting_acts.length
+              ? `<span class="past-show-supporting">w/ ${s.supporting_acts.join(', ')}</span>`
+              : '';
+            const poster  = s.poster_url
+              ? `<img class="past-show-poster" src="${s.poster_url}" alt="${s.venue_name} poster" loading="lazy">`
+              : `<span class="past-show-poster-placeholder"></span>`;
+            return `
+              <div class="past-show-row">
+                ${poster}
+                <span class="past-show-date">${dateStr}</span>
+                <span>
+                  <span class="past-show-venue">${s.venue_name}</span>${loc ? ` <span class="past-show-location">— ${loc}</span>` : ''}
+                  ${sup}
+                </span>
+              </div>`;
+          }).join('')}
+        </div>
+      `).join('');
+    } catch(e) {
+      container.innerHTML = '<div class="shows-empty">Past shows unavailable right now.</div>';
+    }
+  }
+
+  loadPastShows();
 
   // Carousel
   (function() {
