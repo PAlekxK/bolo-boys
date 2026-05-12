@@ -10,20 +10,18 @@ A static site (`index.html`) plus structured JSON data files. No build step. No 
 .
 ├── index.html              # The site (HTML + CSS + vanilla JS, single file)
 ├── README.md               # You are here
-├── CLAUDE.md               # Context for AI assistants working on this repo
 ├── data/
 │   ├── band.json           # Band facts: members, contacts, sound, scene
 │   ├── events.json         # Upcoming shows (rendered by index.html)
 │   ├── venues.json         # Venue library (referenced by events.json)
-│   ├── past-shows.json     # Past show archive
-│   └── distribution-list.json  # Show announcement distribution list
+│   └── past-shows.json     # Past show archive
 ├── assets/
 │   ├── hero.jpg            # Hero background
 │   ├── band-photo.jpg      # About-section band photo
 │   ├── live-1..7.jpg       # Carousel photos
 │   ├── posters/            # Show flyers / posters (one per event, named <event-id>.jpeg)
 │   └── pictures/           # Other show-specific photography
-└── .gitignore              # Keeps CRM and macOS junk out of the repo
+└── .gitignore              # Keeps private files and macOS junk out of the repo
 ```
 
 ## How to add or update a show
@@ -62,12 +60,18 @@ To check deploy status: GitHub repo → **Settings → Pages**.
 
 ## What's *not* in this repo
 
-- The CRM spreadsheet (`Bolo Boys CRM.xlsx`) — gitignored, lives locally only.
-- Personal calendar / email integration — handled outside the site via the band's shared Gmail (`boloboysband@gmail.com`) and shared Google Calendar.
+Private working files live in a sibling folder (`../Bolo Boys - Private/`), gitignored and never deployed:
+
+- `Bolo Boys CRM.xlsx` — booking and contact spreadsheet.
+- `data/distribution-list.json` — show announcement distribution list.
+- `docs/promotion-research.md` — internal booking and promotion strategy.
+- `CLAUDE.md` — AI assistant context (brand rules, tone, workflow).
+
+Personal calendar / email integration is handled outside the site via the band's shared Gmail (`boloboysband@gmail.com`) and shared Google Calendar.
 
 ## Working with AI assistants
 
-Context for AI tools (persona, tone, workflow rules) lives in `CLAUDE.md`. Structured band facts live in `data/band.json`. Both are committed to the repo so anyone — human or AI — can pick up the project from a fresh clone.
+Structured band facts live in `data/band.json` — committed to the repo so anyone (human or AI) can pick up the project. Additional context (persona, tone, workflow rules) lives in `CLAUDE.md` in the sibling private folder; AI tools working in this repo should be pointed at both.
 
 ## Contact
 

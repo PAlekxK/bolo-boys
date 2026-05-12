@@ -1,5 +1,19 @@
-# Internal working files — not part of the public site
+# Private working files — live in ../Bolo Boys - Private/, never deployed
 Bolo Boys CRM.xlsx
+*.xlsx
+data/distribution-list.json
+docs/promotion-research.md
+CLAUDE.md
+
+# Working design files
+design/
+*Redesign*.png
+*Redesign*.psd
+
+# Internal scratch directories
+.content/
+.engineering/
+.claude/
 
 # macOS
 .DS_Store
