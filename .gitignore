@@ -15,5 +15,8 @@ design/
 .engineering/
 .claude/
 
+# Generated artifacts — rebuilt from data/ via tools/
+bandsintown-upload.csv
+
 # macOS
 .DS_Store
