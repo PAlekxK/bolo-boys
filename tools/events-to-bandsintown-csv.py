@@ -11,17 +11,24 @@ EVENTS = REPO_ROOT / "data" / "events.json"
 VENUES = REPO_ROOT / "data" / "venues.json"
 SITE_URL = "https://www.boloboys.band"
 
-# Column order matches Bandsintown's documented bulk-upload template.
+# Column order matches Bandsintown's documented bulk-upload template
+# (Bandsintown_Bulk_Upload_Artists_Template.csv). Asterisks mark required fields.
 COLUMNS = [
-    "Venue", "Country", "Address", "City", "Region", "Postal Code",
-    "Start Date", "End Date", "Start Time", "End Time",
+    "Artist Name",
+    "Venue*", "Country*", "Address", "City*", "Region*", "Postal Code",
+    "Timezone*",
+    "Start Date* (yyyy-mm-dd)", "Start Time* (HH:MM)",
+    "End Date", "End Time",
     "Streaming Link",
     "Ticket Link", "Ticket Type", "Ticket Link 2", "Ticket Type 2",
     "On-Sale Date", "On-Sale Time",
-    "Lineup", "Event Name", "Description",
-    "Scheduled date", "Scheduled time",
-    "Timezone", "Artist Name", "Event Image",
+    "Lineup",
+    "Event Name", "Event Display Format", "Description",
+    "Schedule Date", "Schedule Time",
+    "Do Not Announce", "Setlist", "Event Image",
 ]
+
+ARTIST_NAME = "Bolo Boys"
 
 
 def parse_address(address_str):
@@ -64,15 +71,17 @@ def main():
         venue = venues_by_id.get(event["venue_id"], {})
         street, state, zipc = parse_address(venue.get("address", ""))
         writer.writerow({
-            "Venue": event["venue_name"],
-            "Country": "United States",
+            "Artist Name": ARTIST_NAME,
+            "Venue*": event["venue_name"],
+            "Country*": "United States",
             "Address": street,
-            "City": venue.get("city") or event["venue_city"].split(",")[0].strip(),
-            "Region": venue.get("state") or state,
+            "City*": venue.get("city") or event["venue_city"].split(",")[0].strip(),
+            "Region*": venue.get("state") or state,
             "Postal Code": zipc,
-            "Start Date": event["date"],
+            "Timezone*": "America/New_York",
+            "Start Date* (yyyy-mm-dd)": event["date"],
+            "Start Time* (HH:MM)": to_24h(event["time"]),
             "End Date": "",
-            "Start Time": to_24h(event["time"]),
             "End Time": "",
             "Streaming Link": "",
             "Ticket Link": SITE_URL,
@@ -83,11 +92,12 @@ def main():
             "On-Sale Time": "",
             "Lineup": ", ".join(event.get("supporting_acts") or []),
             "Event Name": event_name(event),
+            "Event Display Format": "",
             "Description": event.get("invitation_text") or "",
-            "Scheduled date": "",
-            "Scheduled time": "",
-            "Timezone": "America/New_York",
-            "Artist Name": "",
+            "Schedule Date": "",
+            "Schedule Time": "",
+            "Do Not Announce": "",
+            "Setlist": "",
             "Event Image": event_image(event),
         })
 
