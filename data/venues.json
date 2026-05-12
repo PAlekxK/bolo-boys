@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Venue library for Bolo Boys event management. Claude checks this before creating new event entries and updates it when new venues are added.",
-    "last_updated": "2026-04-29"
+    "last_updated": "2026-05-11"
   },
   "venues": [
     {
@@ -120,6 +120,44 @@
       "website": "https://www.grantcentraleast.com/",
       "google_maps_url": "https://maps.google.com/?q=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316",
       "notes": "Pizza restaurant in East Atlanta Village. First show 5/25/2026."
+    },
+    {
+      "id": "ideal-sports-bar",
+      "name": "Ideal Sports Bar",
+      "type": "sports bar",
+      "neighborhood": "Lakewood Heights",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "1953 Lakewood Ave SE, Atlanta, GA 30315",
+      "phone": "(404) 622-8206",
+      "website": "https://idealsportsbar.com/",
+      "google_maps_url": "https://maps.google.com/?q=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315",
+      "notes": "New venue as of 2026-05. First booking: June 26 + July 11, 2026. Official brand is 'Ideal Sportsbar' (one word); we normalize to 'Ideal Sports Bar' across the site.",
+      "summary": "A Lakewood Heights neighborhood bar with dive-bar bones and a family-friendly room — two pool tables inside, a rustic beer garden out back, and bartenders who actually know who's at the bar.",
+      "what_we_love": [
+        "the wings (Atlanta-best contenders)",
+        "the back beer-garden",
+        "regulars who'll talk to anyone",
+        "everyday-comfortable prices"
+      ],
+      "menu_highlights": [
+        "wings",
+        "burgers",
+        "Philly cheesesteaks",
+        "Turkey BLT",
+        "Turkey Club"
+      ],
+      "live_music_context": "Live bands sit in the regular rotation alongside bingo, karaoke, and holiday nights.",
+      "crowd_notes": "Multigenerational regulars. The kind of room where the bartender's part of the conversation, not just the order.",
+      "practical_notes": "Two pool tables inside, beer garden in back. Everyday food and drink prices run comfortable. Family-friendly.",
+      "last_researched": "2026-05-11",
+      "research_sources": [
+        "Yelp",
+        "Tripadvisor",
+        "Restaurantji",
+        "Postcard",
+        "idealsportsbar.com"
+      ]
     }
   ]
 }

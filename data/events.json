@@ -53,7 +53,11 @@
       "venue_neighborhood": null,
       "venue_city": "Avondale Estates, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=135B+Maple+St,+Avondale+Estates,+GA+30002",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "Saturday Session at Wild Heaven",
       "invitation_text": "We're back at Wild Heaven Avondale, this time on a Saturday at 4 PM. No agenda, no dress code — just a great way to ease into the evening. Bring the crew, grab a table, and let the afternoon happen.",
       "teaser": null,
@@ -71,7 +75,9 @@
       "venue_neighborhood": "East Atlanta Village",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316",
-      "supporting_acts": ["Adam Klein"],
+      "supporting_acts": [
+        "Adam Klein"
+      ],
       "theme": "Memorial Day at the Opry",
       "invitation_text": "Memorial Day Monday in East Atlanta Village — long weekend, and the best kind of excuse to stay out for one more. Adam Klein at 7, Bolo Boys at 8. Come hang.",
       "teaser": null,
@@ -90,12 +96,32 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame"],
+      "supporting_acts": [
+        "Dirty Shame"
+      ],
       "theme": "One Year on the Beltline",
       "invitation_text": "Side Saddle is turning one, and we couldn't be more honored to be part of the celebration. This Beltline gem has become one of our favorite places to play — and honestly just to be — since we first stepped onto their patio. Great wine, great people, and a space that feels like it was made for live music. Come join us Sunday morning and help us raise a glass to a full year of Side Saddle getting it exactly right.",
       "teaser": null,
       "additional_details": "Part of Side Saddle's 1-year anniversary weekend. Free and open to the public.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260531T113000/20260531T133000&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+Wine+Saloon+%E2%80%94+1-Year+Anniversary+Weekend",
+      "ics_url": null
+    },
+    {
+      "id": "ideal-sports-bar-2026-06-26",
+      "date": "2026-06-26",
+      "day_of_week": "Friday",
+      "time": "8:00 PM",
+      "venue_id": "ideal-sports-bar",
+      "venue_name": "Ideal Sports Bar",
+      "venue_neighborhood": "Lakewood Heights",
+      "venue_city": "Atlanta, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315",
+      "supporting_acts": [],
+      "theme": null,
+      "invitation_text": "Excited to be playing Ideal Sports Bar for the first time — Lakewood Heights spot, two pool tables and a beer garden out back. Friday night, full Bolo Boys mix. Come hang, shoot some pool.",
+      "teaser": null,
+      "additional_details": "First time playing this venue. Start time subject to confirmation.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260626/20260627&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+at+Ideal+Sports+Bar+in+Lakewood+Heights.+8+PM+start+%28subject+to+confirm%29.",
       "ics_url": null
     },
     {
@@ -108,12 +134,34 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "World Cup Saturday",
       "invitation_text": "It's the last day of World Cup group stage play, and a match is being hosted right here in Atlanta. The games are inside, the music is outside — come catch both at Side Saddle. Jerseys welcome.",
       "teaser": null,
       "additional_details": "World Cup Group Stage Final Day. Outdoor patio show — time subject to change based on weather.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260627/20260628&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%E2%80%94+World+Cup+Group+Stage+Final+Day.+Time+TBD.",
+      "ics_url": null
+    },
+    {
+      "id": "ideal-sports-bar-2026-07-11",
+      "date": "2026-07-11",
+      "day_of_week": "Saturday",
+      "time": "8:00 PM",
+      "venue_id": "ideal-sports-bar",
+      "venue_name": "Ideal Sports Bar",
+      "venue_neighborhood": "Lakewood Heights",
+      "venue_city": "Atlanta, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315",
+      "supporting_acts": [],
+      "theme": null,
+      "invitation_text": "Back at Ideal already — and ready for round two. Beer garden, pool tables, full Bolo Boys mix on a Saturday night.",
+      "teaser": null,
+      "additional_details": "Second show at Ideal Sports Bar. Start time subject to confirmation.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260711/20260712&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+at+Ideal+Sports+Bar+in+Lakewood+Heights.+8+PM+start+%28subject+to+confirm%29.",
       "ics_url": null
     },
     {
@@ -126,7 +174,11 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "World Cup Final After Party",
       "invitation_text": "The world's biggest game is today, and when the final whistle blows we'll be on the Side Saddle patio to help you celebrate — or commiserate. Come down after the match. Wear your jersey.",
       "teaser": null,
@@ -144,7 +196,11 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "Last Call for Summer",
       "invitation_text": "August is almost over and we're squeezing every last drop out of it. Come catch us on the Side Saddle patio before Georgia finally lets the summer go.",
       "teaser": null,
@@ -162,7 +218,11 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "Between the Festivals",
       "invitation_text": "DragonCon just wrapped and Shaky Knees is still two weeks out. In between, there's us — no wristband needed, no costume required. Just a good Saturday on the Side Saddle patio.",
       "teaser": null,
@@ -180,7 +240,11 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "Halloween Bash",
       "invitation_text": "It's Halloween on the Beltline. Costumes are encouraged, spooky songs are in the set, and Side Saddle will be the place to be. Come as you are — or come as someone else entirely.",
       "teaser": null,
@@ -198,7 +262,11 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "Pre-Turkey Warmup",
       "invitation_text": "Thanksgiving is next week and the holiday madness is about to hit. Get ahead of it — spend a Saturday afternoon at Side Saddle with good wine, good company, and live music before the travel and the family gatherings and all the rest of it.",
       "teaser": null,
@@ -216,7 +284,11 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=680+Hamilton+Ave+SE,+Atlanta,+GA+30312",
-      "supporting_acts": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
       "theme": "Christmas Party & One-Year Anniversary",
       "invitation_text": "We're marking one full year of live music at Side Saddle — and we couldn't have picked a better occasion than a Christmas party to celebrate. Come ring in the holiday season with us on the Beltline. It's been a great year. Let's toast it.",
       "teaser": null,
