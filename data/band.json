@@ -15,6 +15,12 @@
     "type": "Three-piece live band",
     "primary_locations": ["Atlanta, GA", "Macon, GA"],
     "roots": "North Georgia / Appalachia",
+    "service_area": {
+      "_purpose": "Cities and regions Bolo Boys actively books in. Distinct from primary_locations (where members live). Used for SEO areaServed signal and venue outreach scoping. Update when active booking interest expands.",
+      "cities": ["Atlanta, GA", "Macon, GA", "Jasper, GA", "Chattanooga, TN"],
+      "regions": ["Greater Atlanta", "North Georgia", "Southern Appalachia"],
+      "notes": "Active booking radius is roughly metro Atlanta extending to Macon (south), Jasper (north), and Chattanooga (across the Tennessee line)."
+    },
     "tagline": "High-energy singalongs, throwbacks & originals — live music built to bring people together."
   },
 
