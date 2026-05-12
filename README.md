@@ -1,10 +1,10 @@
 # Bolo Boys Website
 
-Mobile-first single-page website for [Bolo Boys](https://www.instagram.com/boloboysband/) — an Atlanta- and Macon-based three-piece live band. Hosted on GitHub Pages.
+Mobile-first single-page website for [Bolo Boys](https://www.instagram.com/boloboysband/) — an Atlanta- and Macon-based three-piece live band. Live at [boloboys.band](https://boloboys.band).
 
 ## What this repo is
 
-A static site (`index.html`) plus structured JSON data files. No build step. No framework. Push to `main`, GitHub Pages deploys.
+A static site (`index.html`) plus structured JSON data files. No build step. No framework. Push to `main`, Cloudflare Pages deploys.
 
 ```
 .
@@ -29,7 +29,7 @@ A static site (`index.html`) plus structured JSON data files. No build step. No 
 1. Edit `data/events.json` — add a new entry or modify an existing one. Schema example is at the top of the file under `_schema_example`.
 2. If the venue isn't already in `data/venues.json`, add it there too.
 3. Preview locally (see below).
-4. Commit and push to `main`. GitHub Pages will redeploy in ~1 minute.
+4. Commit and push to `main`. Cloudflare Pages will redeploy in ~1 minute.
 
 The site fetches `data/events.json` at runtime, so edits to event data take effect as soon as the deploy lands — no other files need to change.
 
@@ -47,9 +47,11 @@ Then open `http://localhost:8000` in your browser. Stop the server with `Ctrl+C`
 
 ## How the site deploys
 
-GitHub Pages serves from the `main` branch. Every push to `main` triggers a redeploy (typically under a minute). There is no build step.
+Cloudflare Pages is connected to this repo's `main` branch. Every push to `main` triggers a redeploy at [boloboys.band](https://boloboys.band) (typically under a minute). There is no build step.
 
-To check deploy status: GitHub repo → **Settings → Pages**.
+To check deploy status: Cloudflare dashboard → **Workers & Pages** → `bolo-boys` project → **Deployments**.
+
+Pushes to non-`main` branches get a preview URL (e.g. `<branch>.bolo-boys.pages.dev`) so changes can be inspected before they're merged to production.
 
 ## Asset conventions
 
