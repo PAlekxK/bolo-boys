@@ -13,6 +13,7 @@ design/
 # Internal scratch directories
 .content/
 .engineering/
+.research/
 .claude/
 
 # Generated artifacts — rebuilt from data/ via tools/
