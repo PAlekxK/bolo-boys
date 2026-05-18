@@ -4,6 +4,23 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
+## 2026-05-18 (later) — Band update email + master song book audit
+
+- **Drafted + sent** Bolo Boys update email to John + Nigel covering: 5/17 Grant Park recap (Skyler / Summer Shade gazebo opportunity / fall Market series / pending GPC post), Summer Shade prioritization + August Side Saddle reschedule (asks for everyone's August availability), 5/25 setlist build (Boys Don't Cry, Roadrunner, Muddy Knees, Glow as seeds), Side Saddle poster review with Drive link, and Ideal shows detail-confirmation ask for John's point of contact.
+- **Audited** `Bolo Boys Master Song and Gig Book.xlsx` on `boloboysband@gmail.com` Drive (file ID `1NkTzrLHH9hzooOT7x8R-HZ0ZKwgGZgOg`). Cross-referenced against Nigel's tab-share emails and Paul's originals docs. Findings: 6 songs missing from the Song List sheet entirely (Boys Don't Cry, 21 Questions, Kids, Roadrunner, Glow, Muddy Knees); 1 row (TN Stud) in master but Tabs cell empty despite Nigel's PDF chart from 2025-11-13; 22 other rows have empty Tabs as a general gap.
+- **Delivered** `~/Desktop/bolo-song-list-additions.csv` — 6 ready-to-paste rows matching the master sheet's column schema. Paul executes the paste; Drive MCP can't update xlsx in place.
+
+Side-effects Paul confirmed: band update email sent to `jcwilber4340@gmail.com` + `nigelwrightmusic@gmail.com`.
+
+## 2026-05-18 — GSC notifications triaged (no code changes)
+
+- **Reviewed** three Google Search Console notifications for boloboys.band: welcome email (5/13), Events structured-data "missing fields" (5/14), and page-indexing reasons (5/18).
+- **Verified** against live site (`curl https://www.boloboys.band`) that the JSON-LD already emits `description`, `organizer`, `endDate`, and `image` for every event — the 5/14 GSC report is a stale crawl from before the 5/06 restructure. No edits needed to `tools/events-to-jsonld.py`.
+- **Confirmed** the 5/18 indexing reports cover only `http://boloboys.band/` and `http://www.boloboys.band/` — both correctly redirect/canonicalize to the HTTPS canonical via Cloudflare. Working as intended; validation already running in GSC.
+- **Outstanding** (no action this session): the 11 events without `poster_url` still fall back to `band-photo.jpg` for `image` — see [[project_bolo_boys_open_threads]].
+
+Side-effects Paul confirmed: none — diagnostic only.
+
 ## 2026-05-17 (latest) — Scene-events calendar + propose-dates workflow
 
 - **Added** `data/scene-events.json` — Atlanta-area `competing_events` (Summer Shade, VHP, GP Porchfest, East Atlanta Strut, Inman Park Festival, DragonCon, Shaky Knees, Sweetwater 420, Atlanta Pride, Decatur Book Festival, Decatur Craft Beer Festival, Music Midtown hiatus) and `boost_windows` (Memorial Day, July 4th, Labor Day, Halloween-on-Saturday, Thanksgiving, holiday season, St. Patrick's, Cinco de Mayo, spring + fall patio sweet spots). Plus `venue_specific_notes` for Side Saddle, Wild Heaven Avondale, Grant Central Pizza East.
