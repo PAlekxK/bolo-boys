@@ -1,0 +1,272 @@
+{
+  "_meta": {
+    "purpose": "Atlanta-area events and patterns Bolo Boys plans around. Two categories: competing_events (drain audience away — porchfests, festivals, conventions) and boost_windows (holidays, three-day weekends, and patterns that increase demand). Used by the Pipeline status review to flag scene-level conflicts and by the Propose-dates workflow to identify good candidate dates for venue negotiations.",
+    "last_updated": "2026-05-17",
+    "schema_version": "1.0",
+    "audience_overlap_levels": {
+      "high": "Major draw that significantly pulls audience away from competing shows in the same scene/neighborhood radius.",
+      "medium": "Notable draw; competes for some audience but not catastrophic.",
+      "low": "Niche or geographically distant; minimal overlap with Bolo Boys audiences."
+    },
+    "boost_levels": {
+      "high": "Strong demand window — people are out, looking for entertainment, three-day weekends, marquee holiday.",
+      "medium": "Soft demand bump — single holiday day, themed-show opportunity.",
+      "low": "Background-positive — neutral-to-slightly-good."
+    }
+  },
+  "competing_events": [
+    {
+      "id": "summer-shade-festival",
+      "name": "Summer Shade Festival",
+      "neighborhood": "Grant Park",
+      "city": "Atlanta, GA",
+      "pattern": "Last weekend of August (Sat–Sun)",
+      "next_known_start": "2026-08-29",
+      "next_known_end": "2026-08-30",
+      "audience_overlap": "high",
+      "scope": ["Grant Park", "Beltline", "Cabbagetown", "East Atlanta"],
+      "notes": "Major draw for Grant Park / Beltline / Cabbagetown audiences. GPC's flagship music festival. Active opportunity for Bolo Boys (gazebo stage) per 2026-05-17 conversation with Josh and Skyler. Avoid scheduling competing shows in these neighborhoods this weekend."
+    },
+    {
+      "id": "virginia-highland-porchfest",
+      "name": "Virginia Highland Porchfest",
+      "neighborhood": "Virginia Highland",
+      "city": "Atlanta, GA",
+      "pattern": "Mid-May Saturday (typically 3rd Saturday)",
+      "next_known_start": "2026-05-16",
+      "next_known_end": "2026-05-16",
+      "audience_overlap": "high",
+      "scope": ["Virginia Highland", "Poncey-Highland", "Midtown", "intown Atlanta"],
+      "notes": "Huge intown draw — ticketed starting 2026. Pulls heavily from Atlanta intown audiences. Avoid scheduling competing shows in intown neighborhoods this Saturday."
+    },
+    {
+      "id": "grant-park-porchfest",
+      "name": "Grant Park Porchfest",
+      "neighborhood": "Grant Park",
+      "city": "Atlanta, GA",
+      "pattern": "Late March Saturday (3rd annual was 2026-03-21)",
+      "next_known_start": "2026-03-21",
+      "next_known_end": "2026-03-21",
+      "audience_overlap": "high",
+      "scope": ["Grant Park", "Beltline", "Cabbagetown", "Summerhill"],
+      "notes": "Free neighborhood porchfest. Bolo Boys is watching for the 2027 application window — see venue-contacts.json. Avoid competing shows in Grant Park / Beltline this Saturday."
+    },
+    {
+      "id": "east-atlanta-strut",
+      "name": "East Atlanta Strut",
+      "neighborhood": "East Atlanta Village",
+      "city": "Atlanta, GA",
+      "pattern": "Late September Saturday (includes a porchfest component)",
+      "next_known_start": "2026-09-26",
+      "next_known_end": "2026-09-26",
+      "audience_overlap": "high",
+      "scope": ["East Atlanta Village", "Ormewood Park", "Grant Park", "Kirkwood"],
+      "notes": "EAV neighborhood festival with parade, market, and porchfest performances. Strong intown draw. Avoid competing shows in EAV / Grant Park axis this Saturday."
+    },
+    {
+      "id": "inman-park-festival",
+      "name": "Inman Park Festival & Tour of Homes",
+      "neighborhood": "Inman Park",
+      "city": "Atlanta, GA",
+      "pattern": "Late April Sat–Sun (54th annual was 2026-04-25/26)",
+      "next_known_start": "2026-04-25",
+      "next_known_end": "2026-04-26",
+      "audience_overlap": "high",
+      "scope": ["Inman Park", "Old Fourth Ward", "Poncey-Highland", "intown"],
+      "notes": "Long-running neighborhood festival with parade and tour of homes. Heavy intown turnout. Avoid competing shows in intown neighborhoods this weekend."
+    },
+    {
+      "id": "dragoncon",
+      "name": "DragonCon",
+      "neighborhood": "Downtown",
+      "city": "Atlanta, GA",
+      "pattern": "Labor Day weekend (Thu–Mon)",
+      "next_known_start": "2026-09-03",
+      "next_known_end": "2026-09-07",
+      "audience_overlap": "medium",
+      "scope": ["Downtown Atlanta", "intown bars/restaurants citywide"],
+      "notes": "Pop-culture convention. Brings ~80k+ attendees to downtown ATL. Audience is convention-focused but spills out to intown bars/restaurants in the evenings. Already referenced in Side Saddle 9/12 invitation copy."
+    },
+    {
+      "id": "shaky-knees",
+      "name": "Shaky Knees Music Festival",
+      "neighborhood": "Old Fourth Ward / Piedmont Park",
+      "city": "Atlanta, GA",
+      "pattern": "Historically May; moved to September starting 2026 (Sep 18–20)",
+      "next_known_start": "2026-09-18",
+      "next_known_end": "2026-09-20",
+      "audience_overlap": "high",
+      "scope": ["Piedmont Park", "Old Fourth Ward", "Midtown", "intown live-music audience"],
+      "notes": "Major rock/indie festival. Direct overlap with Bolo Boys' core live-music audience. Already referenced in Side Saddle 9/12 invitation copy as 'shoulder weekend.'"
+    },
+    {
+      "id": "sweetwater-420-fest",
+      "name": "SweetWater 420 Fest",
+      "neighborhood": "Shirley Clarke Franklin Park (relocated from Centennial Olympic Park)",
+      "city": "Atlanta, GA",
+      "pattern": "Mid-April Fri–Sat",
+      "next_known_start": "2026-04-17",
+      "next_known_end": "2026-04-18",
+      "audience_overlap": "medium",
+      "scope": ["intown Atlanta live-music audience"],
+      "notes": "Multi-day music + culture festival from SweetWater Brewing. Mid-April timing."
+    },
+    {
+      "id": "atlanta-pride",
+      "name": "Atlanta Pride Festival & Parade",
+      "neighborhood": "Midtown / Piedmont Park",
+      "city": "Atlanta, GA",
+      "pattern": "Columbus Day / Indigenous Peoples' Day weekend",
+      "next_known_start": "2026-10-10",
+      "next_known_end": "2026-10-11",
+      "audience_overlap": "high",
+      "scope": ["Midtown", "Piedmont Park", "intown LGBTQ+ community citywide"],
+      "notes": "Major civic event. Heavy intown weekend draw. Parade is Sunday Oct 11. Venues in/near Midtown may benefit from spillover; venues far from Midtown compete for the audience."
+    },
+    {
+      "id": "decatur-book-festival",
+      "name": "Decatur Book Festival",
+      "neighborhood": "Downtown Decatur",
+      "city": "Decatur, GA",
+      "pattern": "Early October Fri–Sat",
+      "next_known_start": "2026-10-02",
+      "next_known_end": "2026-10-03",
+      "audience_overlap": "medium",
+      "scope": ["Decatur", "Avondale Estates", "Kirkwood", "intown east"],
+      "notes": "Large independent book festival. Pulls intown east audiences to Decatur. Worth flagging for Wild Heaven Avondale Saturday shows."
+    },
+    {
+      "id": "decatur-craft-beer-festival",
+      "name": "Decatur Craft Beer Festival",
+      "neighborhood": "Downtown Decatur",
+      "city": "Decatur, GA",
+      "pattern": "Early May Saturday",
+      "next_known_start": "2026-05-02",
+      "next_known_end": "2026-05-02",
+      "audience_overlap": "medium",
+      "scope": ["Decatur", "Avondale Estates", "Kirkwood", "intown east"],
+      "notes": "Beer-festival audience overlaps with brewery-show audiences. Worth flagging for Wild Heaven Avondale Saturday shows."
+    },
+    {
+      "id": "music-midtown",
+      "name": "Music Midtown",
+      "neighborhood": "Piedmont Park / Midtown",
+      "city": "Atlanta, GA",
+      "pattern": "Historically September; on hiatus since 2024 due to Georgia gun-law dispute",
+      "next_known_start": null,
+      "next_known_end": null,
+      "audience_overlap": "high",
+      "scope": ["Midtown", "Piedmont Park", "intown live-music audience"],
+      "notes": "No 2026 event confirmed. Watch for return announcements — if revived, would be a high-overlap September weekend."
+    }
+  ],
+  "boost_windows": [
+    {
+      "id": "memorial-day-weekend-2026",
+      "name": "Memorial Day weekend",
+      "pattern": "Last Monday of May (3-day weekend Fri–Mon)",
+      "next_known_start": "2026-05-23",
+      "next_known_end": "2026-05-25",
+      "boost_level": "high",
+      "notes": "Three-day weekend; people are out and entertainment-seeking. Monday evening shows work especially well because many have the day off — Bolo Boys' Grant Central Pizza 5/25 Memorial Day show is a planned example."
+    },
+    {
+      "id": "july-4th-weekend-2026",
+      "name": "Independence Day weekend",
+      "pattern": "July 4th (Saturday in 2026, so natural 3-day weekend Fri–Sun)",
+      "next_known_start": "2026-07-03",
+      "next_known_end": "2026-07-05",
+      "boost_level": "high",
+      "notes": "July 4th lands on Saturday in 2026 — full weekend draw. Patio venues especially benefit. Many people travel, so urban-staying-home crowd may be smaller but more concentrated."
+    },
+    {
+      "id": "labor-day-weekend-2026",
+      "name": "Labor Day weekend",
+      "pattern": "First Monday of September (3-day weekend Sat–Mon)",
+      "next_known_start": "2026-09-05",
+      "next_known_end": "2026-09-07",
+      "boost_level": "medium",
+      "notes": "Three-day weekend boost — but overlaps with DragonCon downtown. Net effect for intown patio venues is mixed: locals are out, but the DragonCon-tourist surge skews to downtown/Midtown bars."
+    },
+    {
+      "id": "halloween-2026",
+      "name": "Halloween weekend",
+      "pattern": "Oct 31 (Saturday in 2026)",
+      "next_known_start": "2026-10-30",
+      "next_known_end": "2026-11-01",
+      "boost_level": "high",
+      "notes": "Halloween on a Saturday is the strongest possible alignment. Costume-show opportunity. Bolo Boys' Side Saddle 10/31 Halloween Bash is on the calendar."
+    },
+    {
+      "id": "thanksgiving-week-2026",
+      "name": "Thanksgiving week / weekend",
+      "pattern": "Thanksgiving Thu (Nov 26 in 2026); long weekend Wed–Sun",
+      "next_known_start": "2026-11-25",
+      "next_known_end": "2026-11-29",
+      "boost_level": "medium",
+      "notes": "Wed before Thanksgiving (Nov 25) is historically one of the biggest bar nights of the year. Weekend after is family-heavy and quieter. Pre-Turkey shows the weekend before (mid-Nov Sat) also draw well — Bolo Boys' Side Saddle 11/21 is a planned example."
+    },
+    {
+      "id": "holiday-season-2026",
+      "name": "Holiday season",
+      "pattern": "Mid-December through New Year's Day",
+      "next_known_start": "2026-12-15",
+      "next_known_end": "2027-01-01",
+      "boost_level": "high",
+      "notes": "Holiday parties, end-of-year energy, and people in town for family. Side Saddle 12/19 Christmas Party is the planned example."
+    },
+    {
+      "id": "st-patricks-day-2026",
+      "name": "St. Patrick's Day",
+      "pattern": "March 17 (Tuesday in 2026 — bar boost on the day; the preceding weekend can also lift)",
+      "next_known_start": "2026-03-17",
+      "next_known_end": "2026-03-17",
+      "boost_level": "medium",
+      "notes": "Beer-heavy holiday — strong boost for breweries (Wild Heaven, Cultivation). Weekend before may also lift if bars run themed events."
+    },
+    {
+      "id": "cinco-de-mayo-2026",
+      "name": "Cinco de Mayo",
+      "pattern": "May 5 (Tuesday in 2026)",
+      "next_known_start": "2026-05-05",
+      "next_known_end": "2026-05-05",
+      "boost_level": "low",
+      "notes": "Modest weeknight boost — venues with Mexican-themed programming see the lift. Not a primary booking driver for Bolo Boys."
+    },
+    {
+      "id": "patio-shoulder-season-spring",
+      "name": "Spring patio sweet spot",
+      "pattern": "Mid-April through late May (Atlanta)",
+      "next_known_start": "2026-04-15",
+      "next_known_end": "2026-05-31",
+      "boost_level": "high",
+      "notes": "Best Atlanta patio weather of the year. Outdoor venues (Side Saddle, Wild Heaven patio) hit peak attractiveness. Schedule weather-dependent shows here when possible."
+    },
+    {
+      "id": "patio-shoulder-season-fall",
+      "name": "Fall patio sweet spot",
+      "pattern": "Mid-September through late October (Atlanta)",
+      "next_known_start": "2026-09-15",
+      "next_known_end": "2026-10-31",
+      "boost_level": "high",
+      "notes": "Second-best patio window. Outdoor venues benefit. Side Saddle's October Halloween show + November pre-Turkey show both ride this window."
+    }
+  ],
+  "venue_specific_notes": [
+    {
+      "venue_id": "side-saddle",
+      "best_day_patterns": ["Saturday afternoon (1y anniversary, World Cup Saturday, Halloween)", "Saturday evening (6 PM)", "Sunday brunch (11:30 AM)"],
+      "weather_caveat": "Outdoor patio — weather-dependent. Lean spring + fall windows for high-confidence dates."
+    },
+    {
+      "venue_id": "wild-heaven-avondale",
+      "best_day_patterns": ["Saturday afternoon (4 PM)", "Friday evening"],
+      "weather_caveat": "Indoor + outdoor seating; less weather-dependent than full-patio venues."
+    },
+    {
+      "venue_id": "grant-central-pizza-east",
+      "best_day_patterns": ["Monday evening (Grant Ole Opry series — Memorial Day Monday is a planned example)"],
+      "weather_caveat": "Indoor; year-round."
+    }
+  ]
+}
