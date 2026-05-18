@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Upcoming shows for the Bolo Boys website. Only upcoming shows are listed here — past shows are covered by social media.",
-    "last_updated": "2026-05-11",
+    "last_updated": "2026-05-18",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json."
   },
@@ -113,7 +113,8 @@
       "teaser": null,
       "additional_details": "Part of Side Saddle's 1-year anniversary weekend. Free and open to the public.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260531T113000/20260531T133000&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%E2%80%94+1-Year+Anniversary+Weekend",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     },
     {
       "id": "ideal-sports-bar-2026-06-26",
@@ -157,7 +158,8 @@
       "teaser": null,
       "additional_details": "World Cup Group Stage Final Day. Outdoor patio show — time subject to change based on weather.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260627/20260628&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%E2%80%94+World+Cup+Group+Stage+Final+Day.+Time+TBD.",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     },
     {
       "id": "ideal-sports-bar-2026-07-11",
@@ -201,7 +203,8 @@
       "teaser": null,
       "additional_details": "World Cup Final after-party. Game kicks off at 3 PM — we go on after. Time TBD.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260719/20260720&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%E2%80%94+World+Cup+Final+After+Party.+Game+at+3+PM,+music+after.",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     },
     {
       "id": "side-saddle-2026-08-29",
@@ -225,7 +228,8 @@
       "teaser": null,
       "additional_details": "Outdoor patio show — time subject to change based on weather.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260829/20260830&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%E2%80%94+Last+Call+for+Summer.+Time+TBD.",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     },
     {
       "id": "side-saddle-2026-09-12",
@@ -249,7 +253,8 @@
       "teaser": null,
       "additional_details": "Outdoor patio show — time subject to change based on weather. (Dragon Con 9/4–9/7 | Shaky Knees 9/18–9/20)",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260912/20260913&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle.+Time+TBD.",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     },
     {
       "id": "side-saddle-2026-10-31",
@@ -273,7 +278,8 @@
       "teaser": null,
       "additional_details": "Costumes encouraged. Outdoor patio show — time subject to change based on weather.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle+%E2%80%94+Halloween+Bash&dates=20261031/20261101&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+Halloween+Bash+at+Side+Saddle.+Costumes+encouraged.+Time+TBD.",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     },
     {
       "id": "side-saddle-2026-11-21",
@@ -297,7 +303,8 @@
       "teaser": null,
       "additional_details": "Outdoor patio show — time subject to change based on weather.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20261121/20261122&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%E2%80%94+Week+before+Thanksgiving.+Time+TBD.",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     },
     {
       "id": "side-saddle-2026-12-19",
@@ -321,7 +328,8 @@
       "teaser": null,
       "additional_details": "One-year anniversary of the Bolo Boys concert series at Side Saddle. Outdoor patio show — time subject to change based on weather.",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle+%E2%80%94+Christmas+Party&dates=20261219/20261220&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+Christmas+Party+at+Side+Saddle+%E2%80%94+One-Year+Anniversary.+Time+TBD.",
-      "ics_url": null
+      "ics_url": null,
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg"
     }
   ]
 }
