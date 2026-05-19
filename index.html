@@ -1095,6 +1095,69 @@
 
     #poster-modal-close:hover { background: var(--green-faint); }
 
+    /* ── Original Music sub-section (inside About) ──────────────── */
+    .originals-block {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--divider);
+    }
+
+    .originals-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .original-track {
+      margin-bottom: 18px;
+    }
+
+    .original-track:last-child { margin-bottom: 0; }
+
+    .original-track-embed {
+      margin-bottom: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .original-track-embed iframe {
+      width: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .original-track-credit {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: var(--charcoal);
+      margin: 0 0 8px;
+    }
+
+    .original-track-streaming {
+      font-size: 0.78rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    .original-track-streaming a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .original-track-streaming a:hover { text-decoration: underline; }
+
+    .originals-coming {
+      font-size: 0.85rem;
+      color: var(--gray);
+      font-style: italic;
+      margin-top: 12px;
+    }
+
     /* ── Social / Connect links ─────────────────────────────── */
     .social-list {
       display: flex;
@@ -1316,6 +1379,13 @@
     <img src="assets/band-photo.jpg" alt="Bolo Boys" loading="lazy">
   </div>
   <p class="band-photo-caption">Nigel (vocals, guitar) &nbsp;&middot;&nbsp; John (vocals, guitar) &nbsp;&middot;&nbsp; Paul (vocals, bass)</p>
+
+  <div class="originals-block" id="originals">
+    <div class="originals-label">Original Music</div>
+    <div id="originals-content">
+      <div class="originals-empty">Loading…</div>
+    </div>
+  </div>
 </section>
 
 
@@ -1393,14 +1463,15 @@
   const MAP_ICON_SM = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
   const CHEVRON = `<svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
 
-  // ── Scene collaborators — name → IG URL lookup, loaded once from data/band.json ──
+  // ── Band data — loaded once from data/band.json, drives multiple sections ──
+  let bandData = null;
   const sceneCollaborators = {};
-  const sceneCollaboratorsReady = (async () => {
+  const bandDataReady = (async () => {
     try {
       const r = await fetch('data/band.json', { cache: 'no-cache' });
       if (!r.ok) return;
-      const d = await r.json();
-      const allCoBills = [...(d.scene_collaborators || []), ...(d.guest_co_bills || [])];
+      bandData = await r.json();
+      const allCoBills = [...(bandData.scene_collaborators || []), ...(bandData.guest_co_bills || [])];
       allCoBills.forEach(c => {
         if (c && c.name && c.instagram) {
           sceneCollaborators[c.name.toLowerCase()] = c.instagram;
@@ -1466,7 +1537,7 @@
   async function loadShows() {
     const container = document.getElementById('shows-content');
     try {
-      await sceneCollaboratorsReady;
+      await bandDataReady;
       const response = await fetch('data/events.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error('Failed to load events');
       const data   = await response.json();
@@ -1494,7 +1565,7 @@
   // ── Past shows (collapsed disclosure, lazy-rendered on open) ──
   async function loadPastShows() {
     const container = document.getElementById('past-shows-content');
-    await sceneCollaboratorsReady;
+    await bandDataReady;
     try {
       const response = await fetch('data/past-shows.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error('Failed to load past shows');
@@ -1545,6 +1616,45 @@
   }
 
   loadPastShows();
+
+  // ── Original Music (inside About section) ────────────────────
+  const STREAMING_LABELS = {
+    spotify: 'Spotify',
+    apple_music: 'Apple Music',
+    amazon_music: 'Amazon Music',
+    bandcamp: 'Bandcamp',
+    youtube_music: 'YouTube Music',
+    tidal: 'Tidal',
+    deezer: 'Deezer'
+  };
+
+  async function loadOriginals() {
+    const container = document.getElementById('originals-content');
+    await bandDataReady;
+    const originals = (bandData && bandData.originals) || [];
+    if (!originals.length) {
+      container.innerHTML = '<div class="originals-coming">More original music coming as it gets recorded.</div>';
+      return;
+    }
+    const tracksHtml = originals.map(t => {
+      const embed = t.spotify_track_id
+        ? `<div class="original-track-embed"><iframe src="https://open.spotify.com/embed/track/${t.spotify_track_id}?utm_source=generator" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`
+        : '';
+      const streamingLinks = Object.entries(t.streaming || {})
+        .filter(([_, url]) => url)
+        .map(([service, url]) => `<a href="${url}" target="_blank" rel="noopener">${STREAMING_LABELS[service] || service}</a>`)
+        .join(' &nbsp;&middot;&nbsp; ');
+      return `
+        <div class="original-track">
+          ${embed}
+          <p class="original-track-credit">"${t.title}" — ${t.performer_credit}</p>
+          ${streamingLinks ? `<div class="original-track-streaming">Also on: ${streamingLinks}</div>` : ''}
+        </div>`;
+    }).join('');
+    container.innerHTML = tracksHtml + `<div class="originals-coming">More Bolo Boys originals are getting recorded as we go.</div>`;
+  }
+
+  loadOriginals();
 
   // Carousel
   (function() {
