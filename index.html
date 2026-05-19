@@ -1158,6 +1158,48 @@
       margin-top: 12px;
     }
 
+    /* ── "Who we play with" credibility panel ────────────────────── */
+    .scene-block {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--divider);
+    }
+
+    .scene-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .scene-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+
+    .scene-list li { margin-bottom: 4px; }
+    .scene-list li:last-child { margin-bottom: 0; }
+    .scene-list strong { font-weight: 700; }
+
+    .scene-list a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .scene-list a:hover { text-decoration: underline; }
+
+    .scene-list .scene-note {
+      color: var(--gray);
+      font-style: italic;
+    }
+
     /* ── Social / Connect links ─────────────────────────────── */
     .social-list {
       display: flex;
@@ -1385,6 +1427,11 @@
     <div id="originals-content">
       <div class="originals-empty">Loading…</div>
     </div>
+  </div>
+
+  <div class="scene-block" id="scene">
+    <div class="scene-label">Who we play with</div>
+    <ul class="scene-list" id="scene-list"></ul>
   </div>
 </section>
 
@@ -1655,6 +1702,29 @@
   }
 
   loadOriginals();
+
+  // ── "Who we play with" credibility panel (inside About) ──────
+  async function loadScenePanel() {
+    const list = document.getElementById('scene-list');
+    const block = document.getElementById('scene');
+    await bandDataReady;
+    const collaborators = ((bandData && bandData.scene_collaborators) || []).filter(c => c && c.name);
+    if (!collaborators.length) {
+      if (block) block.style.display = 'none';
+      return;
+    }
+    list.innerHTML = collaborators.map(c => {
+      if (c.instagram && c.instagram_handle) {
+        return `<li><strong>${c.name}</strong> &nbsp;&middot;&nbsp; <a href="${c.instagram}" target="_blank" rel="noopener">${c.instagram_handle}</a></li>`;
+      }
+      if (c.note) {
+        return `<li><strong>${c.name}</strong> <span class="scene-note">— ${c.note}</span></li>`;
+      }
+      return `<li><strong>${c.name}</strong></li>`;
+    }).join('');
+  }
+
+  loadScenePanel();
 
   // Carousel
   (function() {
