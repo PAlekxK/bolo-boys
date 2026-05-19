@@ -4,7 +4,13 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — Polish + operationalization: scope archive, guest co-bills, label rename
+## 2026-05-19 (latest) — Press scanner expanded beyond editorial press
+
+- **`tools/press-scan.py`** — 5 new query categories: `social-ig` (`site:instagram.com`), `social-fb` (`site:facebook.com`), `aggregator` ×2 (general Atlanta-calendar query + music-aggregator site-restricted query), and `local-press` (Creative Loafing / AJC / Atlanta Magazine / Atlanta INtown-style show picks). Total queries went 12 → 17 across 7 tags.
+- **`tools/press-scan-excludes.json`** — added 6 noise URL substrings caught in the first scan: `boloboys.official`, `bolomusicgroup.com`, `bolobeer.com`, `bolapizza.com`, `bolothedjwebsite`, `michaelbolwaire`.
+- **`CLAUDE.md` Press scanner section** — added a "Sources the scanner covers" subsection listing the 7 tag categories and the "Around the web" label. Added a "Paste-and-wire workflow" subsection documenting the manual path (when Paul sees a tag in the wild, paste the URL and we wire it the same way the Adam Klein 5/25 IG post was wired). Added an IG/FB caveat to workflow step 4 (those platforms aggressively block WebFetch — surface URLs for manual confirmation when verification fails).
+
+## 2026-05-19 — Polish + operationalization: scope archive, guest co-bills, label rename
 
 - **Archived `bolo-boys-dashboard-briefing.md`** — moved from public root to `Bolo Boys - Private/_archive/` with a header note explaining what's been absorbed (per-show phase tracking, venue+contact CRM, on-demand pipeline review pattern) vs. what's still gap (promo checklist, weather, BIT sync). Kept the original briefing intact for future reference.
 - **`scans/README.md`** added to the private repo — orientation for the press-scan report directory: what scans are, how they flow (queries → filter → verify → group → report → promote to `external_links`), why reports stay as history, and cadence pointing back to the lifecycle phases.
