@@ -4,7 +4,16 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — Mobile UX polish for event cards + poster lightbox
+## 2026-05-19 (latest) — Mobile event cards: consistent height, time always-on, business-resolving maps links
+
+- **Two-line collapsed card with fixed slots** — venue name (line 1, ellipsis if it overflows) + one secondary signal (line 2). Cards now stack at consistent height regardless of which optional fields a show has. `min-height: 80px` on mobile (<480px).
+- **Secondary line always leads with the time** as a charcoal-bold prefix — `8 PM · w/ Adam Klein`, `11:30 AM · w/ Dirty Shame`, `8 PM · Lakewood Heights`. Time is never hidden. Trailing context follows precedence: **co-bill > theme > city**. `8:00 PM` collapses to `8 PM` for display; `11:30 AM` stays intact.
+- **Maps icon restored** to the mobile collapsed-card action cluster. Mobile cluster now reads: location pin (directions) → calendar → chevron. Icons scale to 36×36 at <480px and 34×34 at <400px to keep the info column wide enough for the venue name.
+- **Maps URLs now resolve to the business**, not just the address — every `?q=<address>` in `venues.json` and `events.json` was rewritten to `?q=<venue name>,<address>`. 9 venues + 12 events updated programmatically. Gateway Park's existing `maps.app.goo.gl` short link preserved (already place-pinned). Bandsintown CSV regenerated to stay in sync.
+- **Expanded view backfills** time + neighborhood + supporting acts so nothing displaced from the collapsed line is lost. Theme still renders as the green-uppercase section header at the start of the expanded panel.
+- **`.ux-reviews/2026-05-19-mobile-card-consistency.json`** — follow-up review from the ux-expert agent (re-engaged after Paul's reaction to the first iteration). Captures the "card-height was actually a composition problem" reframe.
+
+## 2026-05-19 — Mobile UX polish for event cards + poster lightbox
 
 - **Past-shows posters un-cropped** — `.past-show-poster` went from 40×40 square crop (which center-cut the hand-illustrated lettering on portrait posters) to 32px wide × auto height. Past Shows now actually surfaces the band's accumulated identity instead of indistinguishable colored chips.
 - **Mobile collapsed cards tightened** — under 480px: poster thumb hidden, calendar icon hidden (redundant with the expanded-view pill), date block narrowed (42px → 36px), DOM dropped to 1.5rem, divider line removed. Chevron is the lone signifier on the right; venue info gets the breathing room.
