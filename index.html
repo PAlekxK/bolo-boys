@@ -1044,6 +1044,57 @@
 
     .past-show-news a:hover { text-decoration: underline; }
 
+    /* ── Poster expand modal ────────────────────────────────────── */
+    .event-poster-thumb,
+    .event-poster-expanded,
+    .past-show-poster {
+      cursor: zoom-in;
+    }
+
+    #poster-modal {
+      border: none;
+      background: transparent;
+      padding: 0;
+      max-width: 95vw;
+      max-height: 95vh;
+      overflow: visible;
+    }
+
+    #poster-modal::backdrop {
+      background: rgba(0, 0, 0, 0.85);
+      cursor: zoom-out;
+    }
+
+    #poster-modal img {
+      max-width: 95vw;
+      max-height: 95vh;
+      display: block;
+      border-radius: 6px;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    #poster-modal-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: white;
+      border: none;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--charcoal);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    #poster-modal-close:hover { background: var(--green-faint); }
+
     /* ── Social / Connect links ─────────────────────────────── */
     .social-list {
       display: flex;
@@ -1313,10 +1364,27 @@
 </footer>
 
 
+<!-- Poster expand modal — opened via openPosterModal() in the script below -->
+<dialog id="poster-modal" onclick="if (event.target === this) closePosterModal();">
+  <button id="poster-modal-close" aria-label="Close" onclick="closePosterModal()">&times;</button>
+  <img id="poster-modal-img" alt="Show poster">
+</dialog>
+
+
 <script>
   // Toggle expand/collapse on event cards
   function toggleCard(id) {
     document.getElementById(id).classList.toggle('open');
+  }
+
+  // Poster expand modal
+  function openPosterModal(src) {
+    if (!src) return;
+    document.getElementById('poster-modal-img').src = src;
+    document.getElementById('poster-modal').showModal();
+  }
+  function closePosterModal() {
+    document.getElementById('poster-modal').close();
   }
 
   // ── Dynamic event rendering ──────────────────────────────────
@@ -1372,13 +1440,13 @@
             ${ev.supporting_acts && ev.supporting_acts.length ? `<div class="event-supporting">w/ ${linkSupportingActs(ev.supporting_acts)}</div>` : ''}
           </div>
           <div class="event-actions">
-            ${ev.poster_url ? `<img class="event-poster-thumb" src="${ev.poster_url}" alt="Show poster" onclick="event.stopPropagation()">` : ''}
+            ${ev.poster_url ? `<img class="event-poster-thumb" src="${ev.poster_url}" alt="Show poster" onclick="event.stopPropagation(); openPosterModal('${ev.poster_url}')">` : ''}
             <a class="icon-btn" href="${ev.google_calendar_url || '#'}" target="_blank" rel="noopener" aria-label="Add to calendar" title="Add to calendar" onclick="event.stopPropagation()">${CAL_ICON}</a>
             <button class="icon-btn" aria-label="Show details" onclick="event.stopPropagation(); toggleCard('${id}')">${CHEVRON}</button>
           </div>
         </div>
         <div class="event-expanded">
-          ${ev.poster_url ? `<img class="event-poster-expanded" src="${ev.poster_url}" alt="Show poster">` : ''}
+          ${ev.poster_url ? `<img class="event-poster-expanded" src="${ev.poster_url}" alt="Show poster" onclick="openPosterModal('${ev.poster_url}')">` : ''}
           ${ev.theme ? `<div class="event-theme-label">${ev.theme}</div>` : ''}
           ${ev.invitation_text ? `<p class="event-invite">${ev.invitation_text}</p>` : ''}
           ${ev.external_links && ev.external_links.length ? `
@@ -1456,7 +1524,7 @@
               ? `<span class="past-show-news">Around the web: ${s.external_links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.source}</a>`).join(' · ')}</span>`
               : '';
             const poster  = s.poster_url
-              ? `<img class="past-show-poster" src="${s.poster_url}" alt="${s.venue_name} poster" loading="lazy">`
+              ? `<img class="past-show-poster" src="${s.poster_url}" alt="${s.venue_name} poster" loading="lazy" onclick="openPosterModal('${s.poster_url}')">`
               : `<span class="past-show-poster-placeholder"></span>`;
             return `
               <div class="past-show-row">
