@@ -4,7 +4,17 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-18 (latest) — Poster wiring across Side Saddle + Wild Heaven shows
+## 2026-05-18 (latest) — Market in the Park Phase 5 cleanup + stale-events guard
+
+- **Phase 5 transformation** for `gateway-park-grant-park-2026-05-17` (Grant Park Market in the Park, 2026-05-17). Moved from `events.json` to `past-shows.json` with lighter schema. `end_time: 1:00 PM` (matches the publicly advertised band slot of "11–1" in the invitation text). Ran propagators — JSON-LD now at 12 entries (was 13), BIT CSV regenerated without the past event.
+- **Why it fell through:** Phase 5 was purely manual; nothing flagged the past-dated entry. No propagator runs between the show date and now, so no opportunity to catch it.
+- **Added** `tools/check-stale-events.py` — scans `events.json` for past-dated entries and prints a Phase 5 reminder; exits non-zero if drift exists.
+- **Wired** the check into `tools/run-propagators.sh` as a non-blocking warning at the end (catches drift any time propagators run, which happens on any events.json edit).
+- **Added** a "Before working with shows" section to `CLAUDE.md` (local, gitignored) instructing Claude to run the same check at the start of any session that touches events, past-shows, or pipeline review (catches drift even when no events.json edit is happening).
+
+Side-effects Paul confirmed: none — site/data changes only.
+
+## 2026-05-18 (mid) — Poster wiring across Side Saddle + Wild Heaven shows
 
 - **Added** `assets/posters/side-saddle-summer-series-2026.jpeg` — referenced by all 8 Side Saddle summer-series events in events.json (file was missing from a prior session's events.json update).
 - **Added** `assets/posters/side-saddle-2026-02-27.png` and wired it into the Feb 27 Side Saddle past-show entry (only Side Saddle past show that had been missing a poster).
