@@ -4,7 +4,19 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — Press scanner built + first scan run
+## 2026-05-19 (latest) — Polish + operationalization: scope archive, guest co-bills, label rename
+
+- **Archived `bolo-boys-dashboard-briefing.md`** — moved from public root to `Bolo Boys - Private/_archive/` with a header note explaining what's been absorbed (per-show phase tracking, venue+contact CRM, on-demand pipeline review pattern) vs. what's still gap (promo checklist, weather, BIT sync). Kept the original briefing intact for future reference.
+- **`scans/README.md`** added to the private repo — orientation for the press-scan report directory: what scans are, how they flow (queries → filter → verify → group → report → promote to `external_links`), why reports stay as history, and cadence pointing back to the lifecycle phases.
+- **Press scan wired into the show lifecycle** — Phase 2 (Announce) step 13 and Phase 5 (Post-show) step 6 now both close with a press scan. CLAUDE.md "Press scanner" Cadence section rewritten to lead with that standard practice.
+- **`guest_co_bills` array added to `data/band.json`** — sibling to `scene_collaborators`, for one-time / occasional co-bills we still want to link to but don't want to elevate to the recurring-scene tier. **Adam Klein** is the first entry. `index.html` loader now merges both arrays into one lookup so supporting-acts linking works across both.
+- **Label rename: "In the news" → "Around the web"** — better reflects that the field covers articles, listings, IG promo posts, etc. (not just editorial press). One-line CSS-adjacent change in `index.html`.
+- **May 25 Grant Central Pizza event updated:**
+  - `external_links` now carries Adam Klein's Grant Ole Opry debut IG post (linking back to Bolo Boys).
+  - `additional_details` updated to reflect that Adam plays as a duo with Adam Poulin (fiddle) at 7 PM.
+- **Memory** — `project_bolo_boys_open_threads.md` refreshed with shipped-this-session items and stale dates corrected (Halfway Crooks 25 days, Subrena Clark 33 days).
+
+## 2026-05-19 — Press scanner built + first scan run
 
 - **New** `tools/press-scan.py` — deterministic query generator. Reads `data/band.json`, `data/events.json`, `data/past-shows.json`. Builds disambiguated queries (band-member names, per-venue, per-co-bill). Dedupes identical queries while preserving associated `event_ids` and contexts. `--pretty` flag for human-readable output.
 - **New** `tools/press-scan-excludes.json` — disambiguation filter: blocked domains, URL substrings, and title/snippet keywords for recurring noise (Dierks Bentley's prank "Bolo Boys Bluegrass Band", German hip-hop Boloboys, BOLO the DJ, Bolo's Sports Bar, etc.) plus positive-signal keywords.

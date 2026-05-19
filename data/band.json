@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Source-of-truth band facts: members, contact, sound, originals, scene. Read by the website (future), referenced by AI for any band-facing copy, and migrated from the retired project-context.json.",
-    "last_updated": "2026-05-19",
+    "last_updated": "2026-05-19 (Adam Klein added to scene_collaborators)",
     "schema_version": "1.0"
   },
 
@@ -112,6 +112,16 @@
       "instagram": null,
       "instagram_handle": null,
       "note": "Supergroup composed of members from Bolo Boys, Dirty Shame, and Acoustic Station. No separate social presence — render as plain text."
+    }
+  ],
+
+  "guest_co_bills": [
+    {
+      "name": "Adam Klein",
+      "instagram": "https://www.instagram.com/adamkleinmusic/",
+      "instagram_handle": "@adamkleinmusic",
+      "shows": ["grant-central-pizza-2026-05-25"],
+      "note": "Atlanta singer-songwriter. One-time co-bill (Grant Ole Opry, 2026-05-25). Linked on the site via supporting_acts, but not a recurring scene relationship — kept separate from scene_collaborators."
     }
   ],
 
