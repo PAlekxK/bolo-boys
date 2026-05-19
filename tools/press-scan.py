@@ -71,6 +71,37 @@ def build_queries():
                 "context": f"Co-bill: {name}",
             })
 
+    # ── Social platforms (public posts Google has indexed) ─────────
+    queries.append({
+        "query": '"Bolo Boys" site:instagram.com',
+        "tag": "social-ig",
+        "context": "Public IG posts/tags Google has indexed — venue promos, co-bill announcements, fan tags",
+    })
+    queries.append({
+        "query": '"Bolo Boys" site:facebook.com',
+        "tag": "social-fb",
+        "context": "FB pages, posts, and events mentioning the band",
+    })
+
+    # ── Local event aggregators / calendars ────────────────────────
+    queries.append({
+        "query": '"Bolo Boys" Atlanta event calendar',
+        "tag": "aggregator",
+        "context": "Discover Atlanta, Patch, neighborhood blogs, GPC newsletter pickups",
+    })
+    queries.append({
+        "query": '"Bolo Boys" site:eventbrite.com OR site:bandsintown.com OR site:songkick.com',
+        "tag": "aggregator",
+        "context": "Music-event aggregator listings (includes the band's own BIT page — filter as appropriate)",
+    })
+
+    # ── Local alt-press / show picks ───────────────────────────────
+    queries.append({
+        "query": '"Bolo Boys" Atlanta concert OR show OR "live music"',
+        "tag": "local-press",
+        "context": "Creative Loafing, AJC, Atlanta Magazine, Atlanta INtown show picks and listings",
+    })
+
     # ── Per upcoming show ──────────────────────────────────────────
     today = datetime.date.today().isoformat()
     upcoming = sorted(
