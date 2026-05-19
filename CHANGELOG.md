@@ -4,6 +4,16 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
+## 2026-05-18 (latest) — Poster wiring across Side Saddle + Wild Heaven shows
+
+- **Added** `assets/posters/side-saddle-summer-series-2026.jpeg` — referenced by all 8 Side Saddle summer-series events in events.json (file was missing from a prior session's events.json update).
+- **Added** `assets/posters/side-saddle-2026-02-27.png` and wired it into the Feb 27 Side Saddle past-show entry (only Side Saddle past show that had been missing a poster).
+- **Added** `assets/posters/side-saddle-2025-12-19.png` and wired it into the Dec 19 Side Saddle past-show entry; also added Dirty Shame to that entry's `supporting_acts` (per the poster lineup).
+- **Added** `assets/posters/wild-heaven.png` (Bolo Boys / Dirty Shame / Acoustic Station gig flyer, Avondale patio) and wired it into all six Wild Heaven entries — five past (`wild-heaven-toco-hills-2026-04-26`, `-04-12`, `-03-29`; `wild-heaven-avondale-2026-04-04`, `-03-20`) and one upcoming (`wild-heaven-avondale-2026-05-23`).
+- **Ran** `tools/run-propagators.sh` after the events.json edit. Regenerated JSON-LD (13 entries), bumped sitemap `<lastmod>`, regenerated `bandsintown-upload.csv`.
+
+Side-effects Paul confirmed: none — site/data changes only.
+
 ## 2026-05-18 (later) — Band update email + master song book audit
 
 - **Drafted + sent** Bolo Boys update email to John + Nigel covering: 5/17 Grant Park recap (Skyler / Summer Shade gazebo opportunity / fall Market series / pending GPC post), Summer Shade prioritization + August Side Saddle reschedule (asks for everyone's August availability), 5/25 setlist build (Boys Don't Cry, Roadrunner, Muddy Knees, Glow as seeds), Side Saddle poster review with Drive link, and Ideal shows detail-confirmation ask for John's point of contact.
