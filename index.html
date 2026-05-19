@@ -1332,7 +1332,8 @@
       const r = await fetch('data/band.json', { cache: 'no-cache' });
       if (!r.ok) return;
       const d = await r.json();
-      (d.scene_collaborators || []).forEach(c => {
+      const allCoBills = [...(d.scene_collaborators || []), ...(d.guest_co_bills || [])];
+      allCoBills.forEach(c => {
         if (c && c.name && c.instagram) {
           sceneCollaborators[c.name.toLowerCase()] = c.instagram;
         }
@@ -1381,7 +1382,7 @@
           ${ev.theme ? `<div class="event-theme-label">${ev.theme}</div>` : ''}
           ${ev.invitation_text ? `<p class="event-invite">${ev.invitation_text}</p>` : ''}
           ${ev.external_links && ev.external_links.length ? `
-            <div class="event-news-label">In the news</div>
+            <div class="event-news-label">Around the web</div>
             <ul class="event-news-list">
               ${ev.external_links.map(link => `<li><a href="${link.url}" target="_blank" rel="noopener">${link.source}</a> — ${link.title}</li>`).join('')}
             </ul>
@@ -1452,7 +1453,7 @@
               ? `<span class="past-show-supporting">w/ ${linkSupportingActs(s.supporting_acts)}</span>`
               : '';
             const news    = s.external_links && s.external_links.length
-              ? `<span class="past-show-news">In the news: ${s.external_links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.source}</a>`).join(' · ')}</span>`
+              ? `<span class="past-show-news">Around the web: ${s.external_links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.source}</a>`).join(' · ')}</span>`
               : '';
             const poster  = s.poster_url
               ? `<img class="past-show-poster" src="${s.poster_url}" alt="${s.venue_name} poster" loading="lazy">`

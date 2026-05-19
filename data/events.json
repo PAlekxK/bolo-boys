@@ -68,10 +68,18 @@
       "theme": "Memorial Day at the Opry",
       "invitation_text": "Memorial Day Monday in East Atlanta Village — long weekend, and the best kind of excuse to stay out for one more. Adam Klein at 7, Bolo Boys at 8. Come hang.",
       "teaser": null,
-      "additional_details": "Part of the Grant Ole Opry series. Adam Klein opens at 7 PM, Bolo Boys at 8 PM. Free and family friendly.",
+      "additional_details": "Part of the Grant Ole Opry series. Adam Klein and Adam Poulin (fiddle) open at 7 PM as a duo, Bolo Boys close at 8 PM. Free and family friendly.",
       "poster_url": "assets/posters/grant-central-pizza-2026-05-25.jpeg",
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Grant+Central+Pizza+East&dates=20260525T200000/20260525T220000&location=1279+Glenwood+Ave+SE,+Atlanta,+GA+30316&details=Bolo+Boys+live+at+Grant+Central+Pizza+East+in+East+Atlanta+Village",
-      "ics_url": null
+      "ics_url": null,
+      "external_links": [
+        {
+          "title": "Adam Klein's Grant Ole Opry debut — Bolo Boys closing the night",
+          "source": "@adamkleinmusic (Instagram)",
+          "url": "https://www.instagram.com/p/DYcypOuFW9v/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "side-saddle-2026-05-31",
