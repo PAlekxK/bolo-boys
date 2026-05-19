@@ -4,7 +4,15 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — "Who we play with" credibility panel (tier a) live
+## 2026-05-19 (latest) — Visual design principles doc + Ideal Sports Bar logo banked
+
+- **`design/principles.md`** created — decodes the Side Saddle poster visual system (two-color on black, single iconic illustration, fixed furniture: logo TR / QR BR / lineup ticker bottom), names the rules, includes Firefly/Photoshop prompt scaffolding, and ends with the Ideal Sports Bar open thread for handoff to the next session.
+- **`assets/misc/ideal-sports-bar-logo.png`** — third-party venue logo banked from a desktop drop; renamed to match the "Ideal Sports Bar" normalization. Logo is retro varsity red+yellow; future posters should contrast the palette, not match it.
+- **CLAUDE.md** — one-line pointer added in the "When in doubt" section: "About visual design (posters, flyers, illustration prompts): see `design/principles.md`."
+- **Memory** — open-threads entry for the Ideal poster gap updated with the tabled decision, the three design directions surfaced, and the pointer to `design/principles.md`.
+- **Decision tabled:** whether to actually make Ideal Sports Bar posters (2026-06-26 + 2026-07-11). Three directions on the table; brainstorm captured in the principles doc.
+
+## 2026-05-19 — "Who we play with" credibility panel (tier a) live
 
 - **Permanent scene panel** added at the end of the About section (under Original Music). Shows the recurring collaborators from `band.json` `scene_collaborators` — Dirty Shame and Acoustic Station with linked IG handles, Ante Up with a one-line description (supergroup of the three bands). Adam Klein deliberately excluded — he's a one-time guest, captured in `guest_co_bills`, not the recurring scene.
 - **Ante Up `note` shortened** to display-worthy content ("Supergroup of Bolo Boys + Dirty Shame + Acoustic Station.") — the prior version mixed display copy with implementation guidance ("render as plain text") that belongs in code.
