@@ -115,6 +115,25 @@
     }
   ],
 
+  "originals": [
+    {
+      "title": "The Cowboy's Life",
+      "writer": "Nigel Wright",
+      "performer_credit": "Nigel's solo release; played live by Bolo Boys.",
+      "release_year": 2026,
+      "spotify_track_id": "0z03lWCF9HIqwJlTk3gC69",
+      "streaming": {
+        "spotify": "https://open.spotify.com/track/0z03lWCF9HIqwJlTk3gC69",
+        "apple_music": "https://music.apple.com/us/album/the-cowboys-life-single/1894171327",
+        "amazon_music": "https://www.amazon.com/The-Cowboys-Life/dp/B0GXK1ZVWM",
+        "bandcamp": "https://nigelwrightmusic.bandcamp.com/track/the-cowboys-life",
+        "youtube_music": null,
+        "tidal": null,
+        "deezer": null
+      }
+    }
+  ],
+
   "guest_co_bills": [
     {
       "name": "Adam Klein",
