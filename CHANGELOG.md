@@ -4,6 +4,32 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
+## 2026-05-19 (latest) — Press scanner built + first scan run
+
+- **New** `tools/press-scan.py` — deterministic query generator. Reads `data/band.json`, `data/events.json`, `data/past-shows.json`. Builds disambiguated queries (band-member names, per-venue, per-co-bill). Dedupes identical queries while preserving associated `event_ids` and contexts. `--pretty` flag for human-readable output.
+- **New** `tools/press-scan-excludes.json` — disambiguation filter: blocked domains, URL substrings, and title/snippet keywords for recurring noise (Dierks Bentley's prank "Bolo Boys Bluegrass Band", German hip-hop Boloboys, BOLO the DJ, Bolo's Sports Bar, etc.) plus positive-signal keywords.
+- **New** `CLAUDE.md` "Press scanner" section — playbook: trigger patterns, 8-step workflow (generate queries → run searches → filter noise → verify candidates → group by event → write report → wire to site → surface for commit), disambiguation discipline, when-to-update excludes, cadence (on-demand, not scheduled).
+- **First scan executed** — 12 unique queries via WebSearch, candidate hits verified via WebFetch. Report at `Bolo Boys - Private/scans/2026-05-19-press-scan.md`.
+- **New verified mention** — Caren West PR's 2026-05-13 Market in the Park birthday-bash article quotes the band by name. Added to `gateway-park-grant-park-2026-05-17` past-show's `external_links` alongside the Aha! Connection entry.
+- **Notable negatives** — AJC, The Atlanta 100, and ATLNCS all have Market in the Park articles but don't name the band (April-dated, predate the band's involvement). Captured in the scan report for memory.
+- **Memory updated** — `project_bolo_boys_name_disambiguation.md` lives in auto-memory and is referenced from the CLAUDE.md playbook.
+
+## 2026-05-19 — Supporting acts now link to co-bill bands' Instagrams
+
+- **Canonical data home** — added `scene_collaborators` block to `data/band.json` (Dirty Shame, Acoustic Station, Ante Up). Ante Up captured with `instagram: null` and a note explaining it's a supergroup with no separate social presence — render-as-plain-text signal.
+- **Site rendering** — `index.html` fetches `data/band.json` once on load, builds a name → IG-URL lookup, and `linkSupportingActs()` wraps known names in anchor tags. Unknown names stay plain text. CSS gives the anchor green color + italic inheritance to match the surrounding `.event-supporting` / `.past-show-supporting` styling.
+- **Single source of truth cleanup** — removed the duplicate `co_bill_bands` block I'd briefly added to `Bolo Boys - Private/data/distribution-list.json`. Notes in the private file now point at the public band.json as the canonical home for co-bill IG handles.
+- **Verified in a local browser session** — Wild Heaven 5/23 card renders "w/ Dirty Shame, Acoustic Station, Ante Up" with the first two linked and Ante Up in plain italic gray.
+
+## 2026-05-19 — Per-event `external_links` ("In the news") on site cards
+
+- **Schema** — added optional `external_links` array on event entries (`events.json` and `past-shows.json`). Each entry: `{title, source, url, date}`. Empty/missing renders nothing. Goal: contextual proof per show — articles, listings, mentions — embedded where bookers and visitors actually look.
+- **Rendering** — `index.html` now renders the block in two places: expanded card view for upcoming events ("In the news" label + `Source — Title` list) and inline below each past-show row ("In the news: Source · Source").
+- **Backfill** — Market in the Park (`gateway-park-grant-park-2026-05-17`) now links The Aha! Connection's 2026-05-12 birthday-bash coverage. Verified in a local browser session against `127.0.0.1:8765`.
+- **Propagators** — ran cleanly; JSON-LD / sitemap / BIT CSV all rebuilt.
+
+Side-effects Paul confirmed: none yet — pending Paul's approval to commit.
+
 ## 2026-05-18 (latest) — Market in the Park Phase 5 cleanup + stale-events guard
 
 - **Phase 5 transformation** for `gateway-park-grant-park-2026-05-17` (Grant Park Market in the Park, 2026-05-17). Moved from `events.json` to `past-shows.json` with lighter schema. `end_time: 1:00 PM` (matches the publicly advertised band slot of "11–1" in the invitation text). Ran propagators — JSON-LD now at 12 entries (was 13), BIT CSV regenerated without the past event.

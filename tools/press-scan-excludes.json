@@ -1,0 +1,66 @@
+{
+  "$schema_version": "1",
+  "purpose": "Disambiguation filter for press-scanner candidate results. 'Bolo Boys' is a polluted search term — other entities (Dierks Bentley's prank band, a German hip-hop collective) dominate generic queries. Filter out their results when sifting WebSearch output. See ~/.claude/projects/-Users-paulkirschenbauer/memory/project_bolo_boys_name_disambiguation.md.",
+  "last_updated": "2026-05-19",
+
+  "blocked_domains": [
+    "theboot.com",
+    "tasteofcountry.com",
+    "de.wikipedia.org",
+    "wptv.com"
+  ],
+
+  "blocked_url_substrings": [
+    "dierks-bentley",
+    "bolo-boys-bluegrass",
+    "boloboys2k20",
+    "bolothedj",
+    "/de/artist/boloboys",
+    "open.spotify.com/intl-de"
+  ],
+
+  "blocked_title_or_snippet_keywords": [
+    "Dierks Bentley",
+    "Bolo Boys Bluegrass",
+    "Bolotape",
+    "Makko",
+    "Beslik",
+    "BOLO THE DJ",
+    "BOLO the DJ",
+    "B.O.L.O",
+    "BOLO Official",
+    "Deutschrap",
+    "German rap",
+    "German hip-hop",
+    "cloud-rap",
+    "emo-trap",
+    "Bolo the Entertainer"
+  ],
+
+  "positive_signal_keywords": [
+    "Nigel Wright",
+    "Paul Kirschenbauer",
+    "John Wilber",
+    "boloboysband",
+    "boloboys.band",
+    "Atlanta",
+    "Macon",
+    "Avondale Estates",
+    "Grant Park",
+    "Side Saddle",
+    "Wild Heaven",
+    "Cultivation Brewing",
+    "Echo Art",
+    "Halfway Crooks",
+    "Cowboy's Life",
+    "Dirty Shame",
+    "Acoustic Station",
+    "Ante Up"
+  ],
+
+  "always_band_domains": [
+    "boloboys.band",
+    "instagram.com/boloboysband",
+    "youtube.com/@boloboysband"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Historical show log for Bolo Boys. Completed shows move here when they pass. Upcoming shows live in events.json.",
-    "last_updated": "2026-05-18",
+    "last_updated": "2026-05-19",
     "schema_version": "1.0"
   },
   "past_shows": [
@@ -17,7 +17,21 @@
       "venue_city": "Atlanta, GA",
       "supporting_acts": [],
       "notes": "Grant Park's birthday celebration — played the Boulevard Green during the Grant Park Conservancy's Market in the Park.",
-      "poster_url": "assets/posters/gateway-park-grant-park-2026-05-17.jpeg"
+      "poster_url": "assets/posters/gateway-park-grant-park-2026-05-17.jpeg",
+      "external_links": [
+        {
+          "title": "Market in the Park Returns This Weekend With A Birthday Bash for Grant Park",
+          "source": "The Aha! Connection",
+          "url": "https://www.theahaconnection.com/market-in-the-park-returns-this-weekend-with-a-birthday-bash-for-grant-park/",
+          "date": "2026-05-12"
+        },
+        {
+          "title": "Market in the Park Returns With a Birthday Bash for Grant Park on May 17",
+          "source": "Caren West PR",
+          "url": "https://www.carenwestpr.com/grant-park-market-in-the-park-birthday-celebration/",
+          "date": "2026-05-13"
+        }
+      ]
     },
     {
       "id": "wild-heaven-toco-hills-2026-04-26",
