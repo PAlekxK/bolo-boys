@@ -1,0 +1,125 @@
+{
+  "review_id": "ux-2026-05-19-mobile-card-consistency",
+  "project": "Bolo Boys",
+  "subject": "Mobile event-card consistency — collapsed-row height variance from optional theme + supporting_acts + venue-wrap. Continuation of poster/interaction review now that F1–F8 (subset) have shipped.",
+  "review_date": "2026-05-19",
+  "reviewer_mode": "review",
+  "review_level": "screen-component (cross-card consistency)",
+  "prior_review": "ux-2026-05-19-mobile-poster-interaction-and-event-cards",
+  "user_context": {
+    "primary_user": "At-show mobile visitor — QR-scanned the flyer, one hand busy, glance-scanning the upcoming-shows list to find the next one that matters.",
+    "core_jobs_to_be_done": [
+      "Scan the list and find the next show that fits — one swipe, one glance.",
+      "Tell shows apart at-a-glance by date and venue, not by reading every line.",
+      "Decide quickly whether to expand for more (theme, invitation, calendar)."
+    ],
+    "context_of_use": "Portrait phone, low light, distracted, scrolling fast. The user reads the LIST as a rhythm — same shape every row — and stops when something registers.",
+    "assumptions_made": [
+      "Carried forward from the prior review's user_context (medium confidence). The 'consistent rhythm' framing is the agent's read of Paul's verbatim — not user-tested."
+    ],
+    "user_context_confidence": "medium"
+  },
+  "principles_applied": [
+    "Typographic hierarchy by value (cross-project.md)",
+    "Ornament earns its place (cross-project.md)",
+    "Meet the user at the action (cross-project.md)",
+    "Friction kills — it just works (cross-project.md)",
+    "Aesthetic investment is earned by identity-building or recognition (Bolo, foundation)",
+    "Restraint as a stated value (foundation)",
+    "Nielsen #4 (consistency and standards)",
+    "Nielsen #8 (aesthetic and minimalist design)",
+    "Gestalt — Law of Similarity / Common Region (rhythm of repeated row-shape)"
+  ],
+  "problem_framing": {
+    "what_paul_called_out": "Card heights vary on mobile because optional fields (theme, supporting_acts) and long venue names break the row's vertical rhythm. He's giving explicit license for mobile to diverge from desktop to solve it. He wants one recommendation, not options.",
+    "agent_read": "The variance is real but it isn't actually the optional fields — it's that the current layout treats optional fields as 'append a new line if present.' That guarantees variance, because the data is variable. The fix isn't to truncate or hide the data; it's to redesign the row so the SAME visual rhythm holds whether the optional fields are there or not. The row should be a fixed two-line composition that absorbs (or quietly suppresses) the optional fields rather than appending them.",
+    "what_the_two_illustrative_options_get_wrong": {
+      "option_a_stack_time_under_date": "Solves nothing about the actual variance problem (the date block is already fixed-height — it isn't where the variance lives). Worth-doing only if it visually compresses the info column enough to absorb the optional lines without adding height. By itself, it's a layout shuffle that buys little.",
+      "option_b_bigger_cards_with_icons_back": "Trades one inconsistency (variable heights) for a different one (all cards now tall, the optional fields still float at the bottom inconsistently). Adds back the calendar icon we just removed for a Fitts'-Law reason. Net regression on the prior review."
+    }
+  },
+  "recommendation": {
+    "headline": "Mobile gets a fixed two-line info row. The optional fields don't add height — they take the second line's slot, with a deterministic precedence order.",
+    "summary": "Lock the collapsed card to one consistent height on mobile by structuring `.event-info` as a two-line composition: line 1 is always venue name (single-line, truncated with ellipsis if it overflows); line 2 is one of [theme] OR [supporting_acts] OR [time + neighborhood], in that precedence order, chosen by whichever is present and most informative. Time and city move into the expanded view when they're displaced. No appending of multiple optional lines. The card becomes a glance-pattern: date on the left, two-line info block in the middle, chevron on the right — always.",
+    "why_this_over_the_two_illustrative_options": "Paul's options both treat the symptom (heights vary) rather than the cause (the row appends rather than composes). A fixed two-line composition is the lowest-decoration way to enforce consistent height while preserving the most important glanceable signal per card. It honors the restraint principle (no icons added back), the typographic-hierarchy-by-value principle (the second line is whichever optional field carries the most value for THIS show), and the at-show JTBD (rhythm-of-the-list scanning).",
+    "what_the_second_line_does_per_show_type": [
+      "If theme is set AND it's evocative (e.g., 'Memorial Day at the Opry', 'One Year on the Beltline') — theme wins line 2. The theme IS the differentiator; time/city are derivable from context.",
+      "If no theme but supporting_acts is set — 'w/ Dirty Shame' wins line 2. The co-bill is the second-most-valuable scan signal after the venue.",
+      "If neither — time + neighborhood wins line 2. The fallback.",
+      "Time always available in the expanded view (and already echoed in the calendar-pill button text). It's not lost — it's demoted from the always-visible scan rhythm."
+    ],
+    "what_about_long_venue_names": "Single-line truncate with ellipsis (`white-space: nowrap; overflow: hidden; text-overflow: ellipsis;`). The venue name is already a link — the expanded view shows the full name with no truncation. Truncation is rare enough in practice (most Atlanta venues fit) that it won't dominate the visual.",
+    "what_about_the_theme_'s_uppercase_small-caps_treatment": "Keep the green uppercase small-caps treatment when it's on line 2 — it's the strongest signal that THIS show has an angle. The treatment IS the value-encoding. Don't flatten it to body weight.",
+    "tradeoffs_honestly_named": [
+      "Cost: time + city is no longer always visible. The at-show user who's already AT a show is least bothered by this — they know where they are. The cold-discovery user loses a glanceable cue, but they were going to expand the card anyway to learn more.",
+      "Cost: mobile diverges from desktop. Paul gave explicit permission. Desktop has the horizontal room to show theme + time/city + supporting on one row; mobile doesn't. Honest divergence is better than dishonest cramming.",
+      "Cost: a show with both theme AND supporting_acts shows only one on the collapsed card. The expanded card shows everything. That's a tolerable trade — collapsed is for scan, expanded is for read.",
+      "Cost: implementation slightly more involved than 'just hide the divider.' The buildCard JS needs a tiny precedence function. Worth it."
+    ]
+  },
+  "action_items_for_implementation": [
+    {
+      "id": "A1",
+      "title": "Add a `secondaryLine(ev)` helper in the JS",
+      "where": "index.html buildCard area around :1569",
+      "what": "A small function that returns one of three HTML fragments in this order: (1) if `ev.theme` — return `<div class=\"event-theme-teaser\">${ev.theme}</div>`; (2) else if `ev.supporting_acts?.length` — return `<div class=\"event-supporting\">w/ ${linkSupportingActs(ev.supporting_acts)}</div>`; (3) else — return `<div class=\"event-time-city\">${ev.time}${loc ? ' &nbsp;·&nbsp; ' + loc : ''}</div>`. Returns exactly one string.",
+      "scope_change": "Behavioral change to what the collapsed card renders. Expanded card stays as-is — full data still there."
+    },
+    {
+      "id": "A2",
+      "title": "Replace the four conditional divs inside `.event-info` with venue-name + secondaryLine(ev)",
+      "where": "index.html :1586–1591 (the `<div class=\"event-info\">` block)",
+      "what": "Currently renders venue link + optional theme + always-time-city + optional supporting (up to 4 lines). Replace with: venue link + secondaryLine(ev). Exactly two lines, always.",
+      "scope_change": "Removes the always-on time-city line from the collapsed view. Time and city remain available via the expanded view and the calendar-pill button."
+    },
+    {
+      "id": "A3",
+      "title": "Add single-line truncation to `.event-venue-name`",
+      "where": "index.html CSS around :736–743",
+      "what": "Add `white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: block;` (change from `display: inline`). Apply inside the mobile media query if desktop should still allow wrapping.",
+      "scope_change": "Long venue names get an ellipsis on collapsed mobile cards. Full name visible on expand and on the underlying link's title attribute (consider adding `title=\"${ev.venue_name}\"` to the anchor for tap-and-hold disclosure)."
+    },
+    {
+      "id": "A4",
+      "title": "Lock `.event-collapsed` to a fixed min-height on mobile",
+      "where": "index.html mobile media query :1270–1280",
+      "what": "Add `.event-collapsed { min-height: 72px; }` (or tune to whatever the two-line composition naturally sits at — measure with the longest theme/co-bill string after A1+A2 land). Goal: every row, regardless of which secondary line ran, occupies the same vertical slot.",
+      "scope_change": "Cards with the shortest secondary line (e.g., 'w/ Dirty Shame') and the longest one (e.g., a long theme) settle to the same row height."
+    },
+    {
+      "id": "A5",
+      "title": "Make the expanded view carry the data the collapsed view stops showing",
+      "where": "index.html :1598–1611 (`.event-expanded` block)",
+      "what": "Audit the expanded view to confirm time, neighborhood, supporting_acts, AND theme are all visible there (since collapsed now only shows ONE secondary line). Theme already has `.event-theme-label`. Supporting_acts may need to be added if not already present. Time and city should appear as a small `.event-detail` line near the top of the expanded view.",
+      "scope_change": "No data loss — everything still accessible. Just relocated from always-visible-but-inconsistent to one-tap-deep-and-consistent."
+    },
+    {
+      "id": "A6",
+      "title": "Verify after A1–A5: no cards regress to multi-line wrapping on the secondary slot",
+      "where": "Visual QA at 375px (iPhone SE-class) and 414px (iPhone 14 Pro Max-class)",
+      "what": "Walk every event in `events.json` in mobile preview. Confirm every collapsed card lands at the same height. If any secondary line wraps (e.g., a long theme on a narrow screen), add `white-space: nowrap; overflow: hidden; text-overflow: ellipsis;` to `.event-theme-teaser`, `.event-supporting`, `.event-time-city` inside the mobile media query.",
+      "scope_change": "Secondary line is also single-line-truncated on mobile. Acceptable — the theme is meant as a teaser, full text lives in the expanded view."
+    }
+  ],
+  "ascii_sketch": "Mobile collapsed-card layout (after A1–A6). Three cards stacked, all same height.\n\n  ┌──────────────────────────────────────────────────┐\n  │  MON    Grant Central Pizza East              v  │\n  │  25     MEMORIAL DAY AT THE OPRY                 │\n  │  MAY                                             │\n  └──────────────────────────────────────────────────┘\n  ┌──────────────────────────────────────────────────┐\n  │  SUN    Side Saddle                           v  │\n  │  31     ONE YEAR ON THE BELTLINE                 │\n  │  MAY                                             │\n  └──────────────────────────────────────────────────┘\n  ┌──────────────────────────────────────────────────┐\n  │  FRI    Ideal Sports Bar                      v  │\n  │  26     8:00 PM  ·  Lakewood Heights             │\n  │  JUN                                             │\n  └──────────────────────────────────────────────────┘\n\n  Date (3-line stack) | venue-name (truncated if long) + ONE secondary line | chevron.\n  Same height every row. Secondary line is theme / co-bill / time-city, in that order of precedence.\n  Time + city move to the expanded view when displaced.",
+  "what_this_costs": "Time + city stops being always-visible on mobile. The list trades information density for rhythmic consistency. For the at-show user (already AT a venue), this is a near-zero cost. For the cold-discovery user, they expand the card to see time/city — one tap they were going to do anyway. The compensation: every card is now a glance-pattern, and the optional fields stop visually punishing the user for shows that have a theme or a co-bill (which were previously the tallest cards).",
+  "out_of_scope_for_this_pass": [
+    "Past-shows row consistency — separate pattern, not part of this brief.",
+    "Desktop event-card layout — Paul gave permission for mobile to diverge; desktop stays as-is.",
+    "Re-litigation of poster thumb, calendar icon, or modal behavior — shipped per prior review F1–F8 subset."
+  ],
+  "open_questions_for_user": [
+    "Theme-vs-supporting precedence: I picked theme > supporting_acts > time-city. For a show with BOTH theme and supporting_acts (e.g., Wild Heaven 5/23 has both), the theme wins on collapsed and the co-bill list is one-tap-deep. Comfortable with that ordering, or do you want co-bill ahead of theme when both are present?",
+    "Truncation cutoff for the theme: 'MEMORIAL DAY AT THE OPRY' fits on 375px wide; a longer theme might not. Comfortable with ellipsis-truncating the theme in the collapsed view, or should the buildCard be smart about picking a shorter alternative when the theme is too long?"
+  ],
+  "follow_up_research_suggested": [
+    "After A1–A6 land, do a one-touch scan test on the live mobile site: scroll the upcoming-shows list and check that the eye locks into the rhythm. If the list still feels uneven, the issue is line-height or padding within the row, not the row composition — fix as a follow-up at micro-detail level."
+  ],
+  "principles_to_propose": [
+    {
+      "principle": "Note for later (Mode 2) — 'Variable-length data goes to expanded views; collapsed surfaces compose, not append'",
+      "scope": "candidate cross-project",
+      "rationale": "Surfaced by this review. The current event card was appending optional fields; the fix is composition with deterministic precedence. Likely generalizes (any list with optional metadata — Fernwood property cards, financial-viewer briefs, etc.). Flagging only, not proposing — needs a second project's evidence before promotion. Per the foundation rule: don't crystallize too early."
+    }
+  ]
+}

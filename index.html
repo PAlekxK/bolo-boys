@@ -758,6 +758,16 @@
       margin-bottom: 1px;
     }
 
+    /* Time prefix on the secondary line — always reads charcoal-bold regardless of
+       which variant class the parent uses (italic supporting / uppercase theme / plain city). */
+    .event-time-prefix {
+      color: var(--charcoal);
+      font-weight: 600;
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
     .event-supporting {
       font-size: 0.73rem;
       color: var(--gray);
@@ -1270,17 +1280,34 @@
     @media (max-width: 480px) {
       .section { padding: 36px 20px; }
 
-      /* Tighten the event-card row: smaller date block, no divider, fewer action buttons */
+      /* Two-line collapsed card: venue (line 1) + one secondary signal (line 2). Fixed height. */
       .event-date { width: 36px; }
       .event-dom { font-size: 1.5rem; }
       .event-divider-line { display: none; }
-      .event-collapsed { gap: 10px; }
+      .event-collapsed { gap: 8px; min-height: 80px; }
       .event-poster-thumb { display: none; }
-      .event-actions a.icon-btn { display: none; } /* Calendar icon — duplicated by the expanded-view pill */
+      .event-actions { gap: 2px; }
+      .icon-btn { width: 36px; height: 36px; }
+
+      .event-venue-name {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+      .event-secondary {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
     }
 
     @media (max-width: 400px) {
       .event-venue-name { font-size: 0.85rem; }
+      .event-actions { gap: 0; }
+      .icon-btn { width: 34px; height: 34px; }
     }
   </style>
 </head>
@@ -1539,6 +1566,7 @@
   // ── Dynamic event rendering ──────────────────────────────────
   const CAL_ICON = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="15" x2="12" y2="19"/><line x1="10" y1="17" x2="14" y2="17"/></svg>`;
   const CAL_ICON_SM = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="15" x2="12" y2="19"/><line x1="10" y1="17" x2="14" y2="17"/></svg>`;
+  const MAP_ICON = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
   const MAP_ICON_SM = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
   const CHEVRON = `<svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
 
@@ -1566,13 +1594,39 @@
     }).join(', ');
   }
 
+  // Collapse "8:00 PM" -> "8 PM" but keep "11:30 AM" intact. Display-only.
+  function formatTime(t) {
+    return t ? t.replace(/:00 /, ' ') : '';
+  }
+
+  // Mobile-first secondary line under the venue name. Always leads with the time
+  // so it's never hidden, then appends ONE contextual signal (co-bill > theme > city).
+  // The trailing context inherits the variant class for its styling (italic / uppercase / plain).
+  function secondaryLine(ev) {
+    const time = formatTime(ev.time);
+    const timeHtml = time ? `<span class="event-time-prefix">${time}</span>` : '';
+    const SEP = ' &nbsp;·&nbsp; ';
+
+    if (ev.supporting_acts && ev.supporting_acts.length) {
+      const trail = `w/ ${linkSupportingActs(ev.supporting_acts)}`;
+      return `<div class="event-secondary event-supporting">${timeHtml}${time ? SEP : ''}${trail}</div>`;
+    }
+    if (ev.theme) {
+      return `<div class="event-secondary event-theme-teaser">${timeHtml}${time ? SEP : ''}${ev.theme}</div>`;
+    }
+    const loc = [ev.venue_neighborhood, ev.venue_city].filter(Boolean).join(', ');
+    if (loc) {
+      return `<div class="event-secondary event-time-city">${timeHtml}${time ? SEP : ''}${loc}</div>`;
+    }
+    return `<div class="event-secondary event-time-city">${timeHtml}</div>`;
+  }
+
   function buildCard(ev) {
     const d   = new Date(ev.date + 'T12:00:00');
     const dom = d.getDate();
     const mon = d.toLocaleString('en-US', { month: 'short' }).toUpperCase();
     const dow = d.toLocaleString('en-US', { weekday: 'short' }).toUpperCase();
     const id  = 'card-' + ev.id;
-    const loc = [ev.venue_neighborhood, ev.venue_city].filter(Boolean).join(', ');
 
     return `
       <div class="event-card" id="${id}">
@@ -1584,19 +1638,20 @@
           </div>
           <div class="event-divider-line"></div>
           <div class="event-info">
-            <a class="event-venue-name" href="${ev.venue_google_maps_url || '#'}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${ev.venue_name}</a>
-            ${ev.theme ? `<div class="event-theme-teaser">${ev.theme}</div>` : ''}
-            <div class="event-time-city">${ev.time}${loc ? ' &nbsp;·&nbsp; ' + loc : ''}</div>
-            ${ev.supporting_acts && ev.supporting_acts.length ? `<div class="event-supporting">w/ ${linkSupportingActs(ev.supporting_acts)}</div>` : ''}
+            <a class="event-venue-name" href="${ev.venue_google_maps_url || '#'}" target="_blank" rel="noopener" title="${ev.venue_name}" onclick="event.stopPropagation()">${ev.venue_name}</a>
+            ${secondaryLine(ev)}
           </div>
           <div class="event-actions">
             ${ev.poster_url ? `<img class="event-poster-thumb" src="${ev.poster_url}" alt="Show poster" onclick="event.stopPropagation(); openPosterModal('${ev.poster_url}')">` : ''}
+            ${ev.venue_google_maps_url ? `<a class="icon-btn" href="${ev.venue_google_maps_url}" target="_blank" rel="noopener" aria-label="Get directions" title="Get directions" onclick="event.stopPropagation()">${MAP_ICON}</a>` : ''}
             <a class="icon-btn" href="${ev.google_calendar_url || '#'}" target="_blank" rel="noopener" aria-label="Add to calendar" title="Add to calendar" onclick="event.stopPropagation()">${CAL_ICON}</a>
             <button class="icon-btn" aria-label="Show details" onclick="event.stopPropagation(); toggleCard('${id}')">${CHEVRON}</button>
           </div>
         </div>
         <div class="event-expanded">
           ${ev.poster_url ? `<img class="event-poster-expanded" src="${ev.poster_url}" alt="Show poster" onclick="openPosterModal('${ev.poster_url}')">` : ''}
+          <div class="event-detail event-detail-meta">${ev.time}${[ev.venue_neighborhood, ev.venue_city].filter(Boolean).join(', ') ? ' &nbsp;·&nbsp; ' + [ev.venue_neighborhood, ev.venue_city].filter(Boolean).join(', ') : ''}</div>
+          ${ev.supporting_acts && ev.supporting_acts.length ? `<div class="event-supporting event-supporting-expanded">w/ ${linkSupportingActs(ev.supporting_acts)}</div>` : ''}
           ${ev.theme ? `<div class="event-theme-label">${ev.theme}</div>` : ''}
           ${ev.invitation_text ? `<p class="event-invite">${ev.invitation_text}</p>` : ''}
           ${ev.external_links && ev.external_links.length ? `
