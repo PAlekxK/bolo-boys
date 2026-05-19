@@ -4,7 +4,21 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — Press scanner expanded beyond editorial press
+## 2026-05-19 (latest) — Maintenance + small fixes
+
+- **events.json** — fixed the DragonCon date typo on Side Saddle 9/12 `additional_details` ("9/4–9/7" → "9/3–9/7"; actual DragonCon 2026 runs Sep 3–7).
+- **tools/run-propagators.sh** — clarified the Bandsintown CSV report line. Was `wrote bandsintown-upload.csv (N lines)` which conflated header + data rows. Now reads `(N events + 1 header row)`. Matches the JSON-LD line's reporting convention and removes the apparent JSON-LD (12) vs CSV (13) discrepancy seen earlier in the session — they always agreed; the count was just opaque.
+- **PLACEHOLDER.md cleanup** — investigated and confirmed `assets/PLACEHOLDER.md` is already gone (was a stale memory entry, not actually present). Memory note updated.
+
+## 2026-05-19 — Original Music section + click-to-expand posters
+
+- **Original Music** sub-block added at the end of the About section. Spotify embed iframe (152px compact) for Nigel Wright's "The Cowboy's Life" (2026), plus an "Also on:" link row covering Spotify, Apple Music, Amazon Music, Bandcamp (4 platforms confirmed; YouTube Music / Tidal / Deezer captured as `null` placeholders in band.json).
+- Credit line clarifies the recording is Nigel's solo recording while Bolo Boys play the song live (so visitors don't read "Bolo Boys play it live" as "the recording features the band").
+- **Click-to-expand posters** via a native HTML `<dialog>` modal. All three poster img elements (collapsed-card thumb, expanded-card poster, past-show row poster) now open a centered modal on click. Backdrop / Escape / × button close. `cursor: zoom-in` on the imgs makes it discoverable. No library — ~50 lines of CSS, 8 of JS.
+- **band.json loader** refactored: was a scoped `sceneCollaborators` map, now exposes the full `bandData` so the originals section reads from the same single fetch. No extra network round-trip.
+- Press-scan excludes file got 4 more noise sources caught in Round 2 of the scanner: `boloboysmke`, `the.boloboys`, `investinlimbe`, `daniellamellodocaria`.
+
+## 2026-05-19 — Press scanner expanded beyond editorial press
 
 - **`tools/press-scan.py`** — 5 new query categories: `social-ig` (`site:instagram.com`), `social-fb` (`site:facebook.com`), `aggregator` ×2 (general Atlanta-calendar query + music-aggregator site-restricted query), and `local-press` (Creative Loafing / AJC / Atlanta Magazine / Atlanta INtown-style show picks). Total queries went 12 → 17 across 7 tags.
 - **`tools/press-scan-excludes.json`** — added 6 noise URL substrings caught in the first scan: `boloboys.official`, `bolomusicgroup.com`, `bolobeer.com`, `bolapizza.com`, `bolothedjwebsite`, `michaelbolwaire`.

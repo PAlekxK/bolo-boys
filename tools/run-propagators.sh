@@ -20,7 +20,8 @@ python3 tools/bump-sitemap.py
 
 echo "→ events-to-bandsintown-csv.py"
 python3 tools/events-to-bandsintown-csv.py > bandsintown-upload.csv
-echo "wrote bandsintown-upload.csv ($(wc -l < bandsintown-upload.csv | tr -d ' ') lines)"
+_total=$(wc -l < bandsintown-upload.csv | tr -d ' ')
+echo "wrote bandsintown-upload.csv ($((_total - 1)) events + 1 header row)"
 
 echo "→ check-stale-events.py"
 # Non-blocking: surfaces past-dated events.json entries that need Phase 5 cleanup.
