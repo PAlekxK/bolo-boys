@@ -4,7 +4,13 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — Maintenance + small fixes
+## 2026-05-19 (latest) — "Who we play with" credibility panel (tier a) live
+
+- **Permanent scene panel** added at the end of the About section (under Original Music). Shows the recurring collaborators from `band.json` `scene_collaborators` — Dirty Shame and Acoustic Station with linked IG handles, Ante Up with a one-line description (supergroup of the three bands). Adam Klein deliberately excluded — he's a one-time guest, captured in `guest_co_bills`, not the recurring scene.
+- **Ante Up `note` shortened** to display-worthy content ("Supergroup of Bolo Boys + Dirty Shame + Acoustic Station.") — the prior version mixed display copy with implementation guidance ("render as plain text") that belongs in code.
+- Sells the scene-hub angle to bookers without inflating relationships — small, contained, durable (per the tier-a design in the open-threads backlog).
+
+## 2026-05-19 — Maintenance + small fixes
 
 - **events.json** — fixed the DragonCon date typo on Side Saddle 9/12 `additional_details` ("9/4–9/7" → "9/3–9/7"; actual DragonCon 2026 runs Sep 3–7).
 - **tools/run-propagators.sh** — clarified the Bandsintown CSV report line. Was `wrote bandsintown-upload.csv (N lines)` which conflated header + data rows. Now reads `(N events + 1 header row)`. Matches the JSON-LD line's reporting convention and removes the apparent JSON-LD (12) vs CSV (13) discrepancy seen earlier in the session — they always agreed; the count was just opaque.
