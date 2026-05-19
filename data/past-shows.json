@@ -6,6 +6,20 @@
   },
   "past_shows": [
     {
+      "id": "gateway-park-grant-park-2026-05-17",
+      "date": "2026-05-17",
+      "day_of_week": "Sunday",
+      "time": "11:00 AM",
+      "end_time": "1:00 PM",
+      "venue_id": "gateway-park-grant-park",
+      "venue_name": "Grant Park Market in the Park",
+      "venue_neighborhood": "Grant Park",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [],
+      "notes": "Grant Park's birthday celebration — played the Boulevard Green during the Grant Park Conservancy's Market in the Park.",
+      "poster_url": "assets/posters/gateway-park-grant-park-2026-05-17.jpeg"
+    },
+    {
       "id": "wild-heaven-toco-hills-2026-04-26",
       "date": "2026-04-26",
       "day_of_week": "Sunday",
