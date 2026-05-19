@@ -807,7 +807,7 @@
     .event-actions {
       display: flex;
       align-items: center;
-      gap: 2px;
+      gap: 8px;
       flex-shrink: 0;
     }
 
@@ -984,7 +984,7 @@
 
     .past-show-row {
       display: grid;
-      grid-template-columns: 44px 56px 1fr;
+      grid-template-columns: 36px 56px 1fr;
       align-items: center;
       padding: 8px 0;
       font-size: 0.82rem;
@@ -993,17 +993,16 @@
     }
 
     .past-show-poster {
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      object-fit: cover;
+      width: 32px;
+      height: auto;
+      border-radius: 3px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.12);
       display: block;
     }
 
     .past-show-poster-placeholder {
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 1px;
     }
 
     .past-show-date {
@@ -1055,10 +1054,15 @@
       border: none;
       background: transparent;
       padding: 0;
+      margin: auto; /* global reset zeroes this — restore so showModal centers */
       max-width: 95vw;
       max-height: 95vh;
       overflow: visible;
+      opacity: 0;
+      transition: opacity 0.15s ease;
     }
+
+    #poster-modal.is-open { opacity: 1; }
 
     #poster-modal::backdrop {
       background: rgba(0, 0, 0, 0.85);
@@ -1067,10 +1071,22 @@
 
     #poster-modal img {
       max-width: 95vw;
-      max-height: 95vh;
+      max-height: 88vh;
       display: block;
       border-radius: 6px;
       box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    #poster-modal-hint {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -28px;
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.6);
+      pointer-events: none;
     }
 
     #poster-modal-close {
@@ -1253,10 +1269,17 @@
     /* ── Mobile refinements ──────────────────────────────────── */
     @media (max-width: 480px) {
       .section { padding: 36px 20px; }
+
+      /* Tighten the event-card row: smaller date block, no divider, fewer action buttons */
+      .event-date { width: 36px; }
+      .event-dom { font-size: 1.5rem; }
+      .event-divider-line { display: none; }
+      .event-collapsed { gap: 10px; }
+      .event-poster-thumb { display: none; }
+      .event-actions a.icon-btn { display: none; } /* Calendar icon — duplicated by the expanded-view pill */
     }
 
     @media (max-width: 400px) {
-      .event-dom { font-size: 1.55rem; }
       .event-venue-name { font-size: 0.85rem; }
     }
   </style>
@@ -1485,6 +1508,7 @@
 <dialog id="poster-modal" onclick="if (event.target === this) closePosterModal();">
   <button id="poster-modal-close" aria-label="Close" onclick="closePosterModal()">&times;</button>
   <img id="poster-modal-img" alt="Show poster">
+  <p id="poster-modal-hint">Pinch to zoom &nbsp;·&nbsp; tap outside to close</p>
 </dialog>
 
 
@@ -1497,12 +1521,20 @@
   // Poster expand modal
   function openPosterModal(src) {
     if (!src) return;
+    const modal = document.getElementById('poster-modal');
     document.getElementById('poster-modal-img').src = src;
-    document.getElementById('poster-modal').showModal();
+    modal.showModal();
+    requestAnimationFrame(() => modal.classList.add('is-open'));
   }
   function closePosterModal() {
-    document.getElementById('poster-modal').close();
+    const modal = document.getElementById('poster-modal');
+    modal.classList.remove('is-open');
+    setTimeout(() => modal.close(), 150);
   }
+  // Keep ESC-key dismissal in sync with the fade class
+  document.getElementById('poster-modal').addEventListener('close', () => {
+    document.getElementById('poster-modal').classList.remove('is-open');
+  });
 
   // ── Dynamic event rendering ──────────────────────────────────
   const CAL_ICON = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="15" x2="12" y2="19"/><line x1="10" y1="17" x2="14" y2="17"/></svg>`;

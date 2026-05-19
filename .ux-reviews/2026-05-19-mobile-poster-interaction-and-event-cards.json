@@ -1,0 +1,163 @@
+{
+  "review_id": "ux-2026-05-19-mobile-poster-interaction-and-event-cards",
+  "project": "Bolo Boys",
+  "subject": "Mobile poster interaction (collapsed-card thumb -> expanded-card poster -> lightbox modal) and surrounding event-card layout; past-shows poster thumb opens same modal",
+  "review_date": "2026-05-19",
+  "reviewer_mode": "review",
+  "review_level": "screen-component",
+  "user_context": {
+    "primary_user": "At-show mobile visitor — just scanned the QR-code flyer at the venue, holding a beer in a noisy room, deciding whether to come back, follow socials, or check the next show",
+    "core_jobs_to_be_done": [
+      "Glance at the next show date/venue and decide if it's worth coming back",
+      "Inspect the poster artwork (the band's hand-illustrated work — folk-art lettering, motifs that reward attention)",
+      "Take a fast next action: add to calendar, get directions, or move on",
+      "Browse past shows as a credibility / scene-presence cue"
+    ],
+    "context_of_use": "One-handed phone use, low light, distracted attention, intermittent thumb accuracy. Portrait-orientation. Often after a QR-code scan landed them mid-page.",
+    "assumptions_made": [
+      "Primary user model derived from project memory (`project_bolo_boys_site_purpose.md`) — at-show conversion weighted alongside cold discovery. Not yet validated via user research.",
+      "Poster artwork is a meaningful identity surface — anchored in `~/.claude/agent-foundations/ux-expert.md` resource notes on the two band-authored posters (Cultivation/Dirty Shame, Grant Ole Opry)."
+    ],
+    "user_context_confidence": "medium"
+  },
+  "principles_applied": [
+    "Ornament earns its place (cross-project.md)",
+    "Meet the user at the action (cross-project.md)",
+    "Friction kills — it just works (cross-project.md)",
+    "Typographic hierarchy by value (cross-project.md) — applied as visual hierarchy by value to the actions cluster",
+    "Icons earn their place — true AND useful (cross-project.md)",
+    "Norman — signifiers must communicate the affordance",
+    "Nielsen #1 (visibility of system status), #4 (consistency and standards), #6 (recognition rather than recall)",
+    "Fitts' Law — target size + adjacency under fat-finger conditions",
+    "Aesthetic investment is earned by identity-building or recognition (Bolo-specific, foundation file)"
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "area": "affordance",
+      "severity": "important",
+      "observation": "The 34px-wide poster thumb in the collapsed card's action cluster (`index.html:1561`, CSS at `:779–786`) has no signifier that it is tappable to enlarge. `cursor: zoom-in` (`:1051`) only fires on hover devices. Opacity 0.88 actively de-emphasizes it. It sits as a passive image among two icon-buttons that ARE styled as affordances.",
+      "user_impact": "The at-show user will not discover the lightbox from the collapsed card. The band's investment in poster artwork is invisible until they expand the card — which they have no reason to do for a show they already know about (they were just at one).",
+      "principle_invoked": "Norman — signifiers must communicate the affordance; Nielsen #6 (recognition rather than recall).",
+      "recommendation": "Either (a) demote the collapsed-card thumb entirely — let the poster appear only on expansion, which is where 140px gives it room to be recognized — OR (b) keep the thumb but make it look interactive: drop opacity to 1.0, add a small zoom glyph overlay on the corner (a magnifier on a translucent chip), and bump size to ~44–48px so it reaches HIG tap-target minimum. Of the two, (a) is the lower-decoration move and aligns with the restraint preference; (b) is the right answer if the thumb genuinely earns its slot.",
+      "effort": "low"
+    },
+    {
+      "id": "F2",
+      "area": "affordance",
+      "severity": "important",
+      "observation": "Three interactive elements (poster thumb, calendar icon, chevron) are packed into `.event-actions` at `gap: 2px` (CSS `:807–812`) on 40px `.icon-btn` targets and a 34px image. Tap-target adjacency under fat-finger conditions makes mis-tapping likely. Mis-tapping the calendar icon launches a new browser tab (Google Calendar) — high recovery cost in the at-show context. Mis-tapping the chevron expands the card — low cost but interrupts intent.",
+      "user_impact": "The user trying to enlarge a poster ends up on Google Calendar in a new tab. Or the user trying to add to calendar opens the modal. Either way they fumble in front of friends with one hand busy.",
+      "principle_invoked": "Fitts' Law; Nielsen #5 (error prevention).",
+      "recommendation": "Bump `.event-actions` gap to at least 8px between targets, and consider redistributing the cluster. The strongest move: pull the poster out of the actions cluster entirely (see F1 — promote the expanded poster, drop the thumb), leaving only cal icon + chevron with breathing room. If the thumb stays, ensure each target is ≥44px including padding and ≥8px from its neighbor.",
+      "effort": "low"
+    },
+    {
+      "id": "F3",
+      "area": "hierarchy",
+      "severity": "important",
+      "observation": "The action cluster renders three peer elements (poster thumb, calendar icon, chevron) at near-equal visual weight, but they sit at three different hierarchical levels: the chevron is the primary affordance for *this row* (open the card to see more), the calendar icon is a secondary action (the booking conversion), and the poster thumb is a tertiary media preview. The flat row collapses a real three-tier hierarchy into visual equivalence.",
+      "user_impact": "The user has to scan all three to figure out what to do, instead of seeing the obvious next move first. Increases cognitive load in the noisy-room context.",
+      "principle_invoked": "Typographic/visual hierarchy by value (cross-project.md); Nielsen #8 (aesthetic and minimalist design).",
+      "recommendation": "Make the chevron the dominant tap signifier (the row IS already clickable — the chevron is the redundant arrow that confirms it). Demote calendar to either (a) a secondary icon with clearly different weight, or (b) move it into the expanded view where the pill-style Add to Calendar already lives (`index.html:1577`) — the row already toggles, so users don't need TWO entry points to calendar from the collapsed view. Cutting calendar from collapsed simplifies the row to one signifier (chevron) and resolves F2 by removing a tap target.",
+      "effort": "medium"
+    },
+    {
+      "id": "F4",
+      "area": "affordance",
+      "severity": "important",
+      "observation": "The 140px expanded-card poster (`index.html:1567`, CSS `:797–804`) also opens the lightbox modal but offers no signifier on touch. `cursor: zoom-in` is desktop-only. No caption, no glyph, no microcopy.",
+      "user_impact": "The user who DID expand the card sees the poster at 140px — recognizable, but not the size where folk-art lettering and motifs reward attention. They have no reason to suspect a tap delivers a larger view.",
+      "principle_invoked": "Norman — signifiers; Nielsen #6 (recognition rather than recall).",
+      "recommendation": "Add a tiny zoom-glyph overlay (translucent chip, bottom-right corner of the poster) — same pattern that should appear on the collapsed thumb if it stays. Alternative: a small caption below the poster ('Tap to view full poster') — lower-design, but the microcopy is honest. Prefer the glyph; it scales to past-shows row without needing per-instance copy.",
+      "effort": "low"
+    },
+    {
+      "id": "F5",
+      "area": "affordance",
+      "severity": "critical",
+      "observation": "The past-shows row poster (`index.html:1644–1646`, CSS `.past-show-poster` at `:995–1002`) is 40×40 with `object-fit: cover`. Posters are portrait — the square crop center-cuts the artwork. The hand-illustrated lettering and motifs Paul cares about are exactly what gets cut off. Combined with no affordance signifier (same problem as F1), this surface treats poster art as a decorative pixel chip.",
+      "user_impact": "Past-shows is one of the few places on the site where the band's accumulated identity (the posters from real shows) lives. Right now it renders that identity as a row of indistinguishable colored squares — the visitor scrolls through it and learns nothing. For the at-show user, this is the credibility surface ('here's what they've actually played') being squandered. For the cold-discovery user, this is identity-building. Both jobs fail.",
+      "principle_invoked": "Aesthetic investment is earned by identity-building or recognition (foundation); Ornament earns its place — inverted: when the asset IS the identity, cropping it to ornament loses the asset.",
+      "recommendation": "Change `.past-show-poster` from 40×40 cover-crop to 32px-wide × auto-height (preserve portrait aspect). Adjust the `grid-template-columns` in `.past-show-row` (`:987`) to accommodate (currently `44px 56px 1fr` — the 44px column was sized for the square, will work for a 32-wide portrait too with a touch of vertical alignment). Add the same zoom-glyph affordance pattern (or accept that the recognizable-portrait shape is itself an affordance — but err toward making it explicit). Test on one or two rows first to confirm visual rhythm isn't broken at scale.",
+      "effort": "low"
+    },
+    {
+      "id": "F6",
+      "area": "flow",
+      "severity": "important",
+      "observation": "Modal close button is positioned at `top: -14px / right: -14px` (CSS `:1076–1094`) — top-right corner, outside the image bounds, on the backdrop. On mobile this puts the close affordance in the hardest-to-reach corner for one-handed (right-thumb) use. iOS/Android lightbox conventions put close in the upper-LEFT (X icon) and rely on swipe-down or backdrop-tap for primary dismissal.",
+      "user_impact": "User with a beer in the other hand has to stretch the thumb to the diagonal opposite of where it rests, on a target that's 34px. Worse: the only-on-backdrop close (`if (event.target === this) closePosterModal()` at `:1485`) is undocumented to the user — there's no hint that tapping outside dismisses.",
+      "principle_invoked": "Nielsen #4 (consistency with platform conventions); Fitts' Law; Norman — signifiers.",
+      "recommendation": "Two changes: (1) Move close button to top-LEFT to match iOS/Android lightbox conventions, OR add a bottom-bar dismiss button on mobile (thumb-friendly). (2) Add a barely-visible hint that tapping the backdrop dismisses — e.g., a faint 'Tap anywhere to close' caption on the backdrop, dismissable by either action. Choose one, not both — the hint matters more than the position swap.",
+      "effort": "low"
+    },
+    {
+      "id": "F7",
+      "area": "feedback",
+      "severity": "nice-to-have",
+      "observation": "The modal has no transition — `<dialog>.showModal()` snaps the modal in instantly. No fade, no zoom-from-source-position. Mobile lightbox convention is a brief fade-in (~150ms) and ideally a zoom-from-thumb origin to make the connection explicit.",
+      "user_impact": "Loses a small but meaningful cue that the small thumb the user just tapped IS the same artwork now shown large. Adds a faint cheap-feeling moment to the interaction that doesn't fit the care the band has put into the posters.",
+      "principle_invoked": "Nielsen #1 (visibility of system status — transitions confirm what happened); Norman — feedback.",
+      "recommendation": "Add a fade-in + slight scale-up on `#poster-modal` open via CSS `@starting-style` (modern browsers) or a JS-added class. ~150ms ease-out. Don't attempt zoom-from-source origin unless you want to invest meaningfully — fade-in is the floor.",
+      "effort": "low"
+    },
+    {
+      "id": "F8",
+      "area": "discoverability",
+      "severity": "nice-to-have",
+      "observation": "Backdrop tap-to-dismiss works (handler at `:1485`) but is undiscovered by mobile users. `cursor: zoom-out` on the backdrop (`:1065`) is desktop-only.",
+      "user_impact": "Mobile user's only obvious escape path is the small top-right circle (see F6). Backdrop tap is a near-universal mobile lightbox pattern but never advertised here.",
+      "principle_invoked": "Nielsen #3 (user control and freedom — multiple escape paths should be obvious).",
+      "recommendation": "Bundled into F6's recommendation #2 — the faint backdrop caption serves this finding too.",
+      "effort": "low"
+    },
+    {
+      "id": "F9",
+      "area": "consistency",
+      "severity": "nice-to-have",
+      "observation": "Three poster surfaces (collapsed thumb 34px, expanded 140px mobile, past-shows 40×40 square cover) use three different shapes/sizes/aspects. The lightbox modal is the only place all posters are shown in their true aspect.",
+      "user_impact": "Visual continuity between the same poster across surfaces is weak. The user who taps a 40×40 square crop and gets a tall portrait in the lightbox briefly has to re-orient — 'is this the same thing?'. Small effect, but compounds the affordance problems above.",
+      "principle_invoked": "Nielsen #4 (consistency).",
+      "recommendation": "If F5 lands (past-shows preserves portrait aspect) and F1 lands (collapsed thumb either grows or goes), the three surfaces start to feel like the same artwork at three sizes rather than three different objects. Treat as a downstream check after F1/F5, not a separate change.",
+      "effort": "low"
+    },
+    {
+      "id": "F10",
+      "area": "other",
+      "severity": "nice-to-have",
+      "observation": "Tall posters in the lightbox max out at 95vh. On a narrow phone in portrait, a 9:16-ish poster rendered at 95vh fills only ~60vw — leaving wide black sidebars. The detail Paul cares about (lettering, motifs) is shown smaller than the screen could permit.",
+      "user_impact": "The lightbox is doing its job (full image visible, no scroll), but the inspection-of-detail use case is weaker than it could be. Pinch-zoom inside a `<dialog>` is browser-dependent.",
+      "principle_invoked": "Nielsen #7 (flexibility and efficiency of use — power users / detail-seekers should have an escape valve).",
+      "recommendation": "Open question — verify whether native pinch-zoom works inside `<dialog>.showModal()` on iOS Safari and Chrome Android. If not, consider adding a single tap-to-zoom-in state (image scales to 100% natural size, becomes scrollable both axes). Defer until verified — don't build for a problem that doesn't exist.",
+      "effort": "medium"
+    }
+  ],
+  "zoom_out_flag": "The action cluster on the collapsed event card (poster thumb + cal icon + chevron) is mixing two different kinds of objects — action affordances and a media preview — at equal visual weight. This isn't a poster problem; it's a hierarchy problem that the poster surfaces. The same pattern may recur anywhere else in the site where 'preview' and 'action' end up packed into the same row. Worth a second-pass review at zoom-out level (whole event-card module) once F1–F4 land.",
+  "open_questions_for_user": [
+    "Does native pinch-zoom work inside the `<dialog>` lightbox on your iOS device, in real-world testing? (F10 depends on this.)",
+    "On the collapsed card, do you want the poster thumb to stay at all, or is it acceptable to make the lightbox a one-tap-deep thing (tap card to expand → tap larger poster to enlarge)? F1 has two paths and the call is yours.",
+    "Is keeping the calendar icon in the collapsed-card action cluster a load-bearing booking-conversion bet, or are you fine demoting it to expanded-only? F3 hinges on this."
+  ],
+  "follow_up_research_suggested": [
+    "One-touch mobile usability test of the event card with the poster lightbox flow — five-minute task: 'enlarge the poster for the next show.' Even three at-show veterans (Paul + two friends) would surface whether F1 and F4 are the right read.",
+    "Heatmap or click-through data on the existing 34px thumb — is it being tapped at all today? If usage is near-zero, F1's path (a) (remove the thumb) becomes the obvious move."
+  ],
+  "principles_to_propose": [
+    {
+      "principle": "Action affordances and media previews don't sit at equal visual weight",
+      "scope": "cross-project",
+      "rationale": "Surfaced by F3 — the poster thumb / cal icon / chevron cluster collapses three hierarchy tiers into one row. Likely generalizes: anywhere a 'preview' (image, snippet, sparkline) gets packed into an action row, the same flatness problem will appear. Candidate only — needs validation in a second project before promotion."
+    },
+    {
+      "principle": "When the asset IS the identity, don't crop it to ornament",
+      "scope": "bolo-boys",
+      "rationale": "Surfaced by F5 — square-cropping a portrait poster to a 40×40 chip strips out the band's hand-illustrated lettering. The poster artwork IS identity. Bolo-specific because it ties to the foundation rule 'aesthetic investment is earned by identity-building or recognition.' Could generalize later if the same pattern shows up on Fernwood (e.g., property hero photos cropped to thumbnail squares)."
+    },
+    {
+      "principle": "Affordance signifiers must work on touch, not just hover",
+      "scope": "cross-project",
+      "rationale": "Surfaced by F1, F4, F6, F8 — multiple places rely on `cursor: zoom-in` / `cursor: zoom-out` as the only signifier. On mobile-first sites, this is functionally no signifier at all. Strong candidate to promote after one more review confirms the pattern."
+    }
+  ]
+}

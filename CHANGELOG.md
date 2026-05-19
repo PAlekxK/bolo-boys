@@ -4,7 +4,16 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — Visual design principles doc + Ideal Sports Bar logo banked
+## 2026-05-19 (latest) — Mobile UX polish for event cards + poster lightbox
+
+- **Past-shows posters un-cropped** — `.past-show-poster` went from 40×40 square crop (which center-cut the hand-illustrated lettering on portrait posters) to 32px wide × auto height. Past Shows now actually surfaces the band's accumulated identity instead of indistinguishable colored chips.
+- **Mobile collapsed cards tightened** — under 480px: poster thumb hidden, calendar icon hidden (redundant with the expanded-view pill), date block narrowed (42px → 36px), DOM dropped to 1.5rem, divider line removed. Chevron is the lone signifier on the right; venue info gets the breathing room.
+- **Action button gap** bumped 2px → 8px universally — was tap-target-adjacent on mobile.
+- **Poster lightbox modal:** 150ms fade-in on open/close via JS class toggle, hint caption added ("Pinch to zoom · tap outside to close"), and `margin: auto` restored on `#poster-modal` — the global `* { margin: 0 }` reset was zeroing the dialog's default auto-margin and pinning showModal() to the top-left corner.
+- **`.ux-reviews/2026-05-19-mobile-poster-interaction-and-event-cards.json`** added — screen-component review from the ux-expert agent that drove these changes. Includes three candidate principles flagged for future Mode-2 distillation.
+- **Deferred:** F4 (zoom-glyph overlay on expanded poster) — wait to see if it's still needed after this lands. F10 (pinch-zoom) — resolved, confirmed working natively. Card-height consistency on mobile — captured as the next iteration in a follow-up review at `.ux-reviews/2026-05-19-mobile-card-consistency.json` (will ship in the next commit).
+
+## 2026-05-19 — Visual design principles doc + Ideal Sports Bar logo banked
 
 - **`design/principles.md`** created — decodes the Side Saddle poster visual system (two-color on black, single iconic illustration, fixed furniture: logo TR / QR BR / lineup ticker bottom), names the rules, includes Firefly/Photoshop prompt scaffolding, and ends with the Ideal Sports Bar open thread for handoff to the next session.
 - **`assets/misc/ideal-sports-bar-logo.png`** — third-party venue logo banked from a desktop drop; renamed to match the "Ideal Sports Bar" normalization. Logo is retro varsity red+yellow; future posters should contrast the palette, not match it.
