@@ -4,7 +4,23 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-20 (latest) — Venue-review press scanner: explicit + implicit modes
+## 2026-05-20 (latest) — Ideal show details locked + venue contacts updated
+
+- **`data/events.json`** — Ideal Sports Bar 6/26 + 7/11: `duration_hours` 3 → 2 (locked at 8–10 PM per Keith confirmation), dropped "subject to confirmation" language from `additional_details` and the calendar URL details param. `google_calendar_url` rewritten with proper `YYYYMMDDTHHmmSS/YYYYMMDDTHHmmSS` timestamp format (was date-only, which would have rendered as an all-day event).
+- **`index.html` / `sitemap.xml` / `bandsintown-upload.csv`** — regenerated via `tools/run-propagators.sh`.
+- **`Bolo Boys - Private/data/venue-contacts.json`**:
+  - **Josh Peatross → Josh Patterson** — last name was transcribed wrong; contact card confirms Patterson. Added phone (770) 289-1521. ID renamed `gpc-josh-peatross` → `gpc-josh-patterson`. Last-contact updated for the 5/20 GPC email.
+  - **Skyler Edwards** — added phone (678) 670-6256. Last-contact updated for the 5/20 GPC email.
+  - **Added** Ceci Villanueva (GPC photographer / recap content, tertiary scope, phone (404) 698-7626, no email captured).
+  - **Added** Keith (Ideal Sports Bar primary booking contact, phone (678) 633-4251, text preferred, designs venue flyers from band-supplied artwork). Ideal `venue_relationships` entry simplified — dropped the stale "no_direct_contact_note" now that Keith is logged.
+  - `last_compiled` bumped to 2026-05-20.
+- **`Bolo Boys - Private/docs/venue-contacts.md`** — regenerated via `tools/contacts-to-markdown.py`.
+- **Google Calendar (Bolo Boys shared)** — both Ideal events updated: end time 11 PM → 10 PM, description rewritten with confirmed times + Keith's text contact. Notifications silenced (calendar UI shows the update; no email push).
+- **Memory** — `feedback_paul_internal_voice.md` extended with patterns observed in Paul's edits to the GPC email (venue/partner register vs. bandmate register; PS-carries-relationship-ask; give-offers; date-prefix anchors; honest-tell humanizers).
+
+Side-effects Paul confirmed: GPC email sent (Skyler + Josh; CC John + Nigel; subject "Bolo Boys — Summer Shade + Market in the Park"); Bolo Boys shared calendar events updated for 6/26 + 7/11.
+
+## 2026-05-20 — Venue-review press scanner: explicit + implicit modes
 
 - **`tools/press-scan.py`** — added `--mode {explicit,implicit,all}` flag (default `explicit`, so Phase 2 / Phase 5 cadence is unchanged). New `venue-review` tag adds two band-wide queries (`site:yelp.com OR site:google.com/maps`, broad `review`) plus per-recurring-venue queries (`"Bolo Boys" "<venue>" review`) for any venue with ≥2 past plays. New `implicit_targets` output (only emitted under `implicit` / `all`) ships per-venue review URLs, show dates with co-bills, a 14-day match window, and language signals so Claude can execute the implicit playbook per CLAUDE.md. Output shape changed from a bare array to `{"queries": [...], "implicit_targets": [...]}`.
 - **`data/venues.json`** — new optional fields `yelp_url` and `google_reviews_url` on Side Saddle (5 past plays), Wild Heaven Avondale (2), and Wild Heaven Toco Hills (3). Yelp URLs populated; Google reviews URLs left null until next-touch research. Other venues unchanged.

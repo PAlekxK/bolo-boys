@@ -110,7 +110,7 @@
       "date": "2026-06-26",
       "day_of_week": "Friday",
       "time": "8:00 PM",
-      "duration_hours": 3,
+      "duration_hours": 2,
       "venue_id": "ideal-sports-bar",
       "venue_name": "Ideal Sports Bar",
       "venue_neighborhood": "Lakewood Heights",
@@ -120,8 +120,8 @@
       "theme": null,
       "invitation_text": "Excited to be playing Ideal Sports Bar for the first time — Lakewood Heights spot, two pool tables and a beer garden out back. Friday night, full Bolo Boys mix. Come hang, shoot some pool.",
       "teaser": null,
-      "additional_details": "First time playing this venue. Start time subject to confirmation.",
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260626/20260627&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+at+Ideal+Sports+Bar+in+Lakewood+Heights.+8+PM+start+%28subject+to+confirm%29.",
+      "additional_details": null,
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260626T200000/20260626T220000&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+live+at+Ideal+Sports+Bar+%E2%80%94+Lakewood+Heights",
       "ics_url": null
     },
     {
@@ -155,7 +155,7 @@
       "date": "2026-07-11",
       "day_of_week": "Saturday",
       "time": "8:00 PM",
-      "duration_hours": 3,
+      "duration_hours": 2,
       "venue_id": "ideal-sports-bar",
       "venue_name": "Ideal Sports Bar",
       "venue_neighborhood": "Lakewood Heights",
@@ -165,8 +165,8 @@
       "theme": null,
       "invitation_text": "Back at Ideal already — and ready for round two. Beer garden, pool tables, full Bolo Boys mix on a Saturday night.",
       "teaser": null,
-      "additional_details": "Second show at Ideal Sports Bar. Start time subject to confirmation.",
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260711/20260712&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+at+Ideal+Sports+Bar+in+Lakewood+Heights.+8+PM+start+%28subject+to+confirm%29.",
+      "additional_details": null,
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260711T200000/20260711T220000&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+live+at+Ideal+Sports+Bar+%E2%80%94+Lakewood+Heights",
       "ics_url": null
     },
     {
