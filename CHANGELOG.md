@@ -4,7 +4,15 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-19 (latest) — Mobile event cards: consistent height, time always-on, business-resolving maps links
+## 2026-05-20 (latest) — Venue-review press scanner: explicit + implicit modes
+
+- **`tools/press-scan.py`** — added `--mode {explicit,implicit,all}` flag (default `explicit`, so Phase 2 / Phase 5 cadence is unchanged). New `venue-review` tag adds two band-wide queries (`site:yelp.com OR site:google.com/maps`, broad `review`) plus per-recurring-venue queries (`"Bolo Boys" "<venue>" review`) for any venue with ≥2 past plays. New `implicit_targets` output (only emitted under `implicit` / `all`) ships per-venue review URLs, show dates with co-bills, a 14-day match window, and language signals so Claude can execute the implicit playbook per CLAUDE.md. Output shape changed from a bare array to `{"queries": [...], "implicit_targets": [...]}`.
+- **`data/venues.json`** — new optional fields `yelp_url` and `google_reviews_url` on Side Saddle (5 past plays), Wild Heaven Avondale (2), and Wild Heaven Toco Hills (3). Yelp URLs populated; Google reviews URLs left null until next-touch research. Other venues unchanged.
+- **`tools/press-scan-excludes.json`** — new `implicit_language_signals` key (15 live-music terms — "live music", "trio", "guitar", "acoustic", "harmonies", etc.) as the single source the script and playbook agree on for implicit-match scoring.
+- **CLAUDE.md** — Press scanner section gained a **Modes** subsection (explicit default, implicit on-demand, never auto-wire) and a full **Implicit verification playbook** (date filter → language signal → different-band filter → confidence label → per-candidate Paul verification). Workflow step 6 updated to call for the two new scan-report sections in implicit/all runs.
+- **No band-facing side effects yet.** No scan executed; no `external_links` wired. Pilot run on Side Saddle's Yelp reviews is the next step.
+
+## 2026-05-19 — Mobile event cards: consistent height, time always-on, business-resolving maps links
 
 - **Two-line collapsed card with fixed slots** — venue name (line 1, ellipsis if it overflows) + one secondary signal (line 2). Cards now stack at consistent height regardless of which optional fields a show has. `min-height: 80px` on mobile (<480px).
 - **Secondary line always leads with the time** as a charcoal-bold prefix — `8 PM · w/ Adam Klein`, `11:30 AM · w/ Dirty Shame`, `8 PM · Lakewood Heights`. Time is never hidden. Trailing context follows precedence: **co-bill > theme > city**. `8:00 PM` collapses to `8 PM` for display; `11:30 AM` stays intact.

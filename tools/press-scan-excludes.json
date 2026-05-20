@@ -1,7 +1,25 @@
 {
   "$schema_version": "1",
   "purpose": "Disambiguation filter for press-scanner candidate results. 'Bolo Boys' is a polluted search term — other entities (Dierks Bentley's prank band, a German hip-hop collective) dominate generic queries. Filter out their results when sifting WebSearch output. See ~/.claude/projects/-Users-paulkirschenbauer/memory/project_bolo_boys_name_disambiguation.md.",
-  "last_updated": "2026-05-19",
+  "last_updated": "2026-05-20",
+
+  "implicit_language_signals": [
+    "live music",
+    "live band",
+    "band",
+    "trio",
+    "guitar",
+    "guitarist",
+    "acoustic",
+    "harmonies",
+    "musicians",
+    "playing",
+    "set",
+    "sets",
+    "show",
+    "Sunday afternoon music",
+    "patio music"
+  ],
 
   "blocked_domains": [
     "theboot.com",

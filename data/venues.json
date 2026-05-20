@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Venue library for Bolo Boys event management. Claude checks this before creating new event entries and updates it when new venues are added.",
-    "last_updated": "2026-05-11"
+    "last_updated": "2026-05-20"
   },
   "venues": [
     {
@@ -15,6 +15,8 @@
       "phone": "(770) 790-7886",
       "website": "https://www.sidesaddle.wine/",
       "google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
+      "yelp_url": "https://www.yelp.com/biz/side-saddle-wine-saloon-and-bar-atlanta",
+      "google_reviews_url": null,
       "notes": "Regular gig. Monthly showcase. Patio available. Often co-billed with Dirty Shame & Acoustic Station.",
       "summary": "A wine saloon along the Atlanta BeltLine in Boulevard Heights — checkered floors, terracotta velvet booths, palm-frond-print chairs, wide-open windows, and a patio that doubles the room when the weather works.",
       "what_we_love": [
@@ -186,6 +188,8 @@
       "phone": "(404) 228-2961",
       "website": "https://wildheavenbeer.com/",
       "google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+135B+Maple+St%2C+Avondale+Estates%2C+GA+30002",
+      "yelp_url": "https://www.yelp.com/biz/wild-heaven-beer-decatur-4",
+      "google_reviews_url": null,
       "notes": "Ongoing concert series. Typical slots: Fri eve 6:30 PM / Sat afternoon.",
       "summary": "Wild Heaven's Avondale Estates taproom and kitchen on Maple Street — indoor seating plus an outdoor section that includes converted-container seating, with a regular live-music schedule across the weekend.",
       "what_we_love": [
@@ -221,6 +225,8 @@
       "phone": null,
       "website": "https://wildheavenbeer.com/",
       "google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+2935B+N+Druid+Hills+Rd+NE%2C+Atlanta%2C+GA+30329",
+      "yelp_url": "https://www.yelp.com/biz/wild-heaven-beer-atlanta-atlanta-2",
+      "google_reviews_url": null,
       "notes": "Ongoing concert series. Typical slot: Sun afternoon 3–6 PM.",
       "summary": "Wild Heaven's Toco Hills taproom and event space, paired with Fox Bros. Bar-B-Q — an onsite brewery, 93-seat taproom, 48-seat event space, indoor TVs, and a courtyard with turf and mature trees built for live music.",
       "what_we_love": [
