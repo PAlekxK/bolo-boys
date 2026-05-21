@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Upcoming shows for the Bolo Boys website. Only upcoming shows are listed here — past shows are covered by social media.",
-    "last_updated": "2026-05-18",
+    "last_updated": "2026-05-21",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json."
   },
@@ -78,6 +78,12 @@
           "source": "@adamkleinmusic (Instagram)",
           "url": "https://www.instagram.com/p/DYcypOuFW9v/",
           "date": null
+        },
+        {
+          "title": "Memorial Day Monday at the Grant Ole Opry — Bolo Boys + Adam Klein",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DX7TN-4EQoI/",
+          "date": null
         }
       ]
     },
@@ -107,7 +113,15 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
-      }
+      },
+      "external_links": [
+        {
+          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "ideal-sports-bar-2026-06-26",
@@ -157,7 +171,15 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
-      }
+      },
+      "external_links": [
+        {
+          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "ideal-sports-bar-2026-07-11",
@@ -207,7 +229,15 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
-      }
+      },
+      "external_links": [
+        {
+          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "side-saddle-2026-08-29",
