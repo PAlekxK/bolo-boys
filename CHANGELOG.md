@@ -12,6 +12,14 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-21 — Side Saddle + Finca to Filter IG handles captured in venues.json
+
+- **`data/venues.json`** — added `instagram` + `instagram_handle` fields to `side-saddle` (`@sidesaddlewine`) and `finca-to-filter` (`@fincatofilter`). Source-of-truth for future captions that tag these venues; previously the handles lived only in Paul's head. `_meta.last_updated` bumped to 2026-05-21.
+- **JSON-LD / sitemap / `bandsintown-upload.csv`** — regenerated via `tools/run-propagators.sh` (no functional change since IG handles aren't in event-level data, but propagators are idempotent and CLAUDE.md says "after any data/ change").
+- **Side Saddle Summer Series IG caption** — drafted in conversation (warm-welcome + bridge-coming framing, three summer dates, four-band rotation, tags + hashtags). Saved to Drive as a working doc.
+
+No band-facing side effects yet (caption pending Paul's post).
+
 ## 2026-05-21 — Operating-layer skill + DECISIONS.md
 
 - **`Bolo Boys - Private/DECISIONS.md`** — new file. Captures the dashboard archival (2026-05-19), the Markdown pivot via `/bolo-status` Skill, and the load-bearing data-model invariants (`phase` field, `venue-contacts.json` canon, `scene-events.json` for conflicts). D1–D5 locked; D-OPEN-1 (citizen-science) + D-OPEN-2 (sync-band-sheet OAuth) captured as in-flight. Per the W1a portfolio audit's recommendation that Houseplants' DECISIONS.md is the model pattern; Bolo Boys is the second project to adopt it.
