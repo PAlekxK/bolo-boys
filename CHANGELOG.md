@@ -12,6 +12,17 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-21 — Summer Shade 2026 dates corrected in scene-events.json
+
+Confirmed via web research that the 24th annual Summer Shade Festival is **2026-08-22 / 2026-08-23**, not the historical "last weekend of August" pattern. Previous scene-events.json entry had it on 2026-08-29 / 30 — wrong.
+
+- **`data/scene-events.json`** — `summer-shade-festival` entry: `next_known_start` 2026-08-29 → 2026-08-22, `next_known_end` 2026-08-30 → 2026-08-23. `pattern` and `notes` updated to reflect the 2026-specific date and the verification path (Eventeny + Adventures in Atlanta, 2026-05-21).
+- **Implication for the 2026-08-29 Side Saddle show:** no longer a Summer Shade conflict — it's the weekend AFTER Summer Shade. Future `/bolo-status` runs will no longer flag 8/29 in Section 4 conflicts.
+- **Google Calendar (Bolo Boys shared) — 8/29 event:** title "Side Saddle Saturday Show - Last Saturday in August," description "Last Saturday in August. Hopefully gives us a break from July/August heat." No Summer Shade reference to remove — calendar invite is already clean.
+- **Side observation surfaced:** `/bolo-status` Section 5 (Venues needing research refresh) reads `research_date` from `venue-contacts.json`, but actual venue research lives as `last_researched` in `venues.json`. All 11 active venues are fresh as of 2026-05-11 (or fresher) — no research actually needed. Skill edit to fix Section 5 + add Section 6 (Attractive open dates) was blocked by auto-mode permissions for self-modification; needs Paul's explicit approval to land.
+
+No band-facing side effects.
+
 ## 2026-05-21 — Past-show + Avondale series IG URLs wired into external_links
 
 Continuing the paste-and-wire batch. Paul pasted IG post URLs for past shows + the Wild Heaven Avondale concert series.
