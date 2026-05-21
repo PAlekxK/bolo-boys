@@ -12,6 +12,17 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-21 — IG post URLs wired into events.json external_links
+
+- **`data/events.json`** — 4 events gained an `external_links` entry via the paste-and-wire workflow:
+  - `grant-central-pizza-2026-05-25` — appended the Bolo Boys' own Memorial Day announcement to the existing array (Adam Klein's promo was already there).
+  - `side-saddle-2026-05-31`, `side-saddle-2026-06-27`, `side-saddle-2026-07-19` — same summer-series IG collab post wired into all three (announces three dates at once on the band's IG, co-published with @sidesaddlewine + @fincatofilter).
+  - `_meta.last_updated` bumped to 2026-05-21.
+- **`bandsintown-upload.csv`** — regenerated. JSON-LD + sitemap already in sync from earlier this session.
+- Both posts went out from `@boloboysband` (Instagram); paste-and-wire titles match the band-voice tone established in the existing 5/25 external_link.
+
+No band-facing side effects (the posts are already live; this only updates the "Around the web" rendering on boloboys.band).
+
 ## 2026-05-21 — Side Saddle + Finca to Filter IG handles captured in venues.json
 
 - **`data/venues.json`** — added `instagram` + `instagram_handle` fields to `side-saddle` (`@sidesaddlewine`) and `finca-to-filter` (`@fincatofilter`). Source-of-truth for future captions that tag these venues; previously the handles lived only in Paul's head. `_meta.last_updated` bumped to 2026-05-21.
