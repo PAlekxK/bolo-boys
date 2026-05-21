@@ -12,6 +12,25 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-21 — Past-show + Avondale series IG URLs wired into external_links
+
+Continuing the paste-and-wire batch. Paul pasted IG post URLs for past shows + the Wild Heaven Avondale concert series.
+
+- **`data/past-shows.json`** — 9 new `external_links` entries appended across 7 past shows:
+  - `gateway-park-grant-park-2026-05-17` (Market in the Park) — band's IG post joins existing Aha! Connection + Caren West PR coverage.
+  - `side-saddle-2026-02-27` — patio show w/ Dirty Shame + Acoustic Station.
+  - `side-saddle-2026-01-30` — monthly Atlanta showcase w/ Dirty Shame.
+  - `side-saddle-2025-12-19` — holiday show w/ Dirty Shame.
+  - `because-coffee-2025-12-13` — Christmas celebration in Dawsonville.
+  - `cultivation-brewing-2025-12-12` — second annual Cultivation showcase w/ Dirty Shame.
+  - `echo-art-gallery-2025-10-18` — Westside.
+  - `wild-heaven-avondale-2026-03-20` + `wild-heaven-avondale-2026-04-04` — same Wild Heaven Avondale concert-series IG post wired to both past Avondale dates.
+- **`data/events.json`** — same Avondale concert-series URL wired to the upcoming `wild-heaven-avondale-2026-05-23` (one URL spans the series across past + upcoming, similar to how the summer-series URL spans the three SS summer dates).
+- **`_meta.last_updated`** bumped to 2026-05-21 on both files.
+- **`bandsintown-upload.csv`** — regenerated. JSON-LD + sitemap already in sync (external_links isn't reflected in either).
+
+Side-effect Paul flagged: the Avondale URL is plural ("avondale shows"). I interpreted as the concert series and wired it to all 3 Avondale dates (1 upcoming + 2 past). Worth verifying it actually covers the whole series vs. one specific date.
+
 ## 2026-05-21 — IG post URLs wired into events.json external_links
 
 - **`data/events.json`** — 4 events gained an `external_links` entry via the paste-and-wire workflow:

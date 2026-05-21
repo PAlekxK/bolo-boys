@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Historical show log for Bolo Boys. Completed shows move here when they pass. Upcoming shows live in events.json.",
-    "last_updated": "2026-05-19",
+    "last_updated": "2026-05-21",
     "schema_version": "1.0"
   },
   "past_shows": [
@@ -30,6 +30,12 @@
           "source": "Caren West PR",
           "url": "https://www.carenwestpr.com/grant-park-market-in-the-park-birthday-celebration/",
           "date": "2026-05-13"
+        },
+        {
+          "title": "Bolo Boys at Market in the Park — Grant Park's birthday celebration",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DYNlnU6zK7J/",
+          "date": null
         }
       ]
     },
@@ -91,7 +97,15 @@
       "venue_city": "Avondale Estates, GA",
       "supporting_acts": [],
       "notes": "Part of ongoing Wild Heaven concert series.",
-      "poster_url": "assets/posters/wild-heaven.png"
+      "poster_url": "assets/posters/wild-heaven.png",
+      "external_links": [
+        {
+          "title": "Wild Heaven Avondale concert series — Bolo Boys",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DWE2euwEeW6/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "wild-heaven-toco-hills-2026-03-29",
@@ -141,7 +155,15 @@
       "venue_city": "Avondale Estates, GA",
       "supporting_acts": [],
       "notes": "First show in Wild Heaven concert series.",
-      "poster_url": "assets/posters/wild-heaven.png"
+      "poster_url": "assets/posters/wild-heaven.png",
+      "external_links": [
+        {
+          "title": "Wild Heaven Avondale concert series — Bolo Boys",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DWE2euwEeW6/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "side-saddle-2026-02-27",
@@ -163,7 +185,15 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
-      }
+      },
+      "external_links": [
+        {
+          "title": "Side Saddle patio show — Bolo Boys + Dirty Shame + Acoustic Station",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DU1nYp4DFSd/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "side-saddle-2026-01-30",
@@ -184,7 +214,15 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
-      }
+      },
+      "external_links": [
+        {
+          "title": "Monthly Atlanta showcase at Side Saddle — Bolo Boys + Dirty Shame",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DT_S6FOAce_/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "side-saddle-2025-12-19",
@@ -205,7 +243,15 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
-      }
+      },
+      "external_links": [
+        {
+          "title": "Holiday show at Side Saddle — Bolo Boys + Dirty Shame",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DSF32YIkTIW/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "because-coffee-2025-12-13",
@@ -219,7 +265,15 @@
       "venue_city": "Dawsonville, GA",
       "supporting_acts": [],
       "notes": "Christmas celebration event. Santa in attendance.",
-      "poster_url": "assets/posters/because-coffee-2025-12-13.jpeg"
+      "poster_url": "assets/posters/because-coffee-2025-12-13.jpeg",
+      "external_links": [
+        {
+          "title": "Bolo Boys at Because Coffee — Christmas celebration in Dawsonville",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DR-zecdDHJO/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "cultivation-brewing-2025-12-12",
@@ -235,7 +289,15 @@
         "Dirty Shame"
       ],
       "notes": "Second annual showcase at Cultivation Brewing.",
-      "poster_url": "assets/posters/cultivation-brewing-2025-12-12.jpeg"
+      "poster_url": "assets/posters/cultivation-brewing-2025-12-12.jpeg",
+      "external_links": [
+        {
+          "title": "Second annual showcase at Cultivation Brewing — Bolo Boys + Dirty Shame",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DRvW0EbDGUM/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "capitol-view-holiday-market-2025-11-14",
@@ -263,7 +325,15 @@
       "venue_city": "Atlanta, GA",
       "supporting_acts": [],
       "notes": "Show date confirmed from Google Drive folder.",
-      "poster_url": "assets/posters/echo-art-gallery-2025-10-18.jpeg"
+      "poster_url": "assets/posters/echo-art-gallery-2025-10-18.jpeg",
+      "external_links": [
+        {
+          "title": "Bolo Boys at Echo Art Gallery — Westside",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DPuoLD6CnNf/",
+          "date": null
+        }
+      ]
     }
   ]
 }
