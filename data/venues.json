@@ -1,7 +1,8 @@
 {
   "_meta": {
     "purpose": "Venue library for Bolo Boys event management. Claude checks this before creating new event entries and updates it when new venues are added.",
-    "last_updated": "2026-05-20"
+    "last_updated": "2026-05-20",
+    "schema_notes": "Optional sister_venue_id field cross-links venues that share an address/patio (currently Side Saddle ↔ Finca to Filter). UI renders the sister name alongside the primary venue name on event cards."
   },
   "venues": [
     {
@@ -17,7 +18,8 @@
       "google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
       "yelp_url": "https://www.yelp.com/biz/side-saddle-wine-saloon-and-bar-atlanta",
       "google_reviews_url": null,
-      "notes": "Regular gig. Monthly showcase. Patio available. Often co-billed with Dirty Shame & Acoustic Station.",
+      "sister_venue_id": "finca-to-filter",
+      "notes": "Regular gig. Monthly showcase. Patio shared with sister venue Finca to Filter (same owner Kayla Bellman, same address — coffee shop by day 7 AM–3 PM, wine bar by night). Often co-billed with Dirty Shame & Acoustic Station.",
       "summary": "A wine saloon along the Atlanta BeltLine in Boulevard Heights — checkered floors, terracotta velvet booths, palm-frond-print chairs, wide-open windows, and a patio that doubles the room when the weather works.",
       "what_we_love": [
         "the BeltLine-adjacent walk-up",
@@ -42,6 +44,42 @@
         "Yelp",
         "Restaurantji",
         "sidesaddle.wine"
+      ]
+    },
+    {
+      "id": "finca-to-filter",
+      "name": "Finca to Filter",
+      "type": "coffee-shop",
+      "neighborhood": "Grant Park / Beltline (Boulevard Heights)",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "680 Hamilton Ave SE, Atlanta, GA 30312",
+      "phone": null,
+      "website": "https://finca.coffee/",
+      "google_maps_url": "https://maps.google.com/?q=Finca+to+Filter%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
+      "yelp_url": "https://www.yelp.com/biz/finca-to-filter-atlanta-2",
+      "google_reviews_url": null,
+      "sister_venue_id": "side-saddle",
+      "notes": "Sister business to Side Saddle — same owner (Kayla Bellman), same address, shared patio. Operates 7 AM–3 PM daily as the coffee-shop half of the patio; Side Saddle is the wine-bar half (evenings). Bolo Boys don't book Finca directly — cross-promoted alongside Side Saddle shows for reach and recognition. Only overlap with FtF operating hours is the 5/31 1-year anniversary morning show.",
+      "summary": "Queer-and-woman-owned specialty coffee shop on the BeltLine in Boulevard Heights. Sister business to Side Saddle Wine Saloon — they share the address, the patio, and the ownership. Coffee in the morning at Finca, wine in the evening at Side Saddle.",
+      "what_we_love": [
+        "the BeltLine-adjacent walk-up (shared with Side Saddle)",
+        "the patio when weather cooperates",
+        "specialty coffee from queer, women, and BIPOC roasters",
+        "seasonal drinks that lean on place and history",
+        "dogs welcome"
+      ],
+      "menu_highlights": [],
+      "live_music_context": "Coffee shop, not a music-booking venue. Cross-promotion partner with Side Saddle. The 5/31 anniversary morning show is the rare Bolo Boys set that lands inside Finca's operating hours.",
+      "crowd_notes": "Beltline pedestrians + neighborhood coffee regulars. Queer-and-caffeinated vibe per their own framing.",
+      "practical_notes": "Hours: Mon–Sun 7 AM–3 PM. Shared patio with Side Saddle (which opens later, evenings). BeltLine pedestrian access.",
+      "last_researched": "2026-05-20",
+      "research_sources": [
+        "finca.coffee",
+        "Beltline.org blog",
+        "Atlanta Coffee Shops",
+        "Yelp",
+        "Instagram (@fincatofilter)"
       ]
     },
     {

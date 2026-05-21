@@ -4,7 +4,23 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
-## 2026-05-20 (latest) — Ideal show details locked + venue contacts updated
+## 2026-05-20 (latest) — Finca to Filter integration + Side Saddle 5/31 time locked
+
+Cross-promo for Side Saddle's sister venue Finca to Filter (same owner Kayla Bellman, same address 680 Hamilton, shared patio). Lets boloboys.band, calendar invites, and the Bolo Boys IG audience all see both businesses surfaced as a single anniversary celebration on 5/31 and an ongoing patio identity for the rest of the SS series.
+
+- **`data/venues.json`** — new `finca-to-filter` venue entry (coffee shop, 7 AM–3 PM, queer/woman-owned, sister to Side Saddle). New optional `sister_venue_id` field cross-links Side Saddle ↔ Finca to Filter both ways. Side Saddle's `notes` updated to reflect the sister relationship. `_meta.schema_notes` documents the new field.
+- **`data/events.json`** — added `partner_venue` field (`{id, name, instagram}`) to all 8 upcoming Side Saddle events; consumed by the UI for the dual-venue card render (no propagator impact — JSON-LD/BIT CSV still use single `venue_name`). 5/31 specifically: `time` 11:30 AM → 11:00 AM, calendar URL timestamps 113000/133000 → 110000/130000, `invitation_text` fully rewritten for the dual-business anniversary, `additional_details` updated to reflect "Side Saddle + Finca to Filter shared 1-year anniversary weekend." 6/27, 7/19, 8/29 got light-touch invitation_text swaps ("Side Saddle patio" → "Side Saddle + Finca to Filter patio"). All 8 events' `google_calendar_url` details param now reads "Bolo Boys live at Side Saddle + Finca to Filter — ..."
+- **`data/past-shows.json`** — backfilled `partner_venue` on 5 past Side Saddle shows so the historical block also renders the dual name.
+- **`index.html`** — collapsed event card now appends `<span class="event-partner-venue">+ Finca to Filter</span>` inline after the `event-venue-name` when an event has a `partner_venue`. Same treatment in the past-shows row via `.past-show-partner-venue`. New CSS keeps the partner subtle (font-weight 500, slightly smaller, gray) so the primary venue stays dominant. `title` attribute carries the combined name for screen readers.
+- **JSON-LD / sitemap / `bandsintown-upload.csv`** — regenerated via `tools/run-propagators.sh`. JSON-LD MusicEvent.location and BIT CSV stay correctly anchored on Side Saddle (the bookable venue); partner_venue is UI-only.
+- **`Bolo Boys - Private/data/venue-contacts.json`** — new `finca-to-filter` venue_relationship (status: regular, summary explains the sister-venue dynamic). New parallel contact `finca-to-filter-kayla-bellman` so searches by FtF venue_id surface Kayla without schema-changing to multi-venue contacts. Side Saddle entry's notes updated to point to the parallel record. `last_compiled` 2026-05-20.
+- **`Bolo Boys - Private/docs/venue-contacts.md`** — regenerated via `tools/contacts-to-markdown.py`.
+- **Google Calendar (Bolo Boys shared)** — 5/31 event description rewritten with the locked 11 AM–1 PM time and the dual-business anniversary framing; event stayed all-day to match the other 7 SS events' established pattern (locked time lives in the description). 7 other SS events' descriptions updated with light FtF cross-references. Notifications silenced.
+- **Held back:** sending Keith Ideal Sports Bar artwork for the venue-designed flyer (Keith offered to design + send for approval if Bolo Boys provides the art); IG post for the Side Saddle Summer Series (caption drafted, needs Paul's final approval); Side Saddle performer email (blockers cleared, ready to draft).
+
+Side-effects Paul confirmed: GCal updates land silently (notificationLevel NONE on all 8 SS event updates). No band-facing IG post yet.
+
+## 2026-05-20 — Ideal show details locked + venue contacts updated
 
 - **`data/events.json`** — Ideal Sports Bar 6/26 + 7/11: `duration_hours` 3 → 2 (locked at 8–10 PM per Keith confirmation), dropped "subject to confirmation" language from `additional_details` and the calendar URL details param. `google_calendar_url` rewritten with proper `YYYYMMDDTHHmmSS/YYYYMMDDTHHmmSS` timestamp format (was date-only, which would have rendered as an all-day event).
 - **`index.html` / `sitemap.xml` / `bandsintown-upload.csv`** — regenerated via `tools/run-propagators.sh`.

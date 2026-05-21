@@ -58,7 +58,12 @@
       "venue_neighborhood": "Grant Park / Beltline",
       "venue_city": "Atlanta, GA",
       "supporting_acts": [],
-      "notes": "Celebrated Atlanta Beltline's newest segment in Grant Park."
+      "notes": "Celebrated Atlanta Beltline's newest segment in Grant Park.",
+      "partner_venue": {
+        "id": "finca-to-filter",
+        "name": "Finca to Filter",
+        "instagram": "@fincatofilter"
+      }
     },
     {
       "id": "wild-heaven-toco-hills-2026-04-12",
@@ -117,7 +122,12 @@
         "Acoustic Station"
       ],
       "notes": "St. Paddy's Day celebration show. Green drinks, Irish trivia.",
-      "poster_url": "assets/posters/side-saddle-2026-03-28.jpeg"
+      "poster_url": "assets/posters/side-saddle-2026-03-28.jpeg",
+      "partner_venue": {
+        "id": "finca-to-filter",
+        "name": "Finca to Filter",
+        "instagram": "@fincatofilter"
+      }
     },
     {
       "id": "wild-heaven-avondale-2026-03-20",
@@ -148,7 +158,12 @@
         "Acoustic Station"
       ],
       "notes": "Patio show, weather permitting.",
-      "poster_url": "assets/posters/side-saddle-2026-02-27.png"
+      "poster_url": "assets/posters/side-saddle-2026-02-27.png",
+      "partner_venue": {
+        "id": "finca-to-filter",
+        "name": "Finca to Filter",
+        "instagram": "@fincatofilter"
+      }
     },
     {
       "id": "side-saddle-2026-01-30",
@@ -164,7 +179,12 @@
         "Dirty Shame"
       ],
       "notes": "Monthly showcase of Atlanta talent.",
-      "poster_url": "assets/posters/side-saddle-2026-01-30.jpeg"
+      "poster_url": "assets/posters/side-saddle-2026-01-30.jpeg",
+      "partner_venue": {
+        "id": "finca-to-filter",
+        "name": "Finca to Filter",
+        "instagram": "@fincatofilter"
+      }
     },
     {
       "id": "side-saddle-2025-12-19",
@@ -180,7 +200,12 @@
         "Dirty Shame"
       ],
       "notes": "Holiday show. Cowboy hat or santa hat welcome.",
-      "poster_url": "assets/posters/side-saddle-2025-12-19.png"
+      "poster_url": "assets/posters/side-saddle-2025-12-19.png",
+      "partner_venue": {
+        "id": "finca-to-filter",
+        "name": "Finca to Filter",
+        "instagram": "@fincatofilter"
+      }
     },
     {
       "id": "because-coffee-2025-12-13",
