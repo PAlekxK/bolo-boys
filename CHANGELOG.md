@@ -4,6 +4,21 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
+## For band emails
+
+Rolling subsection: what's worth telling Nigel and John in the next band-update email. Distinct from the per-session changelog below (which is for the audit trail). Curate down to the items that matter to a touring trio reading on their phone — new shows, venue changes, press, ops-layer wins. Empty by default after each email goes out; refills as the next cycle's items accumulate.
+
+*(No items queued for the next email as of 2026-05-21.)*
+
+---
+
+## 2026-05-21 — Operating-layer skill + DECISIONS.md
+
+- **`Bolo Boys - Private/DECISIONS.md`** — new file. Captures the dashboard archival (2026-05-19), the Markdown pivot via `/bolo-status` Skill, and the load-bearing data-model invariants (`phase` field, `venue-contacts.json` canon, `scene-events.json` for conflicts). D1–D5 locked; D-OPEN-1 (citizen-science) + D-OPEN-2 (sync-band-sheet OAuth) captured as in-flight. Per the W1a portfolio audit's recommendation that Houseplants' DECISIONS.md is the model pattern; Bolo Boys is the second project to adopt it.
+- **`~/.claude/skills/bolo-status/SKILL.md`** — new Claude Code Skill. Read-only Markdown digest with five sections: Pipeline by phase, Ownership flags, Open leads (with staleness flags), Calendar gaps + conflicts, Venues needing research refresh. Reads `data/events.json`, `data/past-shows.json`, `data/scene-events.json` (public repo) + `data/venue-contacts.json` (private repo). Invoke with `/bolo-status` anywhere Claude Code is running.
+- **`CHANGELOG.md`** — new `## For band emails` subsection at the top of this file (above the per-date entries), feeding future "since last update" emails to Nigel and John.
+- **Held back:** `sync-band-sheet.py` OAuth setup remains a Paul-only manual step (Google Cloud project + consent flow, ~30 min). Skill works against the JSON files in the meantime; switching to the sheet as the source-of-truth waits for OAuth to land.
+
 ## 2026-05-20 (latest) — Finca to Filter integration + Side Saddle 5/31 time locked
 
 Cross-promo for Side Saddle's sister venue Finca to Filter (same owner Kayla Bellman, same address 680 Hamilton, shared patio). Lets boloboys.band, calendar invites, and the Bolo Boys IG audience all see both businesses surfaced as a single anniversary celebration on 5/31 and an ongoing patio identity for the rest of the SS series.
