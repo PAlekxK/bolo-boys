@@ -22,7 +22,36 @@
     "additional_details": "Any extra info (cover, age restriction, etc.)",
     "google_calendar_url": "pre-built Google Calendar link",
     "ics_url": null,
-    "duration_hours": 2
+    "duration_hours": 2,
+    "prep": {
+      "setlist_status": "open",
+      "setlist_url": null,
+      "lifecycle_markers": {
+        "calendar_invite_sent": false,
+        "venue_thanked": false,
+        "clips_pulled": false
+      },
+      "logistics_notes": [
+        {
+          "text": "Example logistics note (band-facing only)",
+          "done": false
+        }
+      ],
+      "subgroups": [
+        {
+          "name": "Subgroup name",
+          "set_after_main": false,
+          "ready": false
+        }
+      ],
+      "open_questions": [
+        {
+          "text": "Question text",
+          "for": "person",
+          "resolved": false
+        }
+      ]
+    }
   },
   "events": [
     {
@@ -56,7 +85,25 @@
           "url": "https://www.instagram.com/p/DWE2euwEeW6/",
           "date": null
         }
-      ]
+      ],
+      "prep": {
+        "setlist_status": "draft",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [],
+        "subgroups": [
+          {
+            "name": "Ante Up",
+            "set_after_main": true,
+            "ready": false
+          }
+        ],
+        "open_questions": []
+      }
     },
     {
       "id": "grant-central-pizza-2026-05-25",
@@ -93,7 +140,34 @@
           "url": "https://www.instagram.com/p/DX7TN-4EQoI/",
           "date": null
         }
-      ]
+      ],
+      "prep": {
+        "setlist_status": "draft",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "No music stands at venue",
+            "done": false
+          },
+          {
+            "text": "Cheat sheets needed",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Cheat sheet placement",
+            "for": "John",
+            "resolved": false
+          }
+        ]
+      }
     },
     {
       "id": "side-saddle-2026-05-31",
@@ -129,7 +203,24 @@
           "url": "https://www.instagram.com/p/DYngFP4TtD8/",
           "date": null
         }
-      ]
+      ],
+      "prep": {
+        "setlist_status": "draft",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Anniversary morning — FtF cross-promo coordination",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": []
+      }
     },
     {
       "id": "ideal-sports-bar-2026-06-26",
@@ -149,7 +240,25 @@
       "teaser": null,
       "additional_details": null,
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260626T200000/20260626T220000&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+live+at+Ideal+Sports+Bar+%E2%80%94+Lakewood+Heights",
-      "ics_url": null
+      "ics_url": null,
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Start time still subject to confirmation",
+            "for": "venue",
+            "resolved": false
+          }
+        ]
+      }
     },
     {
       "id": "side-saddle-2026-06-27",
@@ -187,7 +296,30 @@
           "url": "https://www.instagram.com/p/DYngFP4TtD8/",
           "date": null
         }
-      ]
+      ],
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Outdoor patio — weather contingency",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Start time depends on World Cup Group Stage Final timing",
+            "for": "venue",
+            "resolved": false
+          }
+        ]
+      }
     },
     {
       "id": "ideal-sports-bar-2026-07-11",
@@ -207,7 +339,25 @@
       "teaser": null,
       "additional_details": null,
       "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260711T200000/20260711T220000&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+live+at+Ideal+Sports+Bar+%E2%80%94+Lakewood+Heights",
-      "ics_url": null
+      "ics_url": null,
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Start time still subject to confirmation",
+            "for": "venue",
+            "resolved": false
+          }
+        ]
+      }
     },
     {
       "id": "side-saddle-2026-07-19",
@@ -245,7 +395,30 @@
           "url": "https://www.instagram.com/p/DYngFP4TtD8/",
           "date": null
         }
-      ]
+      ],
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Outdoor patio — weather contingency",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Start time TBD — World Cup Final at 3 PM, we go on after",
+            "for": "venue",
+            "resolved": false
+          }
+        ]
+      }
     },
     {
       "id": "side-saddle-2026-08-29",
@@ -275,6 +448,23 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
+      },
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Outdoor patio — weather contingency",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": []
       }
     },
     {
@@ -305,6 +495,27 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
+      },
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Outdoor patio — weather contingency",
+            "done": false
+          },
+          {
+            "text": "Between DragonCon and Shaky Knees — promo opportunity",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": []
       }
     },
     {
@@ -335,6 +546,27 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
+      },
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Outdoor patio — weather contingency",
+            "done": false
+          },
+          {
+            "text": "Halloween — costumes encouraged",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": []
       }
     },
     {
@@ -365,6 +597,23 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
+      },
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Outdoor patio — weather contingency",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": []
       }
     },
     {
@@ -395,6 +644,27 @@
         "id": "finca-to-filter",
         "name": "Finca to Filter",
         "instagram": "@fincatofilter"
+      },
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Outdoor patio — weather contingency",
+            "done": false
+          },
+          {
+            "text": "One-year anniversary of Side Saddle concert series",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": []
       }
     }
   ]
