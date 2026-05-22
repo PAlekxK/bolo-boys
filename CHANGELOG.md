@@ -12,6 +12,14 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-21 — Show-prep system sketched as D-OPEN-3 (design only, not built)
+
+- **`Bolo Boys - Private/DECISIONS.md`** — added `D-OPEN-3. Show-prep system`. Three-piece design intent: (1) optional `prep` field on each event in `events.json` (band-facing prep state, distinct from `additional_details`); (2) new `data/songs.json` as canonical repertoire; (3) new `/show-prep` skill as read-only audit, sibling to `/bolo-status` Section 2. Build trigger: next time the prep gap bites (likely 5/23/5/25 Ante Up coordination).
+- **Why now:** surfaced when computing "leftover songs for Ante Up to play 5/23" required a canonical repertoire that doesn't exist. Each show has unique prep dimensions (5/25 = no music stands; 5/31 = anniversary morning; 6/27 = World Cup weather contingency) and there's no single place that answers "is X ready?"
+- **Held back per Paul's direction:** sketch only, don't build. Detailed shape + open design questions captured in DECISIONS.md for future-session pickup.
+
+No band-facing side effects.
+
 ## 2026-05-21 — Summer Shade 2026 dates corrected in scene-events.json
 
 Confirmed via web research that the 24th annual Summer Shade Festival is **2026-08-22 / 2026-08-23**, not the historical "last weekend of August" pattern. Previous scene-events.json entry had it on 2026-08-29 / 30 — wrong.
