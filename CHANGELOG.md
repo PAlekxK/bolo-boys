@@ -20,6 +20,18 @@ No band-facing side effects.
 
 ---
 
+## 2026-05-23 — Bandsintown upload tracking hardened (md5 + dedup warning)
+
+- **Discovered:** BIT appends on CSV upload and does NOT dedupe by event ID. Re-uploading the same CSV creates duplicates that must be manually deleted in the BIT UI. Paul did this manually on the 2026-05-23 re-upload before the warning existed.
+- **`CLAUDE.md`** (private repo, mirrored to public via symlink) — Phase 2 step 9 now warns about the append-not-dedupe behavior and the "upload only new rows, or be ready to delete duplicates" workaround. Open backlog item logged in `project_bolo_boys_open_threads.md` for a smarter upload workflow.
+- **`tools/mark-bit-upload.sh`** — sentinel now stores the **md5** of the CSV at upload time (not just a touch). Surfaces a "BIT appends" reminder before marking.
+- **`tools/run-propagators.sh`** — upload-needed check switched from mtime comparison to md5 comparison. Idempotent reruns that don't change CSV content no longer trigger false "upload needed" warnings. Reminder now includes the dedup warning prominently.
+- **`~/.claude/skills/bolo-status/SKILL.md`** — Bandsintown upload-status check updated to match (md5-based, with dedup warning baked into the "upload needed" flag).
+
+No band-facing side effects beyond the manual BIT cleanup Paul already did.
+
+---
+
 ## 2026-05-23 — Bandsintown upload tracking + propagator regen
 
 - **`tools/mark-bit-upload.sh`** (new) — single-purpose script that touches `tools/.last-bit-upload` (gitignored local sentinel) to mark "I just uploaded the current CSV to Bandsintown." Run after every BIT upload.

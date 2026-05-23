@@ -27,13 +27,22 @@ echo "→ check-stale-events.py"
 # Non-blocking: surfaces past-dated events.json entries that need Phase 5 cleanup.
 python3 tools/check-stale-events.py || true
 
-# BIT upload reminder: if the CSV mtime is newer than the upload sentinel
-# (or the sentinel doesn't exist), surface that an upload is needed.
+# BIT upload reminder: compare md5 of current CSV against md5 stored in sentinel.
+# Content-based check (not mtime) so idempotent reruns don't trigger false alarms.
 SENTINEL="tools/.last-bit-upload"
-if [[ ! -f "$SENTINEL" ]] || [[ "bandsintown-upload.csv" -nt "$SENTINEL" ]]; then
+CURRENT_MD5="$(md5 -q bandsintown-upload.csv 2>/dev/null || md5sum bandsintown-upload.csv 2>/dev/null | awk '{print $1}')"
+STORED_MD5="$(cat "$SENTINEL" 2>/dev/null || echo '')"
+if [[ -z "$STORED_MD5" ]] || [[ "$CURRENT_MD5" != "$STORED_MD5" ]]; then
   echo ""
-  echo "⚠ Bandsintown CSV regenerated — upload to BIT, then mark with:"
-  echo "     bash tools/mark-bit-upload.sh"
+  if [[ -z "$STORED_MD5" ]]; then
+    echo "⚠ Bandsintown upload status unknown — no sentinel found."
+  else
+    echo "⚠ Bandsintown CSV content has changed since last upload."
+  fi
+  echo "  BIT APPENDS — does NOT dedupe by event ID. Re-uploading the full CSV"
+  echo "  creates duplicates. Upload only NEW rows since last upload, OR be"
+  echo "  ready to manually delete duplicates in the BIT UI afterward."
+  echo "  After uploading, run: bash tools/mark-bit-upload.sh"
 fi
 
 echo "✓ done"

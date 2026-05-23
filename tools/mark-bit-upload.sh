@@ -17,9 +17,21 @@ if [[ ! -f "$CSV" ]]; then
   exit 1
 fi
 
-touch "$SENTINEL"
+# Surface the duplicate-on-append risk if BIT already had these events.
+# Documented in CLAUDE.md Phase 2 step 9 (discovered 2026-05-23).
+echo "⚠ Reminder: BIT appends on upload. If you uploaded events that were"
+echo "  already on BIT, duplicates exist now and need manual deletion."
+echo ""
+
+# Sentinel stores the md5 of the CSV at upload time. That way an idempotent
+# propagator re-run (which bumps mtime but not content) won't trigger a false
+# "upload needed" warning — we compare content, not mtime.
+CSV_MD5="$(md5 -q "$CSV")"
+echo "$CSV_MD5" > "$SENTINEL"
+
 echo "✓ Marked Bandsintown upload at $(date '+%Y-%m-%d %H:%M:%S %Z')"
 echo "  CSV: $CSV"
+echo "  CSV md5: $CSV_MD5"
 echo "  Sentinel: $SENTINEL"
 echo ""
 echo "  Next /bolo-status will treat the BIT profile as in sync with the"
