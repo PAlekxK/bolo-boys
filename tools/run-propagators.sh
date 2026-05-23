@@ -27,4 +27,13 @@ echo "→ check-stale-events.py"
 # Non-blocking: surfaces past-dated events.json entries that need Phase 5 cleanup.
 python3 tools/check-stale-events.py || true
 
+# BIT upload reminder: if the CSV mtime is newer than the upload sentinel
+# (or the sentinel doesn't exist), surface that an upload is needed.
+SENTINEL="tools/.last-bit-upload"
+if [[ ! -f "$SENTINEL" ]] || [[ "bandsintown-upload.csv" -nt "$SENTINEL" ]]; then
+  echo ""
+  echo "⚠ Bandsintown CSV regenerated — upload to BIT, then mark with:"
+  echo "     bash tools/mark-bit-upload.sh"
+fi
+
 echo "✓ done"
