@@ -21,3 +21,6 @@ bandsintown-upload.csv
 
 # macOS
 .DS_Store
+
+# Editor / tool backup files
+*.bak
