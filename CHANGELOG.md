@@ -12,6 +12,14 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-23 — "Gas Money" Venmo tip button in Connect
+
+- **`index.html`** — added new `social-item` after Bandsintown linking to `https://account.venmo.com/u/nigelwrightmusic` (Nigel's Venmo, used as the band tip handle). Stroke-outline gas-pump icon to match the rest of the Connect row. Name "Gas Money," handle `@nigelwrightmusic`.
+
+No band-facing side effects beyond the new button.
+
+---
+
 ## 2026-05-23 — `.gitignore` excludes `*.bak`
 
 - **`.gitignore`** — added `*.bak` pattern; removed orphaned `data/events.json.bak` (yesterday-dated editor backup with a trivial `done` flag diff). Future editor/tool backups won't litter the working tree.
