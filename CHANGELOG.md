@@ -12,6 +12,14 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-23 — Tip button polish: top of Connect, open-jar icon, hero CTA
+
+- **`index.html`** — Gas Money card moved from last to first in the Connect list (more prominent than the soft-ask-at-end position). Swapped the mason-jar-with-`$` icon for an open jar with a coin floating above it (more active "tip going in" read). Added a smaller secondary `hero-cta-tip` button under the existing Upcoming Shows / Connect / About CTAs in the hero: same uppercase/border style, narrower padding, lighter border, jar+coin icon inline, text "Tip the Band," same Venmo destination.
+
+No band-facing side effects beyond the new placement + button.
+
+---
+
 ## 2026-05-23 — "Gas Money" Venmo tip button in Connect
 
 - **`index.html`** — added new `social-item` after Bandsintown linking to `https://account.venmo.com/u/nigelwrightmusic` (Nigel's Venmo, used as the band tip handle). Stroke-outline mason-jar-with-`$` icon to match the rest of the Connect row. Name "Gas Money," handle `Venmo · @nigelwrightmusic` (Venmo prefixed so visitors know what the link will open).
