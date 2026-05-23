@@ -20,6 +20,18 @@ No band-facing side effects.
 
 ---
 
+## 2026-05-23 — Bandsintown upload tracking + propagator regen
+
+- **`tools/mark-bit-upload.sh`** (new) — single-purpose script that touches `tools/.last-bit-upload` (gitignored local sentinel) to mark "I just uploaded the current CSV to Bandsintown." Run after every BIT upload.
+- **`tools/run-propagators.sh`** — now prints a "⚠ Bandsintown CSV regenerated — upload to BIT" reminder at the end of every run, with instructions to mark via `mark-bit-upload.sh`. Catches the "regenerated but never uploaded" drift mode that surfaced this session (the audit found Paul had not uploaded yesterday's regen).
+- **`.gitignore`** — excludes `tools/.last-bit-upload` (local-only state).
+- **`index.html` + `sitemap.xml`** — propagator regen artifacts: JSON-LD `validFrom` bumped 2026-05-22 → 2026-05-23 across all 12 event entries; sitemap `<lastmod>` bumped to 2026-05-23. Pure date-stamp updates, no structural changes.
+- **`~/.claude/skills/bolo-status/SKILL.md`** (user-skills, not in repo) — new Bandsintown freshness check uses the sentinel to detect upload drift, in addition to CSV-vs-events drift and content drift.
+
+**Band-facing side effects:** Bandsintown CSV needs re-upload from `bandsintown-upload.csv` (Paul handling now). Two Ideal Sports Bar events (6/26, 7/11) still lack posters — known gap, not blocking.
+
+---
+
 ## 2026-05-21 — Show-prep system sketched as D-OPEN-3 (design only, not built)
 
 - **`Bolo Boys - Private/DECISIONS.md`** — added `D-OPEN-3. Show-prep system`. Three-piece design intent: (1) optional `prep` field on each event in `events.json` (band-facing prep state, distinct from `additional_details`); (2) new `data/songs.json` as canonical repertoire; (3) new `/show-prep` skill as read-only audit, sibling to `/bolo-status` Section 2. Build trigger: next time the prep gap bites (likely 5/23/5/25 Ante Up coordination).

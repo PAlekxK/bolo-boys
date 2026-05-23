@@ -24,3 +24,6 @@ bandsintown-upload.csv
 
 # Editor / tool backup files
 *.bak
+
+# Local-only state markers (machine-specific, not shared)
+tools/.last-bit-upload
