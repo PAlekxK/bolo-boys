@@ -12,6 +12,14 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-23 — `.gitignore` excludes `*.bak`
+
+- **`.gitignore`** — added `*.bak` pattern; removed orphaned `data/events.json.bak` (yesterday-dated editor backup with a trivial `done` flag diff). Future editor/tool backups won't litter the working tree.
+
+No band-facing side effects.
+
+---
+
 ## 2026-05-21 — Show-prep system sketched as D-OPEN-3 (design only, not built)
 
 - **`Bolo Boys - Private/DECISIONS.md`** — added `D-OPEN-3. Show-prep system`. Three-piece design intent: (1) optional `prep` field on each event in `events.json` (band-facing prep state, distinct from `additional_details`); (2) new `data/songs.json` as canonical repertoire; (3) new `/show-prep` skill as read-only audit, sibling to `/bolo-status` Section 2. Build trigger: next time the prep gap bites (likely 5/23/5/25 Ante Up coordination).
