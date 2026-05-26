@@ -1,10 +1,66 @@
 {
   "_meta": {
     "purpose": "Historical show log for Bolo Boys. Completed shows move here when they pass. Upcoming shows live in events.json.",
-    "last_updated": "2026-05-21",
+    "last_updated": "2026-05-26",
     "schema_version": "1.0"
   },
   "past_shows": [
+    {
+      "id": "grant-central-pizza-2026-05-25",
+      "date": "2026-05-25",
+      "day_of_week": "Monday",
+      "time": "8:00 PM",
+      "end_time": "9:15 PM",
+      "venue_id": "grant-central-pizza-east",
+      "venue_name": "Grant Central Pizza East",
+      "venue_neighborhood": "East Atlanta Village",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [
+        "Adam Klein"
+      ],
+      "notes": "First booking at Grant Central Pizza East — Memorial Day Monday on the Grant Ole Opry series in East Atlanta Village, with Adam Klein and Adam Poulin opening as a duo.",
+      "poster_url": "assets/posters/grant-central-pizza-2026-05-25.jpeg",
+      "external_links": [
+        {
+          "title": "Adam Klein's Grant Ole Opry debut — Bolo Boys closing the night",
+          "source": "@adamkleinmusic (Instagram)",
+          "url": "https://www.instagram.com/p/DYcypOuFW9v/",
+          "date": null
+        },
+        {
+          "title": "Memorial Day Monday at the Grant Ole Opry — Bolo Boys + Adam Klein",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DX7TN-4EQoI/",
+          "date": null
+        }
+      ]
+    },
+    {
+      "id": "wild-heaven-avondale-2026-05-23",
+      "date": "2026-05-23",
+      "day_of_week": "Saturday",
+      "time": "4:00 PM",
+      "end_time": "8:00 PM",
+      "venue_id": "wild-heaven-avondale",
+      "venue_name": "Wild Heaven Brewing",
+      "venue_neighborhood": "Avondale Estates",
+      "venue_city": "Avondale Estates, GA",
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
+      "notes": "Closed out the spring run at Wild Heaven — a four-hour Saturday session rotating through bluegrass, guitar duets, and full-band sets across all four acts. A meaningful stretch for sharpening the craft.",
+      "poster_url": "assets/posters/wild-heaven.png",
+      "external_links": [
+        {
+          "title": "Wild Heaven Avondale concert series — Bolo Boys",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DWE2euwEeW6/",
+          "date": null
+        }
+      ]
+    },
     {
       "id": "gateway-park-grant-park-2026-05-17",
       "date": "2026-05-17",

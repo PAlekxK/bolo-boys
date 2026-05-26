@@ -12,6 +12,21 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-26 — Phase 5 cleanup: Wild Heaven 5/23 + Grant Central 5/25 moved to past-shows
+
+- **`data/events.json`** — removed `wild-heaven-avondale-2026-05-23` (Saturday Session at Wild Heaven, 4-hour run with Dirty Shame + Acoustic Station + Ante Up) and `grant-central-pizza-2026-05-25` (Memorial Day at the Grant Ole Opry with Adam Klein + Adam Poulin). 10 upcoming events remain. `_meta.last_updated` → 2026-05-26.
+- **`data/past-shows.json`** — prepended both with the lighter Phase 5 schema. Wild Heaven entry captures the spring-run wrap and the multi-act rotation (end_time 8:00 PM); Grant Central captures the first-booking + Grant Ole Opry debut framing (end_time 9:15 PM). External_links preserved (Wild Heaven IG concert-series post + both Grant Central IG posts).
+- **`index.html`** — JSON-LD regenerated, now lists 10 MusicEvent entries.
+- **`sitemap.xml`** — `<lastmod>` bumped.
+- **`bandsintown-upload.csv`** — regenerated (10 events + header).
+
+Band-facing side effects:
+- Bandsintown UI still shows the two played shows as live events — manual delete required in the BIT UI (CSV regen doesn't push deletes). After deleting, run `bash tools/mark-bit-upload.sh`.
+- IG thank-yous to Wild Heaven, Grant Central, and Adam Klein still pending (deferred this session).
+- Phase 5 step 6 press scans for both shows still pending.
+
+---
+
 ## 2026-05-23 — Tip button polish: top of Connect, open-jar icon, hero CTA
 
 - **`index.html`** — Gas Money card moved from last to first in the Connect list (more prominent than the soft-ask-at-end position). Swapped the mason-jar-with-`$` icon for an open jar with a coin floating above it (more active "tip going in" read). Added a smaller secondary `hero-cta-tip` button under the existing Upcoming Shows / Connect / About CTAs in the hero: same uppercase/border style, narrower padding, lighter border, jar+coin icon inline, text "Tip the Band," same Venmo destination.
