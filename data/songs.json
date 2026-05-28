@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "purpose": "Canonical Bolo Boys repertoire — covers + originals with rotation flags. Once complete, 'songs in active rotation not on the 5/31 setlist' becomes a query instead of a head-scratch. Read by the /show-prep skill (Repertoire snapshot). Per DECISIONS.md D-OPEN-3 item 2.",
+    "status": "seed",
+    "status_note": "SEED — NOT the full repertoire. Only songs verifiable from data/band.json (originals) + data/bolo-song-list-additions.csv (covers in progress) as of 2026-05-28 are here. The bulk of the live set lives in Paul's head + scattered docs and needs backfilling. Until status flips to 'complete', any setlist-vs-repertoire query is partial. Owner of the backfill: Paul.",
+    "last_updated": "2026-05-28",
+    "schema_version": "1.0",
+    "source_csv": "data/bolo-song-list-additions.csv (migrated in; the CSV can be retired once this file is the source of truth)"
+  },
+  "_schema_example": {
+    "id": "unique-kebab-case-id",
+    "title": "Song Title",
+    "type": "cover | original",
+    "original_artist": "Artist (covers only; null for originals)",
+    "writer": "Writer name (originals only; null for covers)",
+    "genre": "country | folk | reggae | classic-rock | throwback-pop | bluegrass | punk | other",
+    "rotation": "active | learning | candidate | retired",
+    "rotation_notes": "active = gig-ready & played; learning = being worked up; candidate = on the maybe list, not started; retired = dropped from the set",
+    "confidence": "high | medium | low | null (band's readiness to play it live)",
+    "count_off": "e.g. '1-2-3-4' or feel note, or null",
+    "length": "mm:ss or null",
+    "key": "musical key or null",
+    "capo": "fret number or null",
+    "links": {
+      "tabs": "ultimate-guitar or similar, or null",
+      "youtube": "reference recording, or null",
+      "chords_doc": "Google Doc with chords/lyrics, or null",
+      "spotify": "streaming link, or null"
+    },
+    "notes": "freeform"
+  },
+  "songs": [
+    {
+      "id": "roadrunner",
+      "title": "Roadrunner",
+      "type": "original",
+      "original_artist": null,
+      "writer": "Paul",
+      "genre": "punk",
+      "rotation": "active",
+      "confidence": "high",
+      "count_off": null,
+      "length": null,
+      "key": null,
+      "capo": null,
+      "links": {
+        "tabs": null,
+        "youtube": null,
+        "chords_doc": "https://docs.google.com/document/d/1g67LXV5LvSz3aejGbQppr3c0x9FwY6Jl3fQY5mzh2Ys",
+        "spotify": null
+      },
+      "notes": "Bolo Boys original (Paul). Punk-inspired Atlanta song. Chords & lyrics doc on file. Lyrics PDF: https://drive.google.com/file/d/18hzYbxWvYzyXLtgQeei-QO9ZBRKMMhwA/view"
+    },
+    {
+      "id": "glow",
+      "title": "Glow",
+      "type": "original",
+      "original_artist": null,
+      "writer": "Paul",
+      "genre": "country",
+      "rotation": "active",
+      "confidence": "high",
+      "count_off": null,
+      "length": null,
+      "key": null,
+      "capo": null,
+      "links": {
+        "tabs": null,
+        "youtube": null,
+        "chords_doc": "https://docs.google.com/document/d/1Aw47rLb5MiX2CgPfsL9sePGokqZiQ1E_PIkG2Kd1JvE",
+        "spotify": null
+      },
+      "notes": "Bolo Boys original (Paul). Chords & lyrics doc on file. Lyrics PDF: https://drive.google.com/file/d/1VeNnFdFwh3V6wh_qxj3_Le3_KSd0iggD/view"
+    },
+    {
+      "id": "muddy-knees",
+      "title": "Muddy Knees",
+      "type": "original",
+      "original_artist": null,
+      "writer": "Paul",
+      "genre": "country",
+      "rotation": "active",
+      "confidence": "medium",
+      "count_off": null,
+      "length": null,
+      "key": null,
+      "capo": null,
+      "links": {
+        "tabs": null,
+        "youtube": null,
+        "chords_doc": null,
+        "spotify": null
+      },
+      "notes": "Bolo Boys original. No tab/doc on file yet — chords & lyrics doc needs to be authored."
+    },
+    {
+      "id": "the-cowboys-life",
+      "title": "The Cowboy's Life",
+      "type": "original",
+      "original_artist": null,
+      "writer": "Nigel Wright",
+      "genre": "country",
+      "rotation": "active",
+      "confidence": "high",
+      "count_off": null,
+      "length": null,
+      "key": null,
+      "capo": null,
+      "links": {
+        "tabs": null,
+        "youtube": null,
+        "chords_doc": null,
+        "spotify": "https://open.spotify.com/track/0z03lWCF9HIqwJlTk3gC69"
+      },
+      "notes": "Nigel's solo recording (released 2026); Bolo Boys play it live. Western song about a man on the open road. Released on Spotify/Apple/Amazon/Bandcamp."
+    },
+    {
+      "id": "tennessee-stud",
+      "title": "Tennessee Stud",
+      "type": "cover",
+      "original_artist": "Doc Watson",
+      "writer": null,
+      "genre": "bluegrass",
+      "rotation": "active",
+      "confidence": "high",
+      "count_off": null,
+      "length": null,
+      "key": null,
+      "capo": null,
+      "links": {
+        "tabs": null,
+        "youtube": null,
+        "chords_doc": null,
+        "spotify": null
+      },
+      "notes": "John brings this bluegrass classic into the set (per band.json) — opens the band to new demographics."
+    },
+    {
+      "id": "boys-dont-cry",
+      "title": "Boys Don't Cry",
+      "type": "cover",
+      "original_artist": "The Cure",
+      "writer": null,
+      "genre": "throwback-pop",
+      "rotation": "learning",
+      "confidence": "low",
+      "count_off": null,
+      "length": null,
+      "key": null,
+      "capo": null,
+      "links": {
+        "tabs": "https://tabs.ultimate-guitar.com/tab/the-cure/boys-dont-cry-chords-956417",
+        "youtube": "https://www.youtube.com/watch?v=9GkVhgIeGJQ",
+        "chords_doc": null,
+        "spotify": null
+      },
+      "notes": "From the Side Saddle set additions list (bolo-song-list-additions.csv). Confidence not yet set by band."
+    },
+    {
+      "id": "21-questions",
+      "title": "21 Questions",
+      "type": "cover",
+      "original_artist": "50 Cent (feat. Nate Dogg)",
+      "writer": null,
+      "genre": "throwback-pop",
+      "rotation": "learning",
+      "confidence": "low",
+      "count_off": null,
+      "length": null,
+      "key": null,
+      "capo": null,
+      "links": {
+        "tabs": "https://tabs.ultimate-guitar.com/tab/50-cent/21-questions-official-4917949",
+        "youtube": "https://www.youtube.com/watch?v=cDMhlvbOFaM",
+        "chords_doc": null,
+        "spotify": null
+      },
+      "notes": "From the Side Saddle set additions list. Guitar riff ref: https://tabs.ultimate-guitar.com/tab/50-cent/21-questions-tabs-49597"
+    },
+    {
+      "id": "kids",
+      "title": "Kids",
+      "type": "cover",
+      "original_artist": "MGMT",
+      "writer": null,
+      "genre": "throwback-pop",
+      "rotation": "learning",
+      "confidence": "low",
+      "count_off": null,
+      "length": null,
+      "key": "D",
+      "capo": null,
+      "links": {
+        "tabs": "https://tabs.ultimate-guitar.com/tab/mgmt/kids-chords-630097",
+        "youtube": "https://www.youtube.com/watch?v=fe4EK4HSPkI",
+        "chords_doc": null,
+        "spotify": null
+      },
+      "notes": "From the Side Saddle set additions list. Key of D."
+    }
+  ]
+}
