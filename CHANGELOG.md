@@ -12,6 +12,10 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-29 — songs.json finalized (status → complete)
+
+Flipped `data/songs.json` `_meta.status` from `backfilled-draft` to `complete`; Paul accepted the 64-song backfill as the canonical repertoire. The inferred genres + rotation flags stand as the backfill-time inferences (correctable in a later edit). Closes D-OPEN-3 item 2.
+
 ## 2026-05-28 — songs.json backfilled to full repertoire (D-OPEN-3 item 2)
 
 - **`data/songs.json`** — expanded from the 8-song seed to **64 songs**, sourced from the Drive master songbook ("Bolo Boys Master Song and Gig Book.xlsx"), Nigel's tab emails (5/11 covers + 11/2025 Christmas), and Paul's 5/11 consolidated list. Each song carries tabs + YouTube links where available.
