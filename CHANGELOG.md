@@ -12,6 +12,16 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-28 — songs.json backfilled to full repertoire (D-OPEN-3 item 2)
+
+- **`data/songs.json`** — expanded from the 8-song seed to **64 songs**, sourced from the Drive master songbook ("Bolo Boys Master Song and Gig Book.xlsx"), Nigel's tab emails (5/11 covers + 11/2025 Christmas), and Paul's 5/11 consolidated list. Each song carries tabs + YouTube links where available.
+- Schema → v1.2: added a `holiday` genre for the Christmas set; `confidence` nulled and the songbook count-off column disregarded per Paul; `lead` field dropped.
+- Genres and rotation flags are inferred (flagged in `_meta.status_note`) pending Paul's review; status is `backfilled-draft`.
+
+No band-facing side effects (data-only; not rendered on the live site).
+
+---
+
 ## 2026-05-26 — Phase 5 cleanup: Wild Heaven 5/23 + Grant Central 5/25 moved to past-shows
 
 - **`data/events.json`** — removed `wild-heaven-avondale-2026-05-23` (Saturday Session at Wild Heaven, 4-hour run with Dirty Shame + Acoustic Station + Ante Up) and `grant-central-pizza-2026-05-25` (Memorial Day at the Grant Ole Opry with Adam Klein + Adam Poulin). 10 upcoming events remain. `_meta.last_updated` → 2026-05-26.
