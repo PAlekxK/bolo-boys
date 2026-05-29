@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Upcoming shows for the Bolo Boys website. Only upcoming shows are listed here — past shows are covered by social media.",
-    "last_updated": "2026-05-26",
+    "last_updated": "2026-05-29",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json."
   },
@@ -365,8 +365,6 @@
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
       "supporting_acts": [
-        "Dirty Shame",
-        "Acoustic Station",
         "Ante Up"
       ],
       "theme": "Between the Festivals",
@@ -396,6 +394,10 @@
           },
           {
             "text": "Between DragonCon and Shaky Knees — promo opportunity",
+            "done": false
+          },
+          {
+            "text": "John out for this show — Bolo Boys playing as Paul + Nigel duo",
             "done": false
           }
         ],
