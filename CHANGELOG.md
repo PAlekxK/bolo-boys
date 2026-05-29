@@ -12,6 +12,10 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-05-29 — 9/12 Side Saddle lineup change
+
+Updated the 2026-09-12 "Between the Festivals" Side Saddle show: co-bill reduced to Ante Up only (Dirty Shame + Acoustic Station off the bill); added an internal prep note that John is out and Bolo Boys plays the night as a Paul + Nigel duo. `supporting_acts` doesn't feed JSON-LD or the Bandsintown CSV, so no band-facing surface changed; propagators bumped `validFrom`/`<lastmod>` to today as a side effect. No BIT re-upload triggered by this change.
+
 ## 2026-05-29 — songs.json finalized (status → complete)
 
 Flipped `data/songs.json` `_meta.status` from `backfilled-draft` to `complete`; Paul accepted the 64-song backfill as the canonical repertoire. The inferred genres + rotation flags stand as the backfill-time inferences (correctable in a later edit). Closes D-OPEN-3 item 2.
