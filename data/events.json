@@ -333,7 +333,7 @@
         "setlist_status": "open",
         "setlist_url": null,
         "lifecycle_markers": {
-          "calendar_invite_sent": false,
+          "calendar_invite_sent": true,
           "venue_thanked": false,
           "clips_pulled": false
         },
@@ -470,7 +470,7 @@
         "setlist_status": "open",
         "setlist_url": null,
         "lifecycle_markers": {
-          "calendar_invite_sent": false,
+          "calendar_invite_sent": true,
           "venue_thanked": false,
           "clips_pulled": false
         },
