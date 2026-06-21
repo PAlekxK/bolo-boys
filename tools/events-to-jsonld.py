@@ -87,12 +87,13 @@ def build_event(event, venue, today_iso):
     hour, minute = parse_time(event["time"])
     duration = event.get("duration_hours", 2)
     start = iso_dt(event_date, hour, minute)
-    end_hour = hour + duration
-    end_minute = minute
+    # Minute-aware so fractional durations (e.g. 3.5) work, not just whole hours.
+    total_minutes = hour * 60 + minute + round(duration * 60)
+    end_hour, end_minute = divmod(total_minutes, 60)
     # Handle overflow into next day (e.g. 11 PM + 3 hours)
     end_date = event_date
-    if end_hour >= 24:
-        end_date = event_date + timedelta(days=1)
+    while end_hour >= 24:
+        end_date = end_date + timedelta(days=1)
         end_hour -= 24
     end = iso_dt(end_date, end_hour, end_minute)
 
