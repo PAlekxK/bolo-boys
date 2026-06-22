@@ -55,59 +55,6 @@
   },
   "events": [
     {
-      "id": "side-saddle-2026-05-31",
-      "phase": "promote",
-      "date": "2026-05-31",
-      "day_of_week": "Sunday",
-      "time": "11:00 AM",
-      "duration_hours": 2,
-      "venue_id": "side-saddle",
-      "venue_name": "Side Saddle",
-      "venue_neighborhood": "Grant Park / Beltline",
-      "venue_city": "Atlanta, GA",
-      "venue_google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
-      "supporting_acts": [
-        "Dirty Shame"
-      ],
-      "theme": "One Year on the Beltline",
-      "invitation_text": "Side Saddle and Finca to Filter are both turning one — same patio, same family, same year of getting it exactly right. We're playing the morning side of the celebration. Come grab a coffee from Finca, hang out for the music, and stick around as Side Saddle's evening starts to warm up.",
-      "teaser": null,
-      "additional_details": "Part of Side Saddle + Finca to Filter's shared 1-year anniversary weekend. Free and open to the public.",
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260531T110000/20260531T130000&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%2B+Finca+to+Filter+%E2%80%94+1-Year+Anniversary+Weekend",
-      "ics_url": null,
-      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg",
-      "partner_venue": {
-        "id": "finca-to-filter",
-        "name": "Finca to Filter",
-        "instagram": "@fincatofilter"
-      },
-      "external_links": [
-        {
-          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
-          "source": "@boloboysband (Instagram)",
-          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
-          "date": null
-        }
-      ],
-      "prep": {
-        "setlist_status": "draft",
-        "setlist_url": null,
-        "lifecycle_markers": {
-          "calendar_invite_sent": true,
-          "venue_thanked": false,
-          "clips_pulled": false
-        },
-        "logistics_notes": [
-          {
-            "text": "Anniversary morning — FtF cross-promo coordination",
-            "done": false
-          }
-        ],
-        "subgroups": [],
-        "open_questions": []
-      }
-    },
-    {
       "id": "ideal-sports-bar-2026-06-26",
       "phase": "announced",
       "date": "2026-06-26",
