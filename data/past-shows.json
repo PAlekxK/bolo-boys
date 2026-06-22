@@ -1,10 +1,39 @@
 {
   "_meta": {
     "purpose": "Historical show log for Bolo Boys. Completed shows move here when they pass. Upcoming shows live in events.json.",
-    "last_updated": "2026-05-26",
+    "last_updated": "2026-06-21",
     "schema_version": "1.0"
   },
   "past_shows": [
+    {
+      "id": "side-saddle-2026-05-31",
+      "date": "2026-05-31",
+      "day_of_week": "Sunday",
+      "time": "11:00 AM",
+      "end_time": "1:00 PM",
+      "venue_id": "side-saddle",
+      "venue_name": "Side Saddle",
+      "venue_neighborhood": "Grant Park / Beltline",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [
+        "Dirty Shame"
+      ],
+      "notes": "Played the morning side of Side Saddle + Finca to Filter's shared one-year anniversary weekend on the Grant Park / Beltline patio, with Dirty Shame. Part of the Summer Series.",
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg",
+      "external_links": [
+        {
+          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
+          "date": null
+        }
+      ],
+      "partner_venue": {
+        "id": "finca-to-filter",
+        "name": "Finca to Filter",
+        "instagram": "@fincatofilter"
+      }
+    },
     {
       "id": "grant-central-pizza-2026-05-25",
       "date": "2026-05-25",
