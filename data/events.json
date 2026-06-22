@@ -91,7 +91,15 @@
           }
         ]
       },
-      "poster_url": "assets/posters/ideal-sports-bar-summer-2026.png"
+      "poster_url": "assets/posters/ideal-sports-bar-summer-2026.png",
+      "external_links": [
+        {
+          "title": "Bolo Boys announce two nights at Ideal Sports Bar (6/26 & 7/11)",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DZ3f0xdsRjl/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "side-saddle-2026-06-27",
@@ -191,7 +199,15 @@
           }
         ]
       },
-      "poster_url": "assets/posters/ideal-sports-bar-summer-2026.png"
+      "poster_url": "assets/posters/ideal-sports-bar-summer-2026.png",
+      "external_links": [
+        {
+          "title": "Bolo Boys announce two nights at Ideal Sports Bar (6/26 & 7/11)",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DZ3f0xdsRjl/",
+          "date": null
+        }
+      ]
     },
     {
       "id": "side-saddle-2026-07-19",
