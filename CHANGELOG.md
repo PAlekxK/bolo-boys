@@ -12,6 +12,10 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-06-21 — Google "hip-hop" mislabel fix + Ideal IG post wired
+
+Ideal Sports Bar's Google listing was tagging Bolo Boys' shows as "Hip-hop/rap" — Google's Knowledge Graph conflating the band with the German hip-hop "Bolo Boys." Root cause is entity confusion, not a bad genre field (the Bandsintown genre was already correct). Fixed the signals we control: added the Bandsintown profile to the `MusicGroup` `sameAs` in `index.html` (mirrored canonically in `data/band.json`) so Google links the entity to the right profile. Separately, wired the `@boloboysband` IG announce post into both Ideal shows' (`6/26` + `7/11`) `external_links` — renders in the "Around the web" block. Paul also corrected/expanded the Bandsintown genres (fixed the "Raggae" typo) and added an honest similar-artists cluster in the BIT dashboard. No JSON-LD event drift (propagators clean). Remaining lever is Google's own re-crawl + a possible knowledge-panel "Suggest an edit" — logged as a Paul to-do for early July.
+
 ## 2026-05-29 — 9/12 Side Saddle lineup change
 
 Updated the 2026-09-12 "Between the Festivals" Side Saddle show: co-bill reduced to Ante Up only (Dirty Shame + Acoustic Station off the bill); added an internal prep note that John is out and Bolo Boys plays the night as a Paul + Nigel duo. `supporting_acts` doesn't feed JSON-LD or the Bandsintown CSV, so no band-facing surface changed; propagators bumped `validFrom`/`<lastmod>` to today as a side effect. No BIT re-upload triggered by this change.
