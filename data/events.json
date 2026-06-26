@@ -67,7 +67,7 @@
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=Ideal+Sports+Bar%2C+1953+Lakewood+Ave+SE%2C+Atlanta%2C+GA+30315",
       "supporting_acts": [],
-      "theme": null,
+      "theme": "First Night in Lakewood",
       "invitation_text": "Excited to be playing Ideal Sports Bar for the first time — Lakewood Heights spot, two pool tables and a beer garden out back. Friday night, full Bolo Boys mix. Come hang, shoot some pool.",
       "teaser": null,
       "additional_details": null,
@@ -136,6 +136,12 @@
           "source": "@boloboysband (Instagram)",
           "url": "https://www.instagram.com/p/DYngFP4TtD8/",
           "date": null
+        },
+        {
+          "title": "World Cup Saturday on the patio — Bolo Boys, Dirty Shame + Acoustic Station",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DZ_BPPSFJH2/",
+          "date": "2026-06-24"
         }
       ],
       "prep": {
@@ -175,7 +181,7 @@
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=Ideal+Sports+Bar%2C+1953+Lakewood+Ave+SE%2C+Atlanta%2C+GA+30315",
       "supporting_acts": [],
-      "theme": null,
+      "theme": "Round Two",
       "invitation_text": "Back at Ideal already — and ready for round two. Beer garden, pool tables, full Bolo Boys mix on a Saturday night.",
       "teaser": null,
       "additional_details": null,

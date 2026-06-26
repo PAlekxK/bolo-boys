@@ -12,6 +12,10 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-06-25 — Themed Ideal shows + wired 6/27 World Cup IG post
+
+Themed the two Ideal Sports Bar shows by populating their previously-null `theme`: `6/26` → "First Night in Lakewood" (debut) and `7/11` → "Round Two". `theme` flows into the JSON-LD event `name` (`"Bolo Boys at Ideal Sports Bar — {theme}"`) — the headline Google shows in event results — so the listings now read richer and more clearly Bolo Boys instead of a bare venue name. Also wired the `@boloboysband` World Cup Saturday IG post into the `6/27` Side Saddle show's `external_links` ("Around the web"). Ran propagators: JSON-LD regenerated (only content changes are the two Ideal names; the rest is `validFrom` ticking 6/21→6/25), sitemap `<lastmod>` bumped, Bandsintown CSV regenerated. BIT NOT re-uploaded (appends → dupes — edit the two Ideal events in the BIT UI if the themed names are wanted there). Companion rule codified in CLAUDE.md Phase 2: theme null only when there's genuinely no angle; `poster_url` strongly-preferred-not-a-blocker.
+
 ## 2026-06-21 — Google "hip-hop" mislabel fix + Ideal IG post wired
 
 Ideal Sports Bar's Google listing was tagging Bolo Boys' shows as "Hip-hop/rap" — Google's Knowledge Graph conflating the band with the German hip-hop "Bolo Boys." Root cause is entity confusion, not a bad genre field (the Bandsintown genre was already correct). Fixed the signals we control: added the Bandsintown profile to the `MusicGroup` `sameAs` in `index.html` (mirrored canonically in `data/band.json`) so Google links the entity to the right profile. Separately, wired the `@boloboysband` IG announce post into both Ideal shows' (`6/26` + `7/11`) `external_links` — renders in the "Around the web" block. Paul also corrected/expanded the Bandsintown genres (fixed the "Raggae" typo) and added an honest similar-artists cluster in the BIT dashboard. No JSON-LD event drift (propagators clean). Remaining lever is Google's own re-crawl + a possible knowledge-panel "Suggest an edit" — logged as a Paul to-do for early July.
