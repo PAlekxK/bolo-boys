@@ -477,12 +477,34 @@
       border-color: white;
     }
 
+    /* Primary action — filled, to give the at-show scanner one obvious first move */
+    .hero-cta-primary {
+      background: var(--cream);
+      color: var(--green-dark);
+      border-color: var(--cream);
+    }
+    .hero-cta-primary:hover {
+      background: var(--white);
+      border-color: var(--white);
+    }
+
+    /* Demoted chip — EPK is a booker destination, not a co-equal fan action */
+    .hero-cta-small {
+      width: auto;
+      padding: 8px 16px;
+      font-size: 0.72rem;
+      border-width: 1.5px;
+      border-color: rgba(255,255,255,0.5);
+    }
+
     .hero-cta-tip {
       width: auto;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 7px;
-      padding: 6px 14px;
+      min-height: 40px;
+      padding: 9px 16px;
       font-size: 0.7rem;
       border-width: 1.5px;
       border-color: rgba(255,255,255,0.5);
@@ -980,6 +1002,79 @@
       margin-top: 14px;
     }
 
+    /* ── Past Shows sub-block (inside Connect) ──────────────── */
+    .pastshows-block {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--divider);
+    }
+    .pastshows-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .poster-carousel {
+      position: relative;
+      height: 240px;
+      margin: 0;
+    }
+    .poster-carousel img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .poster-carousel img.active { opacity: 1; }
+    .poster-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .poster-dots button {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      background: var(--divider);
+      cursor: pointer;
+      transition: background 0.2s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .poster-dots button.active { background: var(--green); }
+    .pastshows-full { margin-top: 16px; }
+    .pastshows-toggle {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.66rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 700;
+      user-select: none;
+      padding: 8px 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pastshows-toggle::-webkit-details-marker { display: none; }
+    .pastshows-toggle::marker { content: ''; }
+    .pastshows-full[open] .past-shows-chevron { transform: rotate(180deg); }
+
     .past-month-group { margin-bottom: 10px; }
 
     .past-month-label {
@@ -1227,6 +1322,54 @@
     }
 
     /* ── Social / Connect links ─────────────────────────────── */
+    /* ── Self-contained / what we bring ───────────── */
+    .selfcontained-block {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--divider);
+    }
+    .selfcontained-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .selfcontained-lead {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+      margin: 0;
+    }
+
+    /* ── Connect (folded into About) ─────────── */
+    .connect-block {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--divider);
+    }
+    .connect-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* Email is a contact, not a follow — set apart beneath the follow list */
+    .connect-contact {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--gray);
+    }
+    .connect-contact a {
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
     .social-list {
       display: flex;
       flex-direction: column;
@@ -1321,9 +1464,9 @@
     <h1 class="hero-band-name">Bolo Boys</h1>
     <p class="hero-tagline">High-energy singalongs, throwbacks &amp; originals — live music built to bring people together.</p>
     <div class="hero-cta-group">
-      <a href="#shows" class="hero-cta">Upcoming Shows</a>
-      <a href="#connect" class="hero-cta">Connect</a>
-      <a href="#about" class="hero-cta">About</a>
+      <a href="#shows" class="hero-cta hero-cta-primary">Upcoming Shows</a>
+      <a href="#connect-links" class="hero-cta">Follow</a>
+      <a href="epk.html" class="hero-cta hero-cta-small">EPK</a>
       <a href="https://account.venmo.com/u/nigelwrightmusic"
          target="_blank" rel="noopener"
          class="hero-cta hero-cta-tip">
@@ -1352,69 +1495,33 @@
 </section>
 
 
+
 <!-- ════════════════════════════════════════════════════════════
-     CONNECT
+     ABOUT
      ════════════════════════════════════════════════════════════ -->
 <section class="section" id="connect">
-  <div class="section-label">Connect</div>
+  <div class="section-label">The Band</div>
+  <div class="bio-body">
+    <p>Bolo Boys are an Atlanta- and Macon-based three-piece live band focused on one thing: creating fun, high-energy nights where people sing along, raise a glass, and stay longer.</p>
+    <p>Drawing from cowboy country, folk standards, reggae staples, and classic rock favorites, their sets blend throwback hits and original songs through the band's signature "bolo-fied" style — polished yet relaxed, roots-driven, and built to bring people together.</p>
+  </div>
+  <div class="band-photo-wrap">
+    <img src="assets/band-photo.jpg" alt="Bolo Boys" loading="lazy">
+  </div>
+  <p class="band-photo-caption">Nigel (vocals, guitar) &nbsp;&middot;&nbsp; John (vocals, guitar) &nbsp;&middot;&nbsp; Paul (vocals, bass)</p>
 
-  <div class="social-list">
+  <div class="originals-block" id="originals">
+    <div class="originals-label">Original Music</div>
+    <div id="originals-content">
+      <div class="originals-empty">Loading…</div>
+    </div>
+  </div>
 
-    <a class="social-item"
-       href="https://account.venmo.com/u/nigelwrightmusic"
-       target="_blank" rel="noopener">
-      <div class="social-icon si-venmo">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="3.5" r="1.5"/>
-          <ellipse cx="12" cy="8" rx="7" ry="1.5"/>
-          <path d="M5 8v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8"/>
-        </svg>
-      </div>
-      <div class="social-text-wrap">
-        <span class="social-name">Gas Money</span>
-        <span class="social-handle">Venmo &middot; @nigelwrightmusic</span>
-      </div>
-    </a>
+  <div class="connect-block" id="connect-links">
+    <div class="connect-label">Follow us</div>
+    <div class="social-list">
 
-    <a class="social-item"
-       href="mailto:boloboysband@gmail.com">
-      <div class="social-icon si-email">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/>
-        </svg>
-      </div>
-      <div class="social-text-wrap">
-        <span class="social-name">Email Us</span>
-        <span class="social-handle">boloboysband@gmail.com</span>
-      </div>
-    </a>
-
-    <a class="social-item"
-       href="https://drive.google.com/drive/folders/1gRQn0_4dSbPDIpRSuOqnA_K-JO6Jn5kJ"
-       target="_blank" rel="noopener">
-      <div class="social-icon si-email">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="16" y1="13" x2="8" y2="13"/>
-          <line x1="16" y1="17" x2="8" y2="17"/>
-          <polyline points="10 9 9 9 8 9"/>
-        </svg>
-      </div>
-      <div class="social-text-wrap">
-        <span class="social-name">Press / EPK</span>
-        <span class="social-handle">For press &amp; bookers</span>
-      </div>
-    </a>
-
-    <a class="social-item"
+      <a class="social-item"
        href="https://www.instagram.com/boloboysband/"
        target="_blank" rel="noopener">
       <div class="social-icon si-instagram">
@@ -1432,7 +1539,7 @@
       </div>
     </a>
 
-    <a class="social-item"
+      <a class="social-item"
        href="https://www.youtube.com/@boloboysband"
        target="_blank" rel="noopener">
       <div class="social-icon si-youtube">
@@ -1449,7 +1556,7 @@
       </div>
     </a>
 
-    <a class="social-item"
+      <a class="social-item"
        href="https://www.facebook.com/profile.php?id=61583558940602"
        target="_blank" rel="noopener">
       <div class="social-icon si-facebook">
@@ -1465,7 +1572,7 @@
       </div>
     </a>
 
-    <a class="social-item"
+      <a class="social-item"
        href="https://www.bandsintown.com/a/15647362"
        target="_blank" rel="noopener">
       <div class="social-icon si-bandsintown">
@@ -1484,35 +1591,35 @@
       </div>
     </a>
 
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════════════════════
-     ABOUT
-     ════════════════════════════════════════════════════════════ -->
-<section class="section" id="about">
-  <div class="section-label">About</div>
-  <div class="bio-body">
-    <p>Bolo Boys are an Atlanta- and Macon-based three-piece live band focused on one thing: creating fun, high-energy nights where people sing along, raise a glass, and stay longer.</p>
-    <p>Drawing from cowboy country, folk standards, reggae staples, and classic rock favorites, their sets blend throwback hits and original songs through the band's signature "bolo-fied" style — polished yet relaxed, roots-driven, and built to bring people together.</p>
-  </div>
-  <div class="band-photo-wrap">
-    <img src="assets/band-photo.jpg" alt="Bolo Boys" loading="lazy">
-  </div>
-  <p class="band-photo-caption">Nigel (vocals, guitar) &nbsp;&middot;&nbsp; John (vocals, guitar) &nbsp;&middot;&nbsp; Paul (vocals, bass)</p>
-
-  <div class="originals-block" id="originals">
-    <div class="originals-label">Original Music</div>
-    <div id="originals-content">
-      <div class="originals-empty">Loading…</div>
     </div>
+    <p class="connect-contact">Booking or just want to say hi? <a href="mailto:boloboysband@gmail.com">boloboysband@gmail.com</a></p>
+  </div>
+
+  <div class="selfcontained-block">
+    <div class="selfcontained-label">We bring the whole show</div>
+    <p class="selfcontained-lead">We're fully self-contained &mdash; we bring and run our own PA and full backline, so any room can host a live band, no stage or sound system required. <a href="epk.html">See the full setup &amp; press kit &rarr;</a></p>
   </div>
 
   <div class="scene-block" id="scene">
     <div class="scene-label">Who we play with</div>
     <ul class="scene-list" id="scene-list"></ul>
   </div>
+
+  <div class="pastshows-block" id="past-shows">
+    <div class="pastshows-label">Past Shows</div>
+    <div class="poster-carousel" id="poster-carousel"></div>
+    <div class="poster-dots" id="poster-dots"></div>
+    <details class="pastshows-full">
+      <summary class="pastshows-toggle">
+        <span id="pastshows-toggle-label">See all shows</span>
+        <svg class="past-shows-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="past-shows-content" id="past-shows-content">
+        <div class="shows-empty">Loading…</div>
+      </div>
+    </details>
+  </div>
+
 </section>
 
 
@@ -1537,20 +1644,6 @@
     <div class="carousel-dots" id="carousel-dots"></div>
   </div>
 </div>
-
-
-<!-- ════════════════════════════════════════════════════════════
-     PAST SHOWS (collapsed)
-     ════════════════════════════════════════════════════════════ -->
-<details class="past-shows-wrap" id="past-shows">
-  <summary class="past-shows-summary">
-    <span>Past Shows</span>
-    <svg class="past-shows-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-  </summary>
-  <div class="past-shows-content" id="past-shows-content">
-    <div class="shows-empty">Loading…</div>
-  </div>
-</details>
 
 
 <!-- ════════════════════════════════════════════════════════════
@@ -1774,9 +1867,49 @@
           }).join('')}
         </div>
       `).join('');
+
+      renderPastShowsExtras(shows);
     } catch(e) {
       container.innerHTML = '<div class="shows-empty">Past shows unavailable right now.</div>';
     }
+  }
+
+  // Summary stats + auto-cycling poster carousel for the Past Shows block.
+  function renderPastShowsExtras(shows) {
+    const total = shows.length;
+    const toggleLabel = document.getElementById('pastshows-toggle-label');
+    if (toggleLabel) toggleLabel.textContent = `See all ${total} shows`;
+
+    const posters = shows.filter(s => s.poster_url);
+    const pc = document.getElementById('poster-carousel');
+    const pd = document.getElementById('poster-dots');
+    if (!pc || !posters.length) { if (pc) pc.style.display = 'none'; if (pd) pd.style.display = 'none'; return; }
+
+    pc.innerHTML = posters.map((s, i) =>
+      `<img src="${s.poster_url}" alt="${s.venue_name} poster"${i === 0 ? ' class="active"' : ''} loading="lazy" onclick="openPosterModal('${s.poster_url}')">`
+    ).join('');
+    pd.innerHTML = posters.map((_, i) =>
+      `<button type="button" aria-label="Poster ${i + 1}"${i === 0 ? ' class="active"' : ''}></button>`
+    ).join('');
+
+    const slides = Array.from(pc.querySelectorAll('img'));
+    const dots   = Array.from(pd.querySelectorAll('button'));
+    let idx = 0, timer = null;
+    function show(n) {
+      idx = (n + slides.length) % slides.length;
+      slides.forEach((im, i) => im.classList.toggle('active', i === idx));
+      dots.forEach((dt, i) => dt.classList.toggle('active', i === idx));
+    }
+    function start() { if (slides.length > 1) timer = setInterval(() => show(idx + 1), 5500); }
+    function pause() { clearInterval(timer); }
+    function reset() { pause(); start(); }
+    dots.forEach((dt, i) => dt.addEventListener('click', () => { show(i); reset(); }));
+    // Pause the auto-cycle while a poster is being inspected; resume after.
+    pc.addEventListener('pointerenter', pause);
+    pc.addEventListener('pointerleave', start);
+    pc.addEventListener('touchstart', pause, { passive: true });
+    pc.addEventListener('touchend', reset);
+    start();
   }
 
   loadPastShows();

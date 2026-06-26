@@ -1,0 +1,142 @@
+{
+  "review_id": "ux-2026-06-26-connect-merge-and-epk",
+  "project": "Bolo Boys",
+  "subject": "Uncommitted dev changes: index.html connect-merge (social/contact consolidated into #connect; section order hero -> #shows -> #connect[bio/photo/originals/follow/EPK-blurb/scene/past-shows] -> photo carousel) and the new standalone epk.html booker page",
+  "review_date": "2026-06-26",
+  "reviewer_mode": "review",
+  "review_level": "flow / IA",
+  "user_context": {
+    "primary_user": "Two equally-weighted fan audiences on index.html — (1) at-show QR scanner (just heard the band live, scans a flyer/table QR, wants to follow + find the next show right now on their phone) and (2) cold-discovery visitor (found via Google / Bandsintown / a venue post, sizing up who the band is). epk.html adds a third: the venue booker evaluating whether to book.",
+    "core_jobs_to_be_done": [
+      "At-show scanner: follow the band on socials right now, and see when/where the next show is",
+      "Cold-discovery: understand who Bolo Boys are, hear them, confirm they're a real working band, then follow",
+      "Booker (EPK): answer who / what they sound like / proof they can do it / logistics / track record / how to contact — in a fast scannable read, then reach out"
+    ],
+    "context_of_use": "One-handed mobile, often noisy/distracted at-show context; portrait orientation. Booker reads the EPK on a phone or desktop while deciding, lower-distraction but time-boxed and comparison-shopping against other acts.",
+    "assumptions_made": [
+      "User model is Paul's stated dual-audience framing (memory: project_bolo_boys_site_purpose.md) + brand-voice rules (repo CLAUDE.md). No validated user-research artifact exists for Bolo Boys yet, so all three personas are inferred, not validated.",
+      "Booker evaluation journey (evaluate-then-contact for a cold booker; contact-fast for a warm booker Paul sent the link to) is standard EPK practice, not Bolo-specific evidence.",
+      "Could not verify runtime behavior of the auto-cycling poster carousel or the Google Drive asset-pack link's public-access state from source alone."
+    ],
+    "user_context_confidence": "medium"
+  },
+  "principles_applied": [
+    "Meet the user at the action (cross-project.md)",
+    "Friction kills — it just works (cross-project.md)",
+    "Typographic hierarchy by value (cross-project.md) — applied to CTA clusters and link lists as visual-hierarchy-by-value",
+    "Static visuals lie on dynamic surfaces (cross-project.md) — extended to an empty section that presents as populated",
+    "Ornament earns its place (cross-project.md)",
+    "Aesthetic investment is earned by identity-building or recognition (Bolo-specific, foundation file)",
+    "Nielsen #2 (match between system and the real world — labels mean what they say), #4 (consistency), #8 (aesthetic & minimalist), #10 (help — empty states)",
+    "IA: a navigation label is a promise about the destination (Rosenfeld/Morville)"
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "area": "discoverability",
+      "severity": "important",
+      "observation": "The section at `index.html:1468` carries id=\"connect\" and the visible label \"Connect\" (`:1469`) but its content is bio prose first (`:1471-1472`), then band photo, then Original Music (Spotify embeds), and only THEN the actual follow links (\"Follow us\", `:1486-1487`), followed by the EPK blurb, \"Who we play with,\" and Past Shows. The hero \"Connect\" CTA (`:1434`) links to `#connect`, which scrolls the user to the bio — not to the follow links. So the one surface the at-show scanner came for (tap to follow) is the third sub-block down, behind two paragraphs of bio, a photo, and a set of music embeds.",
+      "user_impact": "The at-show scanner already knows the band — they were just watching them. Their job is 'follow right now,' and the button labeled for that job ('Connect') drops them onto a band bio they don't need, forcing a multi-screen scroll on mobile to reach the Instagram/follow buttons. The label promises connection and delivers an About page. The cold-discovery user IS well-served by bio-first, so the section's content order is fine for them — the failure is specifically the label-to-destination promise and the buried follow target.",
+      "principle_invoked": "Nielsen #2 (a label is a promise about its destination); Meet the user at the action; Friction kills.",
+      "recommendation": "Two low-effort moves that satisfy both audiences without reordering the cold-discovery narrative: (1) Point the hero CTA at the follow block, not the section top — change `href=\"#connect\"` to `href=\"#connect-links\"` (the \"Follow us\" block already has that id at `:1486`). The at-show scanner now lands on the buttons. (2) Rename the visible section label from \"Connect\" to \"The Band\" or \"About\" (`:1469`) so the label matches its bio-first content. Keep the hero button labeled \"Connect\" or relabel it \"Follow\" — \"Follow\" is the truer verb for the at-show job.",
+      "effort": "low"
+    },
+    {
+      "id": "F2",
+      "area": "hierarchy",
+      "severity": "important",
+      "observation": "The hero stacks four CTAs at equal visual weight — Upcoming Shows, Connect, EPK, Tip the Band (`index.html:1433-1447`), all rendered as the same outlined `.hero-cta` (the Tip button only differs by being a smaller chip). There is no primary action. EPK is a booker-only destination sitting as a co-equal peer to the two fan actions on the at-show scanner's very first screen.",
+      "user_impact": "On the first mobile screen, neither fan audience is given an obvious next move — four identical buttons force a read-and-choose instead of an at-a-glance primary. The at-show scanner's two real jobs (shows, follow) get no more weight than EPK, which is irrelevant to them and which a booker can already reach from the in-page 'See the full setup & press kit' link (`:1581`). This is exactly the clutter the EPK was supposed to be separated from.",
+      "principle_invoked": "Typographic/visual hierarchy by value (cross-project.md); Nielsen #8 (aesthetic & minimalist); Ornament earns its place.",
+      "recommendation": "Establish one primary: make \"Upcoming Shows\" a filled button (solid green on the dark hero) and demote the rest to the current outlined style — that alone gives the at-show scanner an obvious first move. Then decide EPK's placement: it does not need co-equal hero billing for a fan-first page when the self-contained block already routes bookers to it. Either (a) keep EPK in the hero but visually demoted (smaller chip, like Tip), or (b) drop it from the hero entirely and rely on the in-page press-kit link. Recommend (a) — bookers occasionally land on the homepage and a small EPK chip keeps a fast path without crowning a booker action on the fan hero.",
+      "effort": "low"
+    },
+    {
+      "id": "F3",
+      "area": "hierarchy",
+      "severity": "nice-to-have",
+      "observation": "The \"Follow us\" list (`index.html:1488-1576`) leads with \"Email Us\" and renders all five rows (Email, Instagram, YouTube, Facebook, Bandsintown) at identical weight. Email is a contact action, not a follow action, and Instagram — the primary at-show follow target — sits second with no differentiation.",
+      "user_impact": "In a block whose heading is the verb 'Follow,' the first row is the one thing you can't follow (email). The at-show scanner scanning for 'where do I follow them' meets a contact link first and an undifferentiated stack second. Small friction, but it sits directly on the #1 at-show conversion.",
+      "principle_invoked": "Hierarchy by value (cross-project.md); Nielsen #2 (match label to content).",
+      "recommendation": "Lead the list with Instagram (the real follow). Keep YouTube / Facebook / Bandsintown after it. Move \"Email Us\" out of the follow stack — it reads more naturally as a one-line 'Get in touch' under the section, or last in the list set slightly apart. Optional light touch: give Instagram a hair more weight (it's the one that matters most at-show), but only if it can be done without adding decoration.",
+      "effort": "low"
+    },
+    {
+      "id": "F4",
+      "area": "flow",
+      "severity": "nice-to-have",
+      "observation": "The Past Shows poster carousel auto-advances every 3.5s (`index.html:1884`) and only resets the timer on a dot click (`:1886`) — there's no pause on touch/focus, and 3.5s is a fast dwell for a portrait poster a user may want to actually look at. The posters are the band's hand-illustrated identity assets, so showing them is right; the auto-motion is the question.",
+      "user_impact": "A user who starts inspecting a poster (the exact reward these assets are meant to give — foundation: aesthetic investment earned by identity) can have it swapped out from under them mid-look. Auto-advancing carousels are a long-standing Nielsen caution: motion competes for attention and removes user control.",
+      "principle_invoked": "Nielsen #1/#3 (system status & user control — auto-motion without pause); Aesthetic investment earned by identity (foundation).",
+      "recommendation": "Low-stakes, so a light touch: either slow the interval to ~5-6s, or pause the auto-cycle on touchstart/pointerenter and resume after. The dots already give manual control; adding pause-on-interaction is a few lines in `renderPastShowsExtras`. Don't over-build it.",
+      "effort": "low"
+    },
+    {
+      "id": "F5",
+      "area": "empty-state",
+      "severity": "critical",
+      "observation": "On epk.html, the \"Live video\" section (`epk.html:159-169`) renders empty: the embed is commented out (`:162-163`) and the section shows only the muted placeholder line \"Live clips of the band in the room.\" plus a \"Watch on YouTube\" button. A booker scrolling the press kit hits a section explicitly labeled 'Live video' that contains no video.",
+      "user_impact": "Live video is the single highest-value proof element in a booker's evaluation — it's the closest thing to 'what will this sound and look like in my room.' A labeled-but-empty 'Live video' block reads to a booker as 'this band has no video,' which is worse than omitting the section entirely. It plants a doubt at the exact moment the page is trying to build confidence, and it makes the kit look unfinished — the opposite of the professional, low-drama signal the copy elsewhere works to send.",
+      "principle_invoked": "Static visuals lie on dynamic surfaces (cross-project.md), extended: a section that presents as populated but is empty erodes trust in the whole kit; Nielsen #10 (empty states must not look broken).",
+      "recommendation": "Before this page is sent to or linked for any booker: either (a) embed at least one real live clip (swap a real VIDEO_ID into the existing embed shape at `:162-163`) — strongly preferred, since one clip in the room does more booker-convincing than any other element on the page — or (b) if there is genuinely no usable live clip yet, remove the 'Live video' section entirely and let the 'Watch on YouTube' link live elsewhere, so the kit never advertises a proof it can't deliver. Do NOT ship the empty section to bookers. (Open question below: does the YouTube channel actually have live clips? If yes, this is purely an embed task.)",
+      "effort": "low"
+    },
+    {
+      "id": "F6",
+      "area": "flow",
+      "severity": "important",
+      "observation": "epk.html is ordered ask-first, proof-last. The body opens with \"Book us\" (`:149-155`), then the empty \"Live video\" (`:159`), then \"Download assets\" (`:171`) — three action/CTA blocks — and only at `:179` does \"Who we are\" begin. The quantified credibility (\"18+ shows / 8 venues / ~2hrs / 100% self-run\", `:272-279`) is the very last block on the page, after \"Hear an original.\"",
+      "user_impact": "A cold booker (one who didn't arrive pre-sold) is asked to book and to download an asset pack before they've been told who the band is, what they sound like, or shown any proof. Downloading an asset pack is a late-stage action — a booker does that after they've decided to use the band in their promo, not as the third thing they see. Meanwhile the strongest at-a-glance proof (the stats strip) is buried where many readers won't reach it. The page leads with the close and hides the pitch.",
+      "principle_invoked": "Meet the user at the action — but the booker's action at the top of the funnel is EVALUATE, not BOOK; ordering must match the journey stage (Kalbach journey thinking); Nielsen #8.",
+      "recommendation": "Reorder proof-first, ask-last: hero -> stats strip (move `:272-279` up, right under the hero — instant credibility) -> Who we are -> The sound -> Live video (populated, per F5 — the proof centerpiece) -> What a booking gets you -> Sound & setup -> On the books -> Photos -> Hear an original -> Book us + Download assets together at the bottom as the closing action pair. The already-present topbar \"Book us\" link (`:135`) keeps a contact path one tap away at the top for the warm booker who arrives ready, so you lose nothing by moving the body 'Book us' block to the end.",
+      "effort": "medium"
+    },
+    {
+      "id": "F7",
+      "area": "consistency",
+      "severity": "nice-to-have",
+      "observation": "\"Book us\" appears as the topbar CTA (`epk.html:135`) AND as the first body section (`:149-155`), which is redundant and contributes to the ask-first front-loading in F6. Separately, the 'Download assets' block (`:171`) and the 'Book us' block are two of the first three things on the page but are the two most end-of-funnel actions.",
+      "user_impact": "Minor redundancy that compounds F6 — the booker sees 'Book us' twice before any substance. Not harmful on its own; it's a symptom of the ordering issue.",
+      "principle_invoked": "Nielsen #8 (minimalist — don't repeat the same CTA stacked); resolves as part of F6's reorder.",
+      "recommendation": "Folds into F6: with the topbar 'Book us' link staying put, drop the dedicated top-of-body 'Book us' section and reintroduce it (paired with 'Download assets') as the closing block. No separate work beyond the reorder.",
+      "effort": "low"
+    },
+    {
+      "id": "F8",
+      "area": "consistency",
+      "severity": "nice-to-have",
+      "observation": "Structural note (zoom-out): on index.html every non-shows surface now lives as a sub-block under the single #connect section — bio, photo, originals, follow, EPK blurb, scene, past-shows (`:1468-1604`). The prompt described these as peer sections (#scene, #originals, #past-shows) but in the markup they are all nested children of #connect, in the order bio -> photo -> originals -> follow -> selfcontained/EPK -> scene -> past-shows.",
+      "user_impact": "Not a defect on its own — a single long scroll can work for cold discovery. But it means one label ('Connect') is doing duty for six different jobs, which is the root of F1's mismatch. Worth Paul's awareness that the IA is now 'everything-that-isn't-shows, under one heading' rather than discrete navigable sections.",
+      "principle_invoked": "IA — section labels should map to distinct user jobs (Rosenfeld/Morville).",
+      "recommendation": "No forced change. If F1's relabel to 'The Band'/'About' lands, the nesting reads more honestly (an About section that contains the follow links, scene, and past shows is coherent; a 'Connect' section that opens with bio is not). Revisit only if the page grows long enough that the at-show scanner struggles to find shows vs. everything-else.",
+      "effort": "low"
+    }
+  ],
+  "open_questions_for_user": [
+    "Does the Bolo Boys YouTube channel have actual live clips right now? F5's fix is trivial (embed one) if yes; if no, the 'Live video' section and the 'Watch on YouTube' button both need to wait or be removed so the kit doesn't promise video it can't show.",
+    "Is the 'Download photo & asset pack' Google Drive folder (epk.html:175) set to public / anyone-with-the-link? If it's permission-gated, a booker hits a request-access wall — quiet but real friction on the EPK's purpose.",
+    "On the index hero: do you want EPK to keep a hero slot at all, or is the in-page 'See the full setup & press kit' link (and a booker's likely arrival via a link you send directly) enough? F2 recommends demoting rather than removing, but the call is yours.",
+    "For the at-show scanner, is Instagram the follow target you most want them to land on? F3 assumes yes — if Bandsintown 'track' is actually the higher-value follow for show alerts, the list lead changes."
+  ],
+  "follow_up_research_suggested": [
+    "A 5-minute over-the-shoulder test with one real booker (or a venue contact from the pipeline) reading the EPK cold: watch where they look first and whether the empty 'Live video' block reads as 'no video.' That single observation would confirm F5/F6 fast.",
+    "At the next show, watch two or three people actually scan the QR and try to follow the band — time how long it takes them to reach the Instagram button from landing. Confirms whether F1's buried-follow read is real in the wild."
+  ],
+  "principles_to_propose": [
+    {
+      "principle": "The at-show scanner's two jobs each get a one-tap path from the hero — and the label routes to the job, not to narrative",
+      "scope": "bolo-boys",
+      "rationale": "Surfaced by F1+F2. The site's stated purpose weights at-show conversion equally with cold discovery, but the at-show jobs (see next show / follow now) kept getting buried behind cold-discovery narrative (bio-first) and behind a label ('Connect') that pointed at the wrong content. Worth codifying as a Bolo rule so future restructures protect the at-show path explicitly rather than optimizing the page as a single cold-discovery scroll."
+    },
+    {
+      "principle": "A section that presents as populated but is empty is worse than no section — especially on a proof surface",
+      "scope": "cross-project",
+      "rationale": "Surfaced by F5. This is the trust-erosion logic of the existing 'Static visuals lie on dynamic surfaces' principle, applied to empty states rather than stale-but-real content: a labeled 'Live video' block with no video actively signals absence to the exact audience you're trying to convince. Candidate for cross-project because the same failure can appear on Fernwood (an empty card that looks like it should hold data) or the financial viewer. Propose as an extension/companion to the existing principle, pending a second occurrence."
+    },
+    {
+      "principle": "An EPK is proof-first, ask-last — order the page to the booker's funnel stage",
+      "scope": "bolo-boys",
+      "rationale": "Surfaced by F6+F7. A booker at the top of the funnel is evaluating, not buying; leading with 'Book us' and 'Download assets' before any who/what/proof inverts the journey. Bolo-specific for now (it's about the booker persona on this one page), but it's really a special case of the cross-project 'Meet the user at the action' principle where the relevant action depends on journey stage — could generalize if a second project grows a similar evaluate-then-act surface."
+    }
+  ]
+}
