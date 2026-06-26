@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bolo Boys — Press &amp; Booking Kit</title>
+<meta name="description" content="Bolo Boys press &amp; booking kit — an Atlanta- and Macon-based three-piece live band. Photos, video, set details, and booking contact.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --green:        #3A5F2A;
+    --green-mid:    #4A7835;
+    --green-dark:   #2D4B1E;
+    --green-faint:  #EBF2E7;
+    --cream:        #F8F4ED;
+    --white:        #FFFFFF;
+    --charcoal:     #2C2B28;
+    --gray:         #6B6560;
+    --divider:      #E5DDD0;
+    --radius-card:  8px;
+    --shadow-card:  0 1px 4px rgba(0,0,0,0.07);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--charcoal);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--green); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 720px; margin: 0 auto; padding: 14px 24px;
+    font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .topbar a { color: var(--green-dark); text-decoration: none; font-weight: 600; }
+  .topbar a:hover { text-decoration: underline; }
+
+  /* hero */
+  .epk-hero { position: relative; color: #fff; text-align: center; }
+  .epk-hero img {
+    width: 100%; height: clamp(280px, 50vh, 480px);
+    object-fit: cover; display: block; filter: brightness(0.6);
+  }
+  .epk-hero .text {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 0 22px;
+  }
+  .kicker {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 700; margin-bottom: 12px;
+  }
+  .epk-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 9vw, 4.2rem); margin: 0 0 10px; letter-spacing: 0.03em;
+  }
+  .epk-hero p {
+    max-width: 540px; margin: 0; font-size: 1rem;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+  }
+
+  section.blk { padding: 40px 0; }
+  section.blk:not(:last-of-type) { border-bottom: 1px solid var(--divider); }
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--green); font-weight: 700; margin-bottom: 18px;
+  }
+  p { margin: 0 0 12px; }
+  .muted { color: var(--gray); }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; }
+  .stat .n { font-family: Georgia, serif; font-size: clamp(1.7rem, 6vw, 2.3rem); color: var(--green-dark); line-height: 1; }
+  .stat .l { font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); margin-top: 6px; }
+  @media (max-width: 540px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
+
+  .members { display: grid; gap: 14px; margin-top: 20px; }
+  .member { display: flex; gap: 14px; align-items: baseline; }
+  .member .nm { font-weight: 700; min-width: 58px; }
+  .member .ro { color: var(--gray); font-size: 0.92rem; }
+
+  .pill {
+    display: inline-block; background: var(--green-faint); color: var(--green-dark);
+    border-radius: 999px; padding: 5px 13px; font-size: 0.8rem; font-weight: 600; margin: 0 6px 8px 0;
+  }
+
+  .venue-list { columns: 2; font-size: 0.92rem; line-height: 1.9; }
+  @media (max-width: 540px) { .venue-list { columns: 1; } }
+
+  /* Past-show posters — the band's hand-illustrated identity, doubling as proof of a gigging history */
+  .poster-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
+  .poster-row a { display: block; line-height: 0; border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-card); }
+  .poster-row img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; transition: transform 0.2s; }
+  .poster-row a:hover img { transform: scale(1.03); }
+
+  .gearlist { list-style: none; padding: 0; margin: 8px 0 0; }
+  .gearlist li { display: flex; justify-content: space-between; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--divider); font-size: 0.9rem; }
+  .gearlist li:last-child { border-bottom: 0; }
+  .gearlist .g-name { font-weight: 600; }
+  .gearlist .g-role { color: var(--gray); text-align: right; max-width: 60%; }
+
+  .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 540px) { .twocol { grid-template-columns: 1fr; gap: 0; } }
+  ul.tight { padding-left: 18px; margin: 6px 0; }
+  ul.tight li { margin: 6px 0; }
+
+  /* gallery */
+  .dl-hint { font-size: 0.8rem; color: var(--gray); margin: -6px 0 14px; }
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .gallery a { display: block; line-height: 0; border-radius: 6px; overflow: hidden; }
+  .gallery img { width: 100%; height: 190px; object-fit: cover; display: block; transition: transform 0.2s; }
+  .gallery a:hover img { transform: scale(1.03); }
+  .gallery a.span { grid-column: 1 / -1; }
+  .gallery a.span img { height: 280px; }
+
+  /* video */
+  .videos { display: grid; gap: 14px; }
+  .video-embed { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; background: #000; }
+  .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  .btn {
+    display: inline-block; background: var(--green); color: #fff; text-decoration: none;
+    padding: 11px 20px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .btn:hover { background: var(--green-dark); }
+  .btn.ghost { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green); }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+
+  footer { background: var(--charcoal); color: #cdc8bf; text-align: center; padding: 30px 22px; font-size: 0.85rem; margin-top: 10px; }
+  footer a { color: #fff; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html">&larr; boloboys.band</a>
+  <a href="mailto:boloboysband@gmail.com?subject=Bolo%20Boys%20booking">Book us</a>
+</div>
+
+<header class="epk-hero">
+  <img src="assets/hero.jpg" alt="Bolo Boys performing live">
+  <div class="text">
+    <div class="kicker">Press &amp; Booking Kit</div>
+    <h1>Bolo Boys</h1>
+    <p>High-energy singalongs, throwbacks &amp; originals — live music built to bring people together.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="blk">
+    <div class="section-label">Book us</div>
+    <p style="font-size:1.04rem">Email <a href="mailto:boloboysband@gmail.com?subject=Bolo%20Boys%20booking">boloboysband@gmail.com</a></p>
+    <div class="cta-row">
+      <a class="btn" href="mailto:boloboysband@gmail.com?subject=Bolo%20Boys%20booking">Email to book</a>
+    </div>
+  </section>
+
+  <!-- Live video -->
+  <section class="blk">
+    <div class="section-label">Live video</div>
+    <div class="videos">
+      <div class="video-embed"><iframe src="https://www.youtube.com/embed/fFYtkrX8zkY"
+        title="Bolo Boys live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="https://www.youtube.com/@boloboysband" target="_blank" rel="noopener">Watch on YouTube</a>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">Download assets</div>
+    <p class="muted" style="margin-top:-4px">Photos, logos, and bio for press &amp; bookers.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://drive.google.com/drive/folders/1gRQn0_4dSbPDIpRSuOqnA_K-JO6Jn5kJ" target="_blank" rel="noopener">Open photo &amp; asset folder</a>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">Who we are</div>
+    <p>Bolo Boys are a three-piece live band out of Atlanta and Macon — cowboy country, folk,
+    reggae, classic rock, and throwback pop, all <em>Bolo-fied</em> until the covers and the four
+    originals sound like they came off the same album. The barometer of a good night is simple:
+    people dancing, and a room singing the hooks back.</p>
+    <div class="members">
+      <div class="member"><span class="nm">Paul</span><span class="ro">vocals, electric bass · Atlanta</span></div>
+      <div class="member"><span class="nm">Nigel</span><span class="ro">vocals, electric guitar · Macon</span></div>
+      <div class="member"><span class="nm">John</span><span class="ro">vocals, acoustic guitar · Atlanta</span></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">The sound</div>
+    <div>
+      <span class="pill">Cowboy country</span><span class="pill">Folk</span>
+      <span class="pill">Reggae</span><span class="pill">Classic rock</span>
+      <span class="pill">Throwback pop</span><span class="pill">Bluegrass-tinged Americana</span>
+    </div>
+    <p style="margin-top:14px">Touchstones: Tom Petty, Bob Marley, Doc Watson, Cat Stevens.
+    Originals are woven in so seamlessly you won't notice them between Petty and Marley — that's the point.</p>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">What a booking gets you</div>
+    <div class="twocol">
+      <div>
+        <ul class="tight">
+          <li><strong>~2 hours</strong>, two sets with a ~20-minute break.</li>
+          <li><strong>Self-contained sound</strong> — our own PA and backline (details below).</li>
+          <li>A set built to fit the room — patio brunch to late-night bar.</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="tight">
+          <li>Professional, low-drama, easy to work with.</li>
+          <li>We promote every show we play — your room included.</li>
+          <li>Active radius: Atlanta to Macon, Jasper, and Chattanooga.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">Sound &amp; setup</div>
+    <p>Bolo Boys are fully self-contained — we own, bring, set up, and run our own PA and backline,
+    then break it all down. A room that has never hosted live music can host a full band this
+    weekend: no stage, no house system, nothing for your staff to run.</p>
+    <ul class="gearlist">
+      <li><span class="g-name">Full PA &amp; mixing</span><span class="g-role">Yamaha MG12XU 12-channel mixer + EV ZLX-12P 1000W mains</span></li>
+      <li><span class="g-name">Stage monitors</span><span class="g-role">so the band hears itself and the mix stays clean</span></li>
+      <li><span class="g-name">Mics, DIs, stands &amp; cabling</span><span class="g-role">vocals and instruments, all of it</span></li>
+      <li><span class="g-name">Setup, sound-check &amp; teardown</span><span class="g-role">we run our own sound, start to finish</span></li>
+    </ul>
+    <p class="muted" style="margin-top:14px;font-size:0.88rem">Right-sized for real rooms — patios,
+    taprooms, shops, markets, and private gatherings around Atlanta and Macon. A detailed input list
+    and stage plot are available on request.</p>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">On the books</div>
+    <p class="muted" style="margin-top:-4px">18+ shows since fall 2025 across metro Atlanta — including
+    standing returns to Side Saddle and Wild Heaven Brewing.</p>
+    <div class="venue-list">
+      Wild Heaven Brewing · Side Saddle · B Complex · Echo Art Gallery ·
+      Grant Central Pizza · Market in the Park · Cultivation Brewing · Because Coffee
+    </div>
+    <div class="poster-row">
+      <a href="assets/posters/side-saddle-summer-series-2026.jpeg" target="_blank" rel="noopener"><img src="assets/posters/side-saddle-summer-series-2026.jpeg" alt="Bolo Boys at Side Saddle — Summer Series show poster" loading="lazy"></a>
+      <a href="assets/posters/ideal-sports-bar-summer-2026.png" target="_blank" rel="noopener"><img src="assets/posters/ideal-sports-bar-summer-2026.png" alt="Bolo Boys at Ideal Sports Bar show poster" loading="lazy"></a>
+      <a href="assets/posters/grant-central-pizza-2026-05-25.jpeg" target="_blank" rel="noopener"><img src="assets/posters/grant-central-pizza-2026-05-25.jpeg" alt="Bolo Boys at Grant Central Pizza East show poster" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">Photos</div>
+    <p class="dl-hint">Tap any photo to open it full-size (long-press to save).</p>
+    <div class="gallery">
+      <a class="span" href="assets/live-1.jpg" download><img src="assets/live-1.jpg" alt="Bolo Boys live" loading="lazy"></a>
+      <a href="assets/live-2.jpg" download><img src="assets/live-2.jpg" alt="Bolo Boys live" loading="lazy"></a>
+      <a href="assets/live-4.jpg" download><img src="assets/live-4.jpg" alt="Bolo Boys live" loading="lazy"></a>
+      <a href="assets/live-5.jpg" download><img src="assets/live-5.jpg" alt="Bolo Boys live" loading="lazy"></a>
+      <a href="assets/live-6.jpg" download><img src="assets/live-6.jpg" alt="Bolo Boys live" loading="lazy"></a>
+      <a href="assets/live-3.jpg" download><img src="assets/live-3.jpg" alt="Bolo Boys live" loading="lazy"></a>
+      <a href="assets/live-7.jpg" download><img src="assets/live-7.jpg" alt="Bolo Boys live" loading="lazy"></a>
+      <a href="assets/band-photo.jpg" download><img src="assets/band-photo.jpg" alt="Bolo Boys band photo" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="section-label">Hear an original</div>
+    <p><strong>"The Cowboy's Life"</strong> — written by Nigel, played live by Bolo Boys. On
+    <a href="https://open.spotify.com/track/0z03lWCF9HIqwJlTk3gC69" target="_blank" rel="noopener">Spotify</a>,
+    <a href="https://music.apple.com/us/album/the-cowboys-life-single/1894171327" target="_blank" rel="noopener">Apple Music</a>,
+    and <a href="https://nigelwrightmusic.bandcamp.com/track/the-cowboys-life" target="_blank" rel="noopener">Bandcamp</a>.</p>
+  </section>
+
+  <section class="blk">
+    <div class="stats">
+      <div class="stat"><div class="n">18+</div><div class="l">Shows played</div></div>
+      <div class="stat"><div class="n">8</div><div class="l">Venues</div></div>
+      <div class="stat"><div class="n">~2 hrs</div><div class="l">Two sets</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">Self-run sound</div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Bolo Boys · Atlanta &amp; Macon, GA ·
+  <a href="https://www.instagram.com/boloboysband/" target="_blank" rel="noopener">Instagram</a> ·
+  <a href="https://www.youtube.com/@boloboysband" target="_blank" rel="noopener">YouTube</a> ·
+  <a href="https://www.bandsintown.com/a/15647362" target="_blank" rel="noopener">Bandsintown</a>
+</footer>
+
+</body>
+</html>
