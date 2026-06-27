@@ -25,7 +25,7 @@
       "next_known_end": "2026-08-23",
       "audience_overlap": "high",
       "scope": ["Grant Park", "Beltline", "Cabbagetown", "East Atlanta"],
-      "notes": "Major draw for Grant Park / Beltline / Cabbagetown audiences. GPC's flagship music festival. 2026 dates confirmed 2026-05-21 via web research: Saturday 2026-08-22 (10 AM) through Sunday 2026-08-23 (6 PM) at Grant Park. Active opportunity for Bolo Boys (gazebo stage) per 2026-05-17 conversation with Josh and Skyler. The Bolo Boys 2026-08-29 Side Saddle show is the weekend AFTER Summer Shade — NOT a conflict."
+      "notes": "Major draw for Grant Park / Beltline / Cabbagetown audiences. GPC's flagship music festival. 2026 dates confirmed 2026-05-21 via web research: Saturday 2026-08-22 (10 AM) through Sunday 2026-08-23 (6 PM) at Grant Park. BOOKED 2026-06-27: Bolo Boys play the gazebo stage Sat 8/22, 12:15–1:00 PM (via Don) — this is now a Bolo Boys show (see events.json summer-shade-festival-2026-08-22), not just a competing event. The Bolo Boys 2026-08-29 Side Saddle show is the weekend AFTER Summer Shade — NOT a conflict."
     },
     {
       "id": "virginia-highland-porchfest",
@@ -44,12 +44,12 @@
       "name": "Grant Park Porchfest",
       "neighborhood": "Grant Park",
       "city": "Atlanta, GA",
-      "pattern": "Late March Saturday (3rd annual was 2026-03-21)",
-      "next_known_start": "2026-03-21",
-      "next_known_end": "2026-03-21",
+      "pattern": "Late March Saturday (3rd annual was 2026-03-21; 2027 is 2027-03-20)",
+      "next_known_start": "2027-03-20",
+      "next_known_end": "2027-03-20",
       "audience_overlap": "high",
       "scope": ["Grant Park", "Beltline", "Cabbagetown", "Summerhill"],
-      "notes": "Free neighborhood porchfest. Bolo Boys is watching for the 2027 application window — see venue-contacts.json. Avoid competing shows in Grant Park / Beltline this Saturday."
+      "notes": "Free neighborhood porchfest. Bolo Boys invited verbally by organizer Don for 2027-03-20 (porch/set-time TBD; captured 2026-06-27) — see venue-contacts.json. Avoid competing shows in Grant Park / Beltline this Saturday."
     },
     {
       "id": "east-atlanta-strut",

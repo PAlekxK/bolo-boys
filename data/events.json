@@ -314,6 +314,54 @@
       }
     },
     {
+      "id": "summer-shade-festival-2026-08-22",
+      "phase": "announced",
+      "date": "2026-08-22",
+      "day_of_week": "Saturday",
+      "time": "12:15 PM",
+      "duration_hours": 0.75,
+      "venue_id": "summer-shade-festival",
+      "venue_name": "Summer Shade Festival",
+      "venue_neighborhood": "Grant Park",
+      "venue_city": "Atlanta, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=Grant+Park+Gazebo%2C+Atlanta%2C+GA+30315",
+      "supporting_acts": [],
+      "theme": "Gazebo Stage",
+      "invitation_text": "We're up on the gazebo stage at the Summer Shade Festival — Grant Park's big summer weekend, right in our home park. Catch us Saturday around lunchtime, then the rest of the festival's yours. Bring the crew, find some shade.",
+      "teaser": null,
+      "additional_details": "Free, all ages. Bolo Boys play the gazebo stage 12:15–1:00 PM; the festival runs all weekend (Sat–Sun) in Grant Park.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Summer+Shade+Festival&dates=20260822T121500/20260822T130000&location=Grant+Park,+Atlanta,+GA+30315&details=Bolo+Boys+on+the+gazebo+stage+at+the+Summer+Shade+Festival+%E2%80%94+Grant+Park.+Free+and+all-ages.",
+      "ics_url": null,
+      "poster_url": null,
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Festival gazebo stage — short 45-min set (12:15–1:00)",
+            "done": false
+          },
+          {
+            "text": "Booked verbally by Don — confirm load-in / sound details closer to date",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Get Don's last name + email/phone for booking confirmation",
+            "for": "Paul",
+            "resolved": false
+          }
+        ]
+      }
+    },
+    {
       "id": "side-saddle-2026-08-29",
       "phase": "announced",
       "date": "2026-08-29",

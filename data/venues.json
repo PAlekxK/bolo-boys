@@ -327,6 +327,36 @@
       ]
     },
     {
+      "id": "summer-shade-festival",
+      "name": "Summer Shade Festival",
+      "type": "festival",
+      "neighborhood": "Grant Park",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "Grant Park, Atlanta, GA 30315",
+      "phone": null,
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?q=Grant+Park+Gazebo%2C+Atlanta%2C+GA+30315",
+      "notes": "Grant Park Conservancy's flagship annual festival — late-August weekend in Grant Park. Bolo Boys play the gazebo stage. Booked via Don (gazebo-stage programmer). First Bolo Boys play 2026-08-22.",
+      "summary": "GPC's flagship summer festival — two days of music, makers, and food under the old-growth shade of Atlanta's oldest park, with the gazebo stage anchoring the live-music side.",
+      "what_we_love": [
+        "playing our home park's biggest weekend",
+        "the gazebo stage under the trees",
+        "a built-in festival crowd",
+        "Grant Park Conservancy as a partner"
+      ],
+      "menu_highlights": [],
+      "live_music_context": "Multi-stage festival programming across the weekend; the gazebo stage hosts rotating live sets.",
+      "crowd_notes": "Grant Park and intown families, Beltline walk-ups, festival-goers of all ages.",
+      "practical_notes": "Outdoor / weather-dependent. Free, all ages. Festival runs Sat–Sun in late August.",
+      "last_researched": "2026-06-27",
+      "research_sources": [
+        "Grant Park Conservancy",
+        "Eventeny",
+        "Adventures in Atlanta"
+      ]
+    },
+    {
       "id": "grant-central-pizza-east",
       "name": "Grant Central Pizza East",
       "type": "restaurant",
