@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 158.3 262" >
+<defs><mask id="scoop"><rect x="-16" y="-16" width="182.3" height="286" fill="white"/><circle cx="0" cy="99" r="21" fill="black"/></mask></defs><g mask="url(#scoop)"><path d="M 15 0 C 126.8 0, 126.8 99, 15 99" fill="none" stroke="#c89b4a" stroke-width="36" stroke-linecap="round"/><path d="M 15 99 C 155.4 99, 155.4 236, 15 236" fill="none" stroke="#c89b4a" stroke-width="36" stroke-linecap="round"/><rect x="0" y="0" width="30" height="236" fill="#7a5400"/></g>
+</svg>

@@ -5,8 +5,9 @@ data/distribution-list.json
 docs/promotion-research.md
 CLAUDE.md
 
-# Working design files
-design/
+# Working design files — logo/brand work IS version-controlled (un-ignored 2026-06-28);
+# only the heavy binary poster references + PSDs stay out
+design/references/
 *Redesign*.png
 *Redesign*.psd
 
