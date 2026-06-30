@@ -12,6 +12,13 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-06-30 — Per-show lineups recorded in events.json + JSON-LD/sitemap refresh
+
+Triggered by Paul's scheduling updates from Jamey + a "schedule email with expected attendance" request.
+- **data/events.json** — per-show lineup deviations recorded in `prep.logistics_notes`: 7/11 (Jamey out, no drums), 8/15 (John out), 9/12 (Bolo w/o John + Ante Up, Jamey on drums; replaced stale "Paul + Nigel duo" note), 10/31 (Jamey out).
+- **index.html / sitemap.xml** — propagator refresh (JSON-LD `validFrom` 6/27→6/30; sitemap lastmod).
+- Band-facing side effects (other surfaces): shared-calendar invites annotated with lineups; Jamey's 12 personal-copy duplicate events merged into the shared invites + deleted; "who's on for what" schedule email drafted in Gmail.
+
 ## 2026-06-27 — Summer Shade Festival booked + Grant Park Porchfest 2027 lead
 
 Don booked Bolo Boys for the **Summer Shade Festival** gazebo stage — Sat **2026-08-22, 12:15–1:00 PM** in Grant Park, closing the gazebo pursuit open since May (Skyler → Don). Added new venue `summer-shade-festival` to `data/venues.json` and announced show `summer-shade-festival-2026-08-22` to `data/events.json` (phase `announced`, theme "Gazebo Stage", 0.75h festival set, poster null). `data/scene-events.json`: marked the 8/22 Summer Shade entry as now a Bolo Boys show (not just a competing event). Ran propagators — JSON-LD now 12 MusicEvents, sitemap bumped, Bandsintown CSV regenerated (**1 new row to upload — Summer Shade; BIT appends, so upload only that row**). Private repo: added contact `summer-shade-don` (last name/email/phone TBD — get from Paul), updated Skyler/Josh notes to close the Don thread, and recorded **Grant Park Porchfest** as a warm lead — Don's verbal invite for Sat **2027-03-20** (porch/time TBD); bumped the scene-events Porchfest entry to 2027-03-20; regenerated `docs/venue-contacts.md`. Calendar (done 2026-06-27): updated the shared-calendar Summer Shade hold → confirmed timed event (12:15–1:00 PM) and added the full core roster — Nigel, John, Paul, **Jamey** (drummer, core since 6/24) + band acct; created a tentative all-day Porchfest hold for 2027-03-20 with the same roster. BIT upload deliberately **held** per Paul ("hold off on BIT") — captured as a backlog item in the private OPEN-THREADS.md (1 new Summer Shade row to upload when ready). Still pending (Paul go): IG collab + announce. 6/26 Ideal held in events.json per Paul (will trip stale-check until moved).
