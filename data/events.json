@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Upcoming shows for the Bolo Boys website. Only upcoming shows are listed here — past shows are covered by social media.",
-    "last_updated": "2026-06-21",
+    "last_updated": "2026-06-30",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json."
   },
@@ -54,120 +54,6 @@
     }
   },
   "events": [
-    {
-      "id": "ideal-sports-bar-2026-06-26",
-      "phase": "announced",
-      "date": "2026-06-26",
-      "day_of_week": "Friday",
-      "time": "8:00 PM",
-      "duration_hours": 2,
-      "venue_id": "ideal-sports-bar",
-      "venue_name": "Ideal Sports Bar",
-      "venue_neighborhood": "Lakewood Heights",
-      "venue_city": "Atlanta, GA",
-      "venue_google_maps_url": "https://maps.google.com/?q=Ideal+Sports+Bar%2C+1953+Lakewood+Ave+SE%2C+Atlanta%2C+GA+30315",
-      "supporting_acts": [],
-      "theme": "First Night in Lakewood",
-      "invitation_text": "Excited to be playing Ideal Sports Bar for the first time — Lakewood Heights spot, two pool tables and a beer garden out back. Friday night, full Bolo Boys mix. Come hang, shoot some pool.",
-      "teaser": null,
-      "additional_details": null,
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260626T200000/20260626T220000&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+live+at+Ideal+Sports+Bar+%E2%80%94+Lakewood+Heights",
-      "ics_url": null,
-      "prep": {
-        "setlist_status": "open",
-        "setlist_url": null,
-        "lifecycle_markers": {
-          "calendar_invite_sent": true,
-          "venue_thanked": false,
-          "clips_pulled": false
-        },
-        "logistics_notes": [],
-        "subgroups": [],
-        "open_questions": [
-          {
-            "text": "Start time still subject to confirmation",
-            "for": "venue",
-            "resolved": false
-          }
-        ]
-      },
-      "poster_url": "assets/posters/ideal-sports-bar-summer-2026.png",
-      "external_links": [
-        {
-          "title": "Bolo Boys announce two nights at Ideal Sports Bar (6/26 & 7/11)",
-          "source": "@boloboysband (Instagram)",
-          "url": "https://www.instagram.com/p/DZ3f0xdsRjl/",
-          "date": null
-        }
-      ]
-    },
-    {
-      "id": "side-saddle-2026-06-27",
-      "phase": "announced",
-      "date": "2026-06-27",
-      "day_of_week": "Saturday",
-      "time": "6:00 PM",
-      "duration_hours": 3,
-      "venue_id": "side-saddle",
-      "venue_name": "Side Saddle",
-      "venue_neighborhood": "Grant Park / Beltline",
-      "venue_city": "Atlanta, GA",
-      "venue_google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
-      "supporting_acts": [
-        "Dirty Shame",
-        "Acoustic Station",
-        "Ante Up"
-      ],
-      "theme": "World Cup Saturday",
-      "invitation_text": "It's the last day of World Cup group stage play, and a match is being hosted right here in Atlanta. The games are inside, the music is outside — come catch both on the Side Saddle + Finca to Filter patio. Jerseys welcome.",
-      "teaser": null,
-      "additional_details": "World Cup Group Stage Final Day. Outdoor patio show — time subject to change based on weather.",
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260627/20260628&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%2B+Finca+to+Filter+%E2%80%94+World+Cup+Group+Stage+Final+Day.+Time+TBD.",
-      "ics_url": null,
-      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg",
-      "partner_venue": {
-        "id": "finca-to-filter",
-        "name": "Finca to Filter",
-        "instagram": "@fincatofilter"
-      },
-      "external_links": [
-        {
-          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
-          "source": "@boloboysband (Instagram)",
-          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
-          "date": null
-        },
-        {
-          "title": "World Cup Saturday on the patio — Bolo Boys, Dirty Shame + Acoustic Station",
-          "source": "@boloboysband (Instagram)",
-          "url": "https://www.instagram.com/p/DZ_BPPSFJH2/",
-          "date": "2026-06-24"
-        }
-      ],
-      "prep": {
-        "setlist_status": "open",
-        "setlist_url": null,
-        "lifecycle_markers": {
-          "calendar_invite_sent": true,
-          "venue_thanked": false,
-          "clips_pulled": false
-        },
-        "logistics_notes": [
-          {
-            "text": "Outdoor patio — weather contingency",
-            "done": false
-          }
-        ],
-        "subgroups": [],
-        "open_questions": [
-          {
-            "text": "Start time depends on World Cup Group Stage Final timing",
-            "for": "venue",
-            "resolved": false
-          }
-        ]
-      }
-    },
     {
       "id": "ideal-sports-bar-2026-07-11",
       "phase": "announced",
