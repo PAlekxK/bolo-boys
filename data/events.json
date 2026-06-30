@@ -195,7 +195,12 @@
           "venue_thanked": false,
           "clips_pulled": false
         },
-        "logistics_notes": [],
+        "logistics_notes": [
+          {
+            "text": "Lineup: Nigel, John, Paul — Jamey out (July packed for him; no drums this show)",
+            "done": false
+          }
+        ],
         "subgroups": [],
         "open_questions": [
           {
@@ -308,7 +313,12 @@
           "venue_thanked": false,
           "clips_pulled": false
         },
-        "logistics_notes": [],
+        "logistics_notes": [
+          {
+            "text": "Lineup: Nigel, Jamey, Paul — John out",
+            "done": false
+          }
+        ],
         "subgroups": [],
         "open_questions": []
       }
@@ -453,7 +463,7 @@
             "done": false
           },
           {
-            "text": "John out for this show — Bolo Boys playing as Paul + Nigel duo",
+            "text": "Lineup: Bolo Boys without John (Nigel, Jamey, Paul) co-billed with Ante Up (Naomi, Paul Shaw, Mel); Jamey on drums",
             "done": false
           }
         ],
@@ -542,6 +552,10 @@
           },
           {
             "text": "Halloween — costumes encouraged",
+            "done": false
+          },
+          {
+            "text": "Lineup: Nigel, John, Paul — Jamey out (no drums this show)",
             "done": false
           }
         ],
