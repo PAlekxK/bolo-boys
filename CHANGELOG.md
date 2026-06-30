@@ -18,7 +18,7 @@ Triggered by Paul's scheduling updates from Jamey + a "schedule email with expec
 - **data/events.json** — per-show lineup deviations recorded in `prep.logistics_notes`: 7/11 (Jamey out, no drums), 8/15 (John out), 9/12 (Bolo w/o John + Ante Up, Jamey on drums; replaced stale "Paul + Nigel duo" note), 10/31 (Jamey out).
 - **index.html / sitemap.xml** — propagator refresh (JSON-LD `validFrom` 6/27→6/30; sitemap lastmod).
 - Band-facing side effects (other surfaces): shared-calendar invites annotated with lineups; Jamey's 12 personal-copy duplicate events merged into the shared invites + deleted; "who's on for what" schedule email drafted in Gmail.
-- **Phase 5 cleanup** — moved the two played shows (6/26 Ideal "First Night in Lakewood", 6/27 Side Saddle "World Cup Saturday") from events.json → past-shows.json (lighter schema; 6/26 end 10 PM, 6/27 end null pending Paul's actual). Upcoming 12→10; past 18→20. Regenerated JSON-LD/BIT CSV.
+- **Phase 5 cleanup** — moved the two played shows (6/26 Ideal "First Night in Lakewood", 6/27 Side Saddle "World Cup Saturday") from events.json → past-shows.json (lighter schema; 6/26 end 10 PM, 6/27 end 10:30 PM). Upcoming 12→10; past 18→20. Regenerated JSON-LD/BIT CSV.
 
 ## 2026-06-27 — Summer Shade Festival booked + Grant Park Porchfest 2027 lead
 
