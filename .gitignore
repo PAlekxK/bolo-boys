@@ -15,6 +15,8 @@ design/references/
 .content/
 .engineering/
 .research/
+.user-research/
+.ux-reviews/
 .claude/
 
 # Generated artifacts — rebuilt from data/ via tools/
