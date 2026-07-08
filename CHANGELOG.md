@@ -19,6 +19,7 @@ Triggered by fan feedback preferring an iCalendar (.ics) popup over a Google Cal
 - **index.html** — both calendar touchpoints (collapsed icon + expanded pill) now point to `ev.ics_url` (Google URL kept as fallback); dropped `target="_blank"` so the `.ics` opens in place; tap target raised to ≥44px tall (was 34–36px on narrow phones).
 - **data/events.json** — 10 `ics_url` fields populated. **sitemap.xml** — propagator lastmod bump.
 - ⚠ **Validation still owed:** tap a `.ics` on a real iPhone (Safari + Instagram in-app browser) post-deploy to confirm the native sheet opens.
+- **.gitignore** — added `.user-research/` + `.ux-reviews/` to the internal-scratch block (closed a gap where internal UX research/reviews could have been published to the public repo; now local-only like `.research/`/`.engineering/`). Moved `paul-as-operator.md` into `.user-research/`; private-repo ops-loop pointer updated to match.
 
 ## 2026-06-30 — Per-show lineups recorded in events.json + JSON-LD/sitemap refresh
 
