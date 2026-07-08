@@ -8,9 +8,17 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 Rolling subsection: what's worth telling Nigel and John in the next band-update email. Distinct from the per-session changelog below (which is for the audit trail). Curate down to the items that matter to a touring trio reading on their phone — new shows, venue changes, press, ops-layer wins. Empty by default after each email goes out; refills as the next cycle's items accumulate.
 
-*(No items queued for the next email as of 2026-05-21.)*
+- **Start times locked:** 7/11 Ideal Sports Bar → **8:00 PM**; 7/19 Side Saddle (World Cup Final after-party) → **6:30 PM** (game's at 3, we go on after).
+- **Summer Shade Festival confirmed** — we've got the **first/opening slot on the gazebo stage, 12:15–1:00 PM, Sat 8/22** in Grant Park. It's on the website now with event info linked (no festival lineup posted yet).
 
 ---
+
+## 2026-07-08 — 7/11 + 7/19 start times locked; Summer Shade confirmed + event links pulled in
+
+Check-in session. Repo was clean and consistent on arrival (no stale events; propagators already in sync).
+- **data/events.json** — 7/11 Ideal start time confirmed **8:00 PM** (open question resolved); 7/19 Side Saddle start time set **6:00 → 6:30 PM** (`additional_details`, timed `google_calendar_url` 18:30–21:30, and open question all updated); Summer Shade booking marked **confirmed — first/opening gazebo slot** (logistics note; set stays 12:15–1:00, 0.75h per Paul). Bumped `_meta.last_updated` → 2026-07-08.
+- **Press sweep (Summer Shade priority)** — ran `tools/press-scan.py` + WebSearch. Finding: **no Bolo-Boys-naming press exists yet** (the only public gazebo lineup surfaced — Peet Midnite, Chasing the Light, Ray Dunlap — predates our booking, and the festival lineup pages 403 the fetcher). Per Paul, pulled **general event info** into the 8/22 show's `external_links` instead: official festival site, the Caren West PR 2026 preview, and Atlanta on the Cheap. No new band-press links found for the other shows (Wild Heaven's own events calendar names us but it's a rolling page, not a durable link).
+- **Propagators** — regenerated JSON-LD (7/19 now 18:30–21:30), sitemap lastmod → 2026-07-08, Bandsintown CSV (7/19 row now 18:30). **BIT NOT re-uploaded** (appends → dupes); the 7/19 time edit + Summer Shade row are pending an upload when Paul's ready.
 
 ## 2026-06-30 — Per-show lineups recorded in events.json + JSON-LD/sitemap refresh
 
