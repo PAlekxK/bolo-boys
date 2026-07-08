@@ -2,6 +2,7 @@
 # Run after editing data/events.json or data/venues.json.
 #
 # Regenerates derived artifacts from canonical JSON:
+#   - per-event .ics files in assets/ics/ (+ populates ics_url in events.json)
 #   - MusicEvent JSON-LD block in index.html
 #   - sitemap.xml <lastmod>
 #   - bandsintown-upload.csv
@@ -11,6 +12,10 @@
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
+
+# ics runs first: it populates events.json's ics_url field, which the site reads.
+echo "→ events-to-ics.py"
+python3 tools/events-to-ics.py
 
 echo "→ events-to-jsonld.py"
 python3 tools/events-to-jsonld.py

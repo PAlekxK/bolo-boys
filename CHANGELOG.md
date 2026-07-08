@@ -12,6 +12,14 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-07-08 — Add-to-Calendar switched to served .ics (lower iPhone friction)
+
+Triggered by fan feedback preferring an iCalendar (.ics) popup over a Google Calendar event; audited with ux-expert + user-researcher. Both converged: serve a real `.ics` (opens the native Apple Calendar sheet on iPhone — no Google account, no browser detour, lands in the calendar fans actually check), single button, **no chooser popup**.
+- **New `tools/events-to-ics.py`** — generates a per-event `.ics` (RFC 5545, CRLF, escaping + line folding) to `assets/ics/<id>.ics` and populates the previously-null `ics_url` in events.json. Idempotent (event-date-derived DTSTAMP), prunes orphans, `--check` aware. Wired into `run-propagators.sh` (runs first).
+- **index.html** — both calendar touchpoints (collapsed icon + expanded pill) now point to `ev.ics_url` (Google URL kept as fallback); dropped `target="_blank"` so the `.ics` opens in place; tap target raised to ≥44px tall (was 34–36px on narrow phones).
+- **data/events.json** — 10 `ics_url` fields populated. **sitemap.xml** — propagator lastmod bump.
+- ⚠ **Validation still owed:** tap a `.ics` on a real iPhone (Safari + Instagram in-app browser) post-deploy to confirm the native sheet opens.
+
 ## 2026-06-30 — Per-show lineups recorded in events.json + JSON-LD/sitemap refresh
 
 Triggered by Paul's scheduling updates from Jamey + a "schedule email with expected attendance" request.

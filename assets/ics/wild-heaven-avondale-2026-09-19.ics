@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wild-heaven-avondale-2026-09-19@boloboys.band
+DTSTAMP:20260919T000000Z
+DTSTART:20260919T200000Z
+DTEND:20260919T233000Z
+SUMMARY:Bolo Boys at Wild Heaven Brewing — First Taste of Fall
+DESCRIPTION:Another afternoon with our friends at Wild Heaven Avondale —
+  Dirty Shame\, Acoustic Station\, Ante Up\, and the Bolo Boys sharing the 
+ bill for three and a half hours of music. We'll be inside or outside depen
+ ding on how September's treating us\, but the good music\, good food\, and
+  good beer are a sure thing. Free and open to everyone.
+LOCATION:135B Maple St\, Avondale Estates\, GA 30002
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

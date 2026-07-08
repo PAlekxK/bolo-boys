@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2026-10-31@boloboys.band
+DTSTAMP:20261031T000000Z
+DTSTART:20261031T220000Z
+DTEND:20261101T010000Z
+SUMMARY:Bolo Boys at Side Saddle — Halloween Bash
+DESCRIPTION:It's Halloween on the Beltline. Costumes are encouraged\, spoo
+ ky songs are in the set\, and Side Saddle will be the place to be. Come as
+  you are — or come as someone else entirely.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

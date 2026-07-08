@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wild-heaven-avondale-2026-08-15@boloboys.band
+DTSTAMP:20260815T000000Z
+DTSTART:20260815T200000Z
+DTEND:20260815T233000Z
+SUMMARY:Bolo Boys at Wild Heaven Brewing — Dog Days at Wild Heaven
+DESCRIPTION:We're glad to keep the collaboration with Wild Heaven Avondale
+  rolling — Dirty Shame\, Acoustic Station\, Ante Up\, and the Bolo Boys 
+ back on Maple Street for about three and a half hours of music. We'll play
+  inside or outside depending on the weather\, but either way you can count
+  on a good time: good music\, good food\, and good beer. Free\, all ages 
+ — come hang out.
+LOCATION:135B Maple St\, Avondale Estates\, GA 30002
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

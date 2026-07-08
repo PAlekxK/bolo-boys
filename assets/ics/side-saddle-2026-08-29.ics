@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2026-08-29@boloboys.band
+DTSTAMP:20260829T000000Z
+DTSTART:20260829T220000Z
+DTEND:20260830T010000Z
+SUMMARY:Bolo Boys at Side Saddle — Last Call for Summer
+DESCRIPTION:August is almost over and we're squeezing every last drop out 
+ of it. Come catch us on the Side Saddle + Finca to Filter patio before Geo
+ rgia finally lets the summer go.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

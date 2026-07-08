@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2026-07-19@boloboys.band
+DTSTAMP:20260719T000000Z
+DTSTART:20260719T220000Z
+DTEND:20260720T010000Z
+SUMMARY:Bolo Boys at Side Saddle — World Cup Final After Party
+DESCRIPTION:The world's biggest game is today\, and when the final whistle
+  blows we'll be on the Side Saddle + Finca to Filter patio to help you cel
+ ebrate — or commiserate. Come down after the match. Wear your jersey.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR
