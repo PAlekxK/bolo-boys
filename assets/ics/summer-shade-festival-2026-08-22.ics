@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:summer-shade-festival-2026-08-22@boloboys.band
+DTSTAMP:20260822T000000Z
+DTSTART:20260822T161500Z
+DTEND:20260822T170000Z
+SUMMARY:Bolo Boys at Summer Shade Festival — Gazebo Stage
+DESCRIPTION:We're up on the gazebo stage at the Summer Shade Festival — 
+ Grant Park's big summer weekend\, right in our home park. Catch us Saturda
+ y around lunchtime\, then the rest of the festival's yours. Bring the crew
+ \, find some shade.
+LOCATION:Grant Park\, Atlanta\, GA 30315
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

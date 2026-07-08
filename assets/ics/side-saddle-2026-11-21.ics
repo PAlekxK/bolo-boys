@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2026-11-21@boloboys.band
+DTSTAMP:20261121T000000Z
+DTSTART:20261121T230000Z
+DTEND:20261122T020000Z
+SUMMARY:Bolo Boys at Side Saddle — Pre-Turkey Warmup
+DESCRIPTION:Thanksgiving is next week and the holiday madness is about to 
+ hit. Get ahead of it — spend a Saturday afternoon at Side Saddle with go
+ od wine\, good company\, and live music before the travel and the family g
+ atherings and all the rest of it.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

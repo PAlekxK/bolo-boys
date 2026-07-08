@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2026-12-19@boloboys.band
+DTSTAMP:20261219T000000Z
+DTSTART:20261219T230000Z
+DTEND:20261220T020000Z
+SUMMARY:Bolo Boys at Side Saddle — Christmas Party & One-Year Anniversary
+DESCRIPTION:We're marking one full year of live music at Side Saddle — a
+ nd we couldn't have picked a better occasion than a Christmas party to cel
+ ebrate. Come ring in the holiday season with us on the Beltline. It's been
+  a great year. Let's toast it.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR
