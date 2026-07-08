@@ -13,6 +13,10 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-07-08 — Draft social/comms plan saved for later reference
+
+Saved `docs/social-plan.md` — a draft comms plan for the summer, to pick back up later. Coverage-first (get every show announced) over cadence; Paul writes/posts all captions, so the doc is what/when/what-info, not caption prose. Threads it weaves: adding Jamey on drums → studio/recording pics → upcoming shows → first single ("Muddy Knees"). Flags the three unannounced shows (Wild Heaven 8/15, Summer Shade 8/22, Side Saddle 8/29 — first two need art) and a running-order checklist. Three open decisions parked in the doc: posters (make vs. photo), single release timing (gates the single beats), and aligning cadence to the outside "Tone Steward" best-practices once Paul shares them. Email-history review this session also confirmed (off-email, so invisible to the scan): Summer Shade booked via text/call with Don; Jamey signed off on the master schedule in person.
+
 ## 2026-07-08 — 7/11 + 7/19 start times locked; Summer Shade confirmed + event links pulled in
 
 Check-in session. Repo was clean and consistent on arrival (no stale events; propagators already in sync).
