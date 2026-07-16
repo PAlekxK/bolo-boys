@@ -7,6 +7,29 @@ premiere is worth attending, and nobody attends anything at 9 AM on a workday.
 
 ---
 
+## ✅ RESOLVED 2026-07-16 ~6:15 PM ET — the site is deployed
+
+**Root cause was not Dogies.** On 2026-06-30 the site was migrated from Cloudflare
+**Pages** to a **Worker** (`bolo-boys-band`). Cloudflare's bot opened
+`cloudflare/workers-autoconfig` with the required `wrangler.jsonc` — **it was never
+merged**, and no git integration was ever wired up. So `main` had no Worker config
+and *nothing had deployed since 6/30*. The live site was frozen at commit `0781627`
+(6/30 11:54 AM) for 17 days, with **11 unpublished commits** on `main`. The Pages
+dashboard hunt below failed because there is no Pages project to find.
+
+**Fix:** `wrangler.jsonc` + `.assetsignore` committed to `main`, and deploying is now
+`bash tools/deploy.sh` — which deploys *and verifies against production*. Verified live:
+cover art 200, `band.json` carries `releases[]`, `#release` renders (browser-checked at
+390px), `og:image` is the Dogies cover, premiere ID in JSON-LD. The art-reveal post has
+somewhere to land.
+
+**Still Paul's to do:** reconnect Workers Builds to the repo in the Cloudflare dashboard
+if you want pushes to auto-deploy again. Until then, `deploy.sh` is the only thing that
+publishes — including tomorrow's 9 AM go-live.
+
+<details>
+<summary>Original blocker writeup (2026-07-16 ~1:10 PM) — kept for the record</summary>
+
 ## 🔴 BLOCKER as of 2026-07-16 ~1:10 PM ET — the site is NOT deployed
 
 `main` is correct and pushed (merge `3c11081`, confirmed present on GitHub via
@@ -46,6 +69,8 @@ curl -sI https://www.boloboys.band/assets/releases/dogies-cover.jpg | head -1
 curl -s  https://www.boloboys.band/data/band.json | grep -c '"releases"'
 ```
 
+</details>
+
 ---
 
 ## Before you go to bed Thursday
@@ -67,9 +92,9 @@ curl -s  https://www.boloboys.band/data/band.json | grep -c '"releases"'
       hero, so the bio link lands people on the record without a special link.
       (The `www.` in the caption still matters — it auto-links on the FB
       cross-post, where a bare domain renders as dead text.)
+- [x] ~~Merge `release/dogies` → `main`~~ — merged *and now actually deployed*
+      (7/16 ~6:15 PM). The release block is live; the post has somewhere to land.
 - [ ] **Post the art reveal** → routes to www.boloboys.band.
-- [ ] Merge `release/dogies` → `main` so the site's release block is live before
-      the post points at it. **The post has nowhere to send people until this ships.**
 
 ---
 
@@ -85,10 +110,12 @@ curl -s  https://www.boloboys.band/data/band.json | grep -c '"releases"'
    python3 tools/release-go-live.py --spotify-track-id '<paste the link>'
    bash tools/run-propagators.sh
    git add -A && git commit -m 'Dogies is out' && git push
+   bash tools/deploy.sh          # ← the push does NOT deploy. This does.
    ```
 
-   Cloudflare deploys in ~1 min. The block flips to "Out Now" with the Spotify
-   player, the streaming row, and the video embedded underneath.
+   Wait for `✅ Deployed and verified` — it checks production for you. The block
+   flips to "Out Now" with the Spotify player, the streaming row, and the video
+   embedded underneath.
 
    Add `--apple-music '<url>'` etc. as those links appear. Safe to re-run.
 

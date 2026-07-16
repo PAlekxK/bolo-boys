@@ -30,3 +30,6 @@ bandsintown-upload.csv
 
 # Local-only state markers (machine-specific, not shared)
 tools/.last-bit-upload
+
+# Wrangler local state (auth cache, build artifacts) — never commit
+.wrangler/
