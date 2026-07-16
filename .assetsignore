@@ -1,0 +1,17 @@
+# Files in the repo that should NOT be served at boloboys.band.
+# The repo is public, so nothing here is a secret — this just keeps the
+# published site to fan-facing surfaces. Do NOT add data/ or assets/:
+# index.html fetches those at runtime.
+.git
+.gitignore
+.assetsignore
+.wrangler
+node_modules
+wrangler.jsonc
+CLAUDE.md
+README.md
+CHANGELOG.md
+LAUNCH-DOGIES.md
+tools
+design
+*.csv

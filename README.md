@@ -4,7 +4,7 @@ Mobile-first single-page website for [Bolo Boys](https://www.instagram.com/bolob
 
 ## What this repo is
 
-A static site (`index.html`) plus structured JSON data files. No build step. No framework. Push to `main`, Cloudflare Pages deploys.
+A static site (`index.html`) plus structured JSON data files. No build step. No framework. Deploy with `bash tools/deploy.sh` (pushing `main` does *not* publish — see [How the site deploys](#how-the-site-deploys)).
 
 ```
 .
@@ -29,7 +29,7 @@ A static site (`index.html`) plus structured JSON data files. No build step. No 
 1. Edit `data/events.json` — add a new entry or modify an existing one. Schema example is at the top of the file under `_schema_example`.
 2. If the venue isn't already in `data/venues.json`, add it there too.
 3. Preview locally (see below).
-4. Commit and push to `main`. Cloudflare Pages will redeploy in ~1 minute.
+4. Commit and push to `main`, then run `bash tools/deploy.sh` to publish. The push alone does not update the live site.
 
 The site fetches `data/events.json` at runtime, so edits to event data take effect as soon as the deploy lands — no other files need to change.
 
@@ -47,11 +47,19 @@ Then open `http://localhost:8000` in your browser. Stop the server with `Ctrl+C`
 
 ## How the site deploys
 
-Cloudflare Pages is connected to this repo's `main` branch. Every push to `main` triggers a redeploy at [boloboys.band](https://boloboys.band) (typically under a minute). There is no build step.
+**Pushing `main` does not deploy anything.** Deploying is an explicit command:
 
-To check deploy status: Cloudflare dashboard → **Workers & Pages** → `bolo-boys` project → **Deployments**.
+```bash
+bash tools/deploy.sh
+```
 
-Pushes to non-`main` branches get a preview URL (e.g. `<branch>.bolo-boys.pages.dev`) so changes can be inspected before they're merged to production.
+It uploads the site and then verifies against production, so a deploy that didn't land fails loudly instead of silently.
+
+The site is a Cloudflare **Worker** named `bolo-boys-band` that serves this repo as static assets (config in `wrangler.jsonc`; `.assetsignore` controls what's excluded). There is **no** Pages project and **no** GitHub integration — the repo was migrated off Pages on 2026-06-30 and the auto-deploy did not survive the move.
+
+> **Why this warning exists:** the old "push and it deploys" instruction stayed in this README after the migration. The live site sat frozen at the 6/30 commit for 17 days while 11 commits piled up on `main`, and it was only caught on 7/16 because a record release depended on it. Commit and push as usual for version control — but the site is live only after `deploy.sh` says `✅ Deployed and verified`.
+
+To check deploy status: Cloudflare dashboard → **Workers & Pages** → `bolo-boys-band` → **Deployments**.
 
 ## Asset conventions
 
