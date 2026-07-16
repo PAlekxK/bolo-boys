@@ -1,6 +1,6 @@
 # Bolo Boys Website
 
-Mobile-first single-page website for [Bolo Boys](https://www.instagram.com/boloboysband/) — an Atlanta- and Macon-based three-piece live band. Live at [boloboys.band](https://boloboys.band).
+Mobile-first single-page website for [Bolo Boys](https://www.instagram.com/boloboysband/) — an Atlanta- and Macon-based four-piece live band. Live at [boloboys.band](https://boloboys.band).
 
 ## What this repo is
 

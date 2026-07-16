@@ -55,58 +55,6 @@
   },
   "events": [
     {
-      "id": "ideal-sports-bar-2026-07-11",
-      "phase": "announced",
-      "date": "2026-07-11",
-      "day_of_week": "Saturday",
-      "time": "8:00 PM",
-      "duration_hours": 2,
-      "venue_id": "ideal-sports-bar",
-      "venue_name": "Ideal Sports Bar",
-      "venue_neighborhood": "Lakewood Heights",
-      "venue_city": "Atlanta, GA",
-      "venue_google_maps_url": "https://maps.google.com/?q=Ideal+Sports+Bar%2C+1953+Lakewood+Ave+SE%2C+Atlanta%2C+GA+30315",
-      "supporting_acts": [],
-      "theme": "Round Two",
-      "invitation_text": "Back at Ideal already — and ready for round two. Beer garden, pool tables, full Bolo Boys mix on a Saturday night.",
-      "teaser": null,
-      "additional_details": null,
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Ideal+Sports+Bar&dates=20260711T200000/20260711T220000&location=1953+Lakewood+Ave+SE,+Atlanta,+GA+30315&details=Bolo+Boys+live+at+Ideal+Sports+Bar+%E2%80%94+Lakewood+Heights",
-      "ics_url": "assets/ics/ideal-sports-bar-2026-07-11.ics",
-      "prep": {
-        "setlist_status": "open",
-        "setlist_url": null,
-        "lifecycle_markers": {
-          "calendar_invite_sent": true,
-          "venue_thanked": false,
-          "clips_pulled": false
-        },
-        "logistics_notes": [
-          {
-            "text": "Lineup: Nigel, John, Paul — Jamey out (July packed for him; no drums this show)",
-            "done": false
-          }
-        ],
-        "subgroups": [],
-        "open_questions": [
-          {
-            "text": "Start time still subject to confirmation",
-            "for": "venue",
-            "resolved": false
-          }
-        ]
-      },
-      "poster_url": "assets/posters/ideal-sports-bar-summer-2026.png",
-      "external_links": [
-        {
-          "title": "Bolo Boys announce two nights at Ideal Sports Bar (6/26 & 7/11)",
-          "source": "@boloboysband (Instagram)",
-          "url": "https://www.instagram.com/p/DZ3f0xdsRjl/",
-          "date": null
-        }
-      ]
-    },
-    {
       "id": "side-saddle-2026-07-19",
       "phase": "announced",
       "date": "2026-07-19",

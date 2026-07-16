@@ -6,6 +6,28 @@
   },
   "past_shows": [
     {
+      "id": "ideal-sports-bar-2026-07-11",
+      "date": "2026-07-11",
+      "day_of_week": "Saturday",
+      "time": "8:00 PM",
+      "end_time": null,
+      "venue_id": "ideal-sports-bar",
+      "venue_name": "Ideal Sports Bar",
+      "venue_neighborhood": "Lakewood Heights",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [],
+      "notes": "Second of two summer nights at Ideal Sports Bar (6/26 + 7/11) — “Round Two.” Full Bolo Boys evening, no co-bills.",
+      "poster_url": "assets/posters/ideal-sports-bar-summer-2026.png",
+      "external_links": [
+        {
+          "title": "Bolo Boys announce two nights at Ideal Sports Bar (6/26 & 7/11)",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DZ3f0xdsRjl/",
+          "date": null
+        }
+      ]
+    },
+    {
       "id": "side-saddle-2026-06-27",
       "date": "2026-06-27",
       "day_of_week": "Saturday",

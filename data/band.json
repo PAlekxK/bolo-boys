@@ -12,7 +12,7 @@
       "verb_form": "Bolo-fy / Bolo-fied — used to describe the band's signature reinterpretation of a song."
     },
     "formed": "December 2024",
-    "type": "Three-piece live band",
+    "type": "Four-piece live band",
     "primary_locations": ["Atlanta, GA", "Macon, GA"],
     "roots": "North Georgia / Appalachia",
     "service_area": {
@@ -47,6 +47,15 @@
       "vocal_role": "harmonies and call-and-response",
       "based_in": "Atlanta, GA",
       "background": "Paul's mom's cousin and family. Has known Nigel since Nigel was born. Retired engineer and a strong bluegrass guitarist — brings classics like Doc Watson's Tennessee Stud into the set, opening the band to whole new demographics.",
+      "songwriting": null
+    },
+    {
+      "name": "Jamey",
+      "role": "drums",
+      "vocal_role": null,
+      "based_in": "TODO — Paul to confirm city (2026-07-16). Every other member carries one; it feeds the site and JSON-LD.",
+      "instagram": "https://www.instagram.com/jamesmerritt/",
+      "background": "A dear friend of the band who sat in on two shows before joining as a core member, announced 2026-07-12. The dog curled up beside the kick drum on the 'Dogies' cover art is his doing — per the band's own announcement, 'it's a rare drummer who can play with such finesse that a dog will curl up right by his kit.'",
       "songwriting": null
     }
   ],
