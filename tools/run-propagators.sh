@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-# Run after editing data/events.json or data/venues.json.
+# Run after editing data/events.json, data/venues.json, or data/band.json.
 #
 # Regenerates derived artifacts from canonical JSON:
 #   - per-event .ics files in assets/ics/ (+ populates ics_url in events.json)
 #   - MusicEvent JSON-LD block in index.html
+#   - MusicRecording/VideoObject JSON-LD block in index.html (from band.json releases[])
 #   - sitemap.xml <lastmod>
 #   - bandsintown-upload.csv
 #
@@ -19,6 +20,9 @@ python3 tools/events-to-ics.py
 
 echo "→ events-to-jsonld.py"
 python3 tools/events-to-jsonld.py
+
+echo "→ release-to-jsonld.py"
+python3 tools/release-to-jsonld.py
 
 echo "→ bump-sitemap.py"
 python3 tools/bump-sitemap.py
