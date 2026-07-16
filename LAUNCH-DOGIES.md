@@ -20,6 +20,12 @@ premiere is worth attending, and nobody attends anything at 9 AM on a workday.
       accept**, so an unaccepted invite is just a normal post. Tell them it's
       coming and to hit accept Friday evening.
       *(Ante Up has no Instagram — named in text, not tagged.)*
+- [ ] **Check the IG link in bio points to boloboys.band.** Captions aren't
+      clickable on Instagram — the bio link is the only real path. No change
+      needed if it's already the site: the release block sits directly under the
+      hero, so the bio link lands people on the record without a special link.
+      (The `www.` in the caption still matters — it auto-links on the FB
+      cross-post, where a bare domain renders as dead text.)
 - [ ] **Post the art reveal** → routes to www.boloboys.band.
 - [ ] Merge `release/dogies` → `main` so the site's release block is live before
       the post points at it. **The post has nowhere to send people until this ships.**
