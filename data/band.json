@@ -135,6 +135,42 @@
     }
   ],
 
+  "releases": [
+    {
+      "id": "dogies",
+      "title": "Dogies",
+      "type": "traditional_arrangement",
+      "songwriter_credit": "Traditional; arranged by Bolo Boys",
+      "composition_name": "Whoopie Ti Yi Yo (Git Along, Little Dogies)",
+      "tagline": "A cowboy standard, Bolo-fied",
+      "source_note": "Bolo-fied take on the traditional cowboy song 'Whoopie Ti Yi Yo (Git Along, Little Dogies)'. Composition is public domain; the arrangement and master are Bolo Boys'. songwriter_credit is metadata (feeds JSON-LD); tagline is the fan-facing display line.",
+      "status": "upcoming",
+      "release_date": "2026-07-17",
+      "release_time_et": "09:00",
+      "isrc": "QT6F72639668",
+      "duration_iso": "PT3M28S",
+      "cover": "assets/releases/dogies-cover.jpg",
+      "cover_sm": "assets/releases/dogies-cover-sm.jpg",
+      "hyperfollow": "https://distrokid.com/hyperfollow/boloboys/dogies",
+      "spotify_track_id": null,
+      "streaming": {
+        "spotify": null,
+        "apple_music": null,
+        "amazon_music": null,
+        "bandcamp": null,
+        "youtube_music": null,
+        "tidal": null,
+        "deezer": null
+      },
+      "video": {
+        "youtube_id": null,
+        "premiere_datetime_et": "2026-07-17T19:00:00-04:00",
+        "duration_iso": "PT3M48S",
+        "credit": "Shot and produced by Nigel Wright",
+        "featuring": ["Ante Up", "Dirty Shame", "Acoustic Station"]
+      }
+    }
+  ],
   "guest_co_bills": [
     {
       "name": "Adam Klein",
