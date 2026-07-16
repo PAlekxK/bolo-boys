@@ -16,7 +16,9 @@ npx --yes wrangler@latest deploy
 
 echo
 echo "==> Verifying against production (not inferring)"
-sleep 5
+# Cloudflare needs a beat to propagate; index.html has gone live ahead of its
+# assets before (2026-07-16), so don't check too eagerly.
+sleep 15
 
 fail=0
 check() { # path, expected_code
@@ -39,16 +41,23 @@ check "robots.txt" 200
 check "CLAUDE.md" 404
 check "tools/deploy.sh" 404
 
-# The live homepage must byte-match the commit being deployed. This is the
-# check that would have caught the 17-day freeze on day one.
-curl -sL "https://www.boloboys.band/?cb=$RANDOM$$" -o /tmp/bolo-prod-index.$$
-if [ "$(md5 -q /tmp/bolo-prod-index.$$)" = "$(md5 -q index.html)" ]; then
-  echo "  ok    live index.html matches local HEAD"
-else
-  echo "  FAIL  live index.html does NOT match local HEAD — deploy did not land"
-  fail=1
-fi
-rm -f /tmp/bolo-prod-index.$$
+# The live files must byte-match what's being deployed. This is the check that
+# would have caught the 17-day freeze on day one. The site renders from the
+# JSON at runtime, so a stale data file is just as broken as a stale page —
+# check those too, not only index.html.
+match() { # local_path, url_path
+  curl -sL "https://www.boloboys.band/$2?cb=$RANDOM$$" -o "/tmp/bolo-prod-check.$$"
+  if [ "$(md5 -q /tmp/bolo-prod-check.$$)" = "$(md5 -q "$1")" ]; then
+    printf '  ok    live %-28s matches local HEAD\n' "$2"
+  else
+    printf '  FAIL  live %-28s does NOT match local HEAD\n' "$2"; fail=1
+  fi
+  rm -f "/tmp/bolo-prod-check.$$"
+}
+match index.html ""
+match data/band.json data/band.json
+match data/events.json data/events.json
+match data/past-shows.json data/past-shows.json
 
 echo
 if [ "$fail" -eq 0 ]; then
