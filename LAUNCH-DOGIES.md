@@ -7,6 +7,47 @@ premiere is worth attending, and nobody attends anything at 9 AM on a workday.
 
 ---
 
+## 🔴 BLOCKER as of 2026-07-16 ~1:10 PM ET — the site is NOT deployed
+
+`main` is correct and pushed (merge `3c11081`, confirmed present on GitHub via
+the API). **Cloudflare has not deployed it.** Verified against production with a
+real browser, not inference:
+
+| probe | result |
+|---|---|
+| `/assets/releases/dogies-cover.jpg` | **404** |
+| `/LAUNCH-DOGIES.md` | **404** |
+| `/data/band.json` | 200, but **no `releases` key** |
+| `/assets/band-photo.jpg` (old) | 200 |
+| `#release` section in DOM | **absent** |
+| `og:image` | still `band-photo.jpg` |
+
+Not a cache artifact: a never-before-requested, cache-busted path returned 404,
+which the edge cannot manufacture. The origin genuinely lacks the files.
+
+**This gates the Thursday art-reveal post** — that post routes to
+boloboys.band, and the site currently has no Dogies on it.
+
+**Check:** Cloudflare dashboard → Workers & Pages → the project → Deployments.
+Look for a build against `3c11081`.
+- *Queued/building* → just slow; re-verify.
+- *Failed* → read the log. This is a static site with no build step, so it'll be
+  something small.
+- *No build triggered* → the GitHub integration is likely disconnected. Retry the
+  deployment or reconnect the repo. **Corroborating hint:** `bolo-boys.pages.dev`
+  and `release-dogies.bolo-boys.pages.dev` both fail DNS, so the Pages project
+  name in `README.md` may be stale/wrong too — worth confirming while you're in
+  there.
+
+Re-verify after it deploys — don't assume:
+```bash
+# expect: 200, and band.json carrying releases[]
+curl -sI https://www.boloboys.band/assets/releases/dogies-cover.jpg | head -1
+curl -s  https://www.boloboys.band/data/band.json | grep -c '"releases"'
+```
+
+---
+
 ## Before you go to bed Thursday
 
 - [ ] **Move the YouTube premiere to 7:00 PM ET.** YouTube Studio → the video →
