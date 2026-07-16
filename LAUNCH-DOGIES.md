@@ -76,8 +76,14 @@ curl -s  https://www.boloboys.band/data/band.json | grep -c '"releases"'
 ## Before you go to bed Thursday
 
 - [ ] **Move the YouTube premiere to 7:00 PM ET.** YouTube Studio → the video →
-      Premiere settings. *The site and its structured data already say 7 PM. If
-      the premiere stays at 9 AM, both are lying — tell Claude to change them.*
+      Premiere settings. **Verified 7/16 6:20 PM: still 9:00 AM**
+      (`scheduledStartTime` = `2026-07-17T13:00:00Z`). The site's JSON-LD asserts a
+      `BroadcastEvent` at 7 PM, so until this moves, the site and the Thursday post
+      are both false. This is the launch's only remaining blocker.
+- [ ] **Turn live chat OFF** on the video (Paul's call 7/16 — nobody's hosting it).
+      This does *not* make the site's `isLiveBroadcast: true` dishonest: a premiere
+      is still a scheduled simultaneous first play, which is what the markup means.
+      No code change needed.
 - [ ] **Retitle the video.** It's currently just "Dogies," which nobody searches.
       → `Bolo Boys — Dogies (Whoopie Ti Yi Yo / Git Along, Little Dogies) — Official Music Video`
 - [ ] **Paste the new description** (credits are the content, not a footer).
@@ -147,7 +153,15 @@ curl -s  https://www.boloboys.band/data/band.json | grep -c '"releases"'
 
 - [ ] **Post the collab.** Send the invites a few minutes early so the
       co-authors can accept; the post is worth far less on one grid than four.
-- [ ] Be in the live chat. It's a premiere — that's the whole point of moving it.
+- [ ] **No live chat** — Paul's call 7/16. Turn it OFF in Studio rather than host
+      an empty room. **Keep it a Premiere anyway:** the premiere page is what
+      gives you a public URL, a countdown, and a "Notify me" button *before* 7 PM
+      — which is exactly what the site's reminder CTA and the Thursday post link
+      to. A plain scheduled upload is invisible until it publishes, so both would
+      404 all day. Chat off ≠ premiere off.
+- [ ] The 7 PM post carries the **Sunday CTA** — the video's cast (Ante Up, Dirty
+      Shame, Acoustic Station) is Sunday's actual lineup at Side Saddle. That's
+      the live event now, not the premiere.
 
 ---
 
