@@ -2001,6 +2001,16 @@
     deezer: 'Deezer'
   };
 
+  // ONE definition of "is it out", used by both the release block and Our Music.
+  // They render the same track; if they disagree the page contradicts itself
+  // (caught 2026-07-16: the block said "Out now" while Our Music still offered a
+  // pre-save). Time-derived so 9 AM needs nobody awake; status:"out" overrides.
+  function isReleaseOut(rel) {
+    if (!rel) return false;
+    if (rel.status === 'out') return true;
+    return rel.release_datetime_et ? Date.now() >= Date.parse(rel.release_datetime_et) : false;
+  }
+
   // "Our Music" — one section over BOTH releases[] and originals[].
   // Deliberately NOT titled "Original Music": Dogies is a Bolo-fied traditional
   // (public-domain composition, the band's arrangement + master), so a heading
@@ -2015,10 +2025,19 @@
       .map(([service, url]) => `<a href="${url}" target="_blank" rel="noopener">${STREAMING_LABELS[service] || service}</a>`)
       .join(' &nbsp;&middot;&nbsp; ');
 
-    // Not out yet → the pre-save stands in for the streaming row. Once
-    // release-go-live.py fills streaming{}, this swaps itself automatically.
+    // No streaming row yet → HyperFollow stands in. Its label MUST track the
+    // clock: "Pre-save" before the drop, "Listen now" after — otherwise this
+    // offers a pre-save on a song that's already out while the block above
+    // says "Out now". Once release-go-live.py fills streaming{}, the real row
+    // replaces this entirely.
     const presave = (!streamingLinks && t.hyperfollow)
-      ? `<div class="original-track-streaming"><a href="${t.hyperfollow}" target="_blank" rel="noopener">Pre-save on Spotify</a></div>`
+      ? `<div class="original-track-streaming"><a href="${t.hyperfollow}" target="_blank" rel="noopener">${t.out ? 'Listen now' : 'Pre-save on Spotify'}</a></div>`
+      : '';
+
+    // A track with a music video should always be one tap from it here too —
+    // not only in the release block at the top, which is temporary by nature.
+    const watch = t.youtube_id
+      ? `<div class="original-track-streaming"><a href="https://www.youtube.com/watch?v=${t.youtube_id}" target="_blank" rel="noopener">Watch the music video</a></div>`
       : '';
 
     return `
@@ -2026,6 +2045,7 @@
         ${embed}
         <p class="original-track-credit">"${t.title}" — ${t.credit}</p>
         ${streamingLinks ? `<div class="original-track-streaming">Also on: ${streamingLinks}</div>` : presave}
+        ${watch}
       </div>`;
   }
 
@@ -2040,6 +2060,8 @@
       spotify_track_id: r.spotify_track_id,
       streaming: r.streaming,
       hyperfollow: r.hyperfollow,
+      youtube_id: r.video && r.video.youtube_id,
+      out: isReleaseOut(r),
     }));
     const originals = ((bandData && bandData.originals) || []).map(t => ({
       title: t.title,
@@ -2047,6 +2069,8 @@
       spotify_track_id: t.spotify_track_id,
       streaming: t.streaming,
       hyperfollow: null,
+      youtube_id: null,
+      out: true,
     }));
 
     const tracks = releases.concat(originals);
@@ -2112,7 +2136,14 @@
     const rel = ((bandData && bandData.releases) || [])[0];
     if (!rel) { section.hidden = true; return; }
 
-    const isOut = rel.status === 'out';
+    // "Out" is TIME-derived, not a flag someone has to remember to flip.
+    // The song goes live on a DistroKid timer whether or not anyone is awake;
+    // before this, the site sat on a pre-save button for an already-released
+    // song until release-go-live.py was run by hand (caught 2026-07-16, when
+    // the plan changed to nobody posting at 9 AM). status:"out" still wins as a
+    // manual override — the clock only ever promotes, never demotes.
+    // release_datetime_et carries an explicit offset so there's no DST guessing.
+    const isOut = isReleaseOut(rel);
     const art = rel.cover
       ? `<img class="release-art" src="${rel.cover}" alt="${rel.title} \u2014 single artwork" width="190" height="190">`
       : '';
