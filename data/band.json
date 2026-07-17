@@ -156,6 +156,7 @@
       "status": "upcoming",
       "release_date": "2026-07-17",
       "release_time_et": "09:00",
+      "release_datetime_et": "2026-07-17T09:00:00-04:00",
       "isrc": "QT6F72639668",
       "duration_iso": "PT3M28S",
       "cover": "assets/releases/dogies-cover.jpg",
