@@ -126,7 +126,7 @@
   "publication": {
     "@type": "BroadcastEvent",
     "isLiveBroadcast": true,
-    "startDate": "2026-07-17T19:00:00-04:00"
+    "startDate": "2026-07-17T09:00:00-04:00"
   }
 }
   </script>
@@ -2028,6 +2028,34 @@
   }
 
   // ── Latest release (single + music video) ────────────────────
+  // Derive the premiere line from premiere_datetime_et — never hardcode it.
+  // This used to read "premieres that evening" as a literal, which quietly went
+  // false the moment the premiere moved (2026-07-16). Data decides the words.
+  function fmtPremiereWhen(rel) {
+    const p = rel.video && rel.video.premiere_datetime_et;
+    if (!p) return '';
+    const m = String(p).match(/^(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2})/);
+    if (!m) return '';
+    const pDate = m[1], pH = Number(m[2]), pMin = Number(m[3]);
+    const rH = Number(String(rel.release_time_et || '').split(':')[0]);
+    const clock = (h, mi) => {
+      const ampm = h >= 12 ? 'PM' : 'AM';
+      const h12 = h % 12 === 0 ? 12 : h % 12;
+      return h12 + (mi ? ':' + String(mi).padStart(2, '0') : '') + ' ' + ampm;
+    };
+    // Same day, within a couple of hours of the drop → they land together.
+    if (pDate === rel.release_date && !isNaN(rH) && Math.abs(pH - rH) <= 2) {
+      return ` <span>· with the music video</span>`;
+    }
+    if (pDate === rel.release_date) {
+      return ` <span>· music video premieres at ${clock(pH, pMin)} ET</span>`;
+    }
+    const [py, pmo, pd] = pDate.split('-').map(Number);
+    const pretty = new Date(py, pmo - 1, pd)
+      .toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    return ` <span>· music video premieres ${pretty}, ${clock(pH, pMin)} ET</span>`;
+  }
+
   function fmtReleaseWhen(rel) {
     const [y, m, d] = (rel.release_date || '').split('-').map(Number);
     if (!y) return '';
@@ -2092,7 +2120,7 @@
 
     const when = isOut
       ? `<p class="release-when">Out now <span>\u00B7 on Spotify, Apple Music, and everywhere else</span></p>`
-      : `<p class="release-when">${fmtReleaseWhen(rel)}${rel.video && rel.video.premiere_datetime_et ? ` <span>\u00B7 music video premieres that evening</span>` : ''}</p>`;
+      : `<p class="release-when">${fmtReleaseWhen(rel)}${fmtPremiereWhen(rel)}</p>`;
 
     container.innerHTML = `
       <div class="release-inner">
