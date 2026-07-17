@@ -4,7 +4,6 @@
     "last_updated": "2026-05-19 (Adam Klein added to scene_collaborators)",
     "schema_version": "1.0"
   },
-
   "band": {
     "name": "Bolo Boys",
     "name_rules": {
@@ -13,17 +12,28 @@
     },
     "formed": "December 2024",
     "type": "Four-piece live band",
-    "primary_locations": ["Atlanta, GA", "Macon, GA"],
+    "primary_locations": [
+      "Atlanta, GA",
+      "Macon, GA"
+    ],
     "roots": "North Georgia / Appalachia",
     "service_area": {
       "_purpose": "Cities and regions Bolo Boys actively books in. Distinct from primary_locations (where members live). Used for SEO areaServed signal and venue outreach scoping. Update when active booking interest expands.",
-      "cities": ["Atlanta, GA", "Macon, GA", "Jasper, GA", "Chattanooga, TN"],
-      "regions": ["Greater Atlanta", "North Georgia", "Southern Appalachia"],
+      "cities": [
+        "Atlanta, GA",
+        "Macon, GA",
+        "Jasper, GA",
+        "Chattanooga, TN"
+      ],
+      "regions": [
+        "Greater Atlanta",
+        "North Georgia",
+        "Southern Appalachia"
+      ],
       "notes": "Active booking radius is roughly metro Atlanta extending to Macon (south), Jasper (north), and Chattanooga (across the Tennessee line)."
     },
     "tagline": "High-energy singalongs, throwbacks & originals — live music built to bring people together."
   },
-
   "members": [
     {
       "name": "Paul",
@@ -31,7 +41,8 @@
       "vocal_role": "trades lead with Nigel",
       "based_in": "Atlanta, GA",
       "background": "Childhood friend of Nigel; consulting background brings structure to the band's operations.",
-      "songwriting": "Three originals: a punk-inspired Atlanta song, a slower country/bluegrass piece featuring solos from Nigel and John, and a Western song about a man on the open road."
+      "songwriting": "Three originals: a punk-inspired Atlanta song, a slower country/bluegrass piece featuring solos from Nigel and John, and a Western song about a man on the open road.",
+      "full_name": "Paul Kirschenbauer"
     },
     {
       "name": "Nigel",
@@ -39,7 +50,8 @@
       "vocal_role": "trades lead with Paul",
       "based_in": "Macon, GA",
       "background": "Lifelong musician; Paul's childhood friend from North Georgia. Moved to the West Coast and reconnected with Paul and John when he returned to Macon in 2024 — the moment Bolo Boys started.",
-      "songwriting": "Has an original Western song released on Spotify; more Bolo Boys recordings in progress."
+      "songwriting": "Has an original Western song released on Spotify; more Bolo Boys recordings in progress.",
+      "full_name": "Nigel Wright"
     },
     {
       "name": "John",
@@ -47,7 +59,8 @@
       "vocal_role": "harmonies and call-and-response",
       "based_in": "Atlanta, GA",
       "background": "Paul's mom's cousin and family. Has known Nigel since Nigel was born. Retired engineer and a strong bluegrass guitarist — brings classics like Doc Watson's Tennessee Stud into the set, opening the band to whole new demographics.",
-      "songwriting": null
+      "songwriting": null,
+      "full_name": "John Wilber"
     },
     {
       "name": "Jamey",
@@ -56,37 +69,49 @@
       "based_in": "Dawsonville, GA",
       "instagram": "https://www.instagram.com/jamesmerritt/",
       "background": "A dear friend of the band who sat in on two shows before joining as a core member, announced 2026-07-12. The dog curled up beside the kick drum on the 'Dogies' cover art is his doing — per the band's own announcement, 'it's a rare drummer who can play with such finesse that a dog will curl up right by his kit.'",
-      "songwriting": null
+      "songwriting": null,
+      "full_name": "Jamey Merritt"
     }
   ],
-
   "contact": {
     "primary_email": "boloboysband@gmail.com",
-    "calendar_policy": "Shared band calendar — every event invite goes to all three members.",
+    "calendar_policy": "Shared band calendar — every event invite goes to ALL core members (four since Jamey joined June 2026). Read the roster, never a hardcoded count.",
     "booking": "boloboysband@gmail.com"
   },
-
   "sound": {
-    "genres": ["cowboy country", "folk", "reggae", "classic rock", "throwback pop", "bluegrass-tinged Americana"],
-    "touchstones": ["Tom Petty", "Bob Marley", "Doc Watson", "Cat Stevens"],
+    "genres": [
+      "cowboy country",
+      "folk",
+      "reggae",
+      "classic rock",
+      "throwback pop",
+      "bluegrass-tinged Americana"
+    ],
+    "touchstones": [
+      "Tom Petty",
+      "Bob Marley",
+      "Doc Watson",
+      "Cat Stevens"
+    ],
     "signature_style": "Bolo-fied — a song gets played until it has the band's spin on it. The barometer of success is when wildly different covers feel like they're from the same album. Southern twang welcome — it's authentic, not a costume.",
     "originals_philosophy": "Originals are woven into the set so seamlessly that listeners don't notice — being able to nestle them between Petty and Marley without losing the room is the success metric. Total of four originals in active rotation.",
     "mission_line": "You'll wind up dancing and singing along — reliving songs from the back of your parents' car, and meeting some new ones."
   },
-
   "live_show": {
     "typical_set": "~2 hours, two sets with a ~20-minute break",
     "pa": "Fully self-contained — band brings, sets up, and runs their own sound.",
     "ethos": "Take it seriously enough to be professional and earn each venue's trust. Build the next show by making this one count.",
     "minimum_set_length": "Will not book sets shorter than 30 minutes — setup and prep don't justify it, and shorter sets don't let the band drive the room."
   },
-
   "scene": {
     "home_scene": "Atlanta",
-    "frequent_collaborators": ["Dirty Shame", "Acoustic Station", "Ante Up"],
+    "frequent_collaborators": [
+      "Dirty Shame",
+      "Acoustic Station",
+      "Ante Up"
+    ],
     "scene_notes": "Friends and frequent co-billers; all lean Western/Appalachian. Bolo Boys learn from them and have been influenced by them in turn."
   },
-
   "what_we_are_not": [
     "Not THE Bolo Boys — just Bolo Boys.",
     "Not tortured singer-songwriters.",
@@ -95,7 +120,6 @@
     "Not a wedding band — fun and singalong-friendly, but not the corporate-event format.",
     "Not a tribute act — covers get Bolo-fied, not reproduced."
   ],
-
   "social": {
     "instagram": "https://www.instagram.com/boloboysband/",
     "instagram_handle": "@boloboysband",
@@ -105,7 +129,6 @@
     "bandsintown": "https://www.bandsintown.com/a/15647362",
     "spotify_artist_note": "Nigel has a Western original released on Spotify; a Bolo Boys artist presence is being built out."
   },
-
   "scene_collaborators": [
     {
       "name": "Dirty Shame",
@@ -124,7 +147,6 @@
       "note": "Supergroup of Bolo Boys + Dirty Shame + Acoustic Station."
     }
   ],
-
   "originals": [
     {
       "title": "The Cowboy's Life",
@@ -143,7 +165,6 @@
       }
     }
   ],
-
   "releases": [
     {
       "id": "dogies",
@@ -177,7 +198,11 @@
         "premiere_datetime_et": "2026-07-17T09:00:00-04:00",
         "duration_iso": "PT3M48S",
         "credit": "Shot and produced by Nigel Wright",
-        "featuring": ["Ante Up", "Dirty Shame", "Acoustic Station"]
+        "featuring": [
+          "Ante Up",
+          "Dirty Shame",
+          "Acoustic Station"
+        ]
       }
     }
   ],
@@ -186,11 +211,12 @@
       "name": "Adam Klein",
       "instagram": "https://www.instagram.com/adamkleinmusic/",
       "instagram_handle": "@adamkleinmusic",
-      "shows": ["grant-central-pizza-2026-05-25"],
+      "shows": [
+        "grant-central-pizza-2026-05-25"
+      ],
       "note": "Atlanta singer-songwriter. One-time co-bill (Grant Ole Opry, 2026-05-25). Linked on the site via supporting_acts, but not a recurring scene relationship — kept separate from scene_collaborators."
     }
   ],
-
   "trajectory": {
     "current_focus": "Getting better with every show; building venue relationships in Atlanta; weaving more originals into sets.",
     "twelve_month_picture": "Packed outdoor courtyards. More outdoor bars and restaurants. Crowds singing the hooks back. More songs on Spotify."
