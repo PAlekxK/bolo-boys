@@ -1585,7 +1585,7 @@
   <p class="band-photo-caption">Nigel (vocals, guitar) &nbsp;&middot;&nbsp; John (vocals, guitar) &nbsp;&middot;&nbsp; Paul (vocals, bass)</p>
 
   <div class="originals-block" id="originals">
-    <div class="originals-label">Original Music</div>
+    <div class="originals-label">Our Music</div>
     <div id="originals-content">
       <div class="originals-empty">Loading…</div>
     </div>
@@ -2001,30 +2001,61 @@
     deezer: 'Deezer'
   };
 
-  async function loadOriginals() {
+  // "Our Music" — one section over BOTH releases[] and originals[].
+  // Deliberately NOT titled "Original Music": Dogies is a Bolo-fied traditional
+  // (public-domain composition, the band's arrangement + master), so a heading
+  // claiming authorship would be false. Each track carries its own credit line
+  // instead, which keeps the section honest as it grows.
+  function renderTrack(t) {
+    const embed = t.spotify_track_id
+      ? `<div class="original-track-embed"><iframe src="https://open.spotify.com/embed/track/${t.spotify_track_id}?utm_source=generator" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`
+      : '';
+    const streamingLinks = Object.entries(t.streaming || {})
+      .filter(([_, url]) => url)
+      .map(([service, url]) => `<a href="${url}" target="_blank" rel="noopener">${STREAMING_LABELS[service] || service}</a>`)
+      .join(' &nbsp;&middot;&nbsp; ');
+
+    // Not out yet → the pre-save stands in for the streaming row. Once
+    // release-go-live.py fills streaming{}, this swaps itself automatically.
+    const presave = (!streamingLinks && t.hyperfollow)
+      ? `<div class="original-track-streaming"><a href="${t.hyperfollow}" target="_blank" rel="noopener">Pre-save on Spotify</a></div>`
+      : '';
+
+    return `
+      <div class="original-track">
+        ${embed}
+        <p class="original-track-credit">"${t.title}" — ${t.credit}</p>
+        ${streamingLinks ? `<div class="original-track-streaming">Also on: ${streamingLinks}</div>` : presave}
+      </div>`;
+  }
+
+  async function loadOurMusic() {
     const container = document.getElementById('originals-content');
     await bandDataReady;
-    const originals = (bandData && bandData.originals) || [];
-    if (!originals.length) {
-      container.innerHTML = '<div class="originals-coming">More original music coming as it gets recorded.</div>';
+
+    // Releases first (newest recordings lead), then the originals.
+    const releases = ((bandData && bandData.releases) || []).map(r => ({
+      title: r.title,
+      credit: r.songwriter_credit || 'Bolo Boys',
+      spotify_track_id: r.spotify_track_id,
+      streaming: r.streaming,
+      hyperfollow: r.hyperfollow,
+    }));
+    const originals = ((bandData && bandData.originals) || []).map(t => ({
+      title: t.title,
+      credit: t.performer_credit,
+      spotify_track_id: t.spotify_track_id,
+      streaming: t.streaming,
+      hyperfollow: null,
+    }));
+
+    const tracks = releases.concat(originals);
+    if (!tracks.length) {
+      container.innerHTML = '<div class="originals-coming">More music coming as it gets recorded.</div>';
       return;
     }
-    const tracksHtml = originals.map(t => {
-      const embed = t.spotify_track_id
-        ? `<div class="original-track-embed"><iframe src="https://open.spotify.com/embed/track/${t.spotify_track_id}?utm_source=generator" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`
-        : '';
-      const streamingLinks = Object.entries(t.streaming || {})
-        .filter(([_, url]) => url)
-        .map(([service, url]) => `<a href="${url}" target="_blank" rel="noopener">${STREAMING_LABELS[service] || service}</a>`)
-        .join(' &nbsp;&middot;&nbsp; ');
-      return `
-        <div class="original-track">
-          ${embed}
-          <p class="original-track-credit">"${t.title}" — ${t.performer_credit}</p>
-          ${streamingLinks ? `<div class="original-track-streaming">Also on: ${streamingLinks}</div>` : ''}
-        </div>`;
-    }).join('');
-    container.innerHTML = tracksHtml + `<div class="originals-coming">More Bolo Boys originals are getting recorded as we go.</div>`;
+    container.innerHTML = tracks.map(renderTrack).join('')
+      + `<div class="originals-coming">More Bolo Boys music is getting recorded as we go.</div>`;
   }
 
   // ── Latest release (single + music video) ────────────────────
@@ -2141,7 +2172,7 @@
 
   loadRelease();
 
-  loadOriginals();
+  loadOurMusic();
 
   // ── "Who we play with" credibility panel (inside About) ──────
   async function loadScenePanel() {
