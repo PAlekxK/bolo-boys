@@ -197,12 +197,13 @@
         "youtube_id": "sBt22_PZ6E4",
         "premiere_datetime_et": "2026-07-17T09:00:00-04:00",
         "duration_iso": "PT3M48S",
-        "credit": "Shot and produced by Nigel Wright",
+        "credit": null,
         "featuring": [
           "Ante Up",
           "Dirty Shame",
           "Acoustic Station"
-        ]
+        ],
+        "credit_note": "Removed 2026-07-17 at Nigel's request — do NOT re-add a 'shot/produced/directed by' credit. null renders nothing and keeps it out of the JSON-LD."
       }
     }
   ],
