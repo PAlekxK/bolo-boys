@@ -33,3 +33,9 @@ tools/.last-bit-upload
 
 # Wrangler local state (auth cache, build artifacts) — never commit
 .wrangler/
+
+# Show-reminder runtime state + rendered reports. Never committed: the state file
+# is machine-local bookkeeping, and a rendered reminder is a SNAPSHOT of a forecast
+# that decays -- the same reason forecasts are not persisted into data/.
+tools/.reminder-state.json
+.reminders/
