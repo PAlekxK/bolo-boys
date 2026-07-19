@@ -46,7 +46,14 @@
         "Yelp",
         "Restaurantji",
         "sidesaddle.wine"
-      ]
+      ],
+      "lat": 33.72582,
+      "lon": -84.36497,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "680 HAMILTON AVE SE, ATLANTA, GA, 30312"
+      }
     },
     {
       "id": "finca-to-filter",
@@ -84,7 +91,14 @@
         "Atlanta Coffee Shops",
         "Yelp",
         "Instagram (@fincatofilter)"
-      ]
+      ],
+      "lat": 33.72582,
+      "lon": -84.36497,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "680 HAMILTON AVE SE, ATLANTA, GA, 30312 - same address/patio as side-saddle; shared coords are INTENTIONAL, not a copy-paste"
+      }
     },
     {
       "id": "cultivation-brewing",
@@ -117,7 +131,14 @@
         "Restaurantji",
         "Explore Georgia",
         "cultivationbrew.com"
-      ]
+      ],
+      "lat": 33.9405,
+      "lon": -84.22601,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "650 LANGFORD DR NW, NORCROSS, GA, 30071"
+      }
     },
     {
       "id": "echo-art-gallery",
@@ -149,7 +170,14 @@
         "Wanderlog",
         "Singulart",
         "Echo Street West"
-      ]
+      ],
+      "lat": 33.77425,
+      "lon": -84.41034,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "785 ECHO ST NW, ATLANTA, GA, 30318"
+      }
     },
     {
       "id": "b-complex",
@@ -180,7 +208,14 @@
         "Creative Loafing",
         "Wheree",
         "Eventsfy"
-      ]
+      ],
+      "lat": 33.71976,
+      "lon": -84.42369,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "1272 MURPHY AVE SW, ATLANTA, GA, 30310"
+      }
     },
     {
       "id": "because-coffee",
@@ -217,7 +252,14 @@
         "Tripadvisor",
         "Restaurantji",
         "because.coffee"
-      ]
+      ],
+      "lat": 34.38953,
+      "lon": -83.9882,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "240 DAWSON DR, DAWSONVILLE, GA, 30534"
+      }
     },
     {
       "id": "wild-heaven-avondale",
@@ -254,7 +296,14 @@
         "Tripadvisor",
         "Wheree",
         "Wanderlog"
-      ]
+      ],
+      "lat": 33.77647,
+      "lon": -84.27572,
+      "geo": {
+        "source": "nominatim",
+        "geocoded": "2026-07-19",
+        "note": "Census had no record for '135B Maple St'. OSM Nominatim matched the brewery POI and returned the exact address '135B, Maple Street' - corroborates the venue record."
+      }
     },
     {
       "id": "wild-heaven-toco-hills",
@@ -292,7 +341,14 @@
         "Yelp",
         "Wheree",
         "Caren West PR"
-      ]
+      ],
+      "lat": 33.81538,
+      "lon": -84.31018,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "2935B N DRUID HILLS RD NE, ATLANTA, GA, 30329"
+      }
     },
     {
       "id": "gateway-park-grant-park",
@@ -324,7 +380,14 @@
         "Urbanize Atlanta",
         "Atlanta Area Parks",
         "HGOR"
-      ]
+      ],
+      "lat": 33.73414,
+      "lon": -84.36832,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "759 BOULEVARD SE, ATLANTA, GA, 30312"
+      }
     },
     {
       "id": "summer-shade-festival",
@@ -354,7 +417,14 @@
         "Grant Park Conservancy",
         "Eventeny",
         "Adventures in Atlanta"
-      ]
+      ],
+      "lat": 33.73586,
+      "lon": -84.37093,
+      "geo": {
+        "source": "nominatim-approx",
+        "geocoded": "2026-07-19",
+        "note": "APPROXIMATE - park centroid, not a street address. Bolo play the gazebo stage; exact stage location unknown. Fine for weather (NWS grid cells are ~2.5km) but do not treat as a precise venue location."
+      }
     },
     {
       "id": "grant-central-pizza-east",
@@ -390,7 +460,14 @@
         "Tripadvisor",
         "Restaurantji",
         "grantcentraleast.com"
-      ]
+      ],
+      "lat": 33.74012,
+      "lon": -84.34568,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "1279 GLENWOOD AVE SE, ATLANTA, GA, 30316"
+      }
     },
     {
       "id": "ideal-sports-bar",
@@ -429,7 +506,14 @@
         "Postcard",
         "idealsportsbar.com"
       ],
-      "instagram": "@idealsportsbar"
+      "instagram": "@idealsportsbar",
+      "lat": 33.70255,
+      "lon": -84.38447,
+      "geo": {
+        "source": "census",
+        "geocoded": "2026-07-19",
+        "note": "1953 LAKEWOOD AVE SE, ATLANTA, GA, 30315"
+      }
     }
   ]
 }
