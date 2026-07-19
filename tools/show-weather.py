@@ -42,15 +42,21 @@ which leg failed rather than printing a confident-looking half report.
 """
 
 import argparse, json, sys, urllib.request, urllib.error
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 REPO = Path(__file__).resolve().parent.parent
 # NWS documents a User-Agent requirement (it wants a contact for abuse reports).
 # Uses the BAND's published address, not Paul's personal one -- this file is in
 # the public repo, and band.json already names this as the public contact.
 UA = "bolo-boys-weather (boloboysband@gmail.com)"
-ET = timezone(timedelta(hours=-4))  # America/New_York, EDT
+# MUST be a real zone, not a fixed offset. A hardcoded -04:00 (EDT) silently
+# breaks in EST: Open-Meteo returns naive LOCAL strings while NWS returns real
+# UTC offsets, so the two sides land an hour apart and the NWS period lookup
+# misses -- dropping NWS PoP, sky text, and the NWS half of the thunder
+# override with NO error. Caught 2026-07-19 against the 11/21 and 12/19 shows.
+ET = ZoneInfo("America/New_York")
 FORECAST_HORIZON_DAYS = 7
 
 # --- Thresholds. All rain/heat judgments live HERE, nowhere else. ------------
