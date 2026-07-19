@@ -39,3 +39,4 @@ tools/.last-bit-upload
 # that decays -- the same reason forecasts are not persisted into data/.
 tools/.reminder-state.json
 .reminders/
+__pycache__/
