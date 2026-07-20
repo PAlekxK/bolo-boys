@@ -68,6 +68,8 @@ def main():
     writer.writeheader()
 
     for event in events_data["events"]:
+        if event.get("unlisted"):
+            continue  # private/anonymized cards never go to Bandsintown
         venue = venues_by_id.get(event["venue_id"], {})
         street, state, zipc = parse_address(venue.get("address", ""))
         writer.writerow({

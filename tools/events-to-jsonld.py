@@ -192,6 +192,8 @@ def main():
     today_iso = date.today().isoformat()
     graph = []
     for ev in events_data["events"]:
+        if ev.get("unlisted"):
+            continue  # private/anonymized cards render on-site only; never indexed
         venue = venues_by_id.get(ev["venue_id"])
         if not venue:
             raise SystemExit(f"Event {ev['id']!r} references unknown venue_id {ev['venue_id']!r}")
