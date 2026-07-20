@@ -55,67 +55,6 @@
   },
   "events": [
     {
-      "id": "side-saddle-2026-07-19",
-      "phase": "announced",
-      "date": "2026-07-19",
-      "day_of_week": "Sunday",
-      "time": "6:00 PM",
-      "duration_hours": 3,
-      "venue_id": "side-saddle",
-      "venue_name": "Side Saddle",
-      "venue_neighborhood": "Grant Park / Beltline",
-      "venue_city": "Atlanta, GA",
-      "venue_google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
-      "supporting_acts": [
-        "Dirty Shame",
-        "Acoustic Station",
-        "Ante Up"
-      ],
-      "theme": "World Cup Final After Party",
-      "invitation_text": "The world's biggest game is today, and when the final whistle blows we'll be on the Side Saddle + Finca to Filter patio to help you celebrate — or commiserate. Come down after the match. Wear your jersey.",
-      "teaser": null,
-      "additional_details": "World Cup Final after-party. Game kicks off at 3 PM — we go on after. Time TBD.",
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Side+Saddle&dates=20260719/20260720&location=680+Hamilton+Ave+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Side+Saddle+%2B+Finca+to+Filter+%E2%80%94+World+Cup+Final+After+Party.+Game+at+3+PM,+music+after.",
-      "ics_url": "assets/ics/side-saddle-2026-07-19.ics",
-      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg",
-      "partner_venue": {
-        "id": "finca-to-filter",
-        "name": "Finca to Filter",
-        "instagram": "@fincatofilter"
-      },
-      "external_links": [
-        {
-          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
-          "source": "@boloboysband (Instagram)",
-          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
-          "date": null
-        }
-      ],
-      "prep": {
-        "setlist_status": "open",
-        "setlist_url": null,
-        "lifecycle_markers": {
-          "calendar_invite_sent": true,
-          "venue_thanked": false,
-          "clips_pulled": false
-        },
-        "logistics_notes": [
-          {
-            "text": "Outdoor patio — weather contingency",
-            "done": false
-          }
-        ],
-        "subgroups": [],
-        "open_questions": [
-          {
-            "text": "Start time TBD — World Cup Final at 3 PM, we go on after",
-            "for": "venue",
-            "resolved": false
-          }
-        ]
-      }
-    },
-    {
       "id": "wild-heaven-avondale-2026-08-15",
       "phase": "announced",
       "date": "2026-08-15",
@@ -395,6 +334,25 @@
           "date": null
         }
       ]
+    },
+    {
+      "id": "private-event-2026-10-08",
+      "phase": "announced",
+      "unlisted": true,
+      "date": "2026-10-08",
+      "day_of_week": "Thursday",
+      "time": null,
+      "duration_hours": 2,
+      "venue_id": null,
+      "venue_name": "Private Event",
+      "venue_neighborhood": null,
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [],
+      "theme": null,
+      "invitation_text": null,
+      "teaser": null,
+      "additional_details": null,
+      "poster_url": null
     },
     {
       "id": "side-saddle-2026-10-31",

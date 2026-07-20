@@ -6,6 +6,37 @@
   },
   "past_shows": [
     {
+      "id": "side-saddle-2026-07-19",
+      "date": "2026-07-19",
+      "day_of_week": "Sunday",
+      "time": "6:00 PM",
+      "end_time": null,
+      "venue_id": "side-saddle",
+      "venue_name": "Side Saddle",
+      "venue_neighborhood": "Grant Park / Beltline",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
+      "notes": "Side Saddle + Finca to Filter Summer Series patio show, staged as a World Cup Final after-party (final at 3 PM, band on after). A full four-act night with Dirty Shame, Acoustic Station, and Ante Up.",
+      "poster_url": "assets/posters/side-saddle-summer-series-2026.jpeg",
+      "partner_venue": {
+        "id": "finca-to-filter",
+        "name": "Finca to Filter",
+        "instagram": "@fincatofilter"
+      },
+      "external_links": [
+        {
+          "title": "Side Saddle + Finca to Filter Summer Series — three patio dates",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DYngFP4TtD8/",
+          "date": null
+        }
+      ]
+    },
+    {
       "id": "ideal-sports-bar-2026-07-11",
       "date": "2026-07-11",
       "day_of_week": "Saturday",

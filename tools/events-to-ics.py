@@ -174,6 +174,8 @@ def main():
     # Build the target state: {filename: content} + the ics_url each event should carry.
     targets = {}
     for ev in events:
+        if ev.get("unlisted"):
+            continue  # private/anonymized cards get no public .ics
         venue = venues_by_id.get(ev["venue_id"])
         if not venue:
             raise SystemExit(f"Event {ev['id']!r} references unknown venue_id {ev['venue_id']!r}")
@@ -219,6 +221,8 @@ def main():
 
     # Populate ics_url in events.json (round-trips byte-identically at indent=2).
     for ev in events:
+        if ev.get("unlisted"):
+            continue  # private/anonymized cards carry no ics_url
         ev["ics_url"] = f"{ICS_URL_PREFIX}/{ev['id']}.ics"
     EVENTS_PATH.write_text(
         json.dumps(events_data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
