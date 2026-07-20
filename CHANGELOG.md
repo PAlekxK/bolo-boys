@@ -12,6 +12,12 @@ Rolling subsection: what's worth telling Nigel and John in the next band-update 
 
 ---
 
+## 2026-07-20 — Phase 5 archive of 7/19 + new "Private Event" (unlisted) card support
+
+- Moved `side-saddle-2026-07-19` (World Cup after-party) from `events.json` to `past-shows.json`.
+- New **`unlisted`** event flag: renders an anonymized "Private Event" card on-site (credibility signal) but is skipped by every propagator — never hits Bandsintown, JSON-LD, sitemap, or `.ics`, so it's not publicly ticketable or indexed.
+- First unlisted card added: `private-event-2026-10-08` (a private benefit, kept anonymous — no org/venue/address). Regenerated all derived surfaces (8 public events); deployed + verified against production.
+
 ## 2026-07-08 — Add-to-Calendar switched to served .ics (lower iPhone friction)
 
 Triggered by fan feedback preferring an iCalendar (.ics) popup over a Google Calendar event; audited with ux-expert + user-researcher. Both converged: serve a real `.ics` (opens the native Apple Calendar sheet on iPhone — no Google account, no browser detour, lands in the calendar fans actually check), single button, **no chooser popup**.
