@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gateway-park-grant-park-2026-10-18@boloboys.band
+DTSTAMP:20261018T000000Z
+DTSTART:20261018T150000Z
+DTEND:20261018T170000Z
+SUMMARY:Bolo Boys at Grant Park Market in the Park — Fall Market Return
+DESCRIPTION:The Market in the Park runs Sunday mornings at Boulevard Green
+  — produce\, vendors\, neighbors\, the usual Grant Park crowd. We played
+  it back in May for the park's birthday. We're back for the fall one.
+LOCATION:759 Boulevard SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

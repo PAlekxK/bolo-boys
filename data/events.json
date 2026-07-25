@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Upcoming shows for the Bolo Boys website. Only upcoming shows are listed here — past shows are covered by social media.",
-    "last_updated": "2026-06-30",
+    "last_updated": "2026-07-25",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json."
   },
@@ -353,6 +353,49 @@
       "teaser": null,
       "additional_details": null,
       "poster_url": null
+    },
+    {
+      "id": "gateway-park-grant-park-2026-10-18",
+      "phase": "announced",
+      "date": "2026-10-18",
+      "day_of_week": "Sunday",
+      "time": "11:00 AM",
+      "duration_hours": 2,
+      "venue_id": "gateway-park-grant-park",
+      "venue_name": "Grant Park Market in the Park",
+      "venue_neighborhood": "Grant Park",
+      "venue_city": "Atlanta, GA",
+      "venue_google_maps_url": "https://maps.app.goo.gl/zqrCTAH2D9zjBjiH6",
+      "supporting_acts": [],
+      "theme": "Fall Market Return",
+      "invitation_text": "The Market in the Park runs Sunday mornings at Boulevard Green — produce, vendors, neighbors, the usual Grant Park crowd. We played it back in May for the park's birthday. We're back for the fall one.",
+      "teaser": null,
+      "additional_details": "Outdoor show at Boulevard Green. Set time carried from the spring slot — confirm with GPC.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Market+in+the+Park&dates=20261018/20261019&location=759+Boulevard+SE,+Atlanta,+GA+30312&details=Bolo+Boys+live+at+Grant+Park+Market+in+the+Park+%E2%80%94+Boulevard+Green.",
+      "ics_url": "assets/ics/gateway-park-grant-park-2026-10-18.ics",
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": false,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Confirm the set time with GPC — 11 AM-1 PM is carried from the May slot, not separately confirmed for October.",
+            "for": "Skyler / GPC",
+            "resolved": false
+          },
+          {
+            "text": "Is this the fall-festival-format event GPC described, or a standard Sunday market?",
+            "for": "Skyler / GPC",
+            "resolved": false
+          }
+        ]
+      }
     },
     {
       "id": "side-saddle-2026-10-31",

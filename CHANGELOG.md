@@ -398,3 +398,7 @@ Side-effects Paul confirmed: calendar invite sent to all 3 members.
 Side-effects Paul confirmed: none yet — this is the consolidation commit, no band-facing changes.
 
 Research + engineering reports lived in `.research/paul-as-operator.md` and `.engineering/dashboard-path-evaluation.md` (both gitignored from the public repo).
+
+## 2026-07-25 — Market in the Park 10/18 confirmed + staged
+Paul confirmed the Grant Park **Market in the Park** return, Sun **2026-10-18** — open since a 5/30 tentative hold awaiting GPC. Added `gateway-park-grant-park-2026-10-18` to `data/events.json` (phase `announced`, theme "Fall Market Return", 11 AM, 2h, existing `gateway-park-grant-park` venue — no new venue needed). Ran propagators: 9 public MusicEvents in JSON-LD, 9 .ics files, sitemap bumped to 7/25, `bandsintown-upload.csv` regenerated (**1 new row — BIT appends, upload only that row**). Private repo: OPEN-THREADS 10/18 thread flipped TENTATIVE HOLD → CONFIRMED with the outbound checklist.
+**Nothing band-facing has happened.** Still needs Paul's go: the drafted `invitation_text` + theme (written without the Phase-2 step-6 review — read them before they ship), the `deploy.sh` that actually publishes it, the BIT row, the IG/collab announce, and the shared-calendar hold → confirmed event. Two GPC questions are parked in the entry's `prep.open_questions`: the 11 AM–1 PM time is inherited from the May slot and never separately confirmed for October, and whether this is the fall-festival format or a standard Sunday market.
