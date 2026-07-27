@@ -80,9 +80,24 @@ favicon, knockout (white-on-dark).
 1. **Poster house-style** — mustard yellow + teal/cyan on **black**. Maximizes coherence
    with existing equity (posters, QR cards).
 2. **Earthy** — forest green (`#2D4B1E`) + cream (`#F8F4ED`), from the current favicon.
-3. **Western metals (most literal)** — **silver + turquoise + leather-brown.** Mirrors
-   real bolo hardware (silver slide, turquoise stone). Strongest fit for the physical
-   clasp; the metals read as themselves in cast form.
+3. ~~**Western metals (most literal)** — **silver + turquoise + leather-brown.**~~
+   ⚠️ **DEPRIORITIZED 2026-07-27 (Paul's call). Do not lead with this, and do not treat
+   "most literal" as "strongest fit."** Mirrors real bolo hardware (silver slide, turquoise
+   stone), so it still reads correctly in cast metal — but as a *palette* it **keyholes the
+   band into Western/Texas**, which misrepresents them: the set is country, folk, **reggae**,
+   classic rock and throwback pop (touchstones above literally include **Bob Marley**).
+
+   > **What the bolo tie actually means here** — Paul, 2026-07-27: *"the bolo tie motif is
+   > about inclusivity, putting your best foot forward, making your own bolo tie. So we're not
+   > gonna over-leverage on Western Texas."* That matches the canonical lore in
+   > `~/.claude/content-principles/bolo-boys-fan.md` (§"the bolo-tie persona narrative"):
+   > **improvised formalwear** — show up with what you've got — and **"unity without
+   > uniformity."** The motif is a *belonging* signal, **not a Western costume.**
+   >
+   > This brief and the content library had drifted apart: the lore has said "not a costume"
+   > since 2026-07-02 while this section called the most literal Western reading the
+   > "strongest fit." Design now follows the lore. **The test for any palette or ornament is
+   > whether it says "make your own bolo tie," not whether it looks like a real one.**
 
 Note: because the clasp is monochrome metal, palette mostly governs the **digital/print**
 expression. Design the emblem silhouette palette-agnostic, then color it three ways to compare.
@@ -186,9 +201,11 @@ Paul-ratified preset for the mark (drives the guitar AND the derived B):
   matched. Next: real lockup kerning + a clean production-union SVG of the mark.
 - **Tool:** `~/Desktop/Claude/bolo-boys-logo-v12.html` (interactive). Controls grouped by **part**
   (Spine & Neck / Bowls / Sound hole / Wordmark), each with its own color(s). New colors: **fret
-  color** + **sound-hole fill** — set the hole turquoise for the **bolo-tie stone** (looks like a
-  silver/gold slide + turquoise on the cast clasp; verified in-browser). Wordmark B spine/bowls
-  inherit the mark's colors. Exports via the scratchpad `export-logo-svgs.js` (`all <face>` |
+  color** + **sound-hole fill** — the hole can be set turquoise for the **bolo-tie stone** (looks
+  like a silver/gold slide + turquoise on the cast clasp; verified in-browser), **but see the
+  2026-07-27 note under Palette directions: turquoise is DEPRIORITIZED as a genre-lock risk and
+  should not be the default.** Keep the control; it stays useful for the *physical clasp*, where
+  the metals read as themselves. Wordmark B spine/bowls inherit the mark's colors. Exports via the scratchpad `export-logo-svgs.js` (`all <face>` |
   `compare`) + `wrap-cards.js`.
 - **Best use here** isn't the logo alone — it's consolidating the whole Bolo Boys identity
   (logo variants + the 3 competing palettes + poster furniture from `principles.md`) into
