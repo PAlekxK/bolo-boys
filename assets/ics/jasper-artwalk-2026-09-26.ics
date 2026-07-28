@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jasper-artwalk-2026-09-26@boloboys.band
+DTSTAMP:20260926T000000Z
+DTSTART:20260926T180000Z
+DTEND:20260926T210000Z
+SUMMARY:Bolo Boys at Pickens County Courthouse — Jasper ArtWalk
+DESCRIPTION:We're headed north for the Jasper ArtWalk — our first time p
+ laying the mountains\, on the courthouse square in the middle of downtown.
+  Art\, makers\, and music up and down the street all afternoon\, and we've
+  got the 2 o'clock slot. Come spend a Saturday in the foothills with us.
+LOCATION:Jasper\, GA 30143
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

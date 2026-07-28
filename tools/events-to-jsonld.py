@@ -60,21 +60,38 @@ def iso_dt(d, hour, minute):
 
 
 def parse_address(addr_str):
-    """'680 Hamilton Ave SE, Atlanta, GA 30312' -> PostalAddress dict."""
+    """'680 Hamilton Ave SE, Atlanta, GA 30312' -> PostalAddress dict.
+
+    Also accepts a CITY-LEVEL address — 'Jasper, GA 30143' — and emits a
+    PostalAddress with no streetAddress. This is deliberate, not a loosened
+    check: schema.org/PostalAddress does not require streetAddress, and some
+    venues genuinely have no street address we have verified. A courthouse
+    square or a park stage is located by name, and the alternative to omitting
+    the street is INVENTING one — which would publish an unverified address
+    into structured data that Google reads as authoritative. An honestly
+    incomplete address beats a confidently wrong one.
+
+    State + postal code are still required: they are what makes the record
+    useful for local search, and we have never had a venue where they were
+    genuinely unknown. Anything shorter than 'City, ST ZIP' is still an error.
+    """
     parts = [p.strip() for p in addr_str.split(",")]
-    if len(parts) < 3:
+    if len(parts) < 2:
         raise ValueError(f"Cannot parse address: {addr_str!r}")
-    street = parts[0]
-    city = parts[1]
+    if len(parts) >= 3:
+        street, city, state_zip_str = parts[0], parts[1], parts[2]
+    else:
+        # 'City, ST ZIP' — no street component
+        street, city, state_zip_str = None, parts[0], parts[1]
     # Last part is "GA 30312" — split on whitespace
-    state_zip = parts[2].split()
+    state_zip = state_zip_str.split()
     if len(state_zip) < 2:
         raise ValueError(f"Cannot parse state/zip from: {addr_str!r}")
     state = state_zip[0]
     postal = state_zip[1]
     return {
         "@type": "PostalAddress",
-        "streetAddress": street,
+        **({"streetAddress": street} if street else {}),
         "addressLocality": city,
         "addressRegion": state,
         "postalCode": postal,

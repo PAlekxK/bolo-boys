@@ -514,6 +514,41 @@
         "geocoded": "2026-07-19",
         "note": "1953 LAKEWOOD AVE SE, ATLANTA, GA, 30315"
       }
+    },
+    {
+      "id": "pickens-county-courthouse",
+      "name": "Pickens County Courthouse",
+      "type": "festival",
+      "neighborhood": "Downtown Jasper",
+      "city": "Jasper",
+      "state": "GA",
+      "address": "Jasper, GA 30143",
+      "phone": null,
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?q=Pickens+County+Courthouse%2C+Jasper%2C+GA+30143",
+      "notes": "Courthouse lawn/plaza in downtown Jasper — the anchor stage for the Jasper ArtWalk, programmed by Angela Reinhardt. Bolo Boys' first north-Georgia booking and the first show in the ACTIVE Jasper cluster (Pendley Creek, Fainting Goat, Old Mulehouse). Band brings its own full PA. First Bolo Boys play 2026-09-26.",
+      "summary": "The historic courthouse at the center of downtown Jasper, and the main stage of the town's ArtWalk — an afternoon of art, makers, and live music in the Blue Ridge foothills.",
+      "what_we_love": [
+        "playing the mountains where the family has roots",
+        "a downtown square that fills up for the day",
+        "an art-walk crowd that came out to look and listen",
+        "Angela and the Jasper scene"
+      ],
+      "menu_highlights": [],
+      "live_music_context": "ArtWalk day programming on the courthouse stage — rotating acts through the afternoon and into the evening.",
+      "crowd_notes": "Jasper and Pickens County locals, ArtWalk browsers, north-Georgia day-trippers, all ages.",
+      "practical_notes": "Outdoor / weather-dependent. Free, all ages. Band provides its own PA.",
+      "last_researched": "2026-07-28",
+      "research_sources": [
+        "Angela Reinhardt (ArtWalk organizer) — direct, by text 2026-07-23 and by phone 2026-07-28"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo": {
+        "source": "NOT GEOCODED",
+        "geocoded": null,
+        "note": "DELIBERATELY UNSET. The stage is the courthouse square in downtown Jasper; the street address was never captured from Angela and has not been verified against a primary source, so nothing is asserted here. The maps URL is a NAME query, which resolves correctly without claiming a precision we do not have. Geocode it once someone confirms the address on the ground or from the ArtWalk's own listing."
+      }
     }
   ]
 }

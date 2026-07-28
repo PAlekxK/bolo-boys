@@ -336,6 +336,57 @@
       ]
     },
     {
+      "id": "jasper-artwalk-2026-09-26",
+      "phase": "announced",
+      "date": "2026-09-26",
+      "day_of_week": "Saturday",
+      "time": "2:00 PM",
+      "duration_hours": 3,
+      "venue_id": "pickens-county-courthouse",
+      "venue_name": "Pickens County Courthouse",
+      "venue_neighborhood": "Downtown Jasper",
+      "venue_city": "Jasper, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=Pickens+County+Courthouse%2C+Jasper%2C+GA+30143",
+      "supporting_acts": [],
+      "theme": "Jasper ArtWalk",
+      "invitation_text": "We're headed north for the Jasper ArtWalk — our first time playing the mountains, on the courthouse square in the middle of downtown. Art, makers, and music up and down the street all afternoon, and we've got the 2 o'clock slot. Come spend a Saturday in the foothills with us.",
+      "teaser": null,
+      "additional_details": "Outdoor show on the courthouse square — weather-dependent. Free, all ages. Part of the Jasper ArtWalk; music continues on the square after our set.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+the+Jasper+ArtWalk&dates=20260926T180000Z/20260926T210000Z&location=Pickens+County+Courthouse,+Jasper,+GA+30143&details=Bolo+Boys+headline+the+Jasper+ArtWalk+on+the+courthouse+square+%E2%80%94+2%E2%80%935+PM.+Free+and+all-ages.",
+      "ics_url": "assets/ics/jasper-artwalk-2026-09-26.ics",
+      "poster_url": null,
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "BAND BRINGS ITS OWN FULL PA — the square has no house system.",
+            "done": false
+          },
+          {
+            "text": "Wrap ~4:40 so the 5-8 PM band can set up. Eric Reinhardt plays filler between acts.",
+            "done": false
+          },
+          {
+            "text": "Lineup promised to the venue: all four, incl. drummer. UNSQUARED - an earlier note has Jamey's Sept availability as 9/11-12 only. Check with Jamey.",
+            "done": false
+          },
+          {
+            "text": "Band calendar invite updated 7/23 (HOLD -> timed 2-5 PM); the time change reset RSVPs, so Nigel + John still need to re-accept.",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": []
+      },
+      "external_links": []
+    },
+    {
       "id": "private-event-2026-10-08",
       "phase": "announced",
       "unlisted": true,
