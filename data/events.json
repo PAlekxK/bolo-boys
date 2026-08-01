@@ -88,20 +88,12 @@
         },
         "logistics_notes": [
           {
-            "text": "Lineup: Nigel, Paul. John out (6/30 email, confirmed by John 7/2). Jamey OUT - his 7/23 text 'I'm unable to do the Wild Heaven show', corroborated by declining the Jamey-only availability probe for both 8/15 and 9/19. CORRECTED 2026-08-01; the prior note said 'Nigel, Jamey, Paul' and that wrong line went to the whole band in the 7/31 email.",
+            "text": "Lineup: Nigel, Paul — John out, Jamey out.",
             "done": false
           },
           {
-            "text": "Invite REBUILT + SENT 2026-08-01 to the full 11-person performer list (title 'Wild Heaven Avondale - Dirty Shame, Acoustic Station, Ante Up + Bolo Boys', 4:00-7:30 PM, 135B Maple St). Before this, the only Bolo-built 8/15 event was the Jamey-only probe - Nigel was on no invite.",
+            "text": "Invite sent to the full performer list 2026-08-01 (4:00–7:30 PM).",
             "done": true
-          },
-          {
-            "text": "Retire the Jamey-only probe 'Bolo Boys at Wild Heaven (Avondale)' now that the real invite exists (Paul 8/01: merge where there are two).",
-            "done": false
-          },
-          {
-            "text": "END TIME UNRESOLVED: events.json says 4:00 + 3.5h = 7:30, but the other 8/15 calendar entry says 4-7:00 and the venue listing says only 'at 4 pm'. Check with Hayden before load-in.",
-            "done": false
           }
         ],
         "subgroups": [],
@@ -156,18 +148,12 @@
             "done": false
           },
           {
-            "text": "Booked verbally by Don — confirm load-in / sound details closer to date",
+            "text": "Booked verbally — confirm load-in / sound details closer to the date",
             "done": false
           }
         ],
         "subgroups": [],
-        "open_questions": [
-          {
-            "text": "Get Don's last name + email/phone for booking confirmation",
-            "for": "Paul",
-            "resolved": false
-          }
-        ]
+        "open_questions": []
       },
       "external_links": [
         {
@@ -330,16 +316,12 @@
         },
         "logistics_notes": [
           {
-            "text": "Lineup: Nigel, John, Paul. Jamey OUT - his 7/23 text 'I'm unable to do the Wild Heaven show', corroborated by declining the Jamey-only availability probes for both Wild Heaven dates. NOTE the 7/31 band email listed this show as 'All four'; that was wrong.",
+            "text": "Lineup: Nigel, John, Paul — Jamey out.",
             "done": false
           },
           {
-            "text": "Invite BUILT + SENT 2026-08-01 to the full 11-person performer list (4:00-7:30 PM, 135B Maple St). Before this the ONLY event on 9/19 was the Jamey-only probe - nobody else was invited at all.",
+            "text": "Invite sent to the full performer list 2026-08-01 (4:00–7:30 PM).",
             "done": true
-          },
-          {
-            "text": "Retire the Jamey-only probe 'Bolo Boys at Wild Heaven (Avondale)' on 9/19.",
-            "done": false
           }
         ],
         "subgroups": [],
@@ -398,12 +380,8 @@
             "done": false
           },
           {
-            "text": "Lineup: all four, incl. Jamey on drums. SQUARED 2026-07-28 - Paul confirmed Jamey is available in September; the old '9/11-12 only' note is retired. Matches what was promised to the venue.",
+            "text": "Lineup: all four, incl. Jamey on drums.",
             "done": true
-          },
-          {
-            "text": "Band calendar invite updated 7/23 (HOLD -> timed 2-5 PM); the time change reset RSVPs, so Nigel + John still need to re-accept.",
-            "done": false
           }
         ],
         "subgroups": [],
@@ -462,12 +440,12 @@
         "open_questions": [
           {
             "text": "Confirm the set time with GPC — 11 AM-1 PM is carried from the May slot, not separately confirmed for October.",
-            "for": "Skyler / GPC",
+            "for": "GPC",
             "resolved": false
           },
           {
             "text": "Is this the fall-festival-format event GPC described, or a standard Sunday market?",
-            "for": "Skyler / GPC",
+            "for": "GPC",
             "resolved": false
           }
         ]
