@@ -4,6 +4,19 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
+## 2026-08-01
+
+- **Wild Heaven 8/15 + 9/19 — invites rebuilt and sent** to the full performer list. Neither date had a
+  working invite; the only event on each was an old single-guest placeholder. Lineups in `events.json`
+  corrected: 8/15 is Nigel + Paul, 9/19 is Nigel, John + Paul.
+- **`prep` notes trimmed.** `data/events.json` is served whole at `boloboys.band/data/events.json`, so
+  everything in `prep` is public. Booker names/contacts, quoted private messages, and internal
+  coordination detail moved to the private repo; lineups and neutral show logistics stay. **Never
+  deployed in the untrimmed state.**
+- Summer Shade start time settled at **12:15–1:00** (Paul) — the contract's "start at 12" is the outlier.
+- Full three-way sync review run (calendar / `events.json` / live site); gaps recorded in the private
+  backlog. Propagators run. **Deployed and verified.**
+
 ## For band emails
 
 Rolling subsection: what's worth telling Nigel and John in the next band-update email. Distinct from the per-session changelog below (which is for the audit trail). Curate down to the items that matter to a touring trio reading on their phone — new shows, venue changes, press, ops-layer wins. Empty by default after each email goes out; refills as the next cycle's items accumulate.
