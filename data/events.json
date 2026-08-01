@@ -88,7 +88,19 @@
         },
         "logistics_notes": [
           {
-            "text": "Lineup: Nigel, Jamey, Paul — John out",
+            "text": "Lineup: Nigel, Paul. John out (6/30 email, confirmed by John 7/2). Jamey OUT - his 7/23 text 'I'm unable to do the Wild Heaven show', corroborated by declining the Jamey-only availability probe for both 8/15 and 9/19. CORRECTED 2026-08-01; the prior note said 'Nigel, Jamey, Paul' and that wrong line went to the whole band in the 7/31 email.",
+            "done": false
+          },
+          {
+            "text": "Invite REBUILT + SENT 2026-08-01 to the full 11-person performer list (title 'Wild Heaven Avondale - Dirty Shame, Acoustic Station, Ante Up + Bolo Boys', 4:00-7:30 PM, 135B Maple St). Before this, the only Bolo-built 8/15 event was the Jamey-only probe - Nigel was on no invite.",
+            "done": true
+          },
+          {
+            "text": "Retire the Jamey-only probe 'Bolo Boys at Wild Heaven (Avondale)' now that the real invite exists (Paul 8/01: merge where there are two).",
+            "done": false
+          },
+          {
+            "text": "END TIME UNRESOLVED: events.json says 4:00 + 3.5h = 7:30, but the other 8/15 calendar entry says 4-7:00 and the venue listing says only 'at 4 pm'. Check with Hayden before load-in.",
             "done": false
           }
         ],
