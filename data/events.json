@@ -328,7 +328,20 @@
           "venue_thanked": false,
           "clips_pulled": false
         },
-        "logistics_notes": [],
+        "logistics_notes": [
+          {
+            "text": "Lineup: Nigel, John, Paul. Jamey OUT - his 7/23 text 'I'm unable to do the Wild Heaven show', corroborated by declining the Jamey-only availability probes for both Wild Heaven dates. NOTE the 7/31 band email listed this show as 'All four'; that was wrong.",
+            "done": false
+          },
+          {
+            "text": "Invite BUILT + SENT 2026-08-01 to the full 11-person performer list (4:00-7:30 PM, 135B Maple St). Before this the ONLY event on 9/19 was the Jamey-only probe - nobody else was invited at all.",
+            "done": true
+          },
+          {
+            "text": "Retire the Jamey-only probe 'Bolo Boys at Wild Heaven (Avondale)' on 9/19.",
+            "done": false
+          }
+        ],
         "subgroups": [],
         "open_questions": []
       },
