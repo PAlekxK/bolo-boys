@@ -18,6 +18,11 @@ cd "$(dirname "$0")/.."
 echo "→ events-to-ics.py"
 python3 tools/events-to-ics.py
 
+# Must follow events-to-ics.py: it imports that module's event_window() so the
+# Google Calendar link and the .ics derive one show's start time from one place.
+echo "→ events-to-gcal-urls.py"
+python3 tools/events-to-gcal-urls.py
+
 echo "→ events-to-jsonld.py"
 python3 tools/events-to-jsonld.py
 

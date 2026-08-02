@@ -118,7 +118,14 @@ def fold(line):
     return "\r\n ".join(out)
 
 
-def build_ics(event, venue):
+def event_window(event):
+    """Event -> (dtstart, dtend) as absolute UTC 'YYYYMMDDTHHMMSSZ' stamps.
+
+    Lifted out of build_ics 2026-08-02 so events-to-gcal-urls.py can import it
+    instead of reimplementing the Eastern-offset math. Two tools computing the
+    same show's start time from the same fields is how they end up disagreeing —
+    which is exactly the drift that propagator exists to fix.
+    """
     event_date = date.fromisoformat(event["date"])
     hour, minute = parse_time(event["time"])
     duration = event.get("duration_hours", 2)
@@ -132,6 +139,20 @@ def build_ics(event, venue):
         end_date = end_date + timedelta(days=1)
         end_hour -= 24
     dtend = to_utc_stamp(end_date, end_hour, end_minute)
+    return dtstart, dtend
+
+
+def event_summary(event):
+    """The one-line title both the .ics and the Google Calendar link use."""
+    summary = f"Bolo Boys at {event['venue_name']}"
+    if event.get("theme"):
+        summary += f" — {event['theme']}"
+    return summary
+
+
+def build_ics(event, venue):
+    event_date = date.fromisoformat(event["date"])
+    dtstart, dtend = event_window(event)
 
     summary = f"Bolo Boys at {event['venue_name']}"
     if event.get("theme"):
