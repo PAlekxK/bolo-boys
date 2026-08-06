@@ -4,7 +4,7 @@
     "last_updated": "2026-07-25",
     "schema_version": "1.0",
     "schema_notes": "Each event follows the structure below. Claude populates this via the event_workflow defined in project-context.json.",
-    "invariant": "Everything in `events` is ANNOUNCEABLE. Unconfirmed dates — leads, holds, booked-but-not-announced — live in bolo-private/data/pipeline.json and are PROMOTED into this file by moving the object. Nothing in this repo should ever need a 'is this one real?' filter."
+    "invariant": "Everything in `events` is announceable. Unconfirmed dates live in the private pipeline and are promoted by MOVING them here. Reasoning: bolo-private/PROPAGATION.md."
   },
   "_schema_example": {
     "id": "unique-kebab-case-id",
