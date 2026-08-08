@@ -30,6 +30,12 @@ bandsintown-upload.csv
 
 # Local-only state markers (machine-specific, not shared)
 tools/.last-bit-upload
+# Content snapshot of the last BIT upload — local operational state, same class as the
+# sentinel above, and covered by icloud-backup layer 2 (which is the leg that sees
+# gitignored files). Tradeoff stated rather than hidden: unlike bandsintown-upload.csv
+# this is NOT regenerable — it records a past act. Losing it degrades the next run to
+# UNKNOWN, which is safe-but-manual (check the profile), never silently wrong.
+tools/.bit-last-uploaded.csv
 
 # Wrangler local state (auth cache, build artifacts) — never commit
 .wrangler/
