@@ -40,3 +40,6 @@ tools/.last-bit-upload
 tools/.reminder-state.json
 .reminders/
 __pycache__/
+
+# derived by tools/bit-delta.py — regenerable, never the source
+bandsintown-delta.csv

@@ -29,6 +29,17 @@ echo ""
 CSV_MD5="$(md5 -q "$CSV")"
 echo "$CSV_MD5" > "$SENTINEL"
 
+# Snapshot the CONTENT, not just its hash (added 2026-08-08).
+# The md5 above answers "has the CSV changed?" It cannot answer "which ROWS are new?",
+# which is the only question that matters at the upload form, because BIT appends and
+# does not dedupe. tools/bit-delta.py diffs against this snapshot to emit an upload of
+# just the new rows. Snapshot the FULL current CSV even when only a delta was uploaded:
+# it represents "what BIT now holds", which after a correct delta upload is everything
+# in the current file.
+SNAPSHOT="${SCRIPT_DIR}/.bit-last-uploaded.csv"
+cp "$CSV" "$SNAPSHOT"
+echo "  Snapshot: $SNAPSHOT ($(wc -l < "$SNAPSHOT" | tr -d ' ') lines incl. header)"
+
 echo "✓ Marked Bandsintown upload at $(date '+%Y-%m-%d %H:%M:%S %Z')"
 echo "  CSV: $CSV"
 echo "  CSV md5: $CSV_MD5"
