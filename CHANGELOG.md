@@ -230,10 +230,10 @@ Side-effects Paul confirmed: GCal updates land silently (notificationLevel NONE 
 - **`data/events.json`** — Ideal Sports Bar 6/26 + 7/11: `duration_hours` 3 → 2 (locked at 8–10 PM per Keith confirmation), dropped "subject to confirmation" language from `additional_details` and the calendar URL details param. `google_calendar_url` rewritten with proper `YYYYMMDDTHHmmSS/YYYYMMDDTHHmmSS` timestamp format (was date-only, which would have rendered as an all-day event).
 - **`index.html` / `sitemap.xml` / `bandsintown-upload.csv`** — regenerated via `tools/run-propagators.sh`.
 - **`Bolo Boys - Private/data/venue-contacts.json`**:
-  - **Josh Peatross → Josh Patterson** — last name was transcribed wrong; contact card confirms Patterson. Added phone REDACTED-S19. ID renamed `gpc-josh-peatross` → `gpc-josh-patterson`. Last-contact updated for the 5/20 GPC email.
-  - **Skyler Edwards** — added phone REDACTED-S19. Last-contact updated for the 5/20 GPC email.
-  - **Added** Ceci Villanueva (GPC photographer / recap content, tertiary scope, phone REDACTED-S19, no email captured).
-  - **Added** Keith (Ideal Sports Bar primary booking contact, phone REDACTED-S19, text preferred, designs venue flyers from band-supplied artwork). Ideal `venue_relationships` entry simplified — dropped the stale "no_direct_contact_note" now that Keith is logged.
+  - **Josh Peatross → Josh Patterson** — last name was transcribed wrong; contact card confirms Patterson. Added phone (recorded in `bolo-private`). ID renamed `gpc-josh-peatross` → `gpc-josh-patterson`. Last-contact updated for the 5/20 GPC email.
+  - **Skyler Edwards** — added phone (recorded in `bolo-private`). Last-contact updated for the 5/20 GPC email.
+  - **Added** Ceci Villanueva (GPC photographer / recap content, tertiary scope, phone recorded in `bolo-private`, no email captured).
+  - **Added** Keith (Ideal Sports Bar primary booking contact, phone recorded in `bolo-private`, text preferred, designs venue flyers from band-supplied artwork). Ideal `venue_relationships` entry simplified — dropped the stale "no_direct_contact_note" now that Keith is logged.
   - `last_compiled` bumped to 2026-05-20.
 - **`Bolo Boys - Private/docs/venue-contacts.md`** — regenerated via `tools/contacts-to-markdown.py`.
 - **Google Calendar (Bolo Boys shared)** — both Ideal events updated: end time 11 PM → 10 PM, description rewritten with confirmed times + Keith's text contact. Notifications silenced (calendar UI shows the update; no email push).
@@ -362,10 +362,10 @@ Side-effects Paul confirmed: none — site/data changes only.
 ## 2026-05-18 (later) — Band update email + master song book audit
 
 - **Drafted + sent** Bolo Boys update email to John + Nigel covering: 5/17 Grant Park recap (Skyler / Summer Shade gazebo opportunity / fall Market series / pending GPC post), Summer Shade prioritization + August Side Saddle reschedule (asks for everyone's August availability), 5/25 setlist build (Boys Don't Cry, Roadrunner, Muddy Knees, Glow as seeds), Side Saddle poster review with Drive link, and Ideal shows detail-confirmation ask for John's point of contact.
-- **Audited** `Bolo Boys Master Song and Gig Book.xlsx` on `boloboysband@gmail.com` Drive (file ID `REDACTED-S19`). Cross-referenced against Nigel's tab-share emails and Paul's originals docs. Findings: 6 songs missing from the Song List sheet entirely (Boys Don't Cry, 21 Questions, Kids, Roadrunner, Glow, Muddy Knees); 1 row (TN Stud) in master but Tabs cell empty despite Nigel's PDF chart from 2025-11-13; 22 other rows have empty Tabs as a general gap.
+- **Audited** `Bolo Boys Master Song and Gig Book.xlsx` on `boloboysband@gmail.com` Drive (file ID recorded in `bolo-private`). Cross-referenced against Nigel's tab-share emails and Paul's originals docs. Findings: 6 songs missing from the Song List sheet entirely (Boys Don't Cry, 21 Questions, Kids, Roadrunner, Glow, Muddy Knees); 1 row (TN Stud) in master but Tabs cell empty despite Nigel's PDF chart from 2025-11-13; 22 other rows have empty Tabs as a general gap.
 - **Delivered** `~/Desktop/bolo-song-list-additions.csv` — 6 ready-to-paste rows matching the master sheet's column schema. Paul executes the paste; Drive MCP can't update xlsx in place.
 
-Side-effects Paul confirmed: band update email sent to `REDACTED-S19` + `REDACTED-S19`.
+Side-effects Paul confirmed: band update email sent to JC + Nigel (addresses in `bolo-private`).
 
 ## 2026-05-18 — GSC notifications triaged (no code changes)
 
@@ -392,7 +392,7 @@ Side-effects Paul confirmed: none — this is a planning-infrastructure session.
 - **Added** "Pipeline status review (Tier 1 read-pattern)" section to `CLAUDE.md` — codifies the read-and-orient workflow Claude runs when Paul triggers a status check, including the cross-check against boloboys.band / Bandsintown / Gmail / Google Calendar to catch downstream drift. Jobs served: JTBD-01, JTBD-02, JTBD-05.
 - **Updated** `venue-contacts.json` from the 5/17 Market in the Park show: Josh Peatross + Skyler Edwards last-contact bumped to 2026-05-17 with the **Summer Shade Festival gazebo-stage interest** captured; gateway-park-grant-park summary updated to note the open opportunity.
 - **Added** `Grant Park Porchfest` as a new `prospecting` venue_relationship — watching for application window to open.
-- **Added** Jasper booking contact **Angela Reinhart** (phone REDACTED-S19) as a new scene_connector for Jasper, GA.
+- **Added** Jasper booking contact **Angela Reinhart** (phone recorded in `bolo-private`) as a new scene_connector for Jasper, GA.
 - **Regenerated** `Bolo Boys - Private/docs/venue-contacts.md` via `tools/contacts-to-markdown.py`.
 - **Created** placeholder calendar invite on the Bolo Boys Calendar for **Sat Aug 29 + Sun Aug 30, 2026** ("[PLACEHOLDER] Summer Shade Festival — Grant Park (gazebo stage interest)") with Paul, Nigel, and John invited so the band can confirm weekend availability before pursuing the gazebo booking. Description flags the potential conflict with the Side Saddle 8/29 evening show.
 
