@@ -59,6 +59,30 @@ match data/band.json data/band.json
 match data/events.json data/events.json
 match data/past-shows.json data/past-shows.json
 
+# Stamp an observation in the ops-layer ledger — win or lose.
+#
+# The ops-layer's site tile does not report "when did we last deploy" (a deploy
+# date can be old and completely fine, so it fails in the flattering direction).
+# It reports live-vs-local equality plus a BOUNDED interval — "live content
+# changed between X and Y" — derived from a ledger of every time we actually
+# looked. That interval is only as tight as the looking is frequent, and until
+# 2026-08-09 the only looks on record were from the day it was built.
+#
+# A deploy is the one moment we KNOW production changed, so it is the highest-
+# value observation there is. Stamped before the pass/fail exit on purpose: an
+# observation of a FAILED deploy is exactly what the ledger wants to hold.
+#
+# Never fails the deploy. The probe is a courtesy, not a gate — and the private
+# repo may simply not be checked out beside this one.
+facts=../bolo-private/tools/opslayer-facts.py
+if [ -f "$facts" ]; then
+  if python3 "$facts" --deep >/dev/null 2>&1; then
+    echo "  ok    ops-layer site observation stamped"
+  else
+    echo "  note  ops-layer observation not stamped (probe failed) — deploy unaffected"
+  fi
+fi
+
 echo
 if [ "$fail" -eq 0 ]; then
   echo "✅ Deployed and verified."
