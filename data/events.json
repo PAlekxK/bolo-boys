@@ -142,7 +142,7 @@
       "ics_url": "assets/ics/summer-shade-festival-2026-08-22.ics",
       "poster_url": null,
       "prep": {
-        "setlist_status": "open",
+        "setlist_status": "proposed",
         "setlist_url": null,
         "lifecycle_markers": {
           "calendar_invite_sent": true,
@@ -157,10 +157,18 @@
           {
             "text": "Booked verbally — confirm load-in / sound details closer to the date",
             "done": false
+          },
+          {
+            "text": "We OPEN the festival; Deep South Wrestling (pro wrestling) follows immediately — keep energy high",
+            "done": false
           }
         ],
         "subgroups": [],
-        "open_questions": []
+        "open_questions": [
+          "Band response to the 13-song proposal sent 2026-08-08 — nothing back yet",
+          "Padding extras not named (45-min slot, 13 songs proposed)",
+          "Boys Don't Cry is the only proposed song at rotation 'learning'"
+        ]
       },
       "external_links": [
         {
