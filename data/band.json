@@ -127,7 +127,9 @@
     "youtube_handle": "@boloboysband",
     "facebook": "https://www.facebook.com/boloboysband",
     "bandsintown": "https://www.bandsintown.com/a/15647362",
-    "spotify_artist_note": "Nigel has a Western original released on Spotify; a Bolo Boys artist presence is being built out."
+    "spotify_artist_note": "Nigel has a Western original released on Spotify; a Bolo Boys artist presence is being built out.",
+    "apple_music_artist": "https://music.apple.com/us/artist/bolo-boys/6791277602",
+    "apple_music_artist_note": "The REAL Bolo Boys artist entity — credited on Dogies (2026-07-17). ⚠️ Apple Music carries THREE 'Bolo Boys': this one has our MUSIC and no tour dates; artist/1491246209 (a 2019 unrelated act) has SEVEN OF OUR TOUR DATES and none of our music; artist/1502377224 is the German hip-hop act. Our music and our calendar are on DIFFERENT pages. Adding this URL to sameAs is LAUNCH-DOGIES.md step 4 — 'the link that tells Google this Bolo Boys is that artist' — which had never been done."
   },
   "scene_collaborators": [
     {
