@@ -416,7 +416,9 @@
           }
         ],
         "subgroups": [],
-        "open_questions": []
+        "open_questions": [
+          "🔴 UNVERIFIED DATE CONFLICT — surfaced by the 2026-08-11 press scan, NOT confirmed. Two independent Pickens outlets (pickensprogress.com, smokesignalsnews.com) summarise the 2026 ArtWalk Jasper dates as May 30 and SEPTEMBER 12; we have this show on SEPTEMBER 26, recorded as 'Confirmed with Angela Reinhardt (7/23), 2-5 PM headliner, Pickens Courthouse'. ⚠️ NOT ESTABLISHED: the verifying fetch returned HTTP 429, so the articles' own dates and publication YEAR were never read - the summaries may describe 2025. DO NOT change the date on this. If the fall ArtWalk really is 9/12 it COLLIDES with side-saddle-2026-09-12 (the Ante Up Showcase, the one night Ante Up is the only full band). One email to Angela Reinhardt settles it."
+        ]
       },
       "external_links": []
     },
