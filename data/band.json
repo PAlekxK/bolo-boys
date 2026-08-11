@@ -268,6 +268,14 @@
       "apple_music_for_artists": "https://artists.apple.com — claim, add website",
       "amazon_music_for_artists": "https://artists.amazonmusic.com — claim, add website",
       "bandsintown_profile": "Profile tab — website field + FIX THE THREE-PIECE BIO (master copy lives here)"
+    },
+    "claims": {
+      "_purpose": "Hand-set flags: has Paul CLAIMED this artist profile. Self-reported — nothing verifies it.",
+      "A1": false,
+      "A2": false,
+      "A3": false,
+      "A4": false,
+      "A5": false
     }
   }
 }
