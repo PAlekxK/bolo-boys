@@ -130,7 +130,9 @@
     "apple_music_artist": "https://music.apple.com/us/artist/bolo-boys/6791277602",
     "apple_music_artist_note": "The REAL Bolo Boys artist entity — credited on Dogies (2026-07-17). ⚠️ Apple Music carries THREE 'Bolo Boys': this one has our MUSIC and no tour dates; artist/1491246209 (a 2019 unrelated act) has SEVEN OF OUR TOUR DATES and none of our music; artist/1502377224 is the German hip-hop act. Our music and our calendar are on DIFFERENT pages. Adding this URL to sameAs is LAUNCH-DOGIES.md step 4 — 'the link that tells Google this Bolo Boys is that artist' — which had never been done.",
     "spotify_artist": "https://open.spotify.com/artist/10rKYATC4L0qNk5sGD04t7",
-    "streaming_identity_note": "⚠️ THE NAME COLLISION IS A DISTRIBUTION PROBLEM, not just a search one. OURS: Spotify 10rKYATC4L0qNk5sGD04t7 · Apple/Shazam 6791277602 — both credited on Dogies. NOT OURS, and both previously wired into our own distribution: Spotify 2YPAAJzHH0CU7fpntv8KDG and Apple 1491246209, a 2019 act whose only release is 'Uk U Gay'. Bandsintown's Spotify integration pointed at THAT artist until 2026-08-11, which is why seven of our shows appeared on its Apple Music page. Third entity: the German hip-hop 'Boloboys' (Apple 1502377224 / Spotify 3NPDXrX2UN8ROaIHaUPrvl). Verify any 'Bolo Boys' id against a Dogies credit before using it."
+    "streaming_identity_note": "⚠️ THE NAME COLLISION IS A DISTRIBUTION PROBLEM, not just a search one. OURS: Spotify 10rKYATC4L0qNk5sGD04t7 · Apple/Shazam 6791277602 — both credited on Dogies. NOT OURS, and both previously wired into our own distribution: Spotify 2YPAAJzHH0CU7fpntv8KDG and Apple 1491246209, a 2019 act whose only release is 'Uk U Gay'. Bandsintown's Spotify integration pointed at THAT artist until 2026-08-11, which is why seven of our shows appeared on its Apple Music page. Third entity: the German hip-hop 'Boloboys' (Apple 1502377224 / Spotify 3NPDXrX2UN8ROaIHaUPrvl). Verify any 'Bolo Boys' id against a Dogies credit before using it.",
+    "amazon_music_artist": "https://music.amazon.com/artists/B0CM1XG2TP/bolo-boys",
+    "shazam_artist": "https://www.shazam.com/artist/bolo-boys/6791277602"
   },
   "scene_collaborators": [
     {
@@ -224,5 +226,48 @@
   "trajectory": {
     "current_focus": "Getting better with every show; building venue relationships in Atlanta; weaving more originals into sets.",
     "twelve_month_picture": "Packed outdoor courtyards. More outdoor bars and restaurants. Crowds singing the hooks back. More songs on Spotify."
+  },
+  "identity": {
+    "_purpose": "CANONICAL REGISTRY of every platform identity. Established 2026-08-11 after a name-collision incident: Bandsintown's Spotify link pointed at a DIFFERENT band, which propagated our tour dates onto that band's Apple Music page. Verify any 'Bolo Boys' id against a DOGIES credit before using it — Dogies is the discriminator.",
+    "_verified": "2026-08-11, each fetched individually",
+    "ours": {
+      "spotify_artist": "https://open.spotify.com/artist/10rKYATC4L0qNk5sGD04t7",
+      "apple_music_artist": "https://music.apple.com/us/artist/bolo-boys/6791277602",
+      "shazam_artist": "https://www.shazam.com/artist/bolo-boys/6791277602",
+      "amazon_music_artist": "https://music.amazon.com/artists/B0CM1XG2TP/bolo-boys",
+      "bandsintown_artist": "https://www.bandsintown.com/a/15647362",
+      "youtube": "https://www.youtube.com/@boloboysband",
+      "instagram": "https://www.instagram.com/boloboysband/",
+      "facebook": "https://www.facebook.com/boloboysband",
+      "website": "https://www.boloboys.band/"
+    },
+    "NOT_ours": {
+      "_warning": "⚠️ These carry the same name and have ALREADY polluted our distribution. Never wire one.",
+      "uk_u_gay_act_spotify": "https://open.spotify.com/artist/2YPAAJzHH0CU7fpntv8KDG — was wired into our Bandsintown until 2026-08-11",
+      "uk_u_gay_act_apple": "https://music.apple.com/us/artist/bolo-boys/1491246209 — carried 7 of our shows",
+      "german_hiphop_apple": "https://music.apple.com/us/artist/boloboys/1502377224",
+      "german_hiphop_spotify": "https://open.spotify.com/artist/3NPDXrX2UN8ROaIHaUPrvl",
+      "dierks_bentley_prank": "2017 'Bolo Boys Bluegrass Band' — Dierks Bentley in disguise; search noise only"
+    },
+    "bandsintown_event_distribution": {
+      "_status": "ALL SIX ACTIVE as of 2026-08-11",
+      "connected": [
+        "Amazon Music",
+        "Apple Music",
+        "Google Search",
+        "Shazam",
+        "Spotify",
+        "YouTube"
+      ],
+      "google_note": "Automatic — no config. BIT syncs events to Google within ~30 hours."
+    },
+    "backlinks_TODO": {
+      "_paul_stated_2026_08_11": "'all that should link back somewhere to our website'",
+      "_status": "NOT DONE — each requires claiming the artist profile on that platform",
+      "spotify_for_artists": "https://artists.spotify.com — claim, set genre (LAUNCH-DOGIES step 3), add website",
+      "apple_music_for_artists": "https://artists.apple.com — claim, add website",
+      "amazon_music_for_artists": "https://artists.amazonmusic.com — claim, add website",
+      "bandsintown_profile": "Profile tab — website field + FIX THE THREE-PIECE BIO (master copy lives here)"
+    }
   }
 }
