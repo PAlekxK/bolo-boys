@@ -161,16 +161,31 @@
           {
             "text": "We OPEN the festival; Deep South Wrestling (pro wrestling) follows immediately — keep energy high",
             "done": false
+          },
+          {
+            "text": "Band camp proposed 8/20-8/21 at Tate (Nigel 8/10: 'Jamie and I are both free 20 and 21 next week... two days of bandcamp leading up to the summer shade festival') — the two days before this show. Nigel already at Tate Sun-Tue and can extend; John 'Hell yes! Checking on one thing.' NOT yet a confirmed plan.",
+            "done": false
+          },
+          {
+            "text": "No poster/graphic yet — poster_url is null. Paul 2026-08-11 wants a Summer Shade graphic before the official announce push.",
+            "done": false
           }
         ],
         "subgroups": [],
         "open_questions": [
-          "Band response to the 13-song proposal sent 2026-08-08 — nothing back yet",
+          "🔴 SET TIME CONFLICT — the festival's own music page publishes 'Bolo Boys | 12:00pm - 12:45 pm'; events.json says 12:15 PM for 0.75h (12:15-1:00) and additional_details repeats it. Two public pages, two times, 11 days out. Verified 2026-08-11 at https://summershadefestival.org/music/. Paul to confirm with the organizer which is right, then fix whichever is wrong -- do NOT guess.",
+          "Three Little Birds vs I Shot the Sheriff — Jamey 2026-08-11: 'Personally I would rather play something like Shot the Sheriff instead of Three Little Birds, but that's my only note'. Nigel same day: 'i'm not sure about the moody/mellow marley tunes.' Two of four want the Marley slot changed; not yet decided.",
           "Padding extras not named (45-min slot, 13 songs proposed)",
-          "Boys Don't Cry is the only proposed song at rotation 'learning'"
+          "Boys Don't Cry — Jamey 2026-08-11 asked to rehearse it: 'That threw me for a loop when we jumped into it last time at SS'. Covered by band camp 8/20-21 if that lands."
         ]
       },
       "external_links": [
+        {
+          "title": "Music lineup — Bolo Boys on the Gazebo stage, Saturday (page links back to boloboys.band)",
+          "source": "Summer Shade Festival",
+          "url": "https://summershadefestival.org/music/",
+          "date": null
+        },
         {
           "title": "Summer Shade Festival — Grant Park, August 22–23",
           "source": "Summer Shade Festival",
