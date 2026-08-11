@@ -319,12 +319,73 @@ def render(R):
     print()
 
 
+# ── LOOK-AHEAD ───────────────────────────────────────────────────────────────
+# `[paul-stated 2026-08-11]`: "part of this loop should also be a look ahead forecast to
+# anything within the forecast range, which is probably at the most... very most ten days,
+# you know, or seven for there to be any accuracy."
+#
+# Both numbers are his and BOTH are kept, because they mean different things: 10 is the
+# horizon (what a model will even emit) and 7 is the trust line (where it starts being worth
+# acting on). Collapsing them to one number would throw away the half that says how much to
+# believe it. Rows past day 7 print with a confidence caveat rather than being hidden —
+# hiding them would make "no show in range" and "a show we chose not to show you" identical,
+# which is B2's signature.
+HORIZON_DAYS = 10
+TRUST_DAYS = 7
+
+
+def horizon(args):
+    """Every show inside the forecast window, one line each. Fails loud per show, not globally:
+    one venue's fetch error must not suppress the others."""
+    d = load("events.json")
+    evs = d if isinstance(d, list) else d.get("events", [])
+    today = datetime.now(ET).date()
+    rows = []
+    for e in sorted(evs, key=lambda x: x.get("date", "")):
+        try:
+            dd = datetime.strptime(e["date"], "%Y-%m-%d").date()
+        except Exception:
+            continue
+        out = (dd - today).days
+        if 0 <= out <= HORIZON_DAYS:
+            rows.append((out, e))
+
+    print("=" * 68)
+    print(f"  LOOK-AHEAD — shows within {HORIZON_DAYS} days (forecast trusted to ~{TRUST_DAYS})")
+    print("=" * 68)
+    if not rows:
+        nxt = [e for e in sorted(evs, key=lambda x: x.get("date", "")) if e.get("date", "") >= str(today)]
+        print(f"  No show inside {HORIZON_DAYS} days.")
+        if nxt:
+            print(f"  Next up: {nxt[0]['date']}  {nxt[0]['id']} — outside the window, NOT forecast.")
+        print("  ⚠️ This is a real 'nothing in range', not a suppressed list.")
+        return 0
+
+    worst = 0
+    for out, e in rows:
+        args.event, args.date = e["id"], None
+        try:
+            R = build(e, args)
+        except SystemExit:
+            print(f"\n  ⚠️ {e['date']} (T-{out})  {e['id']}\n      FETCH FAILED — reported, not skipped.")
+            worst = max(worst, 1)
+            continue
+        conf = "" if out <= TRUST_DAYS else f"  ⚠️ T-{out} is past the ~{TRUST_DAYS}d trust line — directional only"
+        print(f"\n  {e['date']} (T-{out})  {e.get('venue_name') or e['id']}{conf}")
+        render(R)
+    return worst
+
+
 def main():
     ap = argparse.ArgumentParser(description="Weather report for a Bolo Boys show.")
     ap.add_argument("--event", help="event id from events.json")
     ap.add_argument("--date", help="YYYY-MM-DD")
     ap.add_argument("--json", action="store_true", help="machine-readable output")
+    ap.add_argument("--horizon", action="store_true",
+                    help=f"every show within {HORIZON_DAYS} days (the look-ahead)")
     args = ap.parse_args()
+    if args.horizon:
+        sys.exit(horizon(args))
     R = build(pick_event(args), args)
     if args.json:
         def enc(o):
