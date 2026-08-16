@@ -6,6 +6,44 @@
   },
   "past_shows": [
     {
+      "id": "wild-heaven-avondale-2026-08-15",
+      "date": "2026-08-15",
+      "day_of_week": "Saturday",
+      "time": "4:00 PM",
+      "venue_id": "wild-heaven-avondale",
+      "venue_name": "Wild Heaven Brewing",
+      "venue_neighborhood": "Avondale Estates",
+      "venue_city": "Avondale Estates, GA",
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
+      "end_time": "7:00 PM",
+      "notes": "Outdoor four-act afternoon at Wild Heaven with Dirty Shame, Acoustic Station, and Ante Up — a good showing by Acoustic Station, and a nice engagement party the band got to make the announcement for. Very hot day to play outside.",
+      "poster_url": "assets/posters/wild-heaven-avondale-2026-08-15.jpeg",
+      "external_links": [
+        {
+          "title": "Live Music: Acoustic Station, Dirty Shame, + Bolo Boys at 4 pm",
+          "source": "Wild Heaven Brewing",
+          "url": "https://wildheavenbeer.com/event/live-music-acoustic-station-dirty-shame--bolo-boys-at-4-pm-2026-08-15",
+          "date": null
+        },
+        {
+          "title": "Bolo Boys announce two more Wild Heaven Avondale shows (8/15 & 9/19)",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/Da1XvhnjCsK/",
+          "date": null
+        },
+        {
+          "title": "Seven days out — Wild Heaven Avondale, four bands, 4 PM",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/Dbyr0OVzuKz/",
+          "date": "2026-08-08"
+        }
+      ]
+    },
+    {
       "id": "side-saddle-2026-07-19",
       "date": "2026-07-19",
       "day_of_week": "Sunday",
