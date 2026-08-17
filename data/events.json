@@ -103,6 +103,34 @@
           {
             "text": "No poster/graphic yet — poster_url is null. Paul 2026-08-11 wants a Summer Shade graphic before the official announce push.",
             "done": false
+          },
+          {
+            "text": "ARRIVE 11:00 AM — Don's instruction is 1 hour before posted start time; the festival's music page posts us at 12:00.",
+            "done": false
+          },
+          {
+            "text": "Load-in / drop-off: corner of Berne St. and Park Ave, at the Grant Park POOL entrance.",
+            "done": false
+          },
+          {
+            "text": "Parking: 2 passes per band, free, in the Boulevard Parking deck. Only two — carpool.",
+            "done": false
+          },
+          {
+            "text": "BACKLINE PROVIDED on both stages: 2 guitar amps (a Fender plus another Fender-style combo), a bass rig, and a drum kit. Guitarists may bring their own amp if they prefer.",
+            "done": false
+          },
+          {
+            "text": "JAMEY BRINGS: snare, cymbals, sticks, drum key. The house kit cannot be struck; organizer describes it as a pro-style kit.",
+            "done": false
+          },
+          {
+            "text": "Changeovers are quick — a fast line check per band, no soundcheck. Any unusual sound request goes to Don in advance so he can forward it to the sound crew.",
+            "done": false
+          },
+          {
+            "text": "Source: the organizer's performer instructions, sent by Don 2026-08-16 and forwarded by Paul into the band group text. Decoded from iMessage; two copies in the DB agree body-for-body. Don's phone is in bolo-private venue-contacts.json, never here (this file is public).",
+            "done": false
           }
         ],
         "subgroups": [],
