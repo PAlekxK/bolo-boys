@@ -2254,7 +2254,13 @@
     // CTAs
     const ctas = [];
     if (isOut) {
-      const listen = rel.hyperfollow || (rel.streaming && rel.streaming.spotify);
+      // Post-release the STORE link wins; the hyperfollow smart-link is only the
+      // fallback. DistroKid's hyperfollow page lags the stores -- on 2026-08-21
+      // Spotify already had Muddy Knees while hyperfollow still read "Available
+      // Soon" with a pre-save button, so "Listen now" was sending fans to a page
+      // telling them it wasn't out. Pre-release the else-branch still uses
+      // hyperfollow, which is correct: that is where a pre-save lives.
+      const listen = (rel.streaming && rel.streaming.spotify) || rel.hyperfollow;
       if (listen) ctas.push(`<a class="release-cta release-cta-primary" href="${listen}" target="_blank" rel="noopener">Listen now</a>`);
       if (rel.video && rel.video.youtube_id) {
         ctas.push(`<a class="release-cta" href="https://www.youtube.com/watch?v=${rel.video.youtube_id}" target="_blank" rel="noopener">Watch on YouTube</a>`);
