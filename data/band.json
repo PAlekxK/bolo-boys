@@ -172,6 +172,34 @@
   ],
   "releases": [
     {
+      "id": "muddy-knees",
+      "title": "Muddy Knees",
+      "type": "original",
+      "tagline": null,
+      "songwriter_credit": null,
+      "source_note": "Bolo Boys original. songwriter_credit deliberately left null pending Paul's call \u2014 the writer is Paul (per repertoire.json), but credits/splits were cut from the 7/31 band email and remain unraised, so the site falls back to the band name rather than publish a credit nobody has agreed. One-line change when he decides.",
+      "status": "upcoming",
+      "release_date": "2026-08-21",
+      "release_time_et": null,
+      "release_datetime_et": null,
+      "isrc": null,
+      "duration_iso": null,
+      "cover": "assets/releases/muddy-knees-cover.jpg",
+      "cover_sm": "assets/releases/muddy-knees-cover-sm.jpg",
+      "hyperfollow": "https://distrokid.com/hyperfollow/boloboys/muddy-knees",
+      "spotify_track_id": null,
+      "streaming": {
+        "spotify": null,
+        "apple_music": null,
+        "amazon_music": null,
+        "bandcamp": null,
+        "youtube_music": null,
+        "tidal": null,
+        "deezer": null
+      },
+      "video": null
+    },
+    {
       "id": "dogies",
       "title": "Dogies",
       "type": "traditional_arrangement",
