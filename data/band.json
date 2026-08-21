@@ -193,7 +193,7 @@
         "apple_music": null,
         "amazon_music": null,
         "bandcamp": null,
-        "youtube_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=pk546S1WM9U",
         "tidal": null,
         "deezer": null
       },
@@ -222,7 +222,7 @@
         "apple_music": "https://music.apple.com/us/album/dogies-single/6791377510",
         "amazon_music": null,
         "bandcamp": null,
-        "youtube_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=1r4ITdcrcc8",
         "tidal": null,
         "deezer": null
       },
