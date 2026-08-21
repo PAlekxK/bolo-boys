@@ -92,6 +92,7 @@
   "datePublished": "2026-08-21",
   "image": "https://www.boloboys.band/assets/releases/muddy-knees-cover.jpg",
   "sameAs": [
+    "https://open.spotify.com/track/2ANkKNXLanXFN6EPWkaF0T",
     "https://distrokid.com/hyperfollow/boloboys/muddy-knees"
   ]
 }
@@ -2282,8 +2283,19 @@
          ${rel.video.credit ? `<p class="release-video-credit">${rel.video.credit}</p>` : ''}`
       : '';
 
+    // Data decides the words here too. This line hardcoded "on Spotify, Apple
+    // Music, and everywhere else", which was true for Dogies and FALSE for Muddy
+    // Knees on release day: Spotify had it, Apple did not yet, and the page would
+    // have named a store you could not actually find it on. Name only the stores
+    // whose links we actually hold. (2026-08-21)
+    const outOn = Object.entries(rel.streaming || {})
+      .filter(([_, url]) => url)
+      .map(([svc]) => STREAMING_LABELS[svc] || svc);
+    const where = outOn.length === 0 ? ''
+      : outOn.length >= 3 ? ` \u00B7 on ${outOn.slice(0, 2).join(', ')}, and everywhere else`
+      : ` \u00B7 on ${outOn.join(' and ')}`;
     const when = isOut
-      ? `<p class="release-when">Out now <span>\u00B7 on Spotify, Apple Music, and everywhere else</span></p>`
+      ? `<p class="release-when">Out now<span>${where}</span></p>`
       : `<p class="release-when">${fmtReleaseWhen(rel)}${fmtPremiereWhen(rel)}</p>`;
 
     container.innerHTML = `
