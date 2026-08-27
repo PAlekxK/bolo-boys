@@ -549,6 +549,36 @@
         "geocoded": null,
         "note": "DELIBERATELY UNSET. The stage is the courthouse square in downtown Jasper; the street address was never captured from Angela and has not been verified against a primary source, so nothing is asserted here. The maps URL is a NAME query, which resolves correctly without claiming a precision we do not have. Geocode it once someone confirms the address on the ground or from the ArtWalk's own listing."
       }
+    },
+    {
+      "id": "patagonia-krog-street",
+      "name": "Patagonia Atlanta",
+      "type": "retail store (event host)",
+      "neighborhood": "Inman Park / Krog Street",
+      "city": "Atlanta",
+      "state": "GA",
+      "address": "124 Krog St NE, Atlanta, GA 30307",
+      "phone": null,
+      "website": "https://www.patagonia.com/",
+      "google_maps_url": "https://maps.google.com/?q=Patagonia%2C+124+Krog+St+NE%2C+Atlanta%2C+GA+30307",
+      "yelp_url": null,
+      "google_reviews_url": null,
+      "instagram": null,
+      "instagram_handle": null,
+      "notes": "Not a music venue — the Krog Street Patagonia store, used as the host room for the South River Watershed Alliance's Wild Fling benefit (2026-10-08). Added 2026-08-27 when that booking moved from unlisted-private to public. Venue detail comes from the SRWA event page, not from a venue research pass.",
+      "summary": null,
+      "what_we_love": [],
+      "menu_highlights": [],
+      "live_music_context": null,
+      "crowd_notes": null,
+      "practical_notes": null,
+      "last_researched": null,
+      "research_sources": [
+        "https://www.southriverga.org/events/wildfling"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo": null
     }
   ]
 }

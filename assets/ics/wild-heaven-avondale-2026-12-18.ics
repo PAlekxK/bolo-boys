@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wild-heaven-avondale-2026-12-18@boloboys.band
+DTSTAMP:20261218T000000Z
+DTSTART:20261218T233000Z
+DTEND:20261219T023000Z
+SUMMARY:Bolo Boys at Wild Heaven Brewing — The Christmas Kickoff
+DESCRIPTION:The last Friday of the year at Wild Heaven\, and we're sending
+  it off right — Dirty Shame\, Acoustic Station\, Ante Up and Bolo Boys\,
+  three sets\, one week out from Christmas. Holiday songs will happen. We m
+ ake no apologies. Three 45-minute sets\, starting at 6:30.
+LOCATION:135B Maple St\, Avondale Estates\, GA 30002
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

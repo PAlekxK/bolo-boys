@@ -177,25 +177,25 @@
       "type": "original",
       "tagline": null,
       "songwriter_credit": null,
-      "source_note": "Bolo Boys original. songwriter_credit deliberately left null pending Paul's call \u2014 the writer is Paul (per repertoire.json), but credits/splits were cut from the 7/31 band email and remain unraised, so the site falls back to the band name rather than publish a credit nobody has agreed. One-line change when he decides.",
+      "source_note": "Bolo Boys original. songwriter_credit deliberately left null pending Paul's call — the writer is Paul (per repertoire.json), but credits/splits were cut from the 7/31 band email and remain unraised, so the site falls back to the band name rather than publish a credit nobody has agreed. One-line change when he decides.",
       "status": "out",
       "release_date": "2026-08-21",
       "release_time_et": null,
       "release_datetime_et": null,
-      "isrc": null,
-      "duration_iso": null,
+      "isrc": "QT6HQ2636092",
+      "duration_iso": "PT3M4S",
       "cover": "assets/releases/muddy-knees-cover.jpg",
       "cover_sm": "assets/releases/muddy-knees-cover-sm.jpg",
       "hyperfollow": "https://distrokid.com/hyperfollow/boloboys/muddy-knees",
       "spotify_track_id": "2ANkKNXLanXFN6EPWkaF0T",
       "streaming": {
         "spotify": "https://open.spotify.com/track/2ANkKNXLanXFN6EPWkaF0T",
-        "apple_music": null,
+        "apple_music": "https://music.apple.com/us/album/muddy-knees-single/6804005329",
         "amazon_music": null,
         "bandcamp": null,
         "youtube_music": "https://music.youtube.com/watch?v=pk546S1WM9U",
         "tidal": null,
-        "deezer": null
+        "deezer": "https://www.deezer.com/track/4238002372"
       },
       "video": null
     },
@@ -224,7 +224,7 @@
         "bandcamp": null,
         "youtube_music": "https://music.youtube.com/watch?v=1r4ITdcrcc8",
         "tidal": null,
-        "deezer": null
+        "deezer": "https://www.deezer.com/track/4156746582"
       },
       "video": {
         "youtube_id": "sBt22_PZ6E4",

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:private-event-2026-10-08@boloboys.band
+DTSTAMP:20261008T000000Z
+DTSTART:20261008T233000Z
+DTEND:20261009T013000Z
+SUMMARY:Bolo Boys at Patagonia Atlanta — Wild Fling '26
+DESCRIPTION:An evening on Krog Street with the South River Watershed Allia
+ nce — their Wild Fling benefit for a river that does a lot of quiet work
+  for this city. We're the entertainment: two hours\, good people\, and a r
+ oom full of folks who actually show up for the water. It's a ticketed bene
+ fit — from $30\, with general admission\, group and student options — 
+ and tickets are through South River\, linked below.
+LOCATION:124 Krog St NE\, Atlanta\, GA 30307
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

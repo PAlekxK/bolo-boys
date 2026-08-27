@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wild-heaven-avondale-2026-11-20@boloboys.band
+DTSTAMP:20261120T000000Z
+DTSTART:20261120T233000Z
+DTEND:20261121T023000Z
+SUMMARY:Bolo Boys at Wild Heaven Brewing — Sweater Weather
+DESCRIPTION:Round two of our fall Fridays in Avondale Estates. November at
+  Wild Heaven means the room gets warm\, the beer gets darker\, and the fou
+ r of us plus Dirty Shame\, Acoustic Station and Ante Up keep it going for 
+ three sets. Bring somebody who needs a night out. Three 45-minute sets\, s
+ tarting at 6:30.
+LOCATION:135B Maple St\, Avondale Estates\, GA 30002
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

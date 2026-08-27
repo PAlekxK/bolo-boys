@@ -107,6 +107,12 @@
           "source": "@boloboysband (Instagram)",
           "url": "https://www.instagram.com/p/DcMCVHaOeD9/",
           "date": "2026-08-18"
+        },
+        {
+          "title": "Side Saddle's post for the 8/29 show",
+          "source": "Side Saddle (Instagram)",
+          "url": "https://www.instagram.com/p/DchHTHPJQ5p/",
+          "date": null
         }
       ]
     },
@@ -287,22 +293,93 @@
     {
       "id": "private-event-2026-10-08",
       "phase": "announced",
-      "unlisted": true,
       "date": "2026-10-08",
       "day_of_week": "Thursday",
-      "time": null,
+      "time": "7:30 PM",
       "duration_hours": 2,
-      "venue_id": null,
-      "venue_name": "Private Event",
-      "venue_neighborhood": null,
+      "venue_id": "patagonia-krog-street",
+      "venue_name": "Patagonia Atlanta",
+      "venue_neighborhood": "Inman Park / Krog Street",
       "venue_city": "Atlanta, GA",
       "supporting_acts": [],
-      "theme": null,
-      "invitation_text": null,
+      "theme": "Wild Fling '26",
+      "invitation_text": "An evening on Krog Street with the South River Watershed Alliance — their Wild Fling benefit for a river that does a lot of quiet work for this city. We're the entertainment: two hours, good people, and a room full of folks who actually show up for the water. It's a ticketed benefit — from $30, with general admission, group and student options — and tickets are through South River, linked below.",
       "teaser": null,
-      "additional_details": null,
+      "additional_details": "Ticketed benefit — from $30, with general admission, group-of-four and student/youth options at southriverga.org. Hosted at the Patagonia store on Krog Street. Doors and program run 7:30–9:30 PM.",
       "poster_url": null,
-      "google_calendar_url": null
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Patagonia+Atlanta+%E2%80%94+Wild+Fling+%2726&dates=20261008T233000Z%2F20261009T013000Z&location=124+Krog+St+NE%2C+Atlanta%2C+GA+30307&details=An+evening+on+Krog+Street+with+the+South+River+Watershed+Alliance+%E2%80%94+their+Wild+Fling+benefit+for+a+river+that+does+a+lot+of+quiet+work+for+this+city.+We%27re+the+entertainment%3A+two+hours%2C+good+people%2C+and+a+room+full+of+folks+who+actually+show+up+for+the+water.+It%27s+a+ticketed+benefit+%E2%80%94+from+%2430%2C+with+general+admission%2C+group+and+student+options+%E2%80%94+and+tickets+are+through+South+River%2C+linked+below.",
+      "venue_google_maps_url": "https://maps.google.com/?q=Patagonia%2C+124+Krog+St+NE%2C+Atlanta%2C+GA+30307",
+      "external_links": [
+        {
+          "title": "Wild Fling '26 — tickets and event details",
+          "source": "South River Watershed Alliance",
+          "url": "https://www.southriverga.org/events/wildfling",
+          "date": null
+        },
+        {
+          "title": "Wild Fling '26 on Instagram",
+          "source": "Instagram",
+          "url": "https://www.instagram.com/p/DcOjP1RlLZO/",
+          "date": null
+        }
+      ],
+      "ics_url": "assets/ics/private-event-2026-10-08.ics"
+    },
+    {
+      "id": "wild-heaven-avondale-2026-10-16",
+      "phase": "announced",
+      "date": "2026-10-16",
+      "day_of_week": "Friday",
+      "time": "6:30 PM",
+      "duration_hours": 3,
+      "venue_id": "wild-heaven-avondale",
+      "venue_name": "Wild Heaven Brewing",
+      "venue_neighborhood": "Avondale Estates",
+      "venue_city": "Avondale Estates, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+135B+Maple+St%2C+Avondale+Estates%2C+GA+30002",
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
+      "theme": "Fall Fridays Begin",
+      "invitation_text": "The first of three Friday nights at Wild Heaven Avondale this fall — Dirty Shame, Acoustic Station, Ante Up and Bolo Boys taking turns from 6:30 on. Three sets, a full taproom, and the kind of October evening that makes you glad the patio's still open. Come hungry, come early. Three 45-minute sets, starting at 6:30.",
+      "teaser": null,
+      "additional_details": "Three 45-minute sets from 6:30 PM. Indoor or outdoor depending on weather.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Wild+Heaven+Brewing+%E2%80%94+Fall+Fridays+Begin&dates=20261016T223000Z%2F20261017T013000Z&location=135B+Maple+St%2C+Avondale+Estates%2C+GA+30002&details=The+first+of+three+Friday+nights+at+Wild+Heaven+Avondale+this+fall+%E2%80%94+Dirty+Shame%2C+Acoustic+Station%2C+Ante+Up+and+Bolo+Boys+taking+turns+from+6%3A30+on.+Three+sets%2C+a+full+taproom%2C+and+the+kind+of+October+evening+that+makes+you+glad+the+patio%27s+still+open.+Come+hungry%2C+come+early.+Three+45-minute+sets%2C+starting+at+6%3A30.",
+      "ics_url": "assets/ics/wild-heaven-avondale-2026-10-16.ics",
+      "poster_url": null,
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Venue-stated set structure: three 45-minute sets, end time the band's call, encores fine, nothing booked before or after.",
+            "done": false
+          },
+          {
+            "text": "Invite sent to the full performer list 2026-08-19.",
+            "done": true
+          },
+          {
+            "text": "Bill carried over from 9/19 on Paul's call 2026-08-27 — Dirty Shame, Acoustic Station and Ante Up have NOT separately confirmed these three dates.",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Confirm with the venue that these three are free and all-ages like the rest of the Avondale taproom shows.",
+            "for": "john",
+            "resolved": false
+          }
+        ]
+      }
     },
     {
       "id": "gateway-park-grant-park-2026-10-18",
@@ -411,6 +488,62 @@
       ]
     },
     {
+      "id": "wild-heaven-avondale-2026-11-20",
+      "phase": "announced",
+      "date": "2026-11-20",
+      "day_of_week": "Friday",
+      "time": "6:30 PM",
+      "duration_hours": 3,
+      "venue_id": "wild-heaven-avondale",
+      "venue_name": "Wild Heaven Brewing",
+      "venue_neighborhood": "Avondale Estates",
+      "venue_city": "Avondale Estates, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+135B+Maple+St%2C+Avondale+Estates%2C+GA+30002",
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
+      "theme": "Sweater Weather",
+      "invitation_text": "Round two of our fall Fridays in Avondale Estates. November at Wild Heaven means the room gets warm, the beer gets darker, and the four of us plus Dirty Shame, Acoustic Station and Ante Up keep it going for three sets. Bring somebody who needs a night out. Three 45-minute sets, starting at 6:30.",
+      "teaser": null,
+      "additional_details": "Three 45-minute sets from 6:30 PM. Indoor or outdoor depending on weather.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Wild+Heaven+Brewing+%E2%80%94+Sweater+Weather&dates=20261120T233000Z%2F20261121T023000Z&location=135B+Maple+St%2C+Avondale+Estates%2C+GA+30002&details=Round+two+of+our+fall+Fridays+in+Avondale+Estates.+November+at+Wild+Heaven+means+the+room+gets+warm%2C+the+beer+gets+darker%2C+and+the+four+of+us+plus+Dirty+Shame%2C+Acoustic+Station+and+Ante+Up+keep+it+going+for+three+sets.+Bring+somebody+who+needs+a+night+out.+Three+45-minute+sets%2C+starting+at+6%3A30.",
+      "ics_url": "assets/ics/wild-heaven-avondale-2026-11-20.ics",
+      "poster_url": null,
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Venue-stated set structure: three 45-minute sets, end time the band's call, encores fine, nothing booked before or after.",
+            "done": false
+          },
+          {
+            "text": "Invite sent to the full performer list 2026-08-19.",
+            "done": true
+          },
+          {
+            "text": "Bill carried over from 9/19 on Paul's call 2026-08-27 — Dirty Shame, Acoustic Station and Ante Up have NOT separately confirmed these three dates.",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Confirm with the venue that these three are free and all-ages like the rest of the Avondale taproom shows.",
+            "for": "john",
+            "resolved": false
+          }
+        ]
+      }
+    },
+    {
       "id": "side-saddle-2026-11-21",
       "phase": "announced",
       "date": "2026-11-21",
@@ -455,6 +588,62 @@
         ],
         "subgroups": [],
         "open_questions": []
+      }
+    },
+    {
+      "id": "wild-heaven-avondale-2026-12-18",
+      "phase": "announced",
+      "date": "2026-12-18",
+      "day_of_week": "Friday",
+      "time": "6:30 PM",
+      "duration_hours": 3,
+      "venue_id": "wild-heaven-avondale",
+      "venue_name": "Wild Heaven Brewing",
+      "venue_neighborhood": "Avondale Estates",
+      "venue_city": "Avondale Estates, GA",
+      "venue_google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+135B+Maple+St%2C+Avondale+Estates%2C+GA+30002",
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
+      "theme": "The Christmas Kickoff",
+      "invitation_text": "The last Friday of the year at Wild Heaven, and we're sending it off right — Dirty Shame, Acoustic Station, Ante Up and Bolo Boys, three sets, one week out from Christmas. Holiday songs will happen. We make no apologies. Three 45-minute sets, starting at 6:30.",
+      "teaser": null,
+      "additional_details": "Three 45-minute sets from 6:30 PM. Indoor or outdoor depending on weather.",
+      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Wild+Heaven+Brewing+%E2%80%94+The+Christmas+Kickoff&dates=20261218T233000Z%2F20261219T023000Z&location=135B+Maple+St%2C+Avondale+Estates%2C+GA+30002&details=The+last+Friday+of+the+year+at+Wild+Heaven%2C+and+we%27re+sending+it+off+right+%E2%80%94+Dirty+Shame%2C+Acoustic+Station%2C+Ante+Up+and+Bolo+Boys%2C+three+sets%2C+one+week+out+from+Christmas.+Holiday+songs+will+happen.+We+make+no+apologies.+Three+45-minute+sets%2C+starting+at+6%3A30.",
+      "ics_url": "assets/ics/wild-heaven-avondale-2026-12-18.ics",
+      "poster_url": null,
+      "prep": {
+        "setlist_status": "open",
+        "setlist_url": null,
+        "lifecycle_markers": {
+          "calendar_invite_sent": true,
+          "venue_thanked": false,
+          "clips_pulled": false
+        },
+        "logistics_notes": [
+          {
+            "text": "Venue-stated set structure: three 45-minute sets, end time the band's call, encores fine, nothing booked before or after.",
+            "done": false
+          },
+          {
+            "text": "Invite sent to the full performer list 2026-08-19.",
+            "done": true
+          },
+          {
+            "text": "Bill carried over from 9/19 on Paul's call 2026-08-27 — Dirty Shame, Acoustic Station and Ante Up have NOT separately confirmed these three dates.",
+            "done": false
+          }
+        ],
+        "subgroups": [],
+        "open_questions": [
+          {
+            "text": "Confirm with the venue that these three are free and all-ages like the rest of the Avondale taproom shows.",
+            "for": "john",
+            "resolved": false
+          }
+        ]
       }
     },
     {
