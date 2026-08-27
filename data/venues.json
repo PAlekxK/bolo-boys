@@ -53,6 +53,24 @@
         "source": "census",
         "geocoded": "2026-07-19",
         "note": "680 HAMILTON AVE SE, ATLANTA, GA, 30312"
+      },
+      "residency": {
+        "status": "active",
+        "cadence": "monthly",
+        "since": "2025-12-19",
+        "default_day": "Saturday",
+        "default_time": "6:00 PM",
+        "default_duration_hours": 3,
+        "set_structure": null,
+        "free": null,
+        "all_ages": null,
+        "default_bill": [
+          "Dirty Shame",
+          "Acoustic Station",
+          "Ante Up"
+        ],
+        "confirmed_by": "Derived from the show record 2026-08-27, NOT from a venue statement. Contact is Kayla Bellman.",
+        "note": "⚠️ READ THE DERIVATION BEFORE TRUSTING THE DEFAULTS. This residency SETTLED rather than being agreed: it opened 2025-12-19 on a Friday at 7 PM, then ran Fridays, Saturdays and even a Sunday 11 AM brunch (2026-05-31) at five different start times. It has been Saturday 6:00 PM for 3 hours on every show since 2026-06-27 — that is the basis for the defaults above, and it is six months of pattern, not a term sheet. ⚠️ The day-of-month is NOT stable: 2026 ran the 5th, 2nd, 5th, 3rd and 3rd Saturday. The SECOND-Saturday cadence exists only in the twelve 2027 holds in pipeline.json, which are blockers and are explicitly NOT agreed with the venue. Do not describe it publicly as 'second Saturdays' until Kayla has said so. ⚠️ `free` and `all_ages` are NULL because nobody has asked — this is a wine bar, and the answer is NOT assumable from Wild Heaven's. Null means unasked, never 'no'. The bill also is not universal: 9/12 is Ante Up only. Shares a patio with sister venue Finca to Filter (same owner, same address). 2026-12-19 is the one-year anniversary."
       }
     },
     {
@@ -274,7 +292,7 @@
       "google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+135B+Maple+St%2C+Avondale+Estates%2C+GA+30002",
       "yelp_url": "https://www.yelp.com/biz/wild-heaven-beer-decatur-4",
       "google_reviews_url": null,
-      "notes": "Ongoing concert series. Typical slots: Fri eve 6:30 PM / Sat afternoon.",
+      "notes": "⭐ RESIDENCY VENUE — one of two, with Side Saddle. Paul 2026-08-27: pursued MONTHLY, the same way Side Saddle is. Standing terms, venue-stated by Hayden 8/17–8/18: Friday 6:30 PM start, three 45-minute sets, end time the band's call, encores fine, nothing booked before or after. FREE and ALL-AGES on every show we play here (Paul, 8/27). Saturday afternoons also happen (9/19 is a 4:00 PM Saturday) — the Friday 6:30 slot is the residency shape, not the only shape. Hayden's standing offer, 8/17: all other Fridays open, first choice to us — that offer is what makes monthly reachable, and it has already produced 10/16.",
       "summary": "Wild Heaven's Avondale Estates taproom and kitchen on Maple Street — indoor seating plus an outdoor section that includes converted-container seating, with a regular live-music schedule across the weekend.",
       "what_we_love": [
         "the wide tap list (sours, stouts, IPAs, whatever's pouring)",
@@ -286,10 +304,10 @@
         "Wild Heaven beers (brewed on-site)",
         "kitchen via Al's Pine Street Market"
       ],
-      "live_music_context": "Free live music every Friday, Saturday, and Sunday. Bolo Boys play here in the ongoing concert series — typical slots Friday evening 6:30 PM or Saturday afternoon.",
+      "live_music_context": "Free live music every Friday, Saturday and Sunday. Bolo Boys are a monthly residency here — typical slot Friday evening 6:30 PM (three 45-minute sets), with Saturday afternoons as the alternate. Usually a shared bill with Dirty Shame, Acoustic Station and Ante Up.",
       "crowd_notes": "Avondale Estates and DeKalb brewery-goers. Multigenerational across the weekend slots; friendly outdoor scene.",
       "practical_notes": "Indoor and outdoor seating including converted containers. In-house kitchen (Al's Pine Street Market). Trivia nights and rotating tasting events.",
-      "last_researched": "2026-05-11",
+      "last_researched": "2026-08-27",
       "research_sources": [
         "wildheavenbeer.com",
         "Yelp",
@@ -303,6 +321,24 @@
         "source": "nominatim",
         "geocoded": "2026-07-19",
         "note": "Census had no record for '135B Maple St'. OSM Nominatim matched the brewery POI and returned the exact address '135B, Maple Street' - corroborates the venue record."
+      },
+      "residency": {
+        "status": "active",
+        "cadence": "monthly",
+        "since": "2026-05-23",
+        "default_day": "Friday",
+        "default_time": "6:30 PM",
+        "default_duration_hours": 3,
+        "set_structure": "three 45-minute sets",
+        "free": true,
+        "all_ages": true,
+        "default_bill": [
+          "Dirty Shame",
+          "Acoustic Station",
+          "Ante Up"
+        ],
+        "confirmed_by": "Hayden (venue) 2026-08-17/18 for terms; Paul 2026-08-27 for cadence, free and all-ages",
+        "note": "Facts a copywriter should never have to re-derive per show. `free` and `all_ages` are the answer to the open_question that sat on every 2026 fall event."
       }
     },
     {
