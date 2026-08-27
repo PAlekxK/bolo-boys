@@ -72,6 +72,7 @@ def main():
             continue  # private/anonymized cards never go to Bandsintown
         venue = venues_by_id.get(event["venue_id"], {})
         street, state, zipc = parse_address(venue.get("address", ""))
+        tickets = event.get("tickets") or {}
         writer.writerow({
             "Artist Name": ARTIST_NAME,
             "Venue*": event["venue_name"],
@@ -86,8 +87,19 @@ def main():
             "End Date": "",
             "End Time": "",
             "Streaming Link": "",
-            "Ticket Link": SITE_URL,
-            "Ticket Type": "Free",
+            # Ticketing comes from the EVENT, never a constant. This was
+            # hardcoded Free/site-URL, which was true of every show until
+            # 2026-10-08: Wild Fling is a $30 South River benefit, and the
+            # generator would have published "Free" for it to Bandsintown and
+            # pointed ticket-buyers at our own homepage. Same shape as the
+            # release block's hardcoded store list (2026-08-21) — a constant
+            # that is true until it silently isn't.
+            # `type` is left EMPTY when unknown rather than guessed: BIT's
+            # accepted values for this column are not documented anywhere we
+            # hold, and a wrong enum fails the row, while an empty optional
+            # field does not.
+            "Ticket Link": tickets.get("url") or SITE_URL,
+            "Ticket Type": tickets.get("type", "Free"),
             "Ticket Link 2": "",
             "Ticket Type 2": "",
             "On-Sale Date": "",

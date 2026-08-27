@@ -323,7 +323,12 @@
           "date": null
         }
       ],
-      "ics_url": "assets/ics/private-event-2026-10-08.ics"
+      "ics_url": "assets/ics/private-event-2026-10-08.ics",
+      "tickets": {
+        "type": "",
+        "url": "https://www.southriverga.org/events/wildfling",
+        "note": "Ticketed South River Watershed Alliance benefit, from $30 (GA / group-of-four / student-youth). `type` is EMPTY on purpose: Bandsintown's accepted values for the Ticket Type column are not documented in anything this repo holds, and a wrong enum fails the row. Confirm on the BIT upload form, then set it. What matters most is the URL — without it, ticket-buyers were being sent to our own homepage."
+      }
     },
     {
       "id": "wild-heaven-avondale-2026-10-16",
