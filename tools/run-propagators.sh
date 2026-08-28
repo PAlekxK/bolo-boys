@@ -59,4 +59,11 @@ if [[ -z "$STORED_MD5" ]] || [[ "$CURRENT_MD5" != "$STORED_MD5" ]]; then
   echo "  After uploading, run: bash tools/mark-bit-upload.sh"
 fi
 
+# Verify, rather than assume, that every propagator actually landed. This is the same
+# check the pre-commit hook runs (tools/install_hooks.sh) — here it closes the loop on a
+# manual run, there it closes it on the run that never happened.
+echo ""
+echo "→ generated_views.py (verify)"
+python3 tools/generated_views.py
+
 echo "✓ done"

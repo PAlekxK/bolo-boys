@@ -230,7 +230,7 @@ def main():
             for c in would_change:
                 print(f"  - {c}")
             return 1
-        print(f".ics already in sync ({len(targets)} events).")
+        print(f"ok: .ics already in sync ({len(targets)} events).")
         return 0
 
     # Write.

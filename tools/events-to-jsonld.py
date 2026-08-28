@@ -220,13 +220,27 @@ def main():
     html = INDEX_PATH.read_text()
     updated = replace_between_markers(html, new_block)
 
+    # ⭐ build_event() stamps "validFrom": TODAY into every Offer, so a byte comparison
+    # reports drift EVERY DAY whether or not a single event changed. Measured 2026-08-28:
+    # --check said "out of date (12 events)" and the entire diff was 2026-08-27 -> 2026-08-28.
+    # A check that is red every morning is a check nobody reads, so the comparison ignores
+    # the volatile stamp and tests the PAYLOAD — the event content — instead.
+    # ⚠️ A plain run still rewrites validFrom to today; only the comparison ignores it.
+    def _stable(s):
+        return re.sub(r'"validFrom": "\d{4}-\d{2}-\d{2}"', '"validFrom": "<today>"', s)
+
+    if check_only:
+        # The comparison ignores the volatile stamp; a plain run below still writes it,
+        # so this branch changes what is REPORTED, never what is rendered.
+        if _stable(updated) == _stable(html):
+            print(f"ok: JSON-LD in sync ({len(graph)} events; validFrom stamp ignored).")
+            return 0
+        print(f"STALE: JSON-LD is out of date ({len(graph)} events would be regenerated).")
+        return 1
+
     if updated == html:
         print(f"JSON-LD already in sync ({len(graph)} events).")
         return 0
-
-    if check_only:
-        print(f"JSON-LD is out of date ({len(graph)} events would be regenerated).")
-        return 1
 
     INDEX_PATH.write_text(updated)
     print(f"Updated {INDEX_PATH.name} with {len(graph)} MusicEvent entries.")

@@ -105,7 +105,7 @@ def main():
             for eid in changed:
                 print(f"  - {eid}")
             return 1
-        print(f"google_calendar_url already in sync ({len(events)} events).")
+        print(f"ok: google_calendar_url already in sync ({len(events)} events).")
         return 0
 
     for ev in events:

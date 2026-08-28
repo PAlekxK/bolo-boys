@@ -7,6 +7,13 @@ JSON-LD:RELEASE:START / END markers in index.html. Never hand-edit that block.
 Emits nothing but the markers when there is no release, so the file stays valid.
 
 Run via tools/run-propagators.sh after editing data/band.json.
+
+    python3 tools/release-to-jsonld.py          # rewrite the block in index.html
+    python3 tools/release-to-jsonld.py --check  # prove it is in step; exit 1 if STALE
+
+--check exists so tools/generated_views.py has something to ask. It prints a verdict
+in words ("ok:" / "STALE") rather than only setting an exit code, because a checker
+that trusts exit status alone reads a generator that ignored the flag as green.
 """
 
 import json
@@ -109,6 +116,7 @@ def build(rel: dict) -> list:
 
 
 def main() -> int:
+    check_only = "--check" in sys.argv
     rel_list = json.loads(BAND.read_text()).get("releases") or []
     html = INDEX.read_text()
 
@@ -118,7 +126,8 @@ def main() -> int:
 
     if not rel_list:
         body = ""
-        print("no releases[] — emitting empty block")
+        if not check_only:
+            print("no releases[] — emitting empty block")
     else:
         rel = rel_list[0]
         blocks = build(rel)
@@ -129,16 +138,24 @@ def main() -> int:
             for b in blocks
         )
         types = ", ".join(b["@type"] for b in blocks)
-        print(f"release JSON-LD: {rel['title']} → {types}")
+        if not check_only:
+            print(f"release JSON-LD: {rel['title']} → {types}")
 
     new = START + ("\n" + body if body else "") + "\n" + END
-    html = re.sub(
+    rebuilt = re.sub(
         re.escape(START) + r".*?" + re.escape(END),
         lambda _: new,
         html,
         flags=re.DOTALL,
     )
-    INDEX.write_text(html)
+    if check_only:
+        if rebuilt != html:
+            print("STALE: index.html release JSON-LD does not match data/band.json. "
+                  "Run tools/run-propagators.sh.", file=sys.stderr)
+            return 1
+        print("ok: index.html release JSON-LD matches data/band.json")
+        return 0
+    INDEX.write_text(rebuilt)
     return 0
 
 
