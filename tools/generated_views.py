@@ -15,6 +15,9 @@ Roster entry:
     {"generator": "tools/x.py", "view": "X.md"}                   → runs `x.py --check`
     {"generator": "tools/y.py", "views": ["A.md", "B.md"],
      "mode": "render-compare", "ignore": ["<!-- generated [0-9-]+"]} → see below
+    {"cmd": ["./run", "tools.theses.render_overview"], "view": "Z.md",
+     "mode": "render-compare"}                                    → explicit argv, when this
+                                                                     interpreter is the wrong one
     {"view": "sitemap.xml", "exempt": "why it cannot be checked"}  → reported, never green-washed
 
 ⭐ mode "render-compare" is for a generator with NO --check of its own. It snapshots the
@@ -56,6 +59,26 @@ def roster() -> list[dict]:
     return json.loads(ROSTER.read_text())["views"]
 
 
+def _argv(entry: dict, extra: list[str] | None = None) -> list[str] | None:
+    """How to invoke this row's generator.
+
+    `cmd` wins when present, and exists because not every repo may be run with THIS
+    interpreter: market-digest-pipeline pins /usr/bin/python3 via its ./run dispatcher
+    because the .venv lacks pandas — invoking it with sys.executable would silently
+    produce a different render and report drift that is not there.
+    """
+    if entry.get("cmd"):
+        return list(entry["cmd"]) + (extra or [])
+    gen = entry.get("generator")
+    if not gen or not (ROOT / gen).exists():
+        return None
+    return [sys.executable, str(ROOT / gen)] + (extra or [])
+
+
+def _name(entry: dict) -> str:
+    return entry.get("generator") or " ".join(entry.get("cmd") or ["?"])
+
+
 def _normalise(text: str, ignore: list[str]) -> str:
     for pat in ignore or []:
         text = re.sub(pat, "<volatile>", text)
@@ -69,11 +92,12 @@ def check_render_compare(entry: dict) -> dict:
     killed between the render and the restore, what is left on disk is the generator's own
     fresh output — recoverable with git, never corrupt.
     """
-    gen = entry["generator"]
+    gen = _name(entry)
     views = entry.get("views") or [entry["view"]]
     base = {"view": ", ".join(views), "generator": gen}
     paths = [ROOT / v for v in views]
-    if not (ROOT / gen).exists():
+    argv = _argv(entry, entry.get("render_args"))
+    if argv is None:
         return {**base, "state": "unverifiable", "detail": f"generator missing: {gen}"}
     missing = [v for v, p in zip(views, paths) if not p.exists()]
     if missing:
@@ -81,8 +105,7 @@ def check_render_compare(entry: dict) -> dict:
 
     before = {p: p.read_bytes() for p in paths}
     try:
-        r = subprocess.run([sys.executable, str(ROOT / gen)] + (entry.get("render_args") or []),
-                           cwd=ROOT, capture_output=True, text=True, timeout=300)
+        r = subprocess.run(argv, cwd=ROOT, capture_output=True, text=True, timeout=300)
         if r.returncode != 0:
             tail = (r.stderr or r.stdout).strip().splitlines()[-1:] or [f"exit {r.returncode}"]
             return {**base, "state": "unverifiable", "detail": f"{gen} failed to run: {tail[0]}"}
@@ -101,22 +124,20 @@ def check_render_compare(entry: dict) -> dict:
 
 
 def check_one(entry: dict) -> dict:
-    view, gen = entry.get("view", "?"), entry.get("generator")
+    view, gen = entry.get("view", "?"), _name(entry)
     base = {"view": view, "generator": gen}
     if entry.get("exempt"):
         return {**base, "state": "exempt", "detail": entry["exempt"]}
     if entry.get("mode") == "render-compare":
         return check_render_compare(entry)
-    if not gen:
-        return {**base, "state": "unverifiable", "detail": "roster row has no generator"}
-    gen_path = ROOT / gen
-    if not gen_path.exists():
-        return {**base, "state": "unverifiable", "detail": f"generator missing: {gen}"}
+    argv = _argv(entry, ["--check"])
+    if argv is None:
+        return {**base, "state": "unverifiable",
+                "detail": "roster row names no runnable generator"}
     if not (ROOT / view).exists():
         return {**base, "state": "stale", "detail": f"{view} does not exist — run --render"}
     try:
-        r = subprocess.run([sys.executable, str(gen_path), "--check"],
-                           cwd=ROOT, capture_output=True, text=True, timeout=120)
+        r = subprocess.run(argv, cwd=ROOT, capture_output=True, text=True, timeout=120)
     except Exception as e:  # noqa: BLE001 — a check that could not run is never green
         return {**base, "state": "unverifiable", "detail": f"could not run {gen} --check: {e}"}
     out = (r.stdout + r.stderr).strip()
@@ -134,9 +155,11 @@ def check_all() -> list[dict]:
     return [check_one(e) for e in roster()]
 
 
-def render(generator: str, args: list[str] | None = None) -> tuple[bool, str]:
-    cmd = [sys.executable, str(ROOT / generator)] + (args or [])
-    r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, timeout=120)
+def render(entry: dict) -> tuple[bool, str]:
+    argv = _argv(entry, entry.get("render_args"))
+    if argv is None:
+        return False, f"no runnable generator for {_name(entry)}"
+    r = subprocess.run(argv, cwd=ROOT, capture_output=True, text=True, timeout=300)
     return r.returncode == 0, (r.stdout + r.stderr).strip()
 
 
@@ -168,6 +191,12 @@ def selftest() -> int:
                 ({"generator": "good.py", "view": "NOPE.md"}, "stale", "view missing"),
                 ({"view": "x.xml", "exempt": "time-based"}, "exempt", "declared exempt"),
                 ({"view": "y.md"}, "unverifiable", "no generator named"),
+                ({"cmd": ["/bin/sh", "-c", "printf 'ok: fine'"], "view": "VIEW.md"},
+                 "current", "explicit cmd, speaks a verdict"),
+                ({"cmd": ["/bin/sh", "-c", "printf 'STALE: no'; exit 1"], "view": "VIEW.md"},
+                 "stale", "explicit cmd, says STALE"),
+                ({"cmd": ["/definitely/not/here"], "view": "VIEW.md"},
+                 "unverifiable", "explicit cmd that cannot run"),
             ]
             # ── render-compare fixtures. This mode WRITES, so the controls that matter
             # are (1) it goes red, (2) it goes green when the render is idempotent,
@@ -241,7 +270,7 @@ def main() -> int:
     if "--render" in args:
         for e, r in zip(entries, results):
             if r["state"] == "stale":
-                ok, out = render(e["generator"], e.get("render_args"))
+                ok, out = render(e)
                 print(f"  {'✅' if ok else '🔴'} {r['view']}: {out.splitlines()[-1] if out else ''}")
         results = check_all()
 
