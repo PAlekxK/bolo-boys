@@ -12,8 +12,17 @@ identical in every repo that has generated views — the ROSTER differs, the cod
     tools/generated_views.py     ← this file (byte-identical across repos; diff it)
 
 Roster entry:
-    {"generator": "tools/x.py", "view": "X.md"}                  → runs `x.py --check`
-    {"view": "sitemap.xml", "exempt": "why it cannot be checked"} → reported, never green-washed
+    {"generator": "tools/x.py", "view": "X.md"}                   → runs `x.py --check`
+    {"generator": "tools/y.py", "views": ["A.md", "B.md"],
+     "mode": "render-compare", "ignore": ["<!-- generated [0-9-]+"]} → see below
+    {"view": "sitemap.xml", "exempt": "why it cannot be checked"}  → reported, never green-washed
+
+⭐ mode "render-compare" is for a generator with NO --check of its own. It snapshots the
+listed views, runs the generator for real, compares, and ALWAYS restores the snapshot.
+It must be opted into per row — this module never mutates a file it was not told to.
+`ignore` is a list of regexes normalised away before comparing, for the volatile stamp a
+generator writes on every run (a "generated <date>" line, a validFrom). Without it the
+row is red every morning, which is the same as having no check at all.
 
     python3 tools/generated_views.py             # status; exit 1 unless all verified
     python3 tools/generated_views.py --render    # re-render the stale ones
@@ -28,6 +37,7 @@ else is `unverifiable`, which FAILS. (memory: match the PAYLOAD, not the contain
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -46,11 +56,57 @@ def roster() -> list[dict]:
     return json.loads(ROSTER.read_text())["views"]
 
 
+def _normalise(text: str, ignore: list[str]) -> str:
+    for pat in ignore or []:
+        text = re.sub(pat, "<volatile>", text)
+    return text
+
+
+def check_render_compare(entry: dict) -> dict:
+    """For a generator with no --check: snapshot, render for real, compare, ALWAYS restore.
+
+    The restore is in a finally block and rewrites the exact bytes read. If this process is
+    killed between the render and the restore, what is left on disk is the generator's own
+    fresh output — recoverable with git, never corrupt.
+    """
+    gen = entry["generator"]
+    views = entry.get("views") or [entry["view"]]
+    base = {"view": ", ".join(views), "generator": gen}
+    paths = [ROOT / v for v in views]
+    if not (ROOT / gen).exists():
+        return {**base, "state": "unverifiable", "detail": f"generator missing: {gen}"}
+    missing = [v for v, p in zip(views, paths) if not p.exists()]
+    if missing:
+        return {**base, "state": "stale", "detail": f"missing: {', '.join(missing)} — run --render"}
+
+    before = {p: p.read_bytes() for p in paths}
+    try:
+        r = subprocess.run([sys.executable, str(ROOT / gen)] + (entry.get("render_args") or []),
+                           cwd=ROOT, capture_output=True, text=True, timeout=300)
+        if r.returncode != 0:
+            tail = (r.stderr or r.stdout).strip().splitlines()[-1:] or [f"exit {r.returncode}"]
+            return {**base, "state": "unverifiable", "detail": f"{gen} failed to run: {tail[0]}"}
+        ig = entry.get("ignore") or []
+        drifted = [v for v, p in zip(views, paths)
+                   if _normalise(p.read_text(errors="replace"), ig)
+                   != _normalise(before[p].decode(errors="replace"), ig)]
+    finally:
+        for p, data in before.items():
+            p.write_bytes(data)
+
+    if drifted:
+        return {**base, "state": "stale",
+                "detail": f"STALE: {', '.join(drifted)} lags its source — re-run {gen}"}
+    return {**base, "state": "current", "detail": f"ok: matches {gen} output"}
+
+
 def check_one(entry: dict) -> dict:
     view, gen = entry.get("view", "?"), entry.get("generator")
     base = {"view": view, "generator": gen}
     if entry.get("exempt"):
         return {**base, "state": "exempt", "detail": entry["exempt"]}
+    if entry.get("mode") == "render-compare":
+        return check_render_compare(entry)
     if not gen:
         return {**base, "state": "unverifiable", "detail": "roster row has no generator"}
     gen_path = ROOT / gen
@@ -113,6 +169,47 @@ def selftest() -> int:
                 ({"view": "x.xml", "exempt": "time-based"}, "exempt", "declared exempt"),
                 ({"view": "y.md"}, "unverifiable", "no generator named"),
             ]
+            # ── render-compare fixtures. This mode WRITES, so the controls that matter
+            # are (1) it goes red, (2) it goes green when the render is idempotent,
+            # (3) a volatile stamp does not make it red forever, and ⭐ (4) the file on
+            # disk is byte-identical afterwards in every one of those cases.
+            (tdp / "V.md").write_text("payload v1\nstamp: 1999-01-01\n")
+            (tdp / "idem.py").write_text(
+                "from pathlib import Path\n"
+                "Path('V.md').write_text('payload v1\\nstamp: 1999-01-01\\n')\n")
+            (tdp / "drifts.py").write_text(
+                "from pathlib import Path\n"
+                "Path('V.md').write_text('payload v2 CHANGED\\nstamp: 1999-01-01\\n')\n")
+            (tdp / "stamps.py").write_text(
+                "from pathlib import Path\n"
+                "Path('V.md').write_text('payload v1\\nstamp: 2026-08-28\\n')\n")
+            (tdp / "boom.py").write_text("raise SystemExit('exploded')\n")
+            rc_cases = [
+                ({"generator": "idem.py", "view": "V.md", "mode": "render-compare"},
+                 "current", "render-compare: idempotent render"),
+                ({"generator": "drifts.py", "view": "V.md", "mode": "render-compare"},
+                 "stale", "render-compare: the view really lags"),
+                ({"generator": "stamps.py", "view": "V.md", "mode": "render-compare"},
+                 "stale", "⭐ volatile stamp, NOT ignored -> red every day"),
+                ({"generator": "stamps.py", "view": "V.md", "mode": "render-compare",
+                  "ignore": [r"stamp: \d{4}-\d{2}-\d{2}"]},
+                 "current", "⭐ same generator, stamp ignored -> green"),
+                ({"generator": "boom.py", "view": "V.md", "mode": "render-compare"},
+                 "unverifiable", "render-compare: generator crashed"),
+            ]
+            original = (tdp / "V.md").read_bytes()
+            for entry, want, why in rc_cases:
+                got = check_one(entry)["state"]
+                ok = got == want
+                restored = (tdp / "V.md").read_bytes() == original
+                print(f"  {GLYPH.get(got, '?')} {why:<44} -> {got:<13} "
+                      f"({'correct' if ok else 'WRONG, wanted ' + want}; "
+                      f"file {'restored' if restored else 'LEFT MUTATED'})")
+                if not ok:
+                    fails.append(f"{why}: got {got}, wanted {want}")
+                if not restored:
+                    fails.append(f"{why}: render-compare did NOT restore the view")
+
             for entry, want, why in cases:
                 got = check_one(entry)["state"]
                 ok = got == want
