@@ -671,6 +671,23 @@
           "date": null
         }
       ]
+    },
+    {
+      "id": "cultivation-brewing-2024-10-04",
+      "date": "2024-10-04",
+      "day_of_week": "Friday",
+      "time": null,
+      "venue_id": "cultivation-brewing",
+      "venue_name": "Cultivation Brewing",
+      "venue_neighborhood": "Norcross",
+      "venue_city": "Norcross, GA",
+      "supporting_acts": [
+        "Dirty Shame"
+      ],
+      "poster_url": null,
+      "end_time": null,
+      "notes": "⭐ THE FIRST PUBLIC PERFORMANCE — Bolo Boys' first booked gig, played with Dirty Shame, and the first one that paid. ⚠️ NOT the band's first time playing together: they formed for the 2024-06-22 open mic at Tate, which is deliberately not carried here (D-SHOW-1). Added 2026-08-30, ~22 months late — this record began at 2025-10-18 and had been missing its own opening night. The band had no note, no thread and no listing for it; the evidence is 11 photographs running 4:27 to 9:10 PM, load-in through the show.",
+      "external_links": []
     }
   ]
 }
