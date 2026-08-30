@@ -6,6 +6,38 @@
   },
   "past_shows": [
     {
+      "id": "side-saddle-2026-08-29",
+      "date": "2026-08-29",
+      "day_of_week": "Saturday",
+      "time": "6:00 PM",
+      "venue_id": "side-saddle",
+      "venue_name": "Side Saddle",
+      "venue_neighborhood": "Grant Park / Beltline",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [
+        "Dirty Shame",
+        "Acoustic Station",
+        "Ante Up"
+      ],
+      "poster_url": "assets/posters/side-saddle-fall-series-2026.png",
+      "end_time": null,
+      "notes": "Last Call for Summer on the Side Saddle + Finca to Filter patio, with Dirty Shame, Acoustic Station and Ante Up. Two things worth remembering. It went well without Paul, who was out — the show did not need its organiser in the room. And the group proved fluid: people who had said they were out turned up, and the day-of lineup self-organised. John, that night: \"It went very well. We missed both of you!!\"",
+      "external_links": [
+        {
+          "title": "Bolo Boys announce — Side Saddle fall series (8/29 · 9/12 · 10/31)",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DcMCVHaOeD9/",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "Side Saddle's post for the 8/29 show",
+          "source": "Side Saddle (Instagram)",
+          "url": "https://www.instagram.com/p/DchHTHPJQ5p/",
+          "date": null
+        }
+      ]
+    },
+    {
       "id": "summer-shade-festival-2026-08-22",
       "date": "2026-08-22",
       "day_of_week": "Saturday",
