@@ -16,37 +16,10 @@
       "phone": "(770) 790-7886",
       "website": "https://www.sidesaddle.wine/",
       "google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
-      "yelp_url": "https://www.yelp.com/biz/side-saddle-wine-saloon-and-bar-atlanta",
-      "google_reviews_url": null,
       "instagram": "https://www.instagram.com/sidesaddlewine/",
       "instagram_handle": "@sidesaddlewine",
-      "sister_venue_id": "finca-to-filter",
-      "notes": "Regular gig. Monthly showcase. Patio shared with sister venue Finca to Filter (same owner Kayla Bellman, same address — coffee shop by day 7 AM–3 PM, wine bar by night). Often co-billed with Dirty Shame & Acoustic Station.",
-      "summary": "A wine saloon along the Atlanta BeltLine in Boulevard Heights — checkered floors, terracotta velvet booths, palm-frond-print chairs, wide-open windows, and a patio that doubles the room when the weather works.",
-      "what_we_love": [
-        "the BeltLine-adjacent walk-up",
-        "the patio when weather cooperates",
-        "the room's actual personality (checkered floors, terracotta booths)",
-        "the funky and sustainable wine list",
-        "Thursday-night jazz that sets the tone for the room"
-      ],
-      "menu_highlights": [
-        "pimento cheese",
-        "creamy hummus",
-        "pork rillettes with focaccia",
-        "smash burger"
-      ],
-      "live_music_context": "Hosts a Thursday-night jazz program. Bolo Boys play a monthly showcase here, often co-billed with Dirty Shame and Acoustic Station.",
-      "crowd_notes": "Neighborhood wine-bar regulars plus BeltLine walk-ins. Sophisticated menu, unfussy room.",
-      "practical_notes": "Outdoor patio with significant capacity. BeltLine pedestrian access. Wine-led (orange wines, pet-nats, unusual whites/reds) alongside small bites and a short cocktail list.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "The Infatuation",
-        "Wanderlog",
-        "Yelp",
-        "Restaurantji",
-        "sidesaddle.wine"
-      ],
+      "yelp_url": "https://www.yelp.com/biz/side-saddle-wine-saloon-and-bar-atlanta",
+      "google_reviews_url": null,
       "lat": 33.72582,
       "lon": -84.36497,
       "geo": {
@@ -54,24 +27,7 @@
         "geocoded": "2026-07-19",
         "note": "680 HAMILTON AVE SE, ATLANTA, GA, 30312"
       },
-      "residency": {
-        "status": "active",
-        "cadence": "monthly",
-        "since": "2025-12-19",
-        "default_day": "Saturday",
-        "default_time": "6:00 PM",
-        "default_duration_hours": 3,
-        "set_structure": null,
-        "free": null,
-        "all_ages": null,
-        "default_bill": [
-          "Dirty Shame",
-          "Acoustic Station",
-          "Ante Up"
-        ],
-        "confirmed_by": "Derived from the show record 2026-08-27, NOT from a venue statement. Contact is Kayla Bellman.",
-        "note": "⚠️ READ THE DERIVATION BEFORE TRUSTING THE DEFAULTS. This residency SETTLED rather than being agreed: it opened 2025-12-19 on a Friday at 7 PM, then ran Fridays, Saturdays and even a Sunday 11 AM brunch (2026-05-31) at five different start times. It has been Saturday 6:00 PM for 3 hours on every show since 2026-06-27 — that is the basis for the defaults above, and it is six months of pattern, not a term sheet. ⚠️ The day-of-month is NOT stable: 2026 ran the 5th, 2nd, 5th, 3rd and 3rd Saturday. The SECOND-Saturday cadence exists only in the twelve 2027 holds in pipeline.json, which are blockers and are explicitly NOT agreed with the venue. Do not describe it publicly as 'second Saturdays' until Kayla has said so. ⚠️ `free` and `all_ages` are NULL because nobody has asked — this is a wine bar, and the answer is NOT assumable from Wild Heaven's. Null means unasked, never 'no'. The bill also is not universal: 9/12 is Ante Up only. Shares a patio with sister venue Finca to Filter (same owner, same address). 2026-12-19 is the one-year anniversary."
-      }
+      "sister_venue_id": "finca-to-filter"
     },
     {
       "id": "finca-to-filter",
@@ -84,39 +40,18 @@
       "phone": null,
       "website": "https://finca.coffee/",
       "google_maps_url": "https://maps.google.com/?q=Finca+to+Filter%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
-      "yelp_url": "https://www.yelp.com/biz/finca-to-filter-atlanta-2",
-      "google_reviews_url": null,
       "instagram": "https://www.instagram.com/fincatofilter/",
       "instagram_handle": "@fincatofilter",
-      "sister_venue_id": "side-saddle",
-      "notes": "Sister business to Side Saddle — same owner (Kayla Bellman), same address, shared patio. Operates 7 AM–3 PM daily as the coffee-shop half of the patio; Side Saddle is the wine-bar half (evenings). Bolo Boys don't book Finca directly — cross-promoted alongside Side Saddle shows for reach and recognition. Only overlap with FtF operating hours is the 5/31 1-year anniversary morning show.",
-      "summary": "Queer-and-woman-owned specialty coffee shop on the BeltLine in Boulevard Heights. Sister business to Side Saddle Wine Saloon — they share the address, the patio, and the ownership. Coffee in the morning at Finca, wine in the evening at Side Saddle.",
-      "what_we_love": [
-        "the BeltLine-adjacent walk-up (shared with Side Saddle)",
-        "the patio when weather cooperates",
-        "specialty coffee from queer, women, and BIPOC roasters",
-        "seasonal drinks that lean on place and history",
-        "dogs welcome"
-      ],
-      "menu_highlights": [],
-      "live_music_context": "Coffee shop, not a music-booking venue. Cross-promotion partner with Side Saddle. The 5/31 anniversary morning show is the rare Bolo Boys set that lands inside Finca's operating hours.",
-      "crowd_notes": "Beltline pedestrians + neighborhood coffee regulars. Queer-and-caffeinated vibe per their own framing.",
-      "practical_notes": "Hours: Mon–Sun 7 AM–3 PM. Shared patio with Side Saddle (which opens later, evenings). BeltLine pedestrian access.",
-      "last_researched": "2026-05-20",
-      "research_sources": [
-        "finca.coffee",
-        "Beltline.org blog",
-        "Atlanta Coffee Shops",
-        "Yelp",
-        "Instagram (@fincatofilter)"
-      ],
+      "yelp_url": "https://www.yelp.com/biz/finca-to-filter-atlanta-2",
+      "google_reviews_url": null,
       "lat": 33.72582,
       "lon": -84.36497,
       "geo": {
         "source": "census",
         "geocoded": "2026-07-19",
         "note": "680 HAMILTON AVE SE, ATLANTA, GA, 30312 - same address/patio as side-saddle; shared coords are INTENTIONAL, not a copy-paste"
-      }
+      },
+      "sister_venue_id": "side-saddle"
     },
     {
       "id": "cultivation-brewing",
@@ -129,27 +64,6 @@
       "phone": "(770) 696-5407",
       "website": "https://www.cultivationbrew.com/",
       "google_maps_url": "https://maps.google.com/?q=Cultivation+Brewing%2C+650+Langford+Dr%2C+Norcross%2C+GA+30071",
-      "notes": "Multiple bookings. Annual showcase with Dirty Shame.",
-      "summary": "Norcross brewery just outside the historic square — indoor and outdoor seating that feels like hanging out in someone's backyard. Cornhole, rotating food trucks, low-key tap list rotation.",
-      "what_we_love": [
-        "the backyard-garden feel of the space",
-        "the food trucks Friday–Sunday",
-        "the cornhole game on the patio",
-        "the rotating tap list (new beer each week)",
-        "the way the indoor/outdoor split actually works"
-      ],
-      "menu_highlights": [],
-      "live_music_context": "Live music sits in the regular rotation on Friday or Saturday evenings. Bolo Boys have an annual showcase here with Dirty Shame.",
-      "crowd_notes": "Family-safe brewery crowd, dogs welcome. Mix of Norcross locals and Gwinnett brewery-hoppers.",
-      "practical_notes": "Dog-friendly. Cornhole and ample outdoor seating. Food trucks typically Wednesday/Thursday evenings and Friday–Sunday. Rotating tap list.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "Tripadvisor",
-        "Yelp",
-        "Restaurantji",
-        "Explore Georgia",
-        "cultivationbrew.com"
-      ],
       "lat": 33.9405,
       "lon": -84.22601,
       "geo": {
@@ -169,26 +83,6 @@
       "phone": "(404) 680-8728",
       "website": "https://www.echocontemporary.com/",
       "google_maps_url": "https://maps.google.com/?q=Echo+Art+Gallery%2C+785+Echo+St+NW%2C+Atlanta%2C+GA+30318",
-      "notes": "Address/maps link needed — verify before next show listing. Show: 10/18/2025.",
-      "summary": "Contemporary art gallery housed inside Guardian Studios at Echo Street West — spacious, well-lit rooms with clearly labeled work and comfortable seating, leaning down-to-earth rather than white-cube.",
-      "what_we_love": [
-        "the non-pretentious tone of the space",
-        "Echo Street West as a setting for shows",
-        "art at accessible prices",
-        "the gallery's conversation-friendly energy"
-      ],
-      "menu_highlights": [],
-      "live_music_context": "Hosts performances and events alongside its regular art programming.",
-      "crowd_notes": "Local art-curious crowd, Echo Street West regulars, and small-business supporters. Conversational, not silent-gallery.",
-      "practical_notes": "Free and open to the public during gallery hours: Wed–Fri 11 AM–5 PM, Sat noon–5 PM. Inside Guardian Studios at Echo Street West.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "echocontemporary.com",
-        "Creative Loafing",
-        "Wanderlog",
-        "Singulart",
-        "Echo Street West"
-      ],
       "lat": 33.77425,
       "lon": -84.41034,
       "geo": {
@@ -208,25 +102,6 @@
       "phone": null,
       "website": "https://thebcomplex.com/about",
       "google_maps_url": "https://maps.google.com/?q=B+Complex%2C+1272+Murphy+Ave+SW%2C+Atlanta%2C+GA+30310",
-      "notes": "Hosted Community Christmas Market. Address/maps link needed.",
-      "summary": "Cavernous artist-centric space in a repurposed industrial building on Murphy Ave — permanent sculptures, a water feature, and 8,000 square feet of gallery that flexes from exhibition floor to performance venue.",
-      "what_we_love": [
-        "the industrial-cathedral feel of the room",
-        "the permanent sculptures and water feature",
-        "the cross-disciplinary programming (dance, music, exhibitions)",
-        "the artist-cooperative soul of the space"
-      ],
-      "menu_highlights": [],
-      "live_music_context": "Hosts live performances, art shows, and exhibitions across the year — the room flexes between gallery and performance venue.",
-      "crowd_notes": "Atlanta arts community — artists, dancers, gallery-goers, the curious. Open to events of many kinds.",
-      "practical_notes": "8,000 sq ft exhibition gallery available to rent. Handicap accessible. Street parking near the venue; can fill up during events.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "thebcomplex.com",
-        "Creative Loafing",
-        "Wheree",
-        "Eventsfy"
-      ],
       "lat": 33.71976,
       "lon": -84.42369,
       "geo": {
@@ -246,31 +121,6 @@
       "phone": "(706) 216-6278",
       "website": "https://because.coffee/",
       "google_maps_url": "https://maps.google.com/?q=Because+Coffee%2C+240+Dawson+Village+Way+N+%23100%2C+Dawsonville%2C+GA+30534",
-      "notes": "Played 12/13/2025 Christmas show (9 AM–12 PM). Santa in attendance.",
-      "summary": "Roastery and café in Dawson Village — they roast their beans on-site and the owner-roaster is genuinely fired up about coffee. Indoor and patio seating, public WiFi, a room that flexes from quiet-corner-work to musicians-gathering.",
-      "what_we_love": [
-        "the on-site roast (beans roasted right there)",
-        "the seasonal drink lineup",
-        "the owner-roaster's energy",
-        "the seating mix — quiet corners and shareable tables",
-        "the local-baker partnership for muffins"
-      ],
-      "menu_highlights": [
-        "Honey Badger hot latte",
-        "Cherry Bomb",
-        "seasonal drinks (Luchador, Gimme Samoa, Purple People Eater)",
-        "muffins from a local baker"
-      ],
-      "live_music_context": "Hosts gatherings of musicians and community events. Bolo Boys played the 2025 Christmas show.",
-      "crowd_notes": "Dawsonville coffee regulars, work-from-café folks, locals. The owner-roaster is part of the social fabric.",
-      "practical_notes": "Indoor and outdoor seating. Public WiFi. Hot and cold brew on offer. Family- and meeting-friendly.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "Yelp",
-        "Tripadvisor",
-        "Restaurantji",
-        "because.coffee"
-      ],
       "lat": 34.38953,
       "lon": -83.9882,
       "geo": {
@@ -292,53 +142,12 @@
       "google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+135B+Maple+St%2C+Avondale+Estates%2C+GA+30002",
       "yelp_url": "https://www.yelp.com/biz/wild-heaven-beer-decatur-4",
       "google_reviews_url": null,
-      "notes": "⭐ RESIDENCY VENUE — one of two, with Side Saddle. Paul 2026-08-27: pursued MONTHLY, the same way Side Saddle is. Standing terms, venue-stated by Hayden 8/17–8/18: Friday 6:30 PM start, three 45-minute sets, end time the band's call, encores fine, nothing booked before or after. FREE and ALL-AGES on every show we play here (Paul, 8/27). Saturday afternoons also happen (9/19 is a 4:00 PM Saturday) — the Friday 6:30 slot is the residency shape, not the only shape. Hayden's standing offer, 8/17: all other Fridays open, first choice to us — that offer is what makes monthly reachable, and it has already produced 10/16.",
-      "summary": "Wild Heaven's Avondale Estates taproom and kitchen on Maple Street — indoor seating plus an outdoor section that includes converted-container seating, with a regular live-music schedule across the weekend.",
-      "what_we_love": [
-        "the wide tap list (sours, stouts, IPAs, whatever's pouring)",
-        "the converted-container outdoor seating",
-        "the every-weekend live-music programming",
-        "the trivia and tasting calendar"
-      ],
-      "menu_highlights": [
-        "Wild Heaven beers (brewed on-site)",
-        "kitchen via Al's Pine Street Market"
-      ],
-      "live_music_context": "Free live music every Friday, Saturday and Sunday. Bolo Boys are a monthly residency here — typical slot Friday evening 6:30 PM (three 45-minute sets), with Saturday afternoons as the alternate. Usually a shared bill with Dirty Shame, Acoustic Station and Ante Up.",
-      "crowd_notes": "Avondale Estates and DeKalb brewery-goers. Multigenerational across the weekend slots; friendly outdoor scene.",
-      "practical_notes": "Indoor and outdoor seating including converted containers. In-house kitchen (Al's Pine Street Market). Trivia nights and rotating tasting events.",
-      "last_researched": "2026-08-27",
-      "research_sources": [
-        "wildheavenbeer.com",
-        "Yelp",
-        "Tripadvisor",
-        "Wheree",
-        "Wanderlog"
-      ],
       "lat": 33.77647,
       "lon": -84.27572,
       "geo": {
         "source": "nominatim",
         "geocoded": "2026-07-19",
         "note": "Census had no record for '135B Maple St'. OSM Nominatim matched the brewery POI and returned the exact address '135B, Maple Street' - corroborates the venue record."
-      },
-      "residency": {
-        "status": "active",
-        "cadence": "monthly",
-        "since": "2026-05-23",
-        "default_day": "Friday",
-        "default_time": "6:30 PM",
-        "default_duration_hours": 3,
-        "set_structure": "three 45-minute sets",
-        "free": true,
-        "all_ages": true,
-        "default_bill": [
-          "Dirty Shame",
-          "Acoustic Station",
-          "Ante Up"
-        ],
-        "confirmed_by": "Hayden (venue) 2026-08-17/18 for terms; Paul 2026-08-27 for cadence, free and all-ages",
-        "note": "Facts a copywriter should never have to re-derive per show. `free` and `all_ages` are the answer to the open_question that sat on every 2026 fall event."
       }
     },
     {
@@ -354,30 +163,6 @@
       "google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+2935B+N+Druid+Hills+Rd+NE%2C+Atlanta%2C+GA+30329",
       "yelp_url": "https://www.yelp.com/biz/wild-heaven-beer-atlanta-atlanta-2",
       "google_reviews_url": null,
-      "notes": "Ongoing concert series. Typical slot: Sun afternoon 3–6 PM.",
-      "summary": "Wild Heaven's Toco Hills taproom and event space, paired with Fox Bros. Bar-B-Q — an onsite brewery, 93-seat taproom, 48-seat event space, indoor TVs, and a courtyard with turf and mature trees built for live music.",
-      "what_we_love": [
-        "the courtyard with mature trees (great for afternoon sets)",
-        "the Fox Bros. Bar-B-Q kitchen attached",
-        "the patio live-music programming Fri/Sat/Sun (weather permitting)",
-        "the weekday specials calendar",
-        "Tuesday trivia hosted by Dirty South Trivia"
-      ],
-      "menu_highlights": [
-        "Fox Bros. Bar-B-Q (in-house kitchen)",
-        "Wild Heaven beers brewed on-site"
-      ],
-      "live_music_context": "Live music on the patio Friday evenings, Saturday afternoons, and Sunday afternoons (weather permitting). Bolo Boys typically play the Sunday afternoon 3–6 PM slot.",
-      "crowd_notes": "Toco Hills and Druid Hills brewery-goers. Family-friendly courtyard energy, especially in good weather.",
-      "practical_notes": "93-seat taproom + 48-seat event space + outdoor courtyard with turf. 3 TVs indoors, brew bar. Weekday specials (½-off cocktails Mondays, ½-off pitchers Wednesdays). Free trivia Tuesdays 7 PM.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "wildheavenbeer.com",
-        "The Infatuation",
-        "Yelp",
-        "Wheree",
-        "Caren West PR"
-      ],
       "lat": 33.81538,
       "lon": -84.31018,
       "geo": {
@@ -397,26 +182,6 @@
       "phone": null,
       "website": null,
       "google_maps_url": "https://maps.app.goo.gl/zqrCTAH2D9zjBjiH6",
-      "notes": "Outdoor park. Booked via Grant Park Conservancy. Typical slot: Sun morning 11 AM.",
-      "summary": "An outdoor stage area inside Atlanta's oldest city park — Boulevard Green sits at a main park entrance, designed for community events like markets, music, kids' activities, and movie nights, with the Milledge Fountain outdoor classroom and theatre nearby.",
-      "what_we_love": [
-        "the open-air Sunday-morning slot",
-        "Atlanta's oldest park as the setting",
-        "the Market in the Park crowd",
-        "the mature-tree shade on Boulevard",
-        "Grant Park Conservancy as a partner"
-      ],
-      "menu_highlights": [],
-      "live_music_context": "Hosts the Market in the Park series and other Grant Park Conservancy community events; live music is part of the regular Sunday rhythm at Boulevard Green.",
-      "crowd_notes": "Grant Park families, BeltLine walk-ups, market-goers, and the neighborhood's Sunday-morning regulars. All ages.",
-      "practical_notes": "Outdoor / weather-dependent. Free and open to all ages. Booked via Grant Park Conservancy. Typical slot Sunday morning 11 AM.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "Grant Park Conservancy",
-        "Urbanize Atlanta",
-        "Atlanta Area Parks",
-        "HGOR"
-      ],
       "lat": 33.73414,
       "lon": -84.36832,
       "geo": {
@@ -436,24 +201,6 @@
       "phone": null,
       "website": null,
       "google_maps_url": "https://maps.google.com/?q=Grant+Park+Gazebo%2C+Atlanta%2C+GA+30315",
-      "notes": "Grant Park Conservancy's flagship annual festival — late-August weekend in Grant Park. Bolo Boys play the gazebo stage. Booked via Don (gazebo-stage programmer). First Bolo Boys play 2026-08-22.",
-      "summary": "GPC's flagship summer festival — two days of music, makers, and food under the old-growth shade of Atlanta's oldest park, with the gazebo stage anchoring the live-music side.",
-      "what_we_love": [
-        "playing our home park's biggest weekend",
-        "the gazebo stage under the trees",
-        "a built-in festival crowd",
-        "Grant Park Conservancy as a partner"
-      ],
-      "menu_highlights": [],
-      "live_music_context": "Multi-stage festival programming across the weekend; the gazebo stage hosts rotating live sets.",
-      "crowd_notes": "Grant Park and intown families, Beltline walk-ups, festival-goers of all ages.",
-      "practical_notes": "Outdoor / weather-dependent. Free, all ages. Festival runs Sat–Sun in late August.",
-      "last_researched": "2026-06-27",
-      "research_sources": [
-        "Grant Park Conservancy",
-        "Eventeny",
-        "Adventures in Atlanta"
-      ],
       "lat": 33.73586,
       "lon": -84.37093,
       "geo": {
@@ -473,30 +220,6 @@
       "phone": "(404) 627-0007",
       "website": "https://www.grantcentraleast.com/",
       "google_maps_url": "https://maps.google.com/?q=Grant+Central+Pizza+East%2C+1279+Glenwood+Ave+SE%2C+Atlanta%2C+GA+30316",
-      "notes": "Pizza restaurant in East Atlanta Village. First show 5/25/2026.",
-      "summary": "East Atlanta Village pizza spot at the Glenwood corner — hand-tossed NY-style crust, homemade sauce, build-your-own pies, and a casual room that works for groups and families.",
-      "what_we_love": [
-        "hand-tossed NY-style crust",
-        "the East Atlanta Village location",
-        "the build-your-own approach",
-        "the unfussy, group-friendly room"
-      ],
-      "menu_highlights": [
-        "NY-style pizza (hand-tossed crust, homemade sauce)",
-        "specialty slices",
-        "breadsticks with cheese",
-        "vegetarian pies"
-      ],
-      "live_music_context": "Bolo Boys' first booking here was 5/25/2026. Venue hosts occasional live music alongside its standing pizza-shop programming.",
-      "crowd_notes": "East Atlanta Village locals, families with kids, and groups. Casual, moderately loud, easy to hang.",
-      "practical_notes": "Limited parking behind the venue. Dine-in casual. Family- and group-friendly.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "Yelp",
-        "Tripadvisor",
-        "Restaurantji",
-        "grantcentraleast.com"
-      ],
       "lat": 33.74012,
       "lon": -84.34568,
       "geo": {
@@ -516,32 +239,6 @@
       "phone": "(404) 622-8206",
       "website": "https://idealsportsbar.com/",
       "google_maps_url": "https://maps.google.com/?q=Ideal+Sports+Bar%2C+1953+Lakewood+Ave+SE%2C+Atlanta%2C+GA+30315",
-      "notes": "New venue as of 2026-05. First booking: June 26 + July 11, 2026. Official brand is 'Ideal Sportsbar' (one word); we normalize to 'Ideal Sports Bar' across the site.",
-      "summary": "A Lakewood Heights neighborhood bar with dive-bar bones and a family-friendly room — two pool tables inside, a rustic beer garden out back, and bartenders who actually know who's at the bar.",
-      "what_we_love": [
-        "the wings (Atlanta-best contenders)",
-        "the back beer-garden",
-        "regulars who'll talk to anyone",
-        "everyday-comfortable prices"
-      ],
-      "menu_highlights": [
-        "wings",
-        "burgers",
-        "Philly cheesesteaks",
-        "Turkey BLT",
-        "Turkey Club"
-      ],
-      "live_music_context": "Live bands sit in the regular rotation alongside bingo, karaoke, and holiday nights.",
-      "crowd_notes": "Multigenerational regulars. The kind of room where the bartender's part of the conversation, not just the order.",
-      "practical_notes": "Two pool tables inside, beer garden in back. Everyday food and drink prices run comfortable. Family-friendly.",
-      "last_researched": "2026-05-11",
-      "research_sources": [
-        "Yelp",
-        "Tripadvisor",
-        "Restaurantji",
-        "Postcard",
-        "idealsportsbar.com"
-      ],
       "instagram": "@idealsportsbar",
       "lat": 33.70255,
       "lon": -84.38447,
@@ -562,28 +259,12 @@
       "phone": null,
       "website": null,
       "google_maps_url": "https://maps.google.com/?q=Pickens+County+Courthouse%2C+Jasper%2C+GA+30143",
-      "notes": "Courthouse lawn/plaza in downtown Jasper — the anchor stage for the Jasper ArtWalk, programmed by Angela Reinhardt. Bolo Boys' first north-Georgia booking and the first show in the ACTIVE Jasper cluster (Pendley Creek, Fainting Goat, Old Mulehouse). Band brings its own full PA. First Bolo Boys play 2026-09-26.",
-      "summary": "The historic courthouse at the center of downtown Jasper, and the main stage of the town's ArtWalk — an afternoon of art, makers, and live music in the Blue Ridge foothills.",
-      "what_we_love": [
-        "playing the mountains where the family has roots",
-        "a downtown square that fills up for the day",
-        "an art-walk crowd that came out to look and listen",
-        "Angela and the Jasper scene"
-      ],
-      "menu_highlights": [],
-      "live_music_context": "ArtWalk day programming on the courthouse stage — rotating acts through the afternoon and into the evening.",
-      "crowd_notes": "Jasper and Pickens County locals, ArtWalk browsers, north-Georgia day-trippers, all ages.",
-      "practical_notes": "Outdoor / weather-dependent. Free, all ages. Band provides its own PA.",
-      "last_researched": "2026-07-28",
-      "research_sources": [
-        "Angela Reinhardt (ArtWalk organizer) — direct, by text 2026-07-23 and by phone 2026-07-28"
-      ],
       "lat": null,
       "lon": null,
       "geo": {
         "source": "NOT GEOCODED",
         "geocoded": null,
-        "note": "DELIBERATELY UNSET. The stage is the courthouse square in downtown Jasper; the street address was never captured from Angela and has not been verified against a primary source, so nothing is asserted here. The maps URL is a NAME query, which resolves correctly without claiming a precision we do not have. Geocode it once someone confirms the address on the ground or from the ArtWalk's own listing."
+        "note": "DELIBERATELY UNSET. The stage is the courthouse square in downtown Jasper; the street address was never captured from the organizer and has not been verified against a primary source, so nothing is asserted here. The maps URL is a NAME query, which resolves correctly without claiming a precision we do not have. Geocode it once someone confirms the address on the ground or from the ArtWalk's own listing."
       }
     },
     {
@@ -597,21 +278,10 @@
       "phone": null,
       "website": "https://www.patagonia.com/",
       "google_maps_url": "https://maps.google.com/?q=Patagonia%2C+124+Krog+St+NE%2C+Atlanta%2C+GA+30307",
-      "yelp_url": null,
-      "google_reviews_url": null,
       "instagram": null,
       "instagram_handle": null,
-      "notes": "Not a music venue — the Krog Street Patagonia store, used as the host room for the South River Watershed Alliance's Wild Fling benefit (2026-10-08). Added 2026-08-27 when that booking moved from unlisted-private to public. Venue detail comes from the SRWA event page, not from a venue research pass.",
-      "summary": null,
-      "what_we_love": [],
-      "menu_highlights": [],
-      "live_music_context": null,
-      "crowd_notes": null,
-      "practical_notes": null,
-      "last_researched": null,
-      "research_sources": [
-        "https://www.southriverga.org/events/wildfling"
-      ],
+      "yelp_url": null,
+      "google_reviews_url": null,
       "lat": null,
       "lon": null,
       "geo": null
