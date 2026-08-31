@@ -7,29 +7,35 @@
       "name": "gmail:band-availability",
       "reachable": true,
       "query": "prose replies to band-wide availability threads — /bolo-ingest owns the sender→roster-id mapping",
-      "note": "The band answering a date. Read by /bolo-ingest, which diffs against the attendance record and proposes gated writes."
+      "note": "The band answering a date. Read by /bolo-ingest, which diffs against the attendance record and proposes gated writes.",
+      "door": "door:gmail-paulk"
     },
     {
       "name": "gmail:calendar-rsvp",
       "reachable": true,
       "query": "Google Calendar RSVP notification mail for band events",
-      "note": "⚠️ An RSVP burst is often a calendar CLIENT re-syncing, not a decision. /bolo-ingest flags that shape; a counter here must not read a burst as N new answers."
+      "note": "⚠️ An RSVP burst is often a calendar CLIENT re-syncing, not a decision. /bolo-ingest flags that shape; a counter here must not read a burst as N new answers.",
+      "door": "door:gmail-paulk"
     },
     {
       "name": "gmail:venue-outreach",
       "reachable": true,
       "query": "replies on booking threads — see bolo-private/data/venue-contacts.json for the roster",
-      "note": "Also the input to /check-contacts-drift, which reconciles last_contact_date against real send history."
+      "note": "Also the input to /check-contacts-drift, which reconciles last_contact_date against real send history.",
+      "door": "door:gmail-paulk"
     },
     {
       "name": "imessage:band group thread",
       "reachable": false,
-      "note": "⛔ THE KNOWN BLIND SPOT. Attendance also lives in an iMessage group and /bolo-ingest is Gmail-only — it CANNOT see it. The text sits in `attributedBody` and names resolve via AddressBook, so it is technically readable but nothing sweeps it today. A FRESH verdict on this loop never covers this door. (memory: reference_bolo_imessage_group_thread)"
+      "note": "⛔ THE KNOWN BLIND SPOT. Attendance also lives in an iMessage group and /bolo-ingest is Gmail-only — it CANNOT see it. The text sits in `attributedBody` and names resolve via AddressBook, so it is technically readable but nothing sweeps it today. A FRESH verdict on this loop never covers this door. (memory: reference_bolo_imessage_group_thread)",
+      "door": "door:imessage-paulk",
+      "checkable_by": "agent"
     },
     {
       "name": "phone / in-person at practice",
       "reachable": false,
-      "note": "Availability and set decisions get settled at practice and reach the record only when Paul enters them."
+      "note": "Availability and set decisions get settled at practice and reach the record only when Paul enters them.",
+      "door": "door:in-person"
     }
   ]
 }
