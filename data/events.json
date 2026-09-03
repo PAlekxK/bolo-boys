@@ -68,7 +68,8 @@
       "venue_city": "Atlanta, GA",
       "venue_google_maps_url": "https://maps.google.com/?q=Side+Saddle%2C+680+Hamilton+Ave+SE%2C+Atlanta%2C+GA+30312",
       "supporting_acts": [
-        "Ante Up"
+        "Ante Up",
+        "Acoustic Station"
       ],
       "theme": "Between the Festivals",
       "invitation_text": "DragonCon just wrapped and Shaky Knees is still two weeks out. In between, there's us — no wristband needed, no costume required. Just a good Saturday on the Side Saddle patio.",
@@ -373,7 +374,7 @@
         "setlist_status": "open",
         "setlist_url": null,
         "lifecycle_markers": {
-          "calendar_invite_sent": false,
+          "calendar_invite_sent": true,
           "venue_thanked": false,
           "clips_pulled": false
         },
