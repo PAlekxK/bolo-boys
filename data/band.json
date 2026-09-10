@@ -167,7 +167,8 @@
         "bandcamp": "https://nigelwrightmusic.bandcamp.com/track/the-cowboys-life",
         "youtube_music": null,
         "tidal": null,
-        "deezer": null
+        "deezer": null,
+        "iheartradio": null
       }
     }
   ],
@@ -192,11 +193,12 @@
       "streaming": {
         "spotify": "https://open.spotify.com/track/2ANkKNXLanXFN6EPWkaF0T",
         "apple_music": "https://music.apple.com/us/album/muddy-knees-single/6804005329",
-        "amazon_music": null,
+        "amazon_music": "https://music.amazon.com/albums/B0HG1ZMTX6",
         "bandcamp": null,
         "youtube_music": "https://music.youtube.com/watch?v=pk546S1WM9U",
         "tidal": null,
-        "deezer": "https://www.deezer.com/track/4238002372"
+        "deezer": "https://www.deezer.com/track/4238002372",
+        "iheartradio": "https://www.iheart.com/artist/bolo-boys-51416198/albums/muddy-knees-426578637"
       },
       "video": null
     },
@@ -221,11 +223,12 @@
       "streaming": {
         "spotify": "https://open.spotify.com/track/5ks6EJHnEiRrL5p4dMDNDE",
         "apple_music": "https://music.apple.com/us/album/dogies-single/6791377510",
-        "amazon_music": null,
+        "amazon_music": "https://music.amazon.com/albums/B0H92578WB",
         "bandcamp": null,
         "youtube_music": "https://music.youtube.com/watch?v=1r4ITdcrcc8",
         "tidal": null,
-        "deezer": "https://www.deezer.com/track/4156746582"
+        "deezer": "https://www.deezer.com/track/4156746582",
+        "iheartradio": "https://www.iheart.com/artist/bolo-boys-51416198/albums/dogies-417102832"
       },
       "video": {
         "youtube_id": "sBt22_PZ6E4",

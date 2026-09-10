@@ -63,6 +63,53 @@ def block_span(src: str, key: str) -> tuple:
     return m.start(), i
 
 
+def nth_object_span(src: str, array_span: tuple, n: int) -> tuple:
+    """Span of the n-th (0-based) object inside the array at `array_span`.
+
+    ⚠️ ADDED 2026-09-10 AFTER THIS TOOL CORRUPTED THE RECORD. Every edit used to be
+    scoped to `block_span(src, "releases")` — the whole ARRAY — and `replace_scalar`
+    then took the FIRST match inside it. With one release that is the right answer.
+    With two it silently writes every field to releases[0]: run it for Dogies and
+    Muddy Knees ends up carrying Dogies' Spotify id and Dogies' Amazon URL, while
+    Dogies gets nothing. That is exactly what happened, on a file that feeds the
+    public site's release JSON-LD.
+
+    The bug was invisible for a month because the tool ALSO printed
+    `data["releases"][0]["title"]` as confirmation — so it cheerfully said
+    "✓ Muddy Knees → status: out" while being asked about Dogies. A confirmation line
+    read from the same wrong index as the write cannot catch a wrong-index write.
+    """
+    lo, hi = array_span
+    i = src.index("[", lo) + 1
+    depth = 0
+    in_str = esc = False
+    start = None
+    count = 0
+    while i < hi:
+        c = src[i]
+        if in_str:
+            if esc:
+                esc = False
+            elif c == "\\":
+                esc = True
+            elif c == '"':
+                in_str = False
+        elif c == '"':
+            in_str = True
+        elif c == "{":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                if count == n:
+                    return start, i + 1
+                count += 1
+        i += 1
+    raise SystemExit(f"ERROR: no object #{n} inside that array")
+
+
 def replace_scalar(src: str, key: str, value, span: tuple) -> str:
     """Replace one key's value within `span` only, preserving the file's hand
     formatting (json.dump would reflow every compact array)."""
@@ -81,6 +128,10 @@ def main() -> int:
                     help="22-char ID from the Spotify share URL (not the whole URL)")
     ap.add_argument("--apple-music", help="Full Apple Music URL")
     ap.add_argument("--amazon-music", help="Full Amazon Music URL")
+    ap.add_argument("--iheartradio", help="Full iHeartRadio album URL")
+    ap.add_argument("--release", help="Release id or title to target. REQUIRED when "
+                                      "band.json holds more than one release and the "
+                                      "track id matches none of them.")
     ap.add_argument("--youtube-music", help="Full YouTube Music URL")
     ap.add_argument("--keep-upcoming", action="store_true",
                     help="Fill links but don't flip status to 'out' yet")
@@ -99,30 +150,56 @@ def main() -> int:
     if not data.get("releases"):
         print("ERROR: no releases[] in band.json", file=sys.stderr)
         return 1
-    rel_title = data["releases"][0]["title"]
+    # WHICH release? Never releases[0] by default — see nth_object_span's note.
+    rels = data["releases"]
+    if args.release:
+        idx = [i for i, r in enumerate(rels)
+               if args.release in (r.get("id"), r.get("title"))]
+        if not idx:
+            print(f"ERROR: no release with id/title {args.release!r}. Have: "
+                  + ", ".join(r.get("id", "?") for r in rels), file=sys.stderr)
+            return 1
+        n = idx[0]
+    else:
+        # Infer from the track id when it already identifies exactly one release —
+        # this makes re-runs (the documented "safe to re-run to add more links"
+        # case) target correctly without a new flag.
+        idx = [i for i, r in enumerate(rels) if r.get("spotify_track_id") == tid]
+        if len(idx) == 1:
+            n = idx[0]
+        elif len(rels) == 1:
+            n = 0
+        else:
+            # REFUSE rather than guess. Guessing is what corrupted the file.
+            print("ERROR: --release is required when band.json has more than one "
+                  "release and the track id matches none of them.\n  Have: "
+                  + ", ".join(f"{r.get('id')} ({r.get('spotify_track_id')})" for r in rels),
+                  file=sys.stderr)
+            return 1
+    rel_title = rels[n]["title"]
 
-    # Scope every edit to the releases[] block. band.json has a second
-    # "streaming" object under originals[] (Nigel's "The Cowboy's Life") and an
-    # unscoped search silently overwrites it.
-    rel_span = block_span(src, "releases")
-    src = replace_scalar(src, "spotify_track_id", tid, rel_span)
+    def target_span(source):
+        """Recomputed after every edit — offsets shift as values change length."""
+        return nth_object_span(source, block_span(source, "releases"), n)
 
-    rel_span = block_span(src, "releases")  # offsets shift after each edit
-    lo, hi = rel_span
-    stream_lo, stream_hi = block_span(src[lo:hi], "streaming")
-    stream_span = (lo + stream_lo, lo + stream_hi)
+    src = replace_scalar(src, "spotify_track_id", tid, target_span(src))
 
-    src = replace_scalar(src, "spotify", f"https://open.spotify.com/track/{tid}", stream_span)
+    def stream_span(source):
+        lo, hi = target_span(source)
+        s_lo, s_hi = block_span(source[lo:hi], "streaming")
+        return (lo + s_lo, lo + s_hi)
+
+    src = replace_scalar(src, "spotify", f"https://open.spotify.com/track/{tid}",
+                         stream_span(src))
     for key, val in (("apple_music", args.apple_music),
                      ("amazon_music", args.amazon_music),
-                     ("youtube_music", args.youtube_music)):
+                     ("youtube_music", args.youtube_music),
+                     ("iheartradio", args.iheartradio)):
         if val:
-            lo, hi = block_span(src, "releases")
-            s_lo, s_hi = block_span(src[lo:hi], "streaming")
-            src = replace_scalar(src, key, val, (lo + s_lo, lo + s_hi))
+            src = replace_scalar(src, key, val, stream_span(src))
 
     if not args.keep_upcoming:
-        src = replace_scalar(src, "status", "out", block_span(src, "releases"))
+        src = replace_scalar(src, "status", "out", target_span(src))
 
     json.loads(src)  # fail loudly rather than write a broken file
     BAND.write_text(src)
