@@ -4,6 +4,24 @@ Date-stamped one-line summaries of meaningful state changes. Newest first. Compa
 
 ---
 
+## 2026-09-10
+
+- **Amazon Music and iHeartRadio links added to both singles**, and deployed. Each was verified in a
+  real browser and corroborated against two facts already in `band.json` — release date and track
+  duration — because Apple Music carries three different "Bolo Boys" and a title match is not
+  identity. `iheartradio` is a new platform key in `streaming{}` and in the site's `STREAMING_LABELS`.
+- **`release-go-live.py` could not target a release, and corrupted `band.json` when asked to.** Every
+  edit was scoped to the whole `releases[]` array, so running it for Dogies wrote Dogies' Spotify id
+  and Amazon URL onto **Muddy Knees**. Its confirmation line read `releases[0]` too, so it printed
+  "✓ Muddy Knees" for both tracks. Reverted before it propagated; fixed with `--release` targeting
+  that refuses rather than guesses.
+- **`tools/link-check.py` — new.** Every published URL gets a control twin (same shape, impossible
+  id). Real 200 + twin 200 means the host answers 200 to anything and the check learned nothing.
+  First run: 18 verified, 41 blind, 3 blocked, **0 broken** of 62. The site is not rotten, but it can
+  only *prove* 18 of its links, and the 41 blind include every Instagram announce post D6 relies on.
+
+---
+
 ## 2026-08-01
 
 - **Wild Heaven 8/15 + 9/19 — invites rebuilt and sent** to the full performer list. Neither date had a
