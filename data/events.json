@@ -228,7 +228,32 @@
           }
         ]
       },
-      "external_links": []
+      "external_links": [
+        {
+          "title": "ArtWalk September 2026 — official event page",
+          "source": "Pickens Arts & Cultural Alliance (PACA)",
+          "url": "https://www.pickensartsandculturalalliance.org/event/artwalk-september-2026/",
+          "date": null
+        },
+        {
+          "title": "ArtWalk Jasper",
+          "source": "ArtWalk Jasper (Facebook)",
+          "url": "https://www.facebook.com/artwalkjasper/",
+          "date": null
+        },
+        {
+          "title": "Pickens Arts & Cultural Alliance",
+          "source": "PACA",
+          "url": "https://www.pickensartsandculturalalliance.org/",
+          "date": null
+        },
+        {
+          "title": "Bolo Boys announce — Jasper ArtWalk 9/26",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DdZIjwARZB5/",
+          "date": "2026-09-17"
+        }
+      ]
     },
     {
       "id": "private-event-2026-10-08",
