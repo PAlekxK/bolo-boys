@@ -118,66 +118,6 @@
       ]
     },
     {
-      "id": "wild-heaven-avondale-2026-09-19",
-      "phase": "announced",
-      "date": "2026-09-19",
-      "day_of_week": "Saturday",
-      "time": "6:30 PM",
-      "duration_hours": 3.5,
-      "venue_id": "wild-heaven-avondale",
-      "venue_name": "Wild Heaven Brewing",
-      "venue_neighborhood": "Avondale Estates",
-      "venue_city": "Avondale Estates, GA",
-      "venue_google_maps_url": "https://maps.google.com/?q=Wild+Heaven+Brewing%2C+135B+Maple+St%2C+Avondale+Estates%2C+GA+30002",
-      "supporting_acts": [
-        "Dirty Shame",
-        "Acoustic Station",
-        "Ante Up"
-      ],
-      "theme": "First Taste of Fall",
-      "invitation_text": "An evening with our friends at Wild Heaven Avondale — Dirty Shame, Acoustic Station, Ante Up and Bolo Boys sharing the bill for three and a half hours of music. We'll be inside or outside depending on how September's treating us, but the good music, good food and good beer are a sure thing. Free and all-ages, like every show we play here.",
-      "teaser": null,
-      "additional_details": "Free and all-ages. Doors of the taproom are open all day; music starts at 6:30. Indoor or outdoor depending on weather. Kitchen by Al's Pine Street Market.",
-      "google_calendar_url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bolo+Boys+at+Wild+Heaven+Brewing+%E2%80%94+First+Taste+of+Fall&dates=20260919T223000Z%2F20260920T020000Z&location=135B+Maple+St%2C+Avondale+Estates%2C+GA+30002&details=An+evening+with+our+friends+at+Wild+Heaven+Avondale+%E2%80%94+Dirty+Shame%2C+Acoustic+Station%2C+Ante+Up+and+Bolo+Boys+sharing+the+bill+for+three+and+a+half+hours+of+music.+We%27ll+be+inside+or+outside+depending+on+how+September%27s+treating+us%2C+but+the+good+music%2C+good+food+and+good+beer+are+a+sure+thing.+Free+and+all-ages%2C+like+every+show+we+play+here.",
-      "ics_url": "assets/ics/wild-heaven-avondale-2026-09-19.ics",
-      "poster_url": null,
-      "prep": {
-        "setlist_status": "open",
-        "setlist_url": null,
-        "lifecycle_markers": {
-          "calendar_invite_sent": true,
-          "venue_thanked": false,
-          "clips_pulled": false
-        },
-        "logistics_notes": [
-          {
-            "text": "Lineup: Nigel, John, Paul — Jamey out.",
-            "done": false
-          },
-          {
-            "text": "Invite sent to the full performer list 2026-08-01 (4:00–7:30 PM).",
-            "done": true
-          }
-        ],
-        "subgroups": [],
-        "open_questions": []
-      },
-      "external_links": [
-        {
-          "title": "Live Music: Acoustic Station, Dirty Shame, + Bolo Boys at 4 pm",
-          "source": "Wild Heaven Brewing",
-          "url": "https://wildheavenbeer.com/event/live-music-acoustic-station-dirty-shame--bolo-boys-at-4-pm-2026-09-19",
-          "date": null
-        },
-        {
-          "title": "Bolo Boys announce two more Wild Heaven Avondale shows (8/15 & 9/19)",
-          "source": "@boloboysband (Instagram)",
-          "url": "https://www.instagram.com/p/Da1XvhnjCsK/",
-          "date": null
-        }
-      ]
-    },
-    {
       "id": "jasper-artwalk-2026-09-26",
       "phase": "announced",
       "date": "2026-09-26",
