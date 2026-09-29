@@ -1,10 +1,68 @@
 {
   "_meta": {
     "purpose": "Historical show log for Bolo Boys. Completed shows move here when they pass. Upcoming shows live in events.json.",
-    "last_updated": "2026-06-30",
+    "last_updated": "2026-09-29",
     "schema_version": "1.0"
   },
   "past_shows": [
+    {
+      "id": "jasper-artwalk-2026-09-26",
+      "date": "2026-09-26",
+      "day_of_week": "Saturday",
+      "time": "2:00 PM",
+      "venue_id": "pickens-county-courthouse",
+      "venue_name": "Pickens County Courthouse",
+      "venue_neighborhood": "Downtown Jasper",
+      "venue_city": "Jasper, GA",
+      "supporting_acts": [],
+      "poster_url": "assets/posters/jasper-artwalk-2026-09-26.jpeg",
+      "end_time": null,
+      "notes": "Jasper ArtWalk on the Pickens County Courthouse square: the band's first time playing the mountains, a three-hour afternoon slot with all four of us and our own PA. The Pickens Arts & Cultural Alliance made a band-specific graphic for the show.",
+      "external_links": [
+        {
+          "title": "ArtWalk September 2026 — official event page",
+          "source": "Pickens Arts & Cultural Alliance (PACA)",
+          "url": "https://www.pickensartsandculturalalliance.org/event/artwalk-september-2026/",
+          "date": null
+        },
+        {
+          "title": "Bolo Boys LIVE — ArtWalk Jasper (RSVP)",
+          "source": "Facebook event",
+          "url": "https://www.facebook.com/events/1087825867049012/",
+          "date": "2026-09-17"
+        },
+        {
+          "title": "ArtWalk Jasper",
+          "source": "ArtWalk Jasper (Facebook)",
+          "url": "https://www.facebook.com/artwalkjasper/",
+          "date": null
+        },
+        {
+          "title": "Pickens Arts & Cultural Alliance",
+          "source": "PACA",
+          "url": "https://www.pickensartsandculturalalliance.org/",
+          "date": null
+        },
+        {
+          "title": "Bolo Boys announce — Jasper ArtWalk 9/26",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/DdZIjwARZB5/",
+          "date": "2026-09-17"
+        },
+        {
+          "title": "Bolo Boys — ArtWalk on the Harvest Moon",
+          "source": "@boloboysband (Instagram)",
+          "url": "https://www.instagram.com/p/Ddl4M6rxTwZ/",
+          "date": "2026-09-22"
+        },
+        {
+          "title": "Bolo Boys — ArtWalk on the Harvest Moon",
+          "source": "Bolo Boys (Facebook)",
+          "url": "https://www.facebook.com/share/p/1CEA8VVjE1/",
+          "date": "2026-09-22"
+        }
+      ]
+    },
     {
       "id": "side-saddle-2026-08-29",
       "date": "2026-08-29",
