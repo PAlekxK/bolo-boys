@@ -123,6 +123,12 @@ def build_event(event, venue, today_iso):
     else:
         image = f"{SITE_URL}/assets/band-photo.jpg"
 
+    # A ticketed event (tickets.url present) must not advertise itself as free
+    # or point buyers at our own homepage. Free shows keep the old defaults.
+    tickets = event.get("tickets") or {}
+    offer_url = tickets.get("url") or SITE_URL
+    offer_price = str(tickets.get("price", "0"))
+
     return {
         "@type": "MusicEvent",
         "name": name,
@@ -141,10 +147,10 @@ def build_event(event, venue, today_iso):
         "performer": {"@type": "MusicGroup", "name": "Bolo Boys", "url": SITE_URL},
         "offers": {
             "@type": "Offer",
-            "price": "0",
+            "price": offer_price,
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": SITE_URL,
+            "url": offer_url,
             "validFrom": today_iso,
         },
     }
