@@ -42,17 +42,24 @@ def parse_time(time_str):
     return hour, int(m.group(2))
 
 
-def tz_offset_for(d):
-    """US Eastern: EDT (-04:00) roughly Mar 8 – Nov 1, EST (-05:00) otherwise.
+def _eastern_is_dst(d):
+    """True when US Eastern is on daylight time for an evening show on date d.
 
-    Approximation matching the convention documented in CLAUDE.md. Exact DST
-    boundaries (2nd Sunday of March, 1st Sunday of November) could be computed,
-    but the CLAUDE.md window is close enough for the dates Bolo Boys actually
-    plays.
+    Exact US rule: 2nd Sunday of March through the day before the 1st Sunday of
+    November (both switches happen at 2 AM, so a date-level test is exact for
+    evening shows). Replaced a fixed Mar 8 - Nov 1 window on 2026-10-09: it put
+    Sat 2027-03-13 on EDT a day early and published a 5 PM start for a 6 PM show.
     """
-    if (d.month, d.day) >= (3, 8) and (d.month, d.day) < (11, 2):
-        return "-04:00"
-    return "-05:00"
+    import datetime as _dt
+    def nth_sunday(year, month, n):
+        first = _dt.date(year, month, 1)
+        return first + _dt.timedelta(days=(6 - first.weekday()) % 7 + 7 * (n - 1))
+    return nth_sunday(d.year, 3, 2) <= d < nth_sunday(d.year, 11, 1)
+
+
+def tz_offset_for(d):
+    """US Eastern: EDT (-04:00) under daylight time, EST (-05:00) otherwise."""
+    return "-04:00" if _eastern_is_dst(d) else "-05:00"
 
 
 def iso_dt(d, hour, minute):

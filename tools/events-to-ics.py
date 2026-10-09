@@ -57,15 +57,24 @@ def parse_time(time_str):
     return hour, int(m.group(2))
 
 
-def tz_offset_minutes(d):
-    """US Eastern offset in minutes: EDT (-240) roughly Mar 8 – Nov 1, else EST (-300).
+def _eastern_is_dst(d):
+    """True when US Eastern is on daylight time for an evening show on date d.
 
-    Same approximation the JSON-LD generator uses (documented in CLAUDE.md) —
-    close enough for the dates Bolo Boys actually plays.
+    Exact US rule: 2nd Sunday of March through the day before the 1st Sunday of
+    November (both switches happen at 2 AM, so a date-level test is exact for
+    evening shows). Replaced a fixed Mar 8 - Nov 1 window on 2026-10-09: it put
+    Sat 2027-03-13 on EDT a day early and published a 5 PM start for a 6 PM show.
     """
-    if (d.month, d.day) >= (3, 8) and (d.month, d.day) < (11, 2):
-        return -240
-    return -300
+    import datetime as _dt
+    def nth_sunday(year, month, n):
+        first = _dt.date(year, month, 1)
+        return first + _dt.timedelta(days=(6 - first.weekday()) % 7 + 7 * (n - 1))
+    return nth_sunday(d.year, 3, 2) <= d < nth_sunday(d.year, 11, 1)
+
+
+def tz_offset_minutes(d):
+    """US Eastern offset in minutes: EDT (-240) under daylight time, else EST (-300)."""
+    return -240 if _eastern_is_dst(d) else -300
 
 
 def to_utc_stamp(d, hour, minute):
