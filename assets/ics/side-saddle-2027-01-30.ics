@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2027-01-30@boloboys.band
+DTSTAMP:20270130T000000Z
+DTSTART:20270130T230000Z
+DTEND:20270131T020000Z
+SUMMARY:Bolo Boys at Side Saddle — Dry January's Last Call
+DESCRIPTION:January's almost done\, and so are the resolutions. Come close
+  out the month with us at Side Saddle: good wine\, live music\, and a pati
+ o full of people who've earned a glass.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

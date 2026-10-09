@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2027-02-13@boloboys.band
+DTSTAMP:20270213T000000Z
+DTSTART:20270213T230000Z
+DTEND:20270214T020000Z
+SUMMARY:Bolo Boys at Side Saddle — Valentine's Eve
+DESCRIPTION:The night before Valentine's Day\, at a wine bar on the Beltli
+ ne. Bring your date\, bring your friends\, or come find one. We'll play th
+ e songs.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bolo Boys//boloboys.band//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:side-saddle-2027-03-13@boloboys.band
+DTSTAMP:20270313T000000Z
+DTSTART:20270313T220000Z
+DTEND:20270314T010000Z
+SUMMARY:Bolo Boys at Side Saddle — Spring on the Beltline
+DESCRIPTION:Spring is showing up on the Beltline\, and so are we. Come han
+ g on the patio at Side Saddle and hear what the new season sounds like.
+LOCATION:680 Hamilton Ave SE\, Atlanta\, GA 30312
+URL:https://www.boloboys.band
+END:VEVENT
+END:VCALENDAR
