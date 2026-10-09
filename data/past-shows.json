@@ -6,6 +6,34 @@
   },
   "past_shows": [
     {
+      "id": "private-event-2026-10-08",
+      "date": "2026-10-08",
+      "day_of_week": "Thursday",
+      "time": "7:30 PM",
+      "venue_id": "patagonia-krog-street",
+      "venue_name": "Patagonia Atlanta",
+      "venue_neighborhood": "Inman Park / Krog Street",
+      "venue_city": "Atlanta, GA",
+      "supporting_acts": [],
+      "poster_url": null,
+      "end_time": "9:30 PM",
+      "notes": "Wild Fling '26, the South River Watershed Alliance benefit at Patagonia on Krog Street. The venue liked us and is interested in having us back for future events, and the host was really appreciative.",
+      "external_links": [
+        {
+          "title": "Wild Fling '26 — tickets and event details",
+          "source": "South River Watershed Alliance",
+          "url": "https://www.southriverga.org/events/wildfling",
+          "date": null
+        },
+        {
+          "title": "Wild Fling '26 on Instagram",
+          "source": "Instagram",
+          "url": "https://www.instagram.com/p/DcOjP1RlLZO/",
+          "date": null
+        }
+      ]
+    },
+    {
       "id": "jasper-artwalk-2026-09-26",
       "date": "2026-09-26",
       "day_of_week": "Saturday",
